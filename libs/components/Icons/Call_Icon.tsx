@@ -11,5 +11,5 @@ function CallIcon(props: any) {
   );
 }
 
-const MemoCall = React.memo(CallIcon);
-export default MemoCall;
+const MemoCallIcon = React.memo(CallIcon);
+export default MemoCallIcon;
