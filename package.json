@@ -19,6 +19,10 @@
     "@testing-library/react": "13.4.0",
     "@types/jest": "28.1.1",
     "@types/node": "16.11.7",
+<<<<<<< HEAD
+=======
+    "@types/node-sass": "^4.11.3",
+>>>>>>> 22979dd7a3401d37174a7ece236e16dac772d88c
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
@@ -35,6 +39,10 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "jest": "28.1.1",
     "jest-environment-jsdom": "28.1.1",
+<<<<<<< HEAD
+=======
+    "node-sass": "^7.0.3",
+>>>>>>> 22979dd7a3401d37174a7ece236e16dac772d88c
     "nx": "15.5.3",
     "prettier": "^2.6.2",
     "react-test-renderer": "18.2.0",
