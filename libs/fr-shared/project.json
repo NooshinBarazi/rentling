@@ -1,7 +1,7 @@
 {
-  "name": "components",
+  "name": "fr-shared",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/components/src",
+  "sourceRoot": "libs/fr-shared/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -9,14 +9,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/components/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["libs/fr-shared/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/components/jest.config.ts",
+        "jestConfig": "libs/fr-shared/jest.config.ts",
         "passWithNoTests": true
       }
     }
