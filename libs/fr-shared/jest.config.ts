@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'components',
+  displayName: 'fr-shared',
   preset: '../../jest.preset.js',
   transform: {
     '^.+\\.[tj]sx?$': [
@@ -9,5 +9,5 @@ export default {
     ],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/libs/components',
+  coverageDirectory: '../../coverage/libs/fr-shared',
 };
