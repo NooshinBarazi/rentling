@@ -1,0 +1,15 @@
+import * as React from "react";
+
+function ShareIcon(props: any) {
+  return (
+    <svg width="1em" height="1em" viewBox="0 0 24 28" fill="none" {...props}>
+      <path
+        d="M18.752 17.788a4.783 4.783 0 00-3.446 1.458L9.75 15.68a4.857 4.857 0 000-3.494l5.555-3.567a4.82 4.82 0 10-1.374-3.362c.002.597.112 1.19.325 1.747L8.703 10.57a4.82 4.82 0 100 6.724l5.556 3.567a4.82 4.82 0 104.495-3.073zm0-15.424a2.892 2.892 0 11-2.892 2.892 2.904 2.904 0 012.892-2.892zM5.256 16.824a2.893 2.893 0 112.892-2.892 2.904 2.904 0 01-2.892 2.892zM18.752 25.5a2.892 2.892 0 112.892-2.892 2.904 2.904 0 01-2.892 2.892z"
+        fill="#BFC4CC"
+      />
+    </svg>
+  );
+}
+
+const MemoShareIcon = React.memo(ShareIcon);
+export default MemoShareIcon;
