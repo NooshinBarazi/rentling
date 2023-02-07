@@ -7,12 +7,11 @@ interface IProps {
   onClick: React.MouseEventHandler;
 }
 
-export const Button = ({Icon, text, style, onClick}: IProps) => {
-
+export const Button = ({ Icon, text, style, onClick }: IProps) => {
   return (
     <button style={style} onClick={onClick}>
-      {Icon}
-      {text}
+      <p>{text}</p>
+      <span>{Icon}</span>
     </button>
   );
 };
