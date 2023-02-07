@@ -1,1 +1,54 @@
 @import './variables';
+
+@mixin secondary-button {
+  background: transparent;
+  padding: 1rem 1.5rem;
+  border: 0.2rem solid $color-primary;
+  border-radius: 0.2rem;
+  transition: 0.2s;
+
+  p {
+    font-size: 1.2rem;
+
+    font-weight: 600;
+    color: $color-primary;
+  }
+  cursor: pointer;
+  &:hover {
+    transition: 0.2s;
+
+    background: $color-primary;
+    p {
+      font-weight: 600;
+      color: $color-white;
+    }
+  }
+}
+
+@mixin primary-button {
+  display: flex;
+  align-items: center;
+  background: $color-primary;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 0.2rem;
+  transition: 0.2s;
+  p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: $color-white;
+  }
+  cursor: pointer;
+  &:hover {
+    transition: 0.2s;
+
+    p {
+      font-weight: 600;
+    }
+  }
+
+  span > svg {
+    width: 30px;
+    height: 24px;
+  }
+}
