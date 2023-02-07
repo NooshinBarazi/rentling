@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-function EtiketIcon(props: any) {
+function MemoEtiketIcon(props: any) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 337 270" fill="none" {...props}>
       <path
@@ -17,5 +17,4 @@ function EtiketIcon(props: any) {
   );
 }
 
-const MemoEtiketIcon = React.memo(EtiketIcon);
-export default MemoEtiketIcon;
+export const EtiketIcon = React.memo(MemoEtiketIcon);

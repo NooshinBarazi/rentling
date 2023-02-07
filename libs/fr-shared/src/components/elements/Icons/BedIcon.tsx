@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-function BedIcon(props: any) {
+function MemoBedIcon(props: any) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 26 22" fill="none" {...props}>
       <path
@@ -11,5 +11,4 @@ function BedIcon(props: any) {
   );
 }
 
-const MemoBedIcon = React.memo(BedIcon);
-export default MemoBedIcon;
+export const BedIcon = React.memo(MemoBedIcon);

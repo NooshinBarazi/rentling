@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-function CellphoneIcon(props: any) {
+function MemoCellphoneIcon(props: any) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 44 44" fill="none" {...props}>
       <path
@@ -19,5 +19,4 @@ function CellphoneIcon(props: any) {
   );
 }
 
-const MemoCellphoneIcon = React.memo(CellphoneIcon);
-export default MemoCellphoneIcon;
+export const CellphoneIcon = React.memo(MemoCellphoneIcon);

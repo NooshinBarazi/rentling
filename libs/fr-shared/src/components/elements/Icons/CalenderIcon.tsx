@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-function CalenderIcon(props: any) {
+function MemoCalenderIcon(props: any) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 30 29" fill="none" {...props}>
       <path
@@ -15,5 +15,4 @@ function CalenderIcon(props: any) {
   );
 }
 
-const MemoCalenderIcon = React.memo(CalenderIcon);
-export default MemoCalenderIcon;
+export const CalenderIcon = React.memo(MemoCalenderIcon);

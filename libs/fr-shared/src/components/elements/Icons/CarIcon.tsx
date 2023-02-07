@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-function CarIcon(props: any) {
+function MemoCarIcon(props: any) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 36 22" fill="none" {...props}>
       <path
@@ -11,5 +11,4 @@ function CarIcon(props: any) {
   );
 }
 
-const MemoCarIcon = React.memo(CarIcon);
-export default MemoCarIcon;
+export const CarIcon = React.memo(MemoCarIcon);

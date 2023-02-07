@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-function LikeFilledIcon(props: any) {
+function MemoLikeFilledIcon(props: any) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 30 28" fill="none" {...props}>
       <path
@@ -11,5 +11,4 @@ function LikeFilledIcon(props: any) {
   );
 }
 
-const MemoLikeFilledIcon = React.memo(LikeFilledIcon);
-export default MemoLikeFilledIcon;
+export const LikeFilledIcon = React.memo(MemoLikeFilledIcon);

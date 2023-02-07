@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-function MapIcon(props: any) {
+function MemoMapIcon(props: any) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 25 23" fill="none" {...props}>
       <path
@@ -13,5 +13,4 @@ function MapIcon(props: any) {
   );
 }
 
-const MemoMapIcon = React.memo(MapIcon);
-export default MemoMapIcon;
+export const MapIcon = React.memo(MemoMapIcon);

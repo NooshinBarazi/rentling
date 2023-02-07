@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-function ShareIcon(props: any) {
+function MemoShareIcon(props: any) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 24 28" fill="none" {...props}>
       <path
@@ -11,5 +11,4 @@ function ShareIcon(props: any) {
   );
 }
 
-const MemoShareIcon = React.memo(ShareIcon);
-export default MemoShareIcon;
+export const ShareIcon = React.memo(MemoShareIcon);

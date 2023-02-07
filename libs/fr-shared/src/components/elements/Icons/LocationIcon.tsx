@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-function LocationIcon(props: any) {
+function MemoLocationIcon(props: any) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 25 26" fill="none" {...props}>
       <path
@@ -19,5 +19,4 @@ function LocationIcon(props: any) {
   );
 }
 
-const MemoLocationIcon = React.memo(LocationIcon);
-export default MemoLocationIcon;
+export const LocationIcon = React.memo(MemoLocationIcon);

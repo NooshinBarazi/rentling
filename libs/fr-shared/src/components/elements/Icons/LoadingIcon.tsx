@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-function LoadingIcon(props: any) {
+function MemoLoadingIcon(props: any) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 39 38" fill="none" {...props}>
       <path
@@ -16,5 +16,4 @@ function LoadingIcon(props: any) {
   );
 }
 
-const MemoLoadingIcon = React.memo(LoadingIcon);
-export default MemoLoadingIcon;
+export const LoadingIcon = React.memo(MemoLoadingIcon);
