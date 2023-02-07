@@ -4,8 +4,6 @@ interface HeaderProps {
   children: any;
 }
 
-const Header = ({ children }: HeaderProps) => {
-  return <div>{children}</div>;
+export const Header = ({ children }: HeaderProps) => {
+  return <div className={styles.header}>{children}</div>;
 };
-
-export default Header;
