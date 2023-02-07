@@ -1,5 +1,5 @@
-export * from './elements/Icons/ProfileIcon';
 export * from './elements/Icons/PrimaryButtonIcon';
+export * from './elements/Icons/ProfileIcon';
 export * from './elements/Icons/MenuIcon';
 export * from './elements/Icons/LogoIcon';
 export * from './containers/Header/Header';
