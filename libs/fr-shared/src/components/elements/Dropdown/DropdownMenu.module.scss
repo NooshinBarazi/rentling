@@ -1,0 +1,26 @@
+@import '../../../design-system/schema.scss';
+
+.dropdown_menu {
+  ul {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    box-shadow: $box-shadow-3;
+    background-color: $color-white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    li {
+      font-size: 1.6rem;
+      padding: 1.2rem 4rem;
+      color: $color-text-light-gray;
+      list-style: none;
+      &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+      }
+    }
+  }
+}
