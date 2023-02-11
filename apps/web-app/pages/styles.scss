@@ -28,7 +28,10 @@ h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+body {
+  max-width: 160rem;
+  margin: auto;
+}
 a,
 li {
   color: inherit;
