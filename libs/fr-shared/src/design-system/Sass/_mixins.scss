@@ -4,12 +4,13 @@
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  justify-content: center;
   background: $color-primary;
   border: none;
   padding: 1rem 1.5rem;
   border-radius: 0.2rem;
   cursor: pointer;
-
+  min-width: 15rem;
   p {
     font-size: 1.4rem;
     font-weight: 600;
@@ -19,7 +20,6 @@
     width: 30px;
     height: auto;
   }
-
   &:hover {
     background: $color-white;
     outline: 2px solid $color-primary;
@@ -46,13 +46,13 @@
   border-radius: 0.2rem;
   transition: 0.2s all;
   cursor: pointer;
-
+  justify-content: center;
+  min-width: 15rem;
   p {
     font-size: 1.4rem;
     font-weight: 600;
     color: $color-primary;
   }
-
   span > svg {
     width: 30px;
     height: auto;
@@ -63,4 +63,10 @@
       color: $color-white;
     }
   }
+}
+
+@mixin cardAddress {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: $color-text-dark-gray;
 }
