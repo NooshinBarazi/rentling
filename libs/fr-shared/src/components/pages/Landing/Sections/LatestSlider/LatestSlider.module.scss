@@ -1,0 +1,14 @@
+@import '../../../../../design-system/schema.scss';
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  background-color: $color-bg-gray;
+}
+
+.skyline {
+  right: 0;
+  align-self: flex-end;
+}
