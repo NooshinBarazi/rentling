@@ -4,7 +4,7 @@ export * from './elements/Icons/MenuIcon';
 export * from './elements/Icons/LogoIcon';
 export * from './elements/Icons/ShareIcon';
 export * from './elements/Icons/SliderButton';
-export * from './elements/Icons/EtiketIcon';
+export * from './elements/Icons/LabelTagIcon';
 export * from './elements/Dropdown/DropdownMenu';
 export * from './elements/HouseImageSlider/HouseImageSlider';
 export * from './elements/HouseImageSlider/SliderCard/SliderCard';
