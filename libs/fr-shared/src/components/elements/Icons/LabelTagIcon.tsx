@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-function MemoEtiketIcon({ cityName, props }: any) {
+function MemoLabelTagIcon({ cityName, props }: any) {
   return (
     <div>
       <svg viewBox="0 0 337 270" fill="none" {...props}>
@@ -32,4 +32,4 @@ function MemoEtiketIcon({ cityName, props }: any) {
   );
 }
 
-export const EtiketIcon = React.memo(MemoEtiketIcon);
+export const LabelTagIcon = React.memo(MemoLabelTagIcon);
