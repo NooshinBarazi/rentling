@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './HouseImageSlider.module.scss';
 import Image from 'next/image';
 import { SliderPath } from './SliderPath';
-import { SlidebarButton, EtiketIcon, SliderCard } from '@rentling/fr-shared';
+import { SlidebarButton, LabelTagIcon, SliderCard } from '@rentling/fr-shared';
 
 interface HouseImageSliderProps {
   images: any[];
@@ -25,13 +25,12 @@ export const HouseImageSlider = ({ images }: HouseImageSliderProps) => {
   };
 
   useEffect(() => {
-    let intervalId: any;
     if (!isHovered) {
-      intervalId = setInterval(() => {
+      const intervalId = setInterval(() => {
         nextSlide();
       }, 6000);
+      return () => clearInterval(intervalId);
     }
-    return () => clearInterval(intervalId);
   }, [isHovered, nextSlide]);
 
   const currentImage = images[currentImageIndex];
@@ -57,14 +56,14 @@ export const HouseImageSlider = ({ images }: HouseImageSliderProps) => {
          * depends on our json object's structure, we need to set cityName to
         {currentImage.city}
          */}
-        <EtiketIcon cityName="chicago" />
+        <LabelTagIcon cityName="chicago" />
       </div>
       <div className={styles.box}>
         <SliderPath />
         <button className={styles.slider_Button_Prev} onClick={prevSlide}>
           <SlidebarButton />
         </button>
-        <div className={styles.Slider}>
+        <div className={styles.slider}>
           <div className={styles.PrevImage}>
             <Image src={prevImage.url} alt="" fill object-fit="cover" />
           </div>
@@ -84,7 +83,7 @@ export const HouseImageSlider = ({ images }: HouseImageSliderProps) => {
         bathrooms={currentImage.bathrooms}
         rooms={currentImage.rooms}
         parking={currentImage.parking}
-        sqfeet={currentImage.sqfeet}
+        area={currentImage.area}
         url={currentImage.url}
       />
     </div>
