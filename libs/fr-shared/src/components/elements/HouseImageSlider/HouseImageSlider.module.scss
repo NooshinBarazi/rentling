@@ -34,7 +34,7 @@
   overflow: hidden;
   margin: 0 5rem;
 }
-.CurrentImage {
+.current_image {
   margin: 0 5rem;
 }
 .slider {
@@ -44,8 +44,8 @@
   justify-content: space-between;
   align-items: center;
 }
-.slider_Button_Prev,
-.slider_Button_Next {
+.slider_button_prev,
+.slider_button_next {
   backdrop-filter: blur(2px);
   display: flex;
   align-items: center;
@@ -69,7 +69,7 @@
     }
   }
 }
-.slider_Button_Prev {
+.slider_button_prev {
   left: -1px;
   background: linear-gradient(
     90deg,
@@ -84,7 +84,7 @@
     clip-path: path('M48 137.782V3.21775L1.7098 70.5L48 137.782Z');
   }
 }
-.slider_Button_Next {
+.slider_button_next {
   right: -1px;
   background: linear-gradient(
     90deg,
@@ -95,13 +95,13 @@
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-.NextImage,
-.PrevImage {
+.next_image,
+.prev_image {
   position: relative;
   width: 66rem;
   height: 42rem;
 }
-.CurrentImage {
+.current_image {
   position: relative;
   width: 45rem;
   height: 27rem;

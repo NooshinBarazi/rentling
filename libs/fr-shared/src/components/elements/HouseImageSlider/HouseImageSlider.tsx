@@ -60,21 +60,21 @@ export const HouseImageSlider = ({ images }: HouseImageSliderProps) => {
       </div>
       <div className={styles.box}>
         <SliderPath />
-        <button className={styles.slider_Button_Prev} onClick={prevSlide}>
+        <button className={styles.slider_button_prev} onClick={prevSlide}>
           <SlidebarButton />
         </button>
         <div className={styles.slider}>
-          <div className={styles.PrevImage}>
+          <div className={styles.prev_image}>
             <Image src={prevImage.url} alt="" fill object-fit="cover" />
           </div>
-          <div className={styles.CurrentImage}>
+          <div className={styles.current_image}>
             <Image src={currentImage.url} alt="" fill />
           </div>
-          <div className={styles.NextImage}>
+          <div className={styles.next_image}>
             <Image src={nextImage.url} alt="" fill object-fit="contain" />
           </div>
         </div>
-        <button className={styles.slider_Button_Next} onClick={nextSlide}>
+        <button className={styles.slider_button_next} onClick={nextSlide}>
           <SlidebarButton />
         </button>
       </div>
