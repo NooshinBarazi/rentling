@@ -12,7 +12,7 @@ import styles from './LatestSlider.module.scss';
 //     rooms: '3',
 //     bathrooms: '2',
 //     parking: false,
-//     sqfeet: '950',
+//     area: '950',
 //   },
 
 //   {
@@ -23,7 +23,7 @@ import styles from './LatestSlider.module.scss';
 //     rooms: '3',
 //     bathrooms: '2',
 //     parking: false,
-//     sqfeet: '950',
+//     area: '950',
 //   },
 //   {
 //     url: 'https://fastly.picsum.photos/id/17/2500/1667.jpg?hmac=HD-JrnNUZjFiP2UZQvWcKrgLoC_pc_ouUSWv8kHsJJY',
@@ -33,7 +33,7 @@ import styles from './LatestSlider.module.scss';
 //     rooms: '3',
 //     bathrooms: '2',
 //     parking: true,
-//     sqfeet: '950',
+//     area: '950',
 //   },
 
 //   {
@@ -44,7 +44,7 @@ import styles from './LatestSlider.module.scss';
 //     rooms: '3',
 //     bathrooms: '2',
 //     parking: false,
-//     sqfeet: '950',
+//     area: '950',
 //   },
 //   {
 //     url: 'https://fastly.picsum.photos/id/17/2500/1667.jpg?hmac=HD-JrnNUZjFiP2UZQvWcKrgLoC_pc_ouUSWv8kHsJJY',
@@ -54,7 +54,7 @@ import styles from './LatestSlider.module.scss';
 //     rooms: '3',
 //     bathrooms: '2',
 //     parking: true,
-//     sqfeet: '950',
+//     area: '950',
 //   },
 //   {
 //     url: 'https://fastly.picsum.photos/id/14/2500/1667.jpg?hmac=ssQyTcZRRumHXVbQAVlXTx-MGBxm6NHWD3SryQ48G-o',
@@ -64,7 +64,7 @@ import styles from './LatestSlider.module.scss';
 //     rooms: '3',
 //     bathrooms: '2',
 //     parking: true,
-//     sqfeet: '950',
+//     area: '950',
 //   },
 // ];
 
