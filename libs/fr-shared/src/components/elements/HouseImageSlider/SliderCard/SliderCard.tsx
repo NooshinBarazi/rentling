@@ -15,7 +15,7 @@ interface Props {
   rooms: any;
   bathrooms: any;
   parking: any;
-  sqfeet: any;
+  area: any;
   url: any;
 }
 
@@ -24,7 +24,7 @@ export const SliderCard = ({
   rooms,
   bathrooms,
   parking,
-  sqfeet,
+  area,
   url,
 }: Props) => {
   return (
@@ -51,7 +51,7 @@ export const SliderCard = ({
         <div className={styles.card_item}>
           <SqFeetIcon />
           <p>
-            {sqfeet}
+            {area}
             <span>ft²</span>
           </p>
         </div>
