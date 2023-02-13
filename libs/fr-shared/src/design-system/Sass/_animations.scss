@@ -15,10 +15,10 @@
 
 // Landing page Slider animation
 
-@mixin SliderEtiket {
-  animation: etiket 2s ease-in-out alternate infinite;
+@mixin Slider_label_tag {
+  animation: label_tag 2s ease-in-out alternate infinite;
 }
-@keyframes etiket {
+@keyframes label_tag {
   from {
     transform: rotate(15deg);
   }

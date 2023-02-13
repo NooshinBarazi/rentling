@@ -5,10 +5,10 @@
   align-items: center;
   flex-direction: column;
 }
-.etiket {
+.label_tag {
   margin-top: 5rem;
   position: absolute;
-  @include SliderEtiket;
+  @include Slider_label_tag;
   transform-origin: right;
   left: 10rem;
   z-index: 55555;

@@ -51,7 +51,7 @@ export const HouseImageSlider = ({ images }: HouseImageSliderProps) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className={styles.etiket}>
+      <div className={styles.label_tag}>
         {/**
          * depends on our json object's structure, we need to set cityName to
         {currentImage.city}
