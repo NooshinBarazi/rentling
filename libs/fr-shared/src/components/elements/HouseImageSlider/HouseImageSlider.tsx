@@ -68,10 +68,10 @@ export const HouseImageSlider = ({ images }: HouseImageSliderProps) => {
             <Image src={prevImage.url} alt="" fill object-fit="cover" />
           </div>
           <div className={styles.current_image}>
-            <Image src={currentImage.url} alt="" fill />
+            <Image src={currentImage.url} alt="" fill object-fit="cover" />
           </div>
           <div className={styles.next_image}>
-            <Image src={nextImage.url} alt="" fill object-fit="contain" />
+            <Image src={nextImage.url} alt="" fill object-fit="cover" />
           </div>
         </div>
         <button className={styles.slider_button_next} onClick={nextSlide}>
