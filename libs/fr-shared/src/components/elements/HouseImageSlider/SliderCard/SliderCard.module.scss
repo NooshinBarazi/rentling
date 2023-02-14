@@ -16,12 +16,6 @@
 .card_address {
   p {
     @include cardAddress;
-    display: -webkit-box;
-    max-width: 300px;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 }
 
