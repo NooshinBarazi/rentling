@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-function GoToTopIcon(props: any) {
+function MemoGoToTopIcon(props: any) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 32 36" fill="none" {...props}>
       <path
@@ -11,5 +11,4 @@ function GoToTopIcon(props: any) {
   );
 }
 
-const MemoGoToTopIcon = React.memo(GoToTopIcon);
-export default MemoGoToTopIcon;
+export const GoToTopIcon = React.memo(MemoGoToTopIcon);

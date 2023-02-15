@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-function CameraIcon(props: React.SVGProps<SVGSVGElement>) {
+function MemoCameraIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 44 44" fill="none" {...props}>
       <path
@@ -19,5 +19,4 @@ function CameraIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-const MemoCameraIcon = React.memo(CameraIcon);
-export default MemoCameraIcon;
+export const CameraIcon = React.memo(MemoCameraIcon);

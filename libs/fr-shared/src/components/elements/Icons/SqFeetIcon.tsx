@@ -1,8 +1,8 @@
-import * as React from "react";
+import * as React from 'react';
 
-function SqFeetIcon(props: any) {
+function MemoSqFeetIcon(props: any) {
   return (
-    <svg width="1em" height="1em" viewBox="0 0 22 22" fill="none" {...props}>
+    <svg width="1em" viewBox="0 0 22 22" fill="none" {...props}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -13,5 +13,4 @@ function SqFeetIcon(props: any) {
   );
 }
 
-const MemoSqFeetIcon = React.memo(SqFeetIcon);
-export default MemoSqFeetIcon;
+export const SqFeetIcon = React.memo(MemoSqFeetIcon);

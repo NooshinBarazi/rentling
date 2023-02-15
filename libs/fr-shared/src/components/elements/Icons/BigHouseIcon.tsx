@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-function BigHouseIcon(props: any) {
+function MemoBigHouseIcon(props: any) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 42 43" fill="none" {...props}>
       <mask
@@ -69,5 +69,4 @@ function BigHouseIcon(props: any) {
   );
 }
 
-const MemoBigHouseIcon = React.memo(BigHouseIcon);
-export default MemoBigHouseIcon;
+export const BigHouseIcon = React.memo(MemoBigHouseIcon);

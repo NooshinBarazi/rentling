@@ -1,8 +1,8 @@
-import * as React from "react";
+import * as React from 'react';
 
-function BathroomIcon(props: any) {
+function MemoBathroomIcon(props: any) {
   return (
-    <svg width="1em" height="1em" viewBox="0 0 26 23" fill="none" {...props}>
+    <svg width="1em" viewBox="0 0 26 23" fill="none" {...props}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -13,5 +13,4 @@ function BathroomIcon(props: any) {
   );
 }
 
-const MemoBathroomIcon = React.memo(BathroomIcon);
-export default MemoBathroomIcon;
+export const BathroomIcon = React.memo(MemoBathroomIcon);

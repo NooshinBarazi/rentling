@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-function DateMonthIcon(props: any) {
+function MemoDateMonthIcon(props: any) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 20 21" fill="none" {...props}>
       <path
@@ -15,5 +15,4 @@ function DateMonthIcon(props: any) {
   );
 }
 
-const MemoDateMonthIcon = React.memo(DateMonthIcon);
-export default MemoDateMonthIcon;
+export const DateMonthIcon = React.memo(MemoDateMonthIcon);

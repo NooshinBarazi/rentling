@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-function InsuranceIcon(props: any) {
+function MemoInsuranceIcon(props: any) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 44 44" fill="none" {...props}>
       <path
@@ -19,5 +19,4 @@ function InsuranceIcon(props: any) {
   );
 }
 
-const MemoInsuranceIcon = React.memo(InsuranceIcon);
-export default MemoInsuranceIcon;
+export const InsuranceIcon = React.memo(MemoInsuranceIcon);

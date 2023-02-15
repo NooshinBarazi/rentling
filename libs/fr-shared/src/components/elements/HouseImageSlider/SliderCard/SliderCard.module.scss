@@ -1,0 +1,93 @@
+@import '../../../../design-system/schema.scss';
+
+.slider_card {
+  display: flex;
+  background-color: $color-white;
+  flex-direction: column;
+  min-width: 35rem;
+  padding: 2rem;
+  gap: 2rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  box-shadow: $box-shadow-3;
+  margin-top: -12rem;
+  z-index: 5;
+}
+
+.card_address {
+  p {
+    @include cardAddress;
+  }
+}
+
+.card_items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-top: 0.15rem solid rgba($color-grayish-light-green, 0.7);
+  border-bottom: 0.15rem solid rgba($color-grayish-light-green, 0.7);
+}
+.card_item {
+  flex: 1 1 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  p {
+    padding-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $color-text-light-gray;
+  }
+  span {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-left: 0.4rem;
+  }
+}
+
+.card_buttons {
+  display: grid;
+  grid-template-rows: 1 / 2;
+  grid-template-columns: 1 / 6;
+  align-items: center;
+  justify-content: space-between;
+
+  svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+  }
+  button {
+    @include primary-button;
+  }
+}
+
+.share_icon {
+  grid-area: 1 / 4 / 2 / 5;
+  svg {
+    transition: 0.2s;
+    path {
+      transition: 0.5s;
+    }
+    &:hover {
+      scale: 1.2;
+      path {
+        fill: $color-primary;
+      }
+    }
+  }
+}
+.like_icon {
+  grid-area: 1 / 5 / 2 / 6;
+  svg {
+    transition: 0.2s;
+
+    &:hover {
+      scale: 1.2;
+    }
+  }
+}

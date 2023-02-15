@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-function PrimaryButtonIcon(props: any) {
+function MemoPrimaryButtonIcon(props: any) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 50 50" fill="none" {...props}>
       <path
@@ -21,5 +21,4 @@ function PrimaryButtonIcon(props: any) {
   );
 }
 
-const MemoPrimaryButtonIcon = React.memo(PrimaryButtonIcon);
-export default MemoPrimaryButtonIcon;
+export const PrimaryButtonIcon = React.memo(MemoPrimaryButtonIcon);

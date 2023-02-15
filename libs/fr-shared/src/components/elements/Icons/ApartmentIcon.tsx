@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-function ApartmentIcon(props: any) {
+function MemoApartmentIcon(props: any) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 34 43" fill="none" {...props}>
       <mask
@@ -274,5 +274,4 @@ function ApartmentIcon(props: any) {
   );
 }
 
-const MemoApartmentIcon = React.memo(ApartmentIcon);
-export default MemoApartmentIcon;
+export const ApartmentIcon = React.memo(MemoApartmentIcon);

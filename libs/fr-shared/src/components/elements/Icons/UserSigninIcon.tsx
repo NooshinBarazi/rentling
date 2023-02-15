@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-function UserSigninIcon(props: any) {
+function MemoUserSigninIcon(props: any) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 31 30" fill="none" {...props}>
       <path
@@ -11,5 +11,4 @@ function UserSigninIcon(props: any) {
   );
 }
 
-const MemoUserSigninIcon = React.memo(UserSigninIcon);
-export default MemoUserSigninIcon;
+export const UserSigninIcon = React.memo(MemoUserSigninIcon);
