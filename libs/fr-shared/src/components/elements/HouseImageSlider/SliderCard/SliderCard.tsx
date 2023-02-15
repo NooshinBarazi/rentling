@@ -8,6 +8,9 @@ import {
   SqFeetIcon,
   LikeIcon,
   ShareIcon,
+  TextIcon,
+  DateDayIcon,
+  DateMonthIcon,
 } from '@rentling/fr-shared';
 
 interface Props {
@@ -61,6 +64,19 @@ export const SliderCard = ({
           </p>
         </div>
       </div>
+      <div className={styles.card_price}>
+        <div className={styles.card_date}>
+          <DateDayIcon />
+          <h4>255</h4>
+          <p>$/day</p>
+        </div>
+        <div className={styles.card_date}>
+          <DateMonthIcon />
+          <h4>7,100</h4>
+          <p>$/day</p>
+        </div>
+      </div>
+
       <div className={styles.card_buttons}>
         <Link href={`/${url}`}>
           <button>

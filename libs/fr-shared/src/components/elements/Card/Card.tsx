@@ -18,7 +18,14 @@ import { hostname } from 'os';
 
 export const Card = () => {
   return (
-    <section className={styles.card}>
+    <section className={styles.result}>
+      <div className={styles.sort_item}>
+        <p>sort by:</p>
+        <select>
+          <option>cheaper</option>
+        </select>
+      </div>
+      <div className={styles.cards}>
       {houses.map((house: any) => (
         <div className={styles.house}>
           <div className={styles.card_img}>
@@ -67,6 +74,7 @@ export const Card = () => {
           </div>
         </div>
       ))}
+      </div>
     </section>
   );
 };
