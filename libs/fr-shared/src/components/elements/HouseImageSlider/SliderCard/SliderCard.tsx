@@ -11,6 +11,7 @@ import {
 } from '@rentling/fr-shared';
 
 interface Props {
+  title: any;
   address: any;
   rooms: any;
   bathrooms: any;
@@ -20,6 +21,7 @@ interface Props {
 }
 
 export const SliderCard = ({
+  title,
   address,
   rooms,
   bathrooms,
@@ -29,6 +31,9 @@ export const SliderCard = ({
 }: Props) => {
   return (
     <div className={styles.slider_card}>
+      <div className={styles.card_title}>
+        <p>{title}</p>
+      </div>
       <div className={styles.card_address}>
         <p>{address}</p>
       </div>

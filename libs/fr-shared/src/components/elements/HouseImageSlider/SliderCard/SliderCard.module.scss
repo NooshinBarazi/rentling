@@ -4,13 +4,22 @@
   display: flex;
   background-color: $color-white;
   flex-direction: column;
-  min-width: 35rem;
+  min-width: 36.5rem;
   padding: 2rem;
   gap: 2rem;
   border-radius: 0 0 0.5rem 0.5rem;
   box-shadow: $box-shadow-3;
   margin-top: -12rem;
   z-index: 5;
+}
+
+.card_title {
+  p {
+    font-weight: 70rem;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    color: $color-grayish-light-green;
+  }
 }
 
 .card_address {

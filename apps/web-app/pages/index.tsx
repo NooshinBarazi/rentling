@@ -1,4 +1,5 @@
 import styles from './index.module.scss';
+import {Card} from '../../../libs/fr-shared/src/components/elements/Card/Card'
 
 export function Index() {
   /*
@@ -7,7 +8,7 @@ export function Index() {
    * Note: The corresponding styles are in the ./index.scss file.
    */
   return (
-    <>hello word</>
+    <Card/>
 //     <div className={styles.page}>
 //       <div className="wrapper">
 //         <div className="container">
