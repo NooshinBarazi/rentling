@@ -1,4 +1,5 @@
 import styles from './index.module.scss';
+import {Information} from '../../../libs/fr-shared/src/components/section/information/Informayion'
 
 export function Index() {
   /*
@@ -7,7 +8,7 @@ export function Index() {
    * Note: The corresponding styles are in the ./index.scss file.
    */
   return (
-    <>hello word</>
+    <Information />
 //     <div className={styles.page}>
 //       <div className="wrapper">
 //         <div className="container">
