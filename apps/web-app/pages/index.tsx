@@ -6,9 +6,11 @@ export function Index() {
    *
    * Note: The corresponding styles are in the ./index.scss file.
    */
+
   return (
     <div></div>
   );
+
 }
 
 export default Index;
