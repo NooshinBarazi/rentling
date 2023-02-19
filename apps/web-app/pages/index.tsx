@@ -1,5 +1,4 @@
 import styles from './index.module.scss';
-import {Form} from '../../../libs/fr-shared/src/components/elements/Form/Form'
 
 export function Index() {
   /*
