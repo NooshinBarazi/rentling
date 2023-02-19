@@ -39,12 +39,12 @@
 .house {
   width: 36.5rem;
   height: 54rem;
-  background: #f8f8f8;
+  background: $color-bg-gray;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  border-radius: 0.5px;
+  border-radius: 0.5rem;
 }
 .card_img {
   position: relative;
