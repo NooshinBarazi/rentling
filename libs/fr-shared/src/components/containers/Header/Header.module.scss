@@ -1,0 +1,11 @@
+@import '../../../design-system/schema.scss';
+.header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 160rem;
+  margin: auto;
+  background-color: $color-white;
+  z-index: 666;
+}

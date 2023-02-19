@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-function TwitterIcon(props: any) {
+function MemoTwitterIcon(props: any) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 50 50" fill="none" {...props}>
       <path
@@ -11,5 +11,4 @@ function TwitterIcon(props: any) {
   );
 }
 
-const MemoTwitterIcon = React.memo(TwitterIcon);
-export default MemoTwitterIcon;
+export const TwitterIcon = React.memo(MemoTwitterIcon);

@@ -1,1 +1,31 @@
 @import './variables';
+<<<<<<< HEAD
+=======
+
+// Landing page Slider Zoom in animation
+@mixin SliderZoomin {
+  animation: zoomin 12s ease-in-out alternate infinite;
+}
+@keyframes zoomin {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.1;
+  }
+}
+
+// Landing page Slider animation
+
+@mixin Slider_label_tag {
+  animation: label_tag 2s ease-in-out alternate infinite;
+}
+@keyframes label_tag {
+  from {
+    transform: rotate(15deg);
+  }
+  to {
+    transform: rotate(20deg);
+  }
+}
+>>>>>>> c869776faf3e3d92bdeb2d83e268a6409be0281c

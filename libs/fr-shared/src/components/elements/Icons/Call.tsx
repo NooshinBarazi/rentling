@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-function Call(props: any) {
+function MemoCallIcon(props: any) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 50 50" fill="none" {...props}>
       <path
@@ -11,5 +11,4 @@ function Call(props: any) {
   );
 }
 
-const MemoCall = React.memo(Call);
-export default MemoCall;
+export const CallIcon = React.memo(MemoCallIcon);

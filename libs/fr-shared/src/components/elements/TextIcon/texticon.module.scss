@@ -1,6 +1,28 @@
+<<<<<<< HEAD
 .textIcon {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
 }
+=======
+@import '../../../design-system/schema.scss';
+
+.text_icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.text_icon{
+  svg{
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $color-text-light-gray;
+  }
+}
+>>>>>>> c869776faf3e3d92bdeb2d83e268a6409be0281c
