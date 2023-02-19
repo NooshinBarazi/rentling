@@ -5,6 +5,10 @@
   margin-left: auto;
 }
 .sort_item {
+  // position: sticky;
+  // top: 0;
+  // background: $color-bg-gray;
+  z-index: 10;
   display: flex;
   align-items: center;
   width: 100%;
