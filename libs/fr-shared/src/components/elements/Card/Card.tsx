@@ -1,20 +1,7 @@
-import {
-  BathroomIcon,
-  BedIcon,
-  CarIcon,
-  ShareIcon,
-  SqFeetIcon,
-  LikeIcon,
-  DateDayIcon,
-  DateMonthIcon,
-  TextIcon,
-  Button,
-  SliderCard,
-} from '@rentling/fr-shared';
+import { SliderCard} from '@rentling/fr-shared';
 import { houses } from './data';
 import styles from './Card.module.scss';
 import Image from 'next/image';
-import { hostname } from 'os';
 
 export const Card = () => {
   return (
