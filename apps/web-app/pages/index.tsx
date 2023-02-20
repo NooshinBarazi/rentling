@@ -8,11 +8,7 @@ export function Index() {
    */
 
   return (
-<<<<<<< HEAD
-<div></div>
-=======
     <div></div>
->>>>>>> c869776faf3e3d92bdeb2d83e268a6409be0281c
   );
 
 }
