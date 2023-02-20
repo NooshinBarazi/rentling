@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-function MailIcon(props: any) {
+function MemoMailIcon(props: any) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 50 50" fill="none" {...props}>
       <path
@@ -11,5 +11,4 @@ function MailIcon(props: any) {
   );
 }
 
-const MemoMailIcon = React.memo(MailIcon);
-export default MemoMailIcon;
+export const MailIcon = React.memo(MemoMailIcon);

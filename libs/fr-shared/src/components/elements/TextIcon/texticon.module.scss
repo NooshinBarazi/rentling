@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+.textIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+=======
 @import '../../../design-system/schema.scss';
 
 .text_icon {
@@ -17,3 +25,4 @@
     color: $color-text-light-gray;
   }
 }
+>>>>>>> c869776faf3e3d92bdeb2d83e268a6409be0281c
