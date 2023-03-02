@@ -1,0 +1,33 @@
+#house_section1 {
+  display: flex;
+  width: 800px;
+  height: 700px;
+  justify-content: center;
+  align-items: center;
+}
+
+.house_container {
+  position: absolute;
+  width: 450px;
+  height: 240.75px;
+  background-image: url('./image/house1.jpg');
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.small_image_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.small_image {
+  position: relative;
+  width: 150px;
+  height: 90.41px;
+  left: -15px;
+  top: 208px;
+  border: 3px solid #ffffff;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 1px;
+  margin-right: 15px;
+}
