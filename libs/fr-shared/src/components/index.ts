@@ -32,3 +32,4 @@ export * from './containers/Header/Navigationbars/NavbarDrawer/NavbarDrawer';
 export * from './pages/Landing/Sections/Hero/Hero';
 export * from './pages/Landing/Sections/LatestSlider/LatestSlider';
 export * from './elements/Card/Card';
+export * from './elements/Card/data';
