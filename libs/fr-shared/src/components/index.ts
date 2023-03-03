@@ -33,3 +33,6 @@ export * from './pages/Landing/Sections/Hero/Hero';
 export * from './pages/Landing/Sections/LatestSlider/LatestSlider';
 export * from './elements/Card/Card';
 export * from './elements/Card/data';
+export * from './HousePayment/houseDetails';
+export * from './elements/Input/Input';
+export * from './HousePayment/housePayment';
