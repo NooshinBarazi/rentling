@@ -1,6 +1,9 @@
 #section_houseDetails {
-  width: 531px;
+  width: 100%;
+  height: 100%;
   margin-top: 50px;
+  // width: 53.1px;
+  // margin-top: 50px;
 }
 
 .main_container {
@@ -9,18 +12,22 @@
   align-items: center;
   justify-content: center;
 }
+
 .container_text {
-  width: 151px;
-  height: 27px;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  margin-bottom: 40px;
 }
 
-.container_text p {
-  text-align: center;
-  color: #a7a7a7;
-  font-size: 20px;
-  line-height: 27px;
-  font-weight: 600;
+.container_text {
+  p {
+    text-align: center;
+    color: #a7a7a7;
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 600;
+  }
 }
 .button_container {
   display: flex;
@@ -34,8 +41,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0px;
-  position: absolute;
+  margin-top: 20px;
 }
 
 .text_price p {
@@ -53,17 +59,42 @@
   color: #a7a7a7;
   bottom: -7px;
 }
-.input_container {
+.form_container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 150px;
+  margin-top: 40px;
 }
 
-.input_container Input {
+.input_container {
   margin-bottom: 20px;
 }
 
+.input_container {
+  Input {
+    width: 300px;
+    height: 60px;
+    padding: 0px 90px;
+  }
+}
+
 .button_style {
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.actived_button {
+  background: #417d8a;
+  border: none;
+  width: 150px;
+  height: 60px;
+}
+
+.deactive_button {
+  background: white;
+  border: none;
+  width: 150px;
+  height: 60px;
+  border: 1px solid #417d8a;
 }
