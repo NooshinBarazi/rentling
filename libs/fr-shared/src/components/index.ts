@@ -36,3 +36,5 @@ export * from './elements/Card/data';
 export * from './HousePayment/houseDetails';
 export * from './elements/Input/Input';
 export * from './HousePayment/housePayment';
+export * from './elements/Icons/SliderButton';
+export * from './elements/Icons/CalenderIcon';
