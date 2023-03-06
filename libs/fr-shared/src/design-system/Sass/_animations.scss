@@ -1,7 +1,4 @@
 @import './variables';
-<<<<<<< HEAD
-=======
-
 // Landing page Slider Zoom in animation
 @mixin SliderZoomin {
   animation: zoomin 12s ease-in-out alternate infinite;
@@ -28,4 +25,3 @@
     transform: rotate(20deg);
   }
 }
->>>>>>> c869776faf3e3d92bdeb2d83e268a6409be0281c

@@ -1,4 +1,6 @@
 import styles from './index.module.scss';
+import { Form } from 'libs/fr-shared/src/components/elements/Form/Form';
+import { ContainerForm } from '@rentling/fr-shared';
 
 export function Index() {
   /*
@@ -8,11 +10,7 @@ export function Index() {
    */
 
   return (
-<<<<<<< HEAD
-<div></div>
-=======
-    <div></div>
->>>>>>> c869776faf3e3d92bdeb2d83e268a6409be0281c
+    <ContainerForm />
   );
 
 }
