@@ -10,7 +10,7 @@ interface IProps {
 
 export const Button = ({ Icon, text, newStyle, onClick }: IProps) => {
   return (
-    <button onClick={onClick} className={newStyle || styles.primaryBtn}>
+    <button onClick={onClick} className={newStyle || styles.primary_btn}>
       <p>{text}</p>
       <span>{Icon}</span>
     </button>
