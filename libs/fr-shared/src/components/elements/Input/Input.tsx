@@ -20,6 +20,7 @@ export const Input = ({Icon, name, type, id, validation, placeholder,error, regi
       <div className={styles.input_icon}>{Icon}</div>
       <input
         {...register(name, validation)}
+
         name={name}
         type={type}
         id={id}

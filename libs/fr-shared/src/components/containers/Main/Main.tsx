@@ -5,7 +5,7 @@ interface MainProps {
 }
 
 const Main = ({ children }: MainProps) => {
-  return <div>{children}</div>;
+  return <main>{children}</main>;
 };
 
 export default Main;
