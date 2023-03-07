@@ -5,7 +5,7 @@ interface FooterProps {
 }
 
 const Footer = ({ children }: FooterProps) => {
-  return <div>{children}</div>;
+  return <footer>{children}</footer>;
 };
 
 export default Footer;

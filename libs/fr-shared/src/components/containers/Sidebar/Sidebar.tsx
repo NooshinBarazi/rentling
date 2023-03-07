@@ -5,7 +5,7 @@ interface SidebarProps {
 }
 
 const Sidebar = ({ children }: SidebarProps) => {
-  return <div>{children}</div>;
+  return <aside>{children}</aside>;
 };
 
 export default Sidebar;
