@@ -1,6 +1,5 @@
 import { useForm } from 'react-hook-form';
-import { UserSigninIcon, Input, PrimaryButtonIcon } from '@rentling/fr-shared';
-import { MailIcon } from '../Icons/Mail_Icon';
+import { UserSigninIcon, Input, PrimaryButtonIcon, MailIcon } from '@rentling/fr-shared';
 import styles from './Form.module.scss';
 
 export const Form = ({onSubmit, isLogin }: any) => {
