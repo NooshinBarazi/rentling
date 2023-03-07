@@ -10,12 +10,12 @@ interface IProps {
   register: UseFormRegister<FieldValues>;
 }
 
-export const Input = ({Icon, name, type, id, required, register,}: IProps) => {
+export const Input = ({ Icon, name, type, id, required, register }: IProps) => {
   return (
     <>
       <div>{Icon}</div>
       <input
-        {...register(name, {required})}
+        {...register(name, { required })}
         name={name}
         type={type}
         id={id}

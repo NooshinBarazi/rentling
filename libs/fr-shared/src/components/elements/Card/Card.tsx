@@ -1,4 +1,4 @@
-import { SliderCard} from '@rentling/fr-shared';
+import { SliderCard } from '@rentling/fr-shared';
 import { houses } from './data';
 import styles from './Card.module.scss';
 import Image from 'next/image';
@@ -13,18 +13,18 @@ export const Card = () => {
         </select>
       </div>
       <div className={styles.cards}>
-      {houses.map((house: any) => (
-        <div className={styles.house}>
-          <div className={styles.card_img}>
-            <Image
-              src={house.img}
-              alt="Picture of house"
-              fill
-              object-fit="cover"
-            />
-          </div>
-          <div className={styles.card_info}>
-            {/* <div className={styles.card_text}>
+        {houses.map((house: any) => (
+          <div className={styles.house}>
+            <div className={styles.card_img}>
+              <Image
+                src={house.img}
+                alt="Picture of house"
+                fill
+                object-fit="cover"
+              />
+            </div>
+            <div className={styles.card_info}>
+              {/* <div className={styles.card_text}>
               <h4>{house.title}</h4>
               <p>{house.describtion}</p>
             </div>
@@ -49,18 +49,18 @@ export const Card = () => {
                 <span>{<LikeIcon />}</span>
               </div> 
             </div>*/}
-            <SliderCard
-            title={house.title}
-              address={house.describtion}
-              rooms={house.feature.bed}
-              bathrooms={house.feature.bathroom}
-              parking={house.feature.parking}
-              area={house.feature.meterage}
-              url={undefined}
-            />
+              <SliderCard
+                title={house.title}
+                address={house.describtion}
+                rooms={house.feature.bed}
+                bathrooms={house.feature.bathroom}
+                parking={house.feature.parking}
+                area={house.feature.meterage}
+                url={undefined}
+              />
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
       </div>
     </section>
   );
