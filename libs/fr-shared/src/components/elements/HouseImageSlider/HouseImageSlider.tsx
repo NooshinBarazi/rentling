@@ -84,8 +84,7 @@ export const HouseImageSlider = ({ images }: HouseImageSliderProps) => {
         rooms={currentImage.rooms}
         parking={currentImage.parking}
         area={currentImage.area}
-        url={currentImage.url}
-      />
+        url={currentImage.url} title={undefined}      />
     </div>
   );
 };
