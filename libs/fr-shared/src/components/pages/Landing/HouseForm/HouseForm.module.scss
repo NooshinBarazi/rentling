@@ -1,0 +1,97 @@
+@import '../../../../../design-system/schema.scss';
+
+.house_form_section {
+  background-color: $color-bg-gray;
+  padding-top: 10rem;
+  display: grid;
+  grid-row-gap: 5rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 5rem auto auto;
+  padding-bottom: 20rem;
+}
+
+.filtered_result {
+  z-index: 1;
+  p {
+    font-size: 3rem;
+    font-weight: 500;
+    color: $color-text-light-gray;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: 2 / 1 / 3 / 3;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 40rem;
+    height: 0.2rem;
+    background-color: $color-text-light-gray;
+  }
+  &::before {
+    margin-left: -55rem;
+    background: linear-gradient(
+      to left,
+      rgba($color-text-light-gray, 0.5) 0%,
+      rgba($color-text-light-gray, 0) 100%
+    );
+  }
+  &::after {
+    margin-right: -55rem;
+    background: linear-gradient(
+      to right,
+      rgba($color-text-light-gray, 0.5) 0%,
+      rgba($color-text-light-gray, 0) 100%
+    );
+  }
+}
+
+.go_to_top {
+  position: sticky;
+
+  z-index: 555;
+  top: calc(100% - 10rem);
+  grid-area: 3 / 1 / 4 / 3;
+  place-self: end;
+  display: flex;
+  margin-right: 5rem;
+  svg {
+    cursor: pointer;
+    height: 5rem;
+  }
+  transition: all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s;
+}
+
+.form_images {
+  grid-area: 1 / 2 / 2 / 3;
+  place-self: center start;
+  width: 50rem;
+  height: 50rem;
+}
+.filtered_cards {
+  grid-area: 4 / 1 / 5 / 3;
+}
+.form {
+  z-index: 555;
+  border-radius: 0.5rem;
+  position: sticky;
+  top: 6.5rem;
+  margin-left: 2.5rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 35rem;
+  padding: 4rem 2rem;
+  box-shadow: $box-shadow-6;
+  transition: 0.5s;
+}
+
+.button {
+  @include primary-button;
+  margin-top: 2rem;
+  max-width: 20rem;
+  max-height: 4rem;
+  margin-left: calc(50% - 10rem);
+}
