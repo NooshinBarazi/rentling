@@ -4,8 +4,6 @@ interface FooterProps {
   children: any;
 }
 
-const Footer = ({ children }: FooterProps) => {
+export const Footer = ({ children }: FooterProps) => {
   return <footer>{children}</footer>;
 };
-
-export default Footer;

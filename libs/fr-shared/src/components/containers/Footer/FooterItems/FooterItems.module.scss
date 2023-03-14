@@ -1,0 +1,110 @@
+@import '../../../../design-system/schema.scss';
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5rem;
+  background-color: #353535;
+}
+
+.social_media {
+  background-color: $color-secondary;
+  display: grid;
+  grid-template-areas:
+    'a a a'
+    'b b b';
+  column-gap: 2rem;
+  border-radius: 1rem;
+  p {
+    place-self: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $color-text-dark-gray;
+    grid-area: a;
+  }
+  svg {
+    grid-area: b b b;
+    width: 7rem;
+    height: 5rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: 0.2s all;
+    path {
+      transition: 0.2s all;
+      fill: $color-text-dark-gray;
+    }
+    &:hover {
+      scale: 1.1;
+      path {
+        fill: $color-white;
+      }
+    }
+  }
+}
+
+.contact {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  p {
+    place-self: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $color-text-dark-gray;
+  }
+  .mail,
+  .call {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: 0.2s all;
+    &:hover {
+      scale: 1.1;
+      h3 {
+        color: $color-white;
+      }
+      svg {
+        path {
+          fill: $color-white;
+        }
+      }
+    }
+    h3 {
+      color: $color-secondary;
+      font-weight: 500;
+      font-size: 1.6rem;
+    }
+    svg {
+      width: 2rem;
+      height: 2rem;
+      path {
+        fill: $color-secondary;
+      }
+    }
+  }
+}
+
+.credit {
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $color-white;
+  }
+  svg {
+    path {
+      &:nth-child(-n + 3) {
+        fill: $color-white;
+      }
+      &:nth-child(n + 6) {
+        fill: $color-white;
+      }
+    }
+  }
+}
