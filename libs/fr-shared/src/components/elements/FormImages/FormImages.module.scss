@@ -1,0 +1,28 @@
+@import '../../../design-system/schema.scss';
+
+.country {
+  z-index: 0;
+  position: absolute;
+  top: -10rem;
+  left: -30rem;
+  scale: 1.4;
+  svg {
+    path {
+      fill: #edeeef;
+    }
+  }
+}
+.form_images_box,
+.form_country_box {
+  position: relative;
+  display: flex;
+  height: 60rem;
+  width: 60rem;
+}
+.form_images_box {
+  overflow: hidden;
+}
+.image {
+  z-index: 2;
+  position: absolute;
+}
