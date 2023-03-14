@@ -1,26 +1,32 @@
 @import '../../../design-system/schema.scss';
 
-.dropdown_menu {
-  ul {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    box-shadow: $box-shadow-3;
-    background-color: $color-white;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
+.dropdown_link_menu {
+  margin-bottom: -1rem;
+  @include dropdown_link;
+}
 
-    li {
-      font-size: 1.6rem;
-      padding: 1.2rem 4rem;
-      color: $color-text-light-gray;
-      list-style: none;
-      &:hover {
-        background-color: $color-primary;
-        color: $color-white;
-      }
-    }
-  }
+//
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 0 1rem;
+  max-width: 20rem;
+  min-height: 3rem;
+  flex: 1 1 auto;
+  color: $color-grayish-dark-green;
+  background-image: url("data:image/svg+xml,%3Csvg width='13' height='7' viewBox='0 0 13 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.7431 0.242494C12.5718 0.0808314 12.369 0 12.1347 0C11.9009 0 11.6983 0.0808314 11.527 0.242494L6.50856 4.97921L1.47299 0.226328C1.31313 0.0754426 1.11331 0 0.873518 0C0.633729 0 0.428195 0.0808314 0.256917 0.242494C0.085639 0.404157 0 0.595566 0 0.816721C0 1.03744 0.085639 1.22864 0.256917 1.3903L6.02899 6.82217C6.0975 6.88684 6.17172 6.93275 6.25165 6.95991C6.33158 6.98664 6.41722 7 6.50856 7C6.59991 7 6.68555 6.98664 6.76548 6.95991C6.84541 6.93275 6.91963 6.88684 6.98814 6.82217L12.7602 1.37413C12.9201 1.22325 13 1.03744 13 0.816721C13 0.595566 12.9144 0.404157 12.7431 0.242494Z' fill='%23cdd9dc'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: right 1rem top 50%;
+  background-size: 1.5rem;
+  border: 0.15rem solid $color-grayish-light-green;
+  border-radius: 0.4rem;
+  position: relative;
+}
+
+.dropdown_list {
+  @include dropdown_option;
 }
