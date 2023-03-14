@@ -12,7 +12,6 @@ export * from './elements/Button/Button';
 export * from './elements/Dropdown/DropdownMenu';
 export * from './elements/Icons/CellphoneIcon';
 export * from './elements/HouseImageSlider/HouseImageSlider';
-export * from './elements/HouseImageSlider/SliderCard/SliderCard';
 export * from './elements/Icons/BedIcon';
 export * from './elements/Icons/BathroomIcon';
 export * from './elements/Icons/CarIcon';
