@@ -21,6 +21,7 @@ export * from './elements/Icons/ProfileIcon';
 export * from './elements/Icons/InsuranceIcon';
 export * from './elements/Icons/HouseTickIcon';
 export * from './elements/Icons/CameraIcon';
+export * from './elements/Icons/GoToTopIcon';
 export * from './containers/Header/Header';
 export * from './containers/Main/Main';
 //export * from './containers/Header/Navigationbars/MobileNavbar/MobileNavbar';
