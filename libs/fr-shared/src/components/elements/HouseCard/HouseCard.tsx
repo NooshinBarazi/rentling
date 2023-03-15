@@ -68,7 +68,7 @@ export const HouseCard = ({
               <span>parking</span>
             </p>
           </div>
-          <div className={styles.card_feat}>
+          <div className={styles.card_feature}>
             <SqFeetIcon />
             <p>
               {area}
