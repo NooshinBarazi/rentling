@@ -16,16 +16,16 @@ import {
 import Image from 'next/image';
 
 interface Props {
-  title: any;
+  title?: any;
   address: any;
   bedrooms: any;
   bathrooms: any;
   parking: any;
   area: any;
-  url: any;
+  url?: any;
   thirtyDay: any;
   oneDay: any;
-  image: any;
+  image?: any;
 }
 
 export const HouseCard = ({
@@ -53,15 +53,15 @@ export const HouseCard = ({
           <p>{address}</p>
         </div>
         <div className={styles.card_features}>
-          <div className={styles.card_feat}>
+          <div className={styles.card_feature}>
             <BedIcon />
             <p>{bedrooms}</p>
           </div>
-          <div className={styles.card_feat}>
+          <div className={styles.card_feature}>
             <BathroomIcon />
             <p>{bathrooms}</p>
           </div>
-          <div className={styles.card_feat}>
+          <div className={styles.card_feature}>
             <CarIcon />
             <p>
               {parking ? 'with' : 'without'}
