@@ -9,7 +9,6 @@ import {
   LogoIcon,
 } from '@rentling/fr-shared';
 import Link from 'next/link';
-import { LoadingIcon } from '../../../elements/Icons/LoadingIcon';
 
 interface Props {}
 
@@ -31,11 +30,11 @@ export const FooterItems = (props: Props) => {
       <div className={styles.contact}>
         <p> 7/24 ready to help you </p>
         <Link href={'/'} className={styles.mail}>
-          <MailIcon />
-          <h3> RentalHouse@info.com</h3>
+          <MailIcon className={styles.mail_icon} />
+          <h3> RentalHouse@info.com </h3>
         </Link>
         <Link href={'/'} className={styles.call}>
-          <CallIcon />
+          <CallIcon className={styles.call_icon} />
           <h3>{`+1 (212) - 123 - 4567`}</h3>
         </Link>
       </div>

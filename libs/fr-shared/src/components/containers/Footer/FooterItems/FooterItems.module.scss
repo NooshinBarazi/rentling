@@ -55,35 +55,38 @@
     font-weight: 600;
     color: $color-text-dark-gray;
   }
-  .mail,
-  .call {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    transition: 0.2s all;
-    &:hover {
-      scale: 1.1;
-      h3 {
-        color: $color-white;
-      }
-      svg {
-        path {
-          fill: $color-white;
-        }
-      }
-    }
+}
+.mail,
+.call {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: 0.2s all;
+  h3 {
+    color: $color-secondary;
+    font-weight: 500;
+    font-size: 1.6rem;
+  }
+  &:hover {
+    scale: 1.1;
     h3 {
-      color: $color-secondary;
-      font-weight: 500;
-      font-size: 1.6rem;
+      color: $color-white;
     }
-    svg {
-      width: 2rem;
-      height: 2rem;
+    .mail_icon,
+    .call_icon {
       path {
-        fill: $color-secondary;
+        fill: $color-white;
       }
     }
+  }
+}
+
+.mail_icon,
+.call_icon {
+  width: 2rem;
+  height: 2rem;
+  path {
+    fill: $color-secondary;
   }
 }
 
