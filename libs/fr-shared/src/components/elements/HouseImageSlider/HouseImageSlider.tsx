@@ -89,14 +89,11 @@ export const HouseImageSlider = ({
       </div>
       <div style={{ marginTop: '-12rem' }}>
         <HouseCard
-          image={undefined}
-          title={undefined}
           address={currentImage.address}
           bathrooms={currentImage.feature.bathroom}
           bedrooms={currentImage.feature.bedroom}
           parking={currentImage.feature.parking}
           area={currentImage.feature.meterage}
-          url={undefined}
           thirtyDay={currentImage.price.thirtyDay}
           oneDay={currentImage.price.oneDay}
         />
