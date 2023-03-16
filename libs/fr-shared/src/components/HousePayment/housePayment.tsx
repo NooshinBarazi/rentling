@@ -1,8 +1,7 @@
 import Image from 'next/image';
-import house1 from '../HousePayment/image-1/house1.jpg';
-import house2 from '../HousePayment/image-1/house2.jpg';
-import house3 from '../HousePayment/image-1/house3.jpg';
-import house4 from '../HousePayment/image-1/house4.jpg';
+import house1 from '../HousePayment/image/house1.jpg';
+import house2 from '../HousePayment/image/house2.jpg';
+import house3 from '../HousePayment/image/house3.jpg';
 import styles from './HousePayment.module.scss';
 import { SlideImage, HouseDetails, HousePrice, houses } from '@rentling/fr-shared';
 
