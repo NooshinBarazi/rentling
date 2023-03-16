@@ -79,6 +79,7 @@ export const HouseImageSlider = ({ images }: HouseImageSliderProps) => {
         </button>
       </div>
       <SliderCard
+        title={undefined}
         address={currentImage.address}
         bathrooms={currentImage.bathrooms}
         rooms={currentImage.rooms}
