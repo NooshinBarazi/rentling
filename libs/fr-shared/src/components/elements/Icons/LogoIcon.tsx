@@ -26,8 +26,8 @@ function MemoLogoIcon({ href, props }: any) {
           fill="#EDD4BE"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M44.4937 27.2152V30.0633H41.6456V27.2152H44.4937ZM44.4937 30.6962H41.6456V33.5443H44.4937V30.6962ZM45.1266 33.5443V30.6962H47.9747V33.5443H45.1266ZM45.1266 30.0633V27.2152H47.9747V30.0633H45.1266Z"
           fill="#EDD4BE"
         />

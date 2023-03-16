@@ -4,8 +4,6 @@ interface MainProps {
   children: any;
 }
 
-const Main = ({ children }: MainProps) => {
-  return <main>{children}</main>;
+export const Main = ({ children }: MainProps) => {
+  return <div>{children}</div>;
 };
-
-export default Main;

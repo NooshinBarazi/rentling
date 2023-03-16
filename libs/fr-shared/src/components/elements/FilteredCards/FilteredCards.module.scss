@@ -1,0 +1,46 @@
+@import '../../../design-system/schema.scss';
+
+.result {
+  width: calc(100% - 40rem);
+  margin-left: auto;
+}
+
+.sort_option {
+  position: sticky;
+  top: 6.5rem;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 30%,
+    rgba(0, 212, 255, 0) 50%
+  );
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0 1rem 5rem;
+  max-width: 115.5rem;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: $box-shadow-3;
+  p {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 27px;
+    color: $color-text-dark-gray;
+  }
+  &:hover {
+    padding: 2rem 0 2rem 5rem;
+
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 30%,
+      rgb(255, 255, 255) 50%
+    );
+  }
+}
+.cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 36.5rem);
+  grid-gap: 3rem;
+}
