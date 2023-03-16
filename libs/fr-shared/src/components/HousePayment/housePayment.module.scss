@@ -1,45 +1,35 @@
-#house_section1 {
-  display: flex;
-  width: 800px;
-  height: 700px;
-  justify-content: center;
-  align-items: center;
-}
+@import '../../design-system/schema.scss';
 
-.house_container {
+.container {
+  width: 114rem;
+  height: 73.04rem;
   position: absolute;
-  width: 450px;
-  height: 240.75px;
-  background-image: url('./image/house1.jpg');
-  background-size: cover;
-  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #ffffff;
+  box-shadow: 0rem 0rem 1rem #dadde1;
+  border-radius: 1rem;
 }
 
-.small_image_container {
+.side_left {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 0.4rem;
 }
 
-.slide_left {
-  width: 33px;
-  height: 97px;
-  background: white;
-  opacity: 0.6;
+.side_left {
+  SlideImage {
+    margin-bottom: 1rem;
+  }
 }
 
-.slide_left SlidebarButton {
-  width: 19px;
-  height: 55.23px;
+.side_right {
+  padding-right: 7.8rem;
 }
 
-.small_image {
-  position: relative;
-  width: 150px;
-  height: 90.41px;
-  left: -15px;
-  top: 208px;
-  border: 3px solid #ffffff;
-  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25);
-  border-radius: 1px;
-  margin-right: 15px;
+.card_detail {
+  p {
+    color: #a7a7a7;
+  }
 }

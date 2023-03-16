@@ -1,33 +1,36 @@
 import Image from 'next/image';
-import house2 from './image/house2.jpg';
-import house3 from './image/house3.jpg';
-import house4 from './image/house4.jpg';
-import Styles from './housePayment.module.scss';
-import { SlidebarButton } from '@rentling/fr-shared';
+import house1 from '../HousePayment/image-1/house1.jpg';
+import house2 from '../HousePayment/image-1/house2.jpg';
+import house3 from '../HousePayment/image-1/house3.jpg';
+import house4 from '../HousePayment/image-1/house4.jpg';
+import styles from './HousePayment.module.scss';
+import { SlideImage, HouseDetails, HousePrice, houses } from '@rentling/fr-shared';
 
 export const HousePayment = () => {
   return (
-    <section id={Styles.house_section1}>
-      <div className={Styles.house_container}>
-        <Image className={Styles.singleHouseImage} src="" alt="" />
-        <div className={Styles.small_image_container}>
-          <div>
-            <Image className={Styles.small_image} src={house2} alt="" />
-            <div className={Styles.slide_left}>
-              <SlidebarButton />
-            </div>
-          </div>
-          <div>
-            <Image className={Styles.small_image} src={house3} alt="" />
-          </div>
-          <div>
-            <Image className={Styles.small_image} src={house4} alt="" />
-            <div>
-              <SlidebarButton />
-            </div>
-          </div>
+    <>
+      <section className={styles.container}>
+        <div className={styles.side_left}>
+          <SlideImage
+            images={[house1,house2,house3]}
+          />
+          <HouseDetails
+            title="The Residences at NewCity"
+            address="Anim quis esse sit est reprehenderit est reprehenderit."
+            rooms={2}
+            bathrooms={2}
+            parking={0}
+            area="1,687"
+            discribtion="Large suburban house in central London. Fully furnished with
+            outdoor patio, heating insulation and two spacious decks.
+            Walking distance to everything you might need in your stay in
+            London!"
+          />
         </div>
-      </div>
-    </section>
+        <div className={styles.side_right}>
+          <HousePrice />
+        </div>
+      </section>
+    </>
   );
 };
