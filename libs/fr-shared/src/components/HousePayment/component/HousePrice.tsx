@@ -51,7 +51,7 @@ export const HousePrice = () => {
         <div className={styles.content_note}>
           <p>
             <span>Notice</span>: you must reserve a house at least for four days
-            due to Landlord Tenant Laws{' '}
+            due to Landlord Tenant Laws
           </p>
         </div>
         <div className={styles.button_style}>
