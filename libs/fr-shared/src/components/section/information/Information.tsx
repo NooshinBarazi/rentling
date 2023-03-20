@@ -1,6 +1,10 @@
-import { CellphoneIcon, CameraIcon, HouseTickIcon ,InsuranceIcon } from '@rentling/fr-shared';
+import {
+  CellphoneIcon,
+  CameraIcon,
+  HouseTickIcon,
+  InsuranceIcon,
+} from '@rentling/fr-shared';
 import styles from './Information.module.scss';
-
 
 export const Information = () => {
   return (
@@ -11,7 +15,10 @@ export const Information = () => {
       <div className={styles.info_items}>
         <div className={styles.info_item}>
           <CellphoneIcon />
-          <p>An easy online renting experience for you to spend time on what really is important</p>
+          <p>
+            An easy online renting experience for you to spend time on what
+            really is important
+          </p>
         </div>
         <div className={styles.info_item}>
           <InsuranceIcon />
@@ -19,7 +26,10 @@ export const Information = () => {
         </div>
         <div className={styles.info_item}>
           <CameraIcon />
-          <p>Honest photographs, videos and descriptions for you to make safe decisions</p>
+          <p>
+            Honest photographs, videos and descriptions for you to make safe
+            decisions
+          </p>
         </div>
         <div className={styles.info_item}>
           <HouseTickIcon />

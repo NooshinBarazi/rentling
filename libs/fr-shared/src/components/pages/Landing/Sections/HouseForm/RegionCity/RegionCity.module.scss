@@ -1,0 +1,23 @@
+@import '../../../../../../design-system/schema.scss';
+
+.icon_dropdown {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    width: 2.5rem;
+    path {
+      fill: $color-grayish-light-green;
+    }
+  }
+}
+
+.dropdown_list {
+  overflow: hidden;
+  z-index: 5;
+  list-style: none;
+  width: 100%;
+  top: 110%;
+  left: 0;
+}

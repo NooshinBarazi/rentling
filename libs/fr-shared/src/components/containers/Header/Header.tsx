@@ -5,5 +5,5 @@ interface HeaderProps {
 }
 
 export const Header = ({ children }: HeaderProps) => {
-  return <div className={styles.header}>{children}</div>;
+  return <header className={styles.header}>{children}</header>;
 };

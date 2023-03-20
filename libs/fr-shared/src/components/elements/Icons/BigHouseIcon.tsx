@@ -2,7 +2,7 @@ import * as React from 'react';
 
 function MemoBigHouseIcon(props: any) {
   return (
-    <svg width="1em" height="1em" viewBox="0 0 42 43" fill="none" {...props}>
+    <svg viewBox="0 0 42 43" fill="none" {...props}>
       <mask
         id="prefix__a"
         maskUnits="userSpaceOnUse"
