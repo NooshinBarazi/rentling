@@ -4,10 +4,9 @@
   width: 114rem;
   height: 73.04rem;
   position: absolute;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   background: #ffffff;
-  box-shadow: 0rem 0rem 1rem #dadde1;
+  box-shadow: 0px 0px 10px #DADDE1;
   border-radius: 1rem;
 }
 
@@ -15,17 +14,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 0.4rem;
-}
-
-.side_left {
-  SlideImage {
-    margin-bottom: 1rem;
-  }
-}
-
-.side_right {
-  padding-right: 7.8rem;
+  margin-left: 3rem;
 }
 
 .card_detail {

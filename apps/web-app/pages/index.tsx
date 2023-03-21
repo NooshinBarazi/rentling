@@ -1,5 +1,5 @@
 import styles from './index.module.scss';
-import { HousePayment } from '@rentling/fr-shared';
+import { HousePayment, Landing } from '@rentling/fr-shared';
 
 export function Index() {
   /*
@@ -10,7 +10,8 @@ export function Index() {
 
   return (
     <div>
-      <HousePayment />
+      <Landing />
+      {/* <HousePayment /> */}
     </div>
   );
 }
