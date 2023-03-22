@@ -28,6 +28,8 @@ export const FilteredCards = ({
       <div className={styles.cards}>
         {filteredHouses.map((house: any) => (
           <HouseCard
+            region={house.feature.region}
+            city={house.feature.city}
             image={house.images.img}
             title={house.title}
             address={house.address}
