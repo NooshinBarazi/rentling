@@ -27,6 +27,7 @@
   height: 22rem;
 }
 .card_title {
+  margin-bottom: -1.5rem;
   p {
     font-weight: 70rem;
     font-size: 1.8rem;
@@ -72,6 +73,7 @@
       transform: scale(1.2);
       font-weight: 700;
       color: $color-primary;
+      cursor: default;
     }
   }
   svg {
