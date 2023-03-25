@@ -189,9 +189,9 @@ export const HouseForm = () => {
 
   const filteredCardsRef = useRef(null);
 
-  const ref = useRef(null);
+  const go_to_top = useRef(null);
 
-  const isInView = useInView(ref);
+  const isInView = useInView(go_to_top);
 
   //Button apply filter function
   const handleFilterClick = () => {
@@ -281,7 +281,7 @@ export const HouseForm = () => {
       </div>
       <motion.div
         className={styles.go_to_top}
-        ref={ref}
+        ref={go_to_top}
         initial={{
           opacity: 0,
         }}
@@ -306,6 +306,7 @@ export const HouseForm = () => {
       </div>
       <div className={styles.filtered_cards} ref={filteredCardsRef}>
         <FilteredCards
+          selectedRegion={selectedRegion}
           sortSelected={sortSelected}
           handleSortChange={handleSortChange}
           filteredHouses={filteredHouses}
