@@ -48,7 +48,9 @@ export const ChooseDropdown = ({
       onBlur={() => setIsOpen(false)}
       onClick={() => setIsOpen(!isOpen)}
     >
-      <div>{selectedOption || `${label}`}</div>
+      <div className={styles.dropdown_label}>
+        <p>{selectedOption || `${label}`}</p>
+      </div>
       <motion.ul
         animate={
           isOpen
