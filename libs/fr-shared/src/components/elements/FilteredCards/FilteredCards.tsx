@@ -19,7 +19,6 @@ export const FilteredCards = ({
       <div className={styles.sort_option}>
         <p>sort by:</p>
         <ChooseDropdown
-          className={undefined}
           selectedOption={sortSelected}
           style={undefined}
           label={sortSelected}

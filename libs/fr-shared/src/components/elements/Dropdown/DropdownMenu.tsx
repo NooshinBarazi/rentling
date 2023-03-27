@@ -27,7 +27,7 @@ interface DropdownProps {
   selectedOption: string;
   options: string[];
   handleOptionChange: any;
-  className: any;
+  className?: any;
 }
 
 export const ChooseDropdown = ({

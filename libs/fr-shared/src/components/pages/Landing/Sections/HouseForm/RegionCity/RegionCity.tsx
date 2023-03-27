@@ -14,7 +14,6 @@ export const Region = ({
     <div className={styles.icon_dropdown}>
       <MapIcon />
       <ChooseDropdown
-        className={undefined}
         style={{ marginLeft: '2rem' }}
         label="Choose your region"
         selectedOption={selectedRegion}
@@ -35,7 +34,6 @@ export const City = ({
     <div className={styles.icon_dropdown}>
       <LocationIcon />
       <ChooseDropdown
-        className={styles.dropdown}
         style={
           selectedRegion
             ? { marginLeft: '2rem', opacity: '1' }
