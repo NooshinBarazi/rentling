@@ -21,7 +21,7 @@ export const Rooms = ({ bedCount, handleBedChange }: any) => {
             onClick={() => handleBedChange(count)}
             className={count === bedCount ? styles.active : ''}
           >
-            {count}
+            <p>{count}</p>
           </motion.li>
         ))}
       </div>
@@ -36,7 +36,7 @@ export const Rooms = ({ bedCount, handleBedChange }: any) => {
         }
         onClick={() => setCountIsOpen(!countIsOpen)}
       >
-        {['all', '1', '2', '3'].includes(bedCount) ? '+4' : bedCount}
+        <p>{['all', '1', '2', '3'].includes(bedCount) ? '+4' : bedCount}</p>
         <motion.ul
           animate={
             countIsOpen
@@ -95,7 +95,7 @@ export const Bathrooms = ({ bathroomCount, handleBathChange }: any) => {
             onClick={() => handleBathChange(count)}
             className={count === bathroomCount ? styles.active : ''}
           >
-            {count}
+            <p>{count}</p>
           </motion.li>
         ))}
       </div>
@@ -110,7 +110,11 @@ export const Bathrooms = ({ bathroomCount, handleBathChange }: any) => {
         }
         onClick={() => setCountIsOpen(!countIsOpen)}
       >
-        {['all', '1', '2', '3'].includes(bathroomCount) ? '+4' : bathroomCount}
+        <p>
+          {['all', '1', '2', '3'].includes(bathroomCount)
+            ? '+4'
+            : bathroomCount}
+        </p>
 
         <motion.ul
           animate={

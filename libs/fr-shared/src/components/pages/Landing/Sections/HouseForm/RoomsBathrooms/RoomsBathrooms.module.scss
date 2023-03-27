@@ -5,12 +5,21 @@
   align-items: center;
   justify-content: flex-start;
   gap: 1rem;
+  p {
+    &::selection {
+      background-color: transparent;
+    }
+  }
+  cursor: default;
 }
 
 .count_buttons {
   gap: 1rem;
   display: flex;
   li {
+    & ::selection {
+      background-color: transparent;
+    }
     font-weight: 500;
     border-radius: 0.2rem;
     color: $color-primary;
@@ -71,6 +80,9 @@
   border: 0.15rem solid $color-grayish-light-green;
   border-radius: 0.4rem;
   position: relative;
+  & ::selection {
+    background-color: transparent;
+  }
 }
 .dropdown_active {
   color: $color-white;

@@ -26,9 +26,15 @@ interface Props {
   thirtyDay: any;
   oneDay: any;
   image?: any;
+  region?: any;
+  city?: any;
+  selectedRegion?: any;
 }
 
 export const HouseCard = ({
+  region,
+  selectedRegion,
+  city,
   title,
   address,
   bedrooms,
@@ -48,6 +54,14 @@ export const HouseCard = ({
       <div className={styles.card_details}>
         <div className={title ? styles.card_title : styles.display_none}>
           <p>{title}</p>
+        </div>
+        <div className={region ? styles.region_city : styles.display_none}>
+          <p
+            style={selectedRegion ? { display: 'none' } : { display: 'block' }}
+          >
+            {region},
+          </p>
+          <p>{city}</p>
         </div>
         <div className={styles.card_address}>
           <p>{address}</p>

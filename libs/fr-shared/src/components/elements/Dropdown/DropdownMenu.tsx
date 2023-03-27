@@ -27,7 +27,7 @@ interface DropdownProps {
   selectedOption: string;
   options: string[];
   handleOptionChange: any;
-  className: any;
+  className?: any;
 }
 
 export const ChooseDropdown = ({
@@ -48,7 +48,9 @@ export const ChooseDropdown = ({
       onBlur={() => setIsOpen(false)}
       onClick={() => setIsOpen(!isOpen)}
     >
-      <div>{selectedOption || `${label}`}</div>
+      <div className={styles.dropdown_label}>
+        <p>{selectedOption || `${label}`}</p>
+      </div>
       <motion.ul
         animate={
           isOpen
