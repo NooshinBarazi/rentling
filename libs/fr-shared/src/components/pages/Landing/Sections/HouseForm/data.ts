@@ -17,6 +17,27 @@ export const regions = [
 export const houses = [
   {
     images: {
+      img: '/images/19.avif',
+    },
+    id: '36',
+    title: 'Spacious House in the Heart of Calgary',
+    address: '123 Main Street, Calgary, NY 10001',
+    feature: {
+      region: 'CANADA',
+      city: 'Calgary',
+      type: 'house',
+      bedroom: 3,
+      bathroom: 2,
+      parking: true,
+      meterage: '1,500',
+    },
+    price: {
+      oneDay: 199,
+      thirtyDay: 2300,
+    },
+  },
+  {
+    images: {
       img: '/images/1.avif',
     },
     id: '1',
@@ -56,6 +77,28 @@ export const houses = [
     price: {
       oneDay: 205,
       thirtyDay: 1100,
+    },
+  },
+  {
+    images: {
+      img: '/images/23.avif',
+    },
+
+    id: '29',
+    title: 'Charming House with Beautiful Garden in Cologne',
+    address: '789 Oak Street, Cologne, IL 60601',
+    feature: {
+      region: 'GERMANY',
+      city: 'Cologne',
+      type: 'house',
+      bedroom: 4,
+      bathroom: 3,
+      parking: true,
+      meterage: '2,000',
+    },
+    price: {
+      oneDay: 299,
+      thirtyDay: 7100,
     },
   },
   {
@@ -111,7 +154,8 @@ export const houses = [
     title: 'Modern House with Private Pool in Berlin',
     address: '100 Friedrichstrasse, Berlin 10117',
     feature: {
-      region: 'GER',
+      region: 'GERMANY',
+      city: 'Berlin',
       type: 'house',
       bedroom: 3,
       bathroom: 2,
@@ -129,10 +173,11 @@ export const houses = [
       img: '/images/6.avif',
     },
     id: '6',
-    title: 'Luxurious Apartment with Ocean View in Miami',
-    address: '100 Ocean Drive, Miami Beach, FL 33139',
+    title: 'Luxurious Apartment with Ocean View in Chicago',
+    address: '100 Ocean Drive, Chicago , FL 33139',
     feature: {
       region: 'USA',
+      city: 'Chicago',
       type: 'apartment',
       bedroom: 2,
       bathroom: 2,
@@ -310,6 +355,90 @@ export const houses = [
     price: {
       oneDay: 200,
       thirtyDay: 3500,
+    },
+  },
+  {
+    images: {
+      img: '/images/20.avif',
+    },
+    id: '40',
+    title: 'Modern Apartment with a Balcony in Hamburg',
+    address: '2345 Sunset Boulevard, Hamburg, CA 90026',
+    feature: {
+      region: 'GERMANY',
+      city: 'Hamburg',
+      type: 'apartment',
+      bedroom: 2,
+      bathroom: 2,
+      parking: true,
+      meterage: '1,200',
+    },
+    price: {
+      oneDay: 200,
+      thirtyDay: 3500,
+    },
+  },
+  {
+    images: {
+      img: '/images/13.avif',
+    },
+    id: '11',
+    title: 'Modern Apartment with a Balcony in Vancouver',
+    address: '2345 Sunset Boulevard, Vancouver, CA 90026',
+    feature: {
+      region: 'CANADA',
+      city: 'Vancouver',
+      type: 'apartment',
+      bedroom: 2,
+      bathroom: 2,
+      parking: true,
+      meterage: '1,200',
+    },
+    price: {
+      oneDay: 200,
+      thirtyDay: 3500,
+    },
+  },
+  {
+    images: {
+      img: '/images/10.avif',
+    },
+    id: '10',
+    title: 'Luxury Apartment in Montreal',
+    address: '1 Central Park South, Montreal, NY 10019',
+    feature: {
+      region: 'CANADA',
+      city: 'Montreal',
+      type: 'apartment',
+      bedroom: 3,
+      bathroom: 2,
+      parking: false,
+      meterage: '1,800',
+    },
+    price: {
+      oneDay: 350,
+      thirtyDay: 8000,
+    },
+  },
+  {
+    images: {
+      img: '/images/22.avif',
+    },
+    id: '10',
+    title: 'Luxury Apartment in Liverpool',
+    address: '1 Central Park South, Liverpool, NY 10019',
+    feature: {
+      region: 'UK',
+      city: 'Liverpool',
+      type: 'apartment',
+      bedroom: 3,
+      bathroom: 2,
+      parking: false,
+      meterage: '1,800',
+    },
+    price: {
+      oneDay: 350,
+      thirtyDay: 8000,
     },
   },
 ];

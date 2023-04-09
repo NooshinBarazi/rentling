@@ -8,6 +8,46 @@
   display: flex;
   flex-direction: column;
   border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: $box-shadow-3;
+  &:hover {
+    .card_title {
+      opacity: 1;
+      p {
+        animation: textSlide 10s linear infinite 0.5s;
+      }
+    }
+  }
+}
+@keyframes textSlide {
+  0% {
+    transform: translateX(calc(0%));
+    opacity: 1;
+  }
+  48% {
+    transform: translateX(calc(-100%));
+    opacity: 1;
+  }
+  49% {
+    transform: translateX(calc(-100%));
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(max(32.5rem, 100%)) translateY(100%);
+    opacity: 0;
+  }
+  51% {
+    transform: translateX(max(32.5rem, 100%)) translateY(100%);
+    opacity: 0;
+  }
+  52% {
+    opacity: 1;
+    transform: translateX(max(32.5rem, 80%)) translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(calc(0%));
+  }
 }
 .card_details {
   display: flex;
@@ -26,24 +66,63 @@
   width: 100%;
   height: 22rem;
 }
-.card_title {
+.region_city {
+  margin: 0 0 -1.5rem 0;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   p {
+    &:last-child {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: $color-text-dark-gray;
+    }
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: $color-text-dark-gray;
+    transition: 0.2s all;
+    cursor: default;
+  }
+}
+.card_title {
+  opacity: 0;
+  margin-top: -5rem;
+  background-color: #000000ad;
+  padding: 0 1rem;
+  transition: 0.3s all;
+  border-radius: 0.2rem;
+  position: relative;
+  overflow: hidden;
+
+  p {
+    display: inline-block;
+    white-space: nowrap;
     font-weight: 70rem;
     font-size: 1.8rem;
-    line-height: 2.5rem;
-    color: $color-grayish-light-green;
-    display: -webkit-box;
-    max-width: 25rem;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    color: $color-white;
+    width: auto;
   }
 }
 
 .card_address {
   p {
     @include cardAddress;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $color-text-light-gray;
+    display: -webkit-box;
+    max-width: 32rem;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: 0.2s all;
+  }
+  &:hover {
+    p {
+      color: $color-text-dark-gray;
+    }
   }
 }
 
@@ -72,6 +151,7 @@
       transform: scale(1.2);
       font-weight: 700;
       color: $color-primary;
+      cursor: default;
     }
   }
   svg {
@@ -165,5 +245,21 @@
     &:hover {
       scale: 1.2;
     }
+  }
+}
+
+.card_address,
+.card_date,
+.card_price,
+.card_details,
+.card_feature {
+  p,
+  h4 {
+    cursor: default;
+  }
+}
+.card_buttons {
+  p {
+    cursor: pointer;
   }
 }

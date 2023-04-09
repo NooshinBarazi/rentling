@@ -13,7 +13,7 @@
   cursor: pointer;
   font-size: 1.2rem;
   font-weight: 400;
-  padding: 0 1rem;
+  padding: 1rem;
   max-width: 20rem;
   min-height: 3rem;
   flex: 1 1 auto;
@@ -29,4 +29,17 @@
 
 .dropdown_list {
   @include dropdown_option;
+  li {
+    font-size: 1.4rem;
+  }
+}
+
+.dropdown_label > p::selection {
+  background-color: transparent;
+}
+
+.dropdown_label {
+  p {
+    font-size: 1.4rem;
+  }
 }
