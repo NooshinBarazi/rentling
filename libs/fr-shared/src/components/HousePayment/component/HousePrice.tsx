@@ -9,7 +9,6 @@ export const HousePrice = () => {
 
   const handeleClick = () => {
     setHandelActive((handelActive) => !handelActive);
-    console.log(handelActive);
   };
 
   return (
