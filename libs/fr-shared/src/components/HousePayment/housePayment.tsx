@@ -1,19 +1,32 @@
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 import house1 from '../HousePayment/image/house1.jpg';
 import house2 from '../HousePayment/image/house2.jpg';
 import house3 from '../HousePayment/image/house3.jpg';
 import house4 from '../HousePayment/image/house4.jpg';
 import styles from './HousePayment.module.scss';
-import { SlideImage, HouseDetails, HousePrice, houses } from '@rentling/fr-shared';
+import {
+  SlideImage,
+  HouseDetails,
+  HousePrice,
+  Close,
+  Album,
+  Slider,
+  SliderPath,
+  SlidebarButton,
+} from '@rentling/fr-shared';
 
-export const HousePayment = () => {
+interface HousePaymentProps {
+  houses: any[];
+}
+
+export const HousePayment = ({ houses }: HousePaymentProps) => {
+
   return (
     <>
       <section className={styles.container}>
         <div className={styles.side_left}>
-          <SlideImage
-            images={[house1,house2,house3,house4]}
-          />
+          <SlideImage images={[house1, house2, house3, house4]} houses={houses} />
           <HouseDetails
             title="The Residences at NewCity"
             address="Anim quis esse sit est reprehenderit est reprehenderit."
@@ -30,6 +43,7 @@ export const HousePayment = () => {
         <div className={styles.side_right}>
           <HousePrice />
         </div>
+      
       </section>
     </>
   );
