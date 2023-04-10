@@ -6,8 +6,9 @@
   position: absolute;
   display: flex;
   background: #ffffff;
-  box-shadow: 0px 0px 10px #DADDE1;
+  box-shadow: 0px 0px 10px #dadde1;
   border-radius: 1rem;
+  margin: 0 auto;
 }
 
 .side_left {
@@ -17,8 +18,4 @@
   margin-left: 3rem;
 }
 
-.card_detail {
-  p {
-    color: #a7a7a7;
-  }
-}
+
