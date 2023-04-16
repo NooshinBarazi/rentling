@@ -326,7 +326,7 @@ export const houses = [
     ,
       img: '/images/15.avif',
     },
-    id: '10',
+    id: '11',
     title: 'Luxury Apartment in Chicago',
     address: '1 Central Park South, Chicago, NY 10019',
     feature: {
@@ -350,7 +350,7 @@ export const houses = [
     ,
       img: '/images/11.avif',
     },
-    id: '11',
+    id: '12',
     title: 'Modern Apartment with a Balcony in Los Angeles',
     address: '2345 Sunset Boulevard, Los Angeles, CA 90026',
     feature: {
@@ -374,7 +374,7 @@ export const houses = [
     ,
       img: '/images/12.avif',
     },
-    id: '11',
+    id: '13',
     title: 'Modern Apartment with a Balcony in Chicago',
     address: '2345 Sunset Boulevard, Chicago, CA 90026',
     feature: {
@@ -422,7 +422,7 @@ export const houses = [
     ,
       img: '/images/13.avif',
     },
-    id: '11',
+    id: '14',
     title: 'Modern Apartment with a Balcony in Vancouver',
     address: '2345 Sunset Boulevard, Vancouver, CA 90026',
     feature: {
@@ -446,7 +446,7 @@ export const houses = [
     ,
       img: '/images/10.avif',
     },
-    id: '10',
+    id: '15',
     title: 'Luxury Apartment in Montreal',
     address: '1 Central Park South, Montreal, NY 10019',
     feature: {
@@ -470,7 +470,7 @@ export const houses = [
     ,
       img: '/images/22.avif',
     },
-    id: '10',
+    id: '19',
     title: 'Luxury Apartment in Liverpool',
     address: '1 Central Park South, Liverpool, NY 10019',
     feature: {

@@ -13,13 +13,13 @@ export default function MyComponent() {
       {houses.map((item, index) => {
         if (item.id == id) {
           return (
-            <div>
+            <div key={index}>
               <HousePayment
                 title={item.title}
                 address={item.address}
                 rooms={item.feature.bedroom}
                 bathrooms={item.feature.bathroom}
-                parking={item.feature.parking}
+                parking={item.feature.parking as boolean}
                 area={item.feature.city}
                 discribtion={item.feature.meterage}
                 images={item.images.imagesList}
@@ -31,38 +31,3 @@ export default function MyComponent() {
     </>
   );
 }
-
-//   useEffect(()=>{
-//     if(!router.isReady) return;
-//     console.log(id);
-//     houses.map((item)=>{
-// if (item.id == id){
-//   setDiscription(item.id + ":" + item.title)
-//     }})
-//   },[router.query.id, router.isReady]);
-/* <div key={index}>
-<Image
-src={image}
-alt="/"
-onClick={() => setCurrentImagIndex(index)}
-className={currentImageIndex == index ? 'active' : ''}
-/>
-</div> */
-
-/* <div
-            className={styles.small_image_container}
-            onClick={toggleModalSLider}
-          >
-            {houses.map((image, index) => {
-              return (
-                <div key={index}>
-                  <Image
-                    src={image}
-                    alt="/"
-                    onClick={() => setCurrentImagIndex(index)}
-                    className={currentImageIndex == index ? 'active' : ''}
-                  />
-                </div>
-              );
-            })}
-          </div> */
