@@ -67,3 +67,4 @@ export * from './pages/HousePayment/housePayment';
 export * from './elements/HouseImageSlider/SliderPath';
 export * from './elements/Icons/Slider';
 export * from './pages/Landing/Sections/HouseForm/regionCityData';
+export * from '../../../../apps/web-app/pages/houses/[id]';
