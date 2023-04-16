@@ -11,10 +11,9 @@ import { useState, useEffect } from 'react';
 
 interface IProps {
   images: any[];
-  houses: any[];
 }
 
-export const SlideImage = ({ images, houses }: IProps) => {
+export const SlideImage = ({ images }: IProps) => {
   const [currentImageIndex, setCurrentImagIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [modalSlider, setModalSlider] = useState(false);
@@ -30,10 +29,9 @@ export const SlideImage = ({ images, houses }: IProps) => {
   };
 
   const onSelectImage = (
-    housesIndexNumber: number,
-    imagesIndexNumber: number
+    imagesIndexNumber: number,
   ) => {
-    setHousesIndex(housesIndexNumber);
+    // setHousesIndex(housesIndexNumber);
     setImageIndex(imagesIndexNumber);
     setPopup(!popup);
   };
@@ -71,17 +69,17 @@ export const SlideImage = ({ images, houses }: IProps) => {
     }
   }, [isHovered, nextSlide]);
 
-  const currentImage = houses[currentImageIndex];
+  const currentImage = images[currentImageIndex];
 
   const prevImage =
     currentImageIndex === 0
-      ? houses[houses.length - 1]
-      : houses[currentImageIndex - 1];
+      ? images[images.length - 1]
+      : images[currentImageIndex - 1];
 
   const nextImage =
-    currentImageIndex === houses.length - 1
-      ? houses[0]
-      : houses[currentImageIndex + 1];
+    currentImageIndex === images.length - 1
+      ? images[0]
+      : images[currentImageIndex + 1];
 
   const ShowImage = () => {};
   return (
@@ -89,7 +87,7 @@ export const SlideImage = ({ images, houses }: IProps) => {
       <div className={styles.house_container}>
         <div className={styles.image_container}>
           <div className={styles.single_image}>
-            <Image src={images[currentImageIndex]} alt="" />
+            <Image src={images[imageIndex]} alt="" width={100} height={100} />
           </div>
           <div
             className={styles.small_image_container}
@@ -97,13 +95,17 @@ export const SlideImage = ({ images, houses }: IProps) => {
           >
             {images.map((image, index) => {
               return (
-                <div key={index}>
-                  <Image
-                    src={image}
-                    alt="/"
-                    onClick={() => setCurrentImagIndex(index)}
-                    className={currentImageIndex == index ? 'active' : ''}
-                  />
+                <div className={styles.image_list_container}>
+                  <div className={styles.images_slide} key={index}>
+                    <Image
+                      width={100}
+                      height={100}
+                      src={image}
+                      alt="/"
+                      onClick={() => setCurrentImagIndex(index)}
+                      className={currentImageIndex == index ? 'active' : ''}
+                    />
+                  </div>
                 </div>
               );
             })}
@@ -169,28 +171,13 @@ export const SlideImage = ({ images, houses }: IProps) => {
               </button>
               <div className={styles.slider}>
                 <div className={styles.prev_image}>
-                  <Image
-                    src={prevImage.images.img}
-                    alt=""
-                    fill
-                    object-fit="cover"
-                  />
+                  <Image src={prevImage} alt="" fill object-fit="cover" />
                 </div>
                 <div className={styles.current_image_slider}>
-                  <Image
-                    src={currentImage.images.img}
-                    alt=""
-                    fill
-                    object-fit="cover"
-                  />
+                  <Image src={currentImage} alt="" fill object-fit="cover" />
                 </div>
                 <div className={styles.next_image}>
-                  <Image
-                    src={nextImage.images.img}
-                    alt=""
-                    fill
-                    object-fit="cover"
-                  />
+                  <Image src={nextImage} alt="" fill object-fit="cover" />
                 </div>
               </div>
               <button className={styles.slider_button_next} onClick={nextSlide}>
@@ -246,25 +233,19 @@ export const SlideImage = ({ images, houses }: IProps) => {
             </div>
           </div>
           <div className={styles.current_image_album}>
-            {houses.map((img, index) => {
+            {images.map((img, index) => {
               return (
-                <div className={styles.grid_container} key={index}>
-                  {img.images.imagesList.map((image: string, i: number) => {
-                    return (
-                      <div
-                        className={styles.grid_images}
-                        key={i}
-                        onClick={togglePopup}
-                      >
-                        <img
-                          src={image}
-                          alt="/"
-                          onClick={() => onSelectImage(index, i)}
-                        />
-                      </div>
-                    );
-                  })}
-                </div>
+                  <div
+                    className={styles.grid_images}
+                    key={index}
+                    onClick={togglePopup}
+                  >
+                    <img
+                      src={img}
+                      alt="/"
+                      onClick={() => onSelectImage(index)}
+                    />
+                  </div>
               );
             })}
           </div>
@@ -285,10 +266,10 @@ export const SlideImage = ({ images, houses }: IProps) => {
 
             <div className={styles.popup_image}>
               <Image
-                src={houses[housesIndex].images.imagesList[imageIndex]}
+                src={images[imageIndex]}
                 alt="/"
-                fill
-                object-fit="cover"
+                width={900}
+                height={700}
               />
             </div>
           </div>

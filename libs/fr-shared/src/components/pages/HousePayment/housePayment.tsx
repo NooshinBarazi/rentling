@@ -6,6 +6,7 @@ import house3 from '../HousePayment/image/house3.jpg';
 import house4 from '../HousePayment/image/house4.jpg';
 import styles from './HousePayment.module.scss';
 import {
+  houses,
   SlideImage,
   HouseDetails,
   HousePrice,
@@ -15,35 +16,47 @@ import {
   SliderPath,
   SlidebarButton,
 } from '@rentling/fr-shared';
+import { title } from 'process';
 
-interface HousePaymentProps {
-  houses: any[];
+interface PropsHousePayment {
+  title: string;
+  address: string;
+  rooms: number;
+  bathrooms: number;
+  parking: boolean;
+  area: string;
+  discribtion: string;
+  images: any
 }
 
-export const HousePayment = ({ houses }: HousePaymentProps) => {
-
+export const HousePayment = ({
+  title,
+  address,
+  rooms,
+  bathrooms,
+  parking,
+  area,
+  discribtion,
+  images
+}: PropsHousePayment) => {
   return (
     <>
       <section className={styles.container}>
         <div className={styles.side_left}>
-          <SlideImage images={[house1, house2, house3, house4]} houses={houses} />
+          <SlideImage images={images} />
           <HouseDetails
-            title="The Residences at NewCity"
-            address="Anim quis esse sit est reprehenderit est reprehenderit."
-            rooms={2}
-            bathrooms={2}
-            parking={0}
-            area="1,687"
-            discribtion="Large suburban house in central London. Fully furnished with
-            outdoor patio, heating insulation and two spacious decks.
-            Walking distance to everything you might need in your stay in
-            London!"
+            title={title}
+            address={address}
+            parking={parking}
+            bathrooms={bathrooms}
+            rooms={rooms}
+            area={area}
+            discribtion={discribtion}
           />
         </div>
         <div className={styles.side_right}>
           <HousePrice />
         </div>
-      
       </section>
     </>
   );

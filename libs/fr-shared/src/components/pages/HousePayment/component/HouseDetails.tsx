@@ -9,10 +9,10 @@ import styles from './houseDetails.module.scss';
 
 interface Props {
   title: string;
-  address: any;
-  rooms: any;
-  bathrooms: any;
-  parking: any;
+  address: string;
+  rooms: number;
+  bathrooms: number;
+  parking: boolean;
   area: string;
   discribtion: string;
 }
@@ -23,7 +23,7 @@ export const HouseDetails = ({
   bathrooms,
   parking,
   area,
-  discribtion
+  discribtion,
 }: Props) => {
   return (
     <section className={styles.container}>
