@@ -19,7 +19,7 @@
   }
 }
 
-.single_Image {
+.single_image {
   img {
     border-radius: 0.3rem;
   }
@@ -105,12 +105,13 @@
 
 .container_slider {
   box-shadow: 0px 0px 10px #bfc4cc;
-  width: 1552px;
-  height: 832px;
+  width: 90vw;
+  height: 90vh;
   margin-top: 2rem;
   z-index: 30;
   background-color: #ffffff;
   margin: 0 auto;
+  margin-left: -32rem;
 }
 
 .containers {
@@ -121,38 +122,65 @@
   justify-content: center;
   align-items: center;
 }
-.Header_container {
-  position: fixed;
-  width: 155rem;
+.Header_container_slider {
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 30;
+}
+.Header_container_album{
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 30;
+}
+.Header_slider {
   background-color: #fff;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 30;
+  margin: 2rem 0;
+}
+.Header_album{
+  background: #fff;
+  position: fixed;
+  width: 88vw;
+  height: 10.4vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 9.7rem 3rem 0 1rem;
 }
 
 .Header_left {
   margin-left: 2.8rem;
-  margin-top: 3.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .Header_right {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 2.8rem;
-  margin-top: 3.3rem;
 }
 
 .slider_button {
+  width: 10rem;
+  height: 4rem;
   border: none;
   background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-
 }
 .album_button {
+  width: 10rem;
+  height: 4rem;
   border: none;
   background-color: #fff;
   display: flex;
@@ -163,24 +191,25 @@
 }
 .close_button {
   width: 10rem;
-height: 4rem;
+  height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
-  background-color: #F76969;
+  background-color: #f76969;
   border-radius: 0.5rem;
   cursor: pointer;
 }
 
 .box {
-  max-width: 140rem;
+  max-width: 100vw;
+  height: 80vh;
   display: flex;
   position: relative;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin: 17.5rem 5rem;
+  margin: 6rem 0;
 }
 
 .slider {
@@ -195,13 +224,12 @@ height: 4rem;
   height: 24rem;
 }
 
-.current_imageSlider {
+.current_image_slider {
   position: relative;
   width: 85rem;
   height: 51rem;
   overflow: hidden;
   margin: 0 5rem;
-
 }
 .slider_button_next,
 .slider_button_prev {
@@ -253,7 +281,7 @@ height: 4rem;
   );
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
-.text_btnClose{
+.text_btnClose {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
@@ -277,121 +305,121 @@ height: 4rem;
   justify-content: center;
   align-items: center;
   border: none;
-  width: 15rem;
-  height: 60px;
-  border-radius: 0.4rem;
+  width: 10rem;
+  height: 4rem;
+  border-radius: 0.2rem;
   font-weight: bold;
   color: #fbfbfb;
 }
 
 .deactived_button {
-  background: white;
+  background: #e8e8e8;
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
-  height: 60px;
+  width: 10rem;
+  height: 4rem;
   font-weight: bold;
   color: #417d8a;
+  margin: 2rem;
+  border-radius: 0.2rem;
 }
 
 //modalAlbum
 
+
+
 .container_album {
-  position: relative;
-  background-color: #ffffff;
+  position: absolute;
   box-shadow: 0px 0px 10px #bfc4cc;
-  width: 1552px;
-  height: 832px;
-  overflow: scroll;
+  width: 90vw;
+  height: 90vh;
+  margin-top: 2rem;
   z-index: 30;
+  background-color: #ffffff;
+  margin: 0 auto;
+  margin-left: -32rem;
+  overflow: scroll;
 }
 
-.current_imageAlbum {
+.current_image_album {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
   text-align: center;
   margin: 12rem 2rem 0 2rem;
-  }
-  
-  .grid_container {
+}
+
+.grid_container {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
-  }
-  
-  .grid_images {
-    display: grid;
-    flex-direction: row;
-    width: 100%;
-    margin-bottom: 0.5rem;
-    img{
-      width: 100%;
-      padding-right: 0.5rem;
-      object-fit: cover;
-      transition: .2s linear;
-      &:hover{
-        transform: scale(1.1);
-        border: #fff solid 0.3rem;
-        border-radius: 2rem;
-      }
-    }
-  }
+}
 
-  //popup
-
-  .container_popup {
-    position: relative;
-  }
-  
-  .text_btnClose {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1.4rem;
-    line-height: 16px;
-    color: #fff;
-    padding-left: 1rem;
-  }
-  .popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
+.grid_images {
+  display: grid;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  img {
     width: 100%;
-    height: 100%;
-    z-index: 100;
+    padding-right: 0.5rem;
+    object-fit: cover;
+    transition: 0.2s linear;
   }
-  .closePopup {
-    position: absolute;
-    top: 10rem;
-    left: 20rem;
-    width: 10rem;
-    height: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    background-color: #f76969;
-    border-radius: 0.5rem;
-    cursor: pointer;
-  }
-  
-  .popupImage{
+}
+
+//popup
+
+.container_popup {
+  position: relative;
+}
+
+.text_btn_close {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 16px;
+  color: #fff;
+  padding-left: 1rem;
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+.close_popup {
+  position: absolute;
+  top: 10rem;
+  left: 20rem;
+  width: 10rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #f76969;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.popup_image {
   position: absolute;
   top: 52rem;
   left: 110rem;
-  transform: translate(-50%,-50%);
-  border: .5rem solid #fff;
+  transform: translate(-50%, -50%);
   border-radius: 0.5rem;
   object-fit: cover;
-  }
+}
 
-  .close_image{
-    display: none;
-  }
-  
+.close_image {
+  display: none;
+}

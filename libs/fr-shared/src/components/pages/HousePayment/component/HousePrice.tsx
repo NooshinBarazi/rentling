@@ -12,7 +12,7 @@ export const HousePrice = () => {
   };
 
   return (
-    <section id={styles.section_houseDetails}>
+    <section id={styles.section_house_details}>
       <div className={styles.main_container}>
         <div className={styles.container_text}>
           <p>Rent this house</p>

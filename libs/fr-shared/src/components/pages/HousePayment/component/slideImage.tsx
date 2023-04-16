@@ -19,7 +19,7 @@ export const SlideImage = ({ images, houses }: IProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const [modalSlider, setModalSlider] = useState(false);
   const [modalAlbum, setModalAlbum] = useState(false);
-  
+
   const [handelActive, setHandelActive] = useState(false);
   const [popup, setPopup] = useState(false);
   const [housesIndex, setHousesIndex] = useState(0);
@@ -88,7 +88,7 @@ export const SlideImage = ({ images, houses }: IProps) => {
     <section id={styles.house_section1}>
       <div className={styles.house_container}>
         <div className={styles.image_container}>
-          <div className={styles.single_Image}>
+          <div className={styles.single_image}>
             <Image src={images[currentImageIndex]} alt="" />
           </div>
           <div
@@ -122,42 +122,44 @@ export const SlideImage = ({ images, houses }: IProps) => {
           onMouseLeave={() => setIsHovered(false)}
         >
           <div className={styles.container_slider}>
-            <div className={styles.Header_container}>
-              <div className={styles.Header_left}>
-                <button
-                  className={styles.close_button}
-                  onClick={toggleModalSLider}
-                >
-                  <Close />
-                  <p className={styles.text_btnClose}>close</p>
-                </button>
-              </div>
-              <div className={styles.Header_right}>
-                <button
-                  onClick={handeleClick}
-                  className={
-                    handelActive
-                      ? styles.deactived_button
-                      : styles.actived_button
-                  }
-                >
-                  <Slider />
-                  <p className={styles.text_btn}>slider</p>
-                </button>
-                <button
-                  onClick={(event) => {
-                    toggleModalSLider();
-                    toggleModalAlbum();
-                  }}
-                  className={
-                    handelActive
-                      ? styles.actived_button
-                      : styles.deactived_button
-                  }
-                >
-                  <Album />
-                  <p className={styles.text_btn}>Album</p>
-                </button>
+            <div className={styles.Header_container_slider}>
+              <div className={styles.Header_slider}>
+                <div className={styles.Header_left}>
+                  <button
+                    className={styles.close_button}
+                    onClick={toggleModalSLider}
+                  >
+                    <Close />
+                    <p className={styles.text_btnClose}>close</p>
+                  </button>
+                </div>
+                <div className={styles.Header_right}>
+                  <button
+                    onClick={handeleClick}
+                    className={
+                      handelActive
+                        ? styles.deactived_button
+                        : styles.actived_button
+                    }
+                  >
+                    <Slider />
+                    <p className={styles.text_btn}>slider</p>
+                  </button>
+                  <button
+                    onClick={(event) => {
+                      toggleModalSLider();
+                      toggleModalAlbum();
+                    }}
+                    className={
+                      handelActive
+                        ? styles.actived_button
+                        : styles.deactived_button
+                    }
+                  >
+                    <Album />
+                    <p className={styles.text_btn}>Album</p>
+                  </button>
+                </div>
               </div>
             </div>
             <div className={styles.box}>
@@ -174,7 +176,7 @@ export const SlideImage = ({ images, houses }: IProps) => {
                     object-fit="cover"
                   />
                 </div>
-                <div className={styles.current_imageSlider}>
+                <div className={styles.current_image_slider}>
                   <Image
                     src={currentImage.images.img}
                     alt=""
@@ -201,43 +203,49 @@ export const SlideImage = ({ images, houses }: IProps) => {
 
       {modalAlbum && (
         <div className={styles.container_album}>
-          <div className={styles.Header_container}>
-            <div className={styles.Header_left}>
-              <button
-                className={styles.close_button}
-                onClick={(event) => {
-                  toggleModalAlbum();
-                }}
-              >
-                <Close />
-                <p className={styles.text_btnClose}>close</p>
-              </button>
-            </div>
-            <div className={styles.Header_right}>
-              <button
-                className={
-                  handelActive ? styles.actived_button : styles.deactived_button
-                }
-                onClick={(event) => {
-                  toggleModalSLider();
-                  toggleModalAlbum();
-                }}
-              >
-                <Slider />
-                <p className={styles.text_btn}>slider</p>
-              </button>
-              <button
-                className={
-                  handelActive ? styles.deactived_button : styles.actived_button
-                }
-                onClick={handeleClick}
-              >
-                <Album />
-                <p className={styles.text_btn}>Album</p>
-              </button>
+          <div className={styles.Header_container_album}>
+            <div className={styles.Header_album}>
+              <div className={styles.Header_left}>
+                <button
+                  className={styles.close_button}
+                  onClick={(event) => {
+                    toggleModalAlbum();
+                  }}
+                >
+                  <Close />
+                  <p className={styles.text_btnClose}>close</p>
+                </button>
+              </div>
+              <div className={styles.Header_right}>
+                <button
+                  className={
+                    handelActive
+                      ? styles.actived_button
+                      : styles.deactived_button
+                  }
+                  onClick={(event) => {
+                    toggleModalSLider();
+                    toggleModalAlbum();
+                  }}
+                >
+                  <Slider />
+                  <p className={styles.text_btn}>slider</p>
+                </button>
+                <button
+                  className={
+                    handelActive
+                      ? styles.deactived_button
+                      : styles.actived_button
+                  }
+                  onClick={handeleClick}
+                >
+                  <Album />
+                  <p className={styles.text_btn}>Album</p>
+                </button>
+              </div>
             </div>
           </div>
-          <div className={styles.current_imageAlbum}>
+          <div className={styles.current_image_album}>
             {houses.map((img, index) => {
               return (
                 <div className={styles.grid_container} key={index}>
@@ -270,19 +278,17 @@ export const SlideImage = ({ images, houses }: IProps) => {
             onBlur={() => setPopup(false)}
             onClick={() => setPopup(!popup)}
           >
-            <button
-              className={popup ? styles.closePopup : styles.close_image}
-            >
+            <button className={popup ? styles.close_popup : styles.close_image}>
               <Close />
-              <p className={styles.text_btnClose}>close</p>
+              <p className={styles.text_btn_close}>close</p>
             </button>
 
-            <div className={styles.popupImage}>
+            <div className={styles.popup_image}>
               <Image
                 src={houses[housesIndex].images.imagesList[imageIndex]}
                 alt="/"
-                width={800}
-                height={600}
+                fill
+                object-fit="cover"
               />
             </div>
           </div>
