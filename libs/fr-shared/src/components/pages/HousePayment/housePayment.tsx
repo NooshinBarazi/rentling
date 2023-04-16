@@ -15,6 +15,8 @@ import {
   Slider,
   SliderPath,
   SlidebarButton,
+  MapIcon,
+  CalenderIcon,
 } from '@rentling/fr-shared';
 import { title } from 'process';
 
@@ -26,7 +28,7 @@ interface PropsHousePayment {
   parking: boolean;
   area: string;
   discribtion: string;
-  images: any
+  images: any;
 }
 
 export const HousePayment = ({
@@ -37,11 +39,19 @@ export const HousePayment = ({
   parking,
   area,
   discribtion,
-  images
+  images,
 }: PropsHousePayment) => {
   return (
     <>
       <section className={styles.container}>
+        <div className={styles.icon_container}>
+          <div className={styles.map_icon}>
+            <MapIcon />
+          </div>
+          <div className={styles.calender_icon}>
+            <CalenderIcon />
+          </div>
+        </div>
         <div className={styles.side_left}>
           <SlideImage images={images} />
           <HouseDetails

@@ -7,9 +7,11 @@ export const HousePrice = () => {
   const { register } = useForm();
   const [handelActive, setHandelActive] = useState(false);
 
+
   const handeleClick = () => {
     setHandelActive((handelActive) => !handelActive);
   };
+
 
   return (
     <section id={styles.section_house_details}>

@@ -28,9 +28,7 @@ export const SlideImage = ({ images }: IProps) => {
     setPopup(!popup);
   };
 
-  const onSelectImage = (
-    imagesIndexNumber: number,
-  ) => {
+  const onSelectImage = (imagesIndexNumber: number) => {
     // setHousesIndex(housesIndexNumber);
     setImageIndex(imagesIndexNumber);
     setPopup(!popup);
@@ -95,13 +93,14 @@ export const SlideImage = ({ images }: IProps) => {
           >
             {images.map((image, index) => {
               return (
-                <div className={styles.image_list_container}>
-                  <div className={styles.images_slide} key={index}>
+                <div className={styles.image_list_container} key={index}>
+                  <div className={styles.images_slide}>
                     <Image
                       width={100}
                       height={100}
                       src={image}
                       alt="/"
+                      priority
                       onClick={() => setCurrentImagIndex(index)}
                       className={currentImageIndex == index ? 'active' : ''}
                     />
@@ -132,7 +131,7 @@ export const SlideImage = ({ images }: IProps) => {
                     onClick={toggleModalSLider}
                   >
                     <Close />
-                    <p className={styles.text_btnClose}>close</p>
+                    <p className={styles.text_btn_close}>close</p>
                   </button>
                 </div>
                 <div className={styles.Header_right}>
@@ -200,7 +199,7 @@ export const SlideImage = ({ images }: IProps) => {
                   }}
                 >
                   <Close />
-                  <p className={styles.text_btnClose}>close</p>
+                  <p className={styles.text_btn_close}>close</p>
                 </button>
               </div>
               <div className={styles.Header_right}>
@@ -233,19 +232,15 @@ export const SlideImage = ({ images }: IProps) => {
             </div>
           </div>
           <div className={styles.current_image_album}>
-            {images.map((img, index) => {
+            {images.map((img, i) => {
               return (
-                  <div
-                    className={styles.grid_images}
-                    key={index}
-                    onClick={togglePopup}
-                  >
-                    <img
-                      src={img}
-                      alt="/"
-                      onClick={() => onSelectImage(index)}
-                    />
-                  </div>
+                <div
+                  className={styles.grid_images}
+                  key={i}
+                  onClick={togglePopup}
+                >
+                  <img src={img} alt="/" onClick={() => onSelectImage(i)} />
+                </div>
               );
             })}
           </div>
@@ -268,6 +263,7 @@ export const SlideImage = ({ images }: IProps) => {
               <Image
                 src={images[imageIndex]}
                 alt="/"
+                priority
                 width={900}
                 height={700}
               />
