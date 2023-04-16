@@ -3,9 +3,10 @@
 .container {
   width: 114rem;
   height: 73.04rem;
-  position: absolute;
   display: flex;
-  background: #ffffff;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
   box-shadow: 0px 0px 10px #dadde1;
   border-radius: 1rem;
   margin: 0 auto;
