@@ -6,28 +6,37 @@ import { HousePayment, houses } from '@rentling/fr-shared';
 export default function MyComponent() {
   const router = useRouter();
   const { id } = router.query;
-  const [discription, setDiscription] = useState('');
+  const [house, setHouse] = useState(null);
 
-  return (
-    <>
-      {houses.map((item, index) => {
-        if (item.id == id) {
-          return (
-            <div key={index}>
-              <HousePayment
-                title={item.title}
-                address={item.address}
-                rooms={item.feature.bedroom}
-                bathrooms={item.feature.bathroom}
-                parking={item.feature.parking as boolean}
-                area={item.feature.city}
-                discribtion={item.feature.meterage}
-                images={item.images.imagesList}
-              />
-            </div>
-          );
-        }
-      })}
-    </>
-  );
+  useEffect(() => {
+    if (id) {
+      const houseData = getHouseById(id as string);
+      setHouse(houseData);
+    }
+  }, [id]);
+
+  const getHouseById = (houseId: string) => {
+    return houses.find((house) => house.id === houseId);
+  };
+
+  if (!house) {
+   return <div style={{display: 'flex', justifyContent:'center', alignContent:'center'}}><h1>House profile not found!</h1>;</div>
+  } else {
+    return (
+      <div>
+        <HousePayment
+          title={house.title}
+          address={house.address}
+          rooms={house.feature.bedroom}
+          bathrooms={house.feature.bathroom}
+          parking={house.feature.parking as boolean}
+          area={house.feature.city}
+          discribtion={house.feature.meterage}
+          images={house.images.imagesList}
+          priceDaily={house.price.oneDay}
+          priceMonthly={house.price.thirtyDay}
+        />
+      </div>
+    );
+  }
 }
