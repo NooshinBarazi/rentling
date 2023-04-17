@@ -3,7 +3,11 @@ import { Button, CalenderIcon } from '@rentling/fr-shared';
 import styles from './housePrice.module.scss';
 import { useState } from 'react';
 
-export const HousePrice = () => {
+interface PropsHousePrice {
+priceDaily: number;
+priceMonthly:number
+}
+export const HousePrice = ({priceDaily,priceMonthly}: PropsHousePrice) => {
   const { register } = useForm();
   const [handelActive, setHandelActive] = useState(false);
 
@@ -38,7 +42,7 @@ export const HousePrice = () => {
           />
         </div>
         <div className={styles.text_price}>
-          <p>{handelActive ? '150' : '3200'}</p>
+          <p>{handelActive ? priceDaily : priceMonthly}</p>
           <span>{handelActive ? '$/day' : '$/mo'}</span>
         </div>
         <form className={styles.form_container}>

@@ -29,6 +29,8 @@ interface PropsHousePayment {
   area: string;
   discribtion: string;
   images: any;
+  priceDaily:number
+  priceMonthly:number
 }
 
 export const HousePayment = ({
@@ -40,6 +42,8 @@ export const HousePayment = ({
   area,
   discribtion,
   images,
+  priceDaily,
+  priceMonthly
 }: PropsHousePayment) => {
   return (
     <>
@@ -65,7 +69,7 @@ export const HousePayment = ({
           />
         </div>
         <div className={styles.side_right}>
-          <HousePrice />
+          <HousePrice priceDaily={priceDaily} priceMonthly={priceMonthly} />
         </div>
       </section>
     </>
