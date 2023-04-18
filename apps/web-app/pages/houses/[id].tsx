@@ -3,7 +3,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { HousePayment, houses } from '@rentling/fr-shared';
 
-export default function MyComponent() {
+export default function HousePaymentHandel() {
   const router = useRouter();
   const { id } = router.query;
   const [house, setHouse] = useState(null);
