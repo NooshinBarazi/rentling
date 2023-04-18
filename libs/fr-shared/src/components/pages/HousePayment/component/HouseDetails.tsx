@@ -10,20 +10,20 @@ import styles from './houseDetails.module.scss';
 interface Props {
   title: string;
   address: string;
-  rooms: number;
+  bedroom: number;
   bathrooms: number;
   parking: boolean;
   area: string;
-  discribtion: string;
+  description: string;
 }
 export const HouseDetails = ({
   title,
   address,
-  rooms,
+  bedroom,
   bathrooms,
   parking,
   area,
-  discribtion,
+  description,
 }: Props) => {
   return (
     <section className={styles.container}>
@@ -56,7 +56,7 @@ export const HouseDetails = ({
       <div className={styles.card_items}>
         <div className={styles.card_item}>
           <BedIcon />
-          <p>{rooms}</p>
+          <p>{bedroom}</p>
         </div>
         <div className={styles.card_item}>
           <BathroomIcon />
@@ -79,7 +79,7 @@ export const HouseDetails = ({
       </div>
       <div className={styles.card_detail}>
         <span>About this house:</span>
-        <p>{discribtion}</p>
+        <p>{description}</p>
       </div>
     </section>
   );
