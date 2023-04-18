@@ -68,3 +68,4 @@ export * from './elements/HouseImageSlider/SliderPath';
 export * from './elements/Icons/Slider';
 export * from './pages/Landing/Sections/HouseForm/regionCityData';
 export * from './elements/Icons/MapIcon';
+export * from '../../../fr-shared/src/components/elements/HouseImageSlider/HouseImageSlider';
