@@ -1,7 +1,18 @@
 @import '../../../design-system/schema.scss';
 
 .container {
-  width: 70vw;
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 10rem;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../Landing//svgs//HeroBackground.svg');
+  background-color: $color-bg-gray;
+}
+.house_payment_conatainer {
+  width: 60vw;
   height: auto;
   display: flex;
   justify-content: center;
@@ -9,11 +20,9 @@
   background: #fff;
   box-shadow: 0px 0px 10px #dadde1;
   border-radius: 1rem;
-  margin: 0 auto;
   margin-top: 4rem;
   position: relative;
 }
-
 .icon_container {
   display: flex;
   align-items: center;
@@ -23,8 +32,11 @@
   right: 2rem;
 }
 
-.map_icon {
+.btn_deactive {
   background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 6.5rem;
   height: 3.77rem;
   border: 0.1rem solid #f6f3f3;
@@ -35,14 +47,20 @@
   }
 }
 
-.calender_icon {
+.btn_active {
   background-color: #585858;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 6.5rem;
   height: 3.77rem;
   svg {
     width: 4rem;
     height: 3.8rem;
     margin: 0 1rem;
+    Path{
+      color: #fff;
+    }
   }
 }
 
@@ -50,5 +68,34 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 3rem;
+  width: 50%;
+}
+
+.side_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+
+.side_right_calender {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.side_right_map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48.7rem;
+  height: 69.64rem;
+  img {
+    width: 45rem;
+    height: 45rem;
+  }
+}
+
+.deactive_side_right {
+  display: none;
 }

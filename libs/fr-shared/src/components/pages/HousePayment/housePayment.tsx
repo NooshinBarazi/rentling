@@ -1,9 +1,6 @@
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import house1 from '../HousePayment/image/house1.jpg';
-import house2 from '../HousePayment/image/house2.jpg';
-import house3 from '../HousePayment/image/house3.jpg';
-import house4 from '../HousePayment/image/house4.jpg';
+import map from '../HousePayment/component/image/map.jpg';
 import styles from './HousePayment.module.scss';
 import {
   houses,
@@ -17,59 +14,90 @@ import {
   SlidebarButton,
   MapIcon,
   CalenderIcon,
+  HouseImageSlider,
 } from '@rentling/fr-shared';
 import { title } from 'process';
+import { set } from 'react-hook-form';
 
 interface PropsHousePayment {
   title: string;
   address: string;
-  rooms: number;
+  bedroom: number;
   bathrooms: number;
   parking: boolean;
   area: string;
-  discribtion: string;
+  description: string;
   images: any;
-  priceDaily:number
-  priceMonthly:number
+  priceDaily: number;
+  priceMonthly: number;
+  cityName: string;
 }
 
 export const HousePayment = ({
   title,
   address,
-  rooms,
   bathrooms,
   parking,
   area,
-  discribtion,
   images,
   priceDaily,
-  priceMonthly
+  priceMonthly,
+  cityName,
+  bedroom,
+  description,
 }: PropsHousePayment) => {
+  const [selectBtn, setSelectBtn] = useState(false);
+
+  const onclickBtn = () => {
+    setSelectBtn(!selectBtn);
+  };
+
+
   return (
     <>
       <section className={styles.container}>
-        <div className={styles.icon_container}>
-          <div className={styles.map_icon}>
-            <MapIcon />
+        <div className={styles.house_payment_conatainer}>
+          <div className={styles.icon_container}>
+            <button className={selectBtn ? styles.btn_deactive : styles.btn_active} onClick={()=> setSelectBtn(false)}>
+              <MapIcon />
+            </button>
+            <button className={selectBtn ?  styles.btn_active : styles.btn_deactive} onClick={()=> setSelectBtn(true)}>
+              <CalenderIcon />
+            </button>
           </div>
-          <div className={styles.calender_icon}>
-            <CalenderIcon />
+          <div className={styles.side_left}>
+            <SlideImage images={images} />
+            <HouseDetails
+              title={title}
+              address={address}
+              parking={parking}
+              bathrooms={bathrooms}
+              bedroom={bedroom}
+              area={area}
+              description={description}
+            />
           </div>
-        </div>
-        <div className={styles.side_left}>
-          <SlideImage images={images} />
-          <HouseDetails
-            title={title}
-            address={address}
-            parking={parking}
-            bathrooms={bathrooms}
-            rooms={rooms}
-            area={area}
-            discribtion={discribtion}
-          />
-        </div>
         <div className={styles.side_right}>
-          <HousePrice priceDaily={priceDaily} priceMonthly={priceMonthly} />
+        <div
+            className={
+              selectBtn
+                ? styles.side_right_calender
+                : styles.deactive_side_right
+            }
+          >
+            <HousePrice priceDaily={priceDaily} priceMonthly={priceMonthly} />
+          </div>
+          <div
+            className={
+              !selectBtn ? styles.side_right_map : styles.deactive_side_right
+            }
+          >
+            <Image src={map} alt="/" />
+          </div>
+        </div>
+        </div>
+        <div className={styles.house_image_slider}>
+          <HouseImageSlider houses={houses} cityName={cityName}/>
         </div>
       </section>
     </>
