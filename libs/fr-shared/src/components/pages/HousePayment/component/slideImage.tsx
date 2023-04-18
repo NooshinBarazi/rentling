@@ -34,10 +34,6 @@ export const SlideImage = ({ images }: IProps) => {
     setPopup(!popup);
   };
 
-  const handeleClick = () => {
-    setHandelActive((handelActive) => !handelActive);
-  };
-
   const toggleModalSLider = () => {
     setModalSlider(!modalSlider);
   };
@@ -85,11 +81,11 @@ export const SlideImage = ({ images }: IProps) => {
       <div className={styles.house_container}>
         <div className={styles.image_container}>
           <div className={styles.single_image}>
-            <Image src={images[imageIndex]} alt="" width={100} height={100} />
+            <Image src={currentImage} alt="" width={100} height={100} />
           </div>
           <div
             className={styles.small_image_container}
-            onClick={toggleModalSLider}
+            onClick={(event)=> {setModalSlider(true); setHandelActive(true)}}
           >
             {images.map((image, index) => {
               return (
@@ -111,8 +107,8 @@ export const SlideImage = ({ images }: IProps) => {
           </div>
         </div>
         <div className={styles.counter_container}>
-          <div className={styles.text_coounter}>
-            <button onClick={toggleModalSLider}>+{images.length}</button>
+          <div className={styles.text_counter}>
+            <button onClick={(event)=> {setModalSlider(true); setHandelActive(true)}}>+{images.length}</button>
           </div>
         </div>
       </div>
@@ -136,11 +132,11 @@ export const SlideImage = ({ images }: IProps) => {
                 </div>
                 <div className={styles.Header_right}>
                   <button
-                    onClick={handeleClick}
+                    onClick={() => setHandelActive(true)}
                     className={
                       handelActive
-                        ? styles.deactived_button
-                        : styles.actived_button
+                        ? styles.actived_button
+                        : styles.deactived_button
                     }
                   >
                     <Slider />
@@ -148,13 +144,14 @@ export const SlideImage = ({ images }: IProps) => {
                   </button>
                   <button
                     onClick={(event) => {
-                      toggleModalSLider();
+                      setHandelActive(false);
                       toggleModalAlbum();
+                      toggleModalSLider();
                     }}
                     className={
                       handelActive
-                        ? styles.actived_button
-                        : styles.deactived_button
+                        ? styles.deactived_button
+                        : styles.actived_button
                     }
                   >
                     <Album />
@@ -210,8 +207,9 @@ export const SlideImage = ({ images }: IProps) => {
                       : styles.deactived_button
                   }
                   onClick={(event) => {
-                    toggleModalSLider();
+                    setHandelActive(true);
                     toggleModalAlbum();
+                    toggleModalSLider();
                   }}
                 >
                   <Slider />
@@ -223,7 +221,9 @@ export const SlideImage = ({ images }: IProps) => {
                       ? styles.deactived_button
                       : styles.actived_button
                   }
-                  onClick={handeleClick}
+                  onClick={() => {
+                    setHandelActive(false);
+                  }}
                 >
                   <Album />
                   <p className={styles.text_btn}>Album</p>
