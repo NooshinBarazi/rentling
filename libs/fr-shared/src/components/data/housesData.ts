@@ -1,11 +1,32 @@
-
-
 export const houses = [
   {
-    images: { 
-      imagesList:
-       ['/images/10.avif','/images/20.avif','/images/19.avif','/images/14.avif','/images/17.avif','/images/16.avif']
-      ,
+    images: {
+      imagesList: [
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/14.avif',
+        '/images/17.avif',
+        '/images/16.avif',
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/14.avif',
+        '/images/17.avif',
+        '/images/16.avif',
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/14.avif',
+        '/images/17.avif',
+        '/images/16.avif',
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/14.avif',
+        '/images/17.avif',
+        '/images/16.avif',
+      ],
       img: '/images/19.avif',
     },
     id: '36',
@@ -27,9 +48,14 @@ export const houses = [
   },
   {
     images: {
-      imagesList:
-      ['/images/11.avif','/images/20.avif','/images/19.avif','/images/10.avif','/images/17.avif','/images/12.avif']
-    ,
+      imagesList: [
+        '/images/11.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/12.avif',
+      ],
       img: '/images/1.avif',
     },
     id: '1',
@@ -51,9 +77,14 @@ export const houses = [
   },
   {
     images: {
-      imagesList:
-      ['/images/10.avif','/images/20.avif','/images/19.avif','/images/10.avif','/images/17.avif','/images/11.avif']
-    ,
+      imagesList: [
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/11.avif',
+      ],
       img: '/images/2.avif',
     },
 
@@ -76,9 +107,14 @@ export const houses = [
   },
   {
     images: {
-      imagesList:
-      ['/images/11.avif','/images/20.avif','/images/19.avif','/images/10.avif','/images/17.avif','/images/12.avif']
-    ,
+      imagesList: [
+        '/images/11.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/12.avif',
+      ],
       img: '/images/23.avif',
     },
 
@@ -101,9 +137,14 @@ export const houses = [
   },
   {
     images: {
-      imagesList:
-      ['/images/10.avif','/images/20.avif','/images/19.avif','/images/10.avif','/images/17.avif','/images/14.avif']
-    ,
+      imagesList: [
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/14.avif',
+      ],
       img: '/images/3.avif',
     },
 
@@ -126,9 +167,14 @@ export const houses = [
   },
   {
     images: {
-      imagesList:
-      ['/images/11.avif','/images/20.avif','/images/19.avif','/images/10.avif','/images/17.avif','/images/15.avif']
-    ,
+      imagesList: [
+        '/images/11.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/15.avif',
+      ],
       img: '/images/4.avif',
     },
 
@@ -151,9 +197,14 @@ export const houses = [
   },
   {
     images: {
-      imagesList:
-      ['/images/10.avif','/images/20.avif','/images/19.avif','/images/10.avif','/images/17.avif','/images/16.avif']
-    ,
+      imagesList: [
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/16.avif',
+      ],
       img: '/images/5.avif',
     },
 
@@ -177,9 +228,14 @@ export const houses = [
 
   {
     images: {
-      imagesList:
-      ['/images/11.avif','/images/20.avif','/images/19.avif','/images/10.avif','/images/18.avif','/images/17.avif']
-    ,
+      imagesList: [
+        '/images/11.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/18.avif',
+        '/images/17.avif',
+      ],
       img: '/images/6.avif',
     },
     id: '6',
@@ -201,9 +257,14 @@ export const houses = [
   },
   {
     images: {
-      imagesList:
-      ['/images/10.avif','/images/20.avif','/images/19.avif','/images/10.avif','/images/17.avif','/images/10.avif']
-    ,
+      imagesList: [
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/10.avif',
+      ],
       img: '/images/7.avif',
     },
     id: '7',
@@ -225,9 +286,14 @@ export const houses = [
   },
   {
     images: {
-      imagesList:
-      ['/images/11.avif','/images/20.avif','/images/19.avif','/images/10.avif','/images/17.avif','/images/19.avif']
-    ,
+      imagesList: [
+        '/images/11.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/19.avif',
+      ],
       img: '/images/8.avif',
     },
     id: '8',
@@ -249,9 +315,14 @@ export const houses = [
   },
   {
     images: {
-      imagesList:
-      ['/images/10.avif','/images/20.avif','/images/19.avif','/images/10.avif','/images/17.avif','/images/10.avif']
-    ,
+      imagesList: [
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/10.avif',
+      ],
       img: '/images/9.avif',
     },
     id: '9',
@@ -273,9 +344,14 @@ export const houses = [
   },
   {
     images: {
-      imagesList:
-      ['/images/11.avif','/images/20.avif','/images/19.avif','/images/10.avif','/images/17.avif','/images/11.avif']
-    ,
+      imagesList: [
+        '/images/11.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/11.avif',
+      ],
       img: '/images/16.avif',
     },
     id: '16',
@@ -297,9 +373,14 @@ export const houses = [
   },
   {
     images: {
-      imagesList:
-      ['/images/10.avif','/images/20.avif','/images/19.avif','/images/10.avif','/images/17.avif','/images/12.avif']
-    ,
+      imagesList: [
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/12.avif',
+      ],
       img: '/images/10.avif',
     },
     id: '10',
@@ -321,9 +402,14 @@ export const houses = [
   },
   {
     images: {
-      imagesList:
-      ['/images/11.avif','/images/20.avif','/images/19.avif','/images/10.avif','/images/17.avif','/images/15.avif']
-    ,
+      imagesList: [
+        '/images/11.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/15.avif',
+      ],
       img: '/images/15.avif',
     },
     id: '11',
@@ -345,9 +431,14 @@ export const houses = [
   },
   {
     images: {
-      imagesList:
-      ['/images/10.avif','/images/20.avif','/images/19.avif','/images/10.avif','/images/17.avif','/images/14.avif']
-    ,
+      imagesList: [
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/14.avif',
+      ],
       img: '/images/11.avif',
     },
     id: '12',
@@ -369,9 +460,14 @@ export const houses = [
   },
   {
     images: {
-      imagesList:
-      ['/images/11.avif','/images/20.avif','/images/19.avif','/images/10.avif','/images/17.avif','/images/15.avif']
-    ,
+      imagesList: [
+        '/images/11.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/15.avif',
+      ],
       img: '/images/12.avif',
     },
     id: '13',
@@ -393,9 +489,14 @@ export const houses = [
   },
   {
     images: {
-      imagesList:
-      ['/images/10.avif','/images/20.avif','/images/19.avif','/images/10.avif','/images/17.avif','/images/16.avif']
-    ,
+      imagesList: [
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/16.avif',
+      ],
       img: '/images/20.avif',
     },
     id: '40',
@@ -417,9 +518,14 @@ export const houses = [
   },
   {
     images: {
-      imagesList:
-      ['/images/11.avif','/images/20.avif','/images/19.avif','/images/10.avif','/images/16.avif','/images/17.avif']
-    ,
+      imagesList: [
+        '/images/11.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/16.avif',
+        '/images/17.avif',
+      ],
       img: '/images/13.avif',
     },
     id: '14',
@@ -441,9 +547,14 @@ export const houses = [
   },
   {
     images: {
-      imagesList:
-      ['/images/10.avif','/images/20.avif','/images/19.avif','/images/10.avif','/images/17.avif','/images/10.avif']
-    ,
+      imagesList: [
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/10.avif',
+      ],
       img: '/images/10.avif',
     },
     id: '15',
@@ -465,9 +576,14 @@ export const houses = [
   },
   {
     images: {
-      imagesList:
-      ['/images/11.avif','/images/20.avif','/images/19.avif','/images/10.avif','/images/17.avif','/images/19.avif']
-    ,
+      imagesList: [
+        '/images/11.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/19.avif',
+      ],
       img: '/images/22.avif',
     },
     id: '19',
