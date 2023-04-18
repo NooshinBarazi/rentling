@@ -28,6 +28,7 @@
 .small_image_container {
   display: flex;
   justify-content: space-between;
+  gap: 1.5rem;
   position: relative;
   bottom: 2.5rem;
   right: 1.5rem;
@@ -42,7 +43,7 @@
 }
 
 .images_slide {
-  margin-right: 1.5rem;
+  
   img {
     width: 15rem;
     height: 9rem;
@@ -54,14 +55,18 @@
   height: 6rem;
   box-shadow: 0px 0px 10px #bfc4cc;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   top: 7.5rem;
   right: 5.5rem;
   background-color: #ffffff;
 }
 
-.text_coounter {
-  padding: 1.5rem;
+.text_counter {
+  cursor: pointer;
+
   button {
     font-family: 'openSans';
     font-style: normal;
@@ -72,7 +77,7 @@
     text-align: center;
     border: none;
     background-color: #ffffff;
-    margin-left: -1rem;
+    border-radius: 50%;
   }
 }
 
@@ -181,6 +186,7 @@
   border: none;
   height: 24rem;
   position: absolute;
+  cursor: pointer;
   z-index: 5;
   & svg {
     width: 60%;
@@ -229,7 +235,7 @@
 // modalAlbum
 
 .container_album {
-  position: absolute;
+  position: relative;
   box-shadow: 0px 0px 10px #bfc4cc;
   width: 90vw;
   height: 90vh;
@@ -346,6 +352,7 @@
   border-radius: 0.2rem;
   font-weight: bold;
   color: #fbfbfb;
+  cursor: pointer;
 }
 
 .deactived_button {
@@ -360,10 +367,12 @@
   color: #417d8a;
   margin: 2rem;
   border-radius: 0.2rem;
+  cursor: pointer;
 }
 
 .slider_button_prev {
   left: -1px;
+  cursor: pointer;
   background: linear-gradient(
     90deg,
     hsl(0, 0%, 97%) 0%,
