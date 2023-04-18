@@ -27,14 +27,15 @@ export default function MyComponent() {
         <HousePayment
           title={house.title}
           address={house.address}
-          rooms={house.feature.bedroom}
           bathrooms={house.feature.bathroom}
           parking={house.feature.parking as boolean}
           area={house.feature.city}
-          discribtion={house.feature.meterage}
+          description={undefined}
           images={house.images.imagesList}
           priceDaily={house.price.oneDay}
           priceMonthly={house.price.thirtyDay}
+          cityName={house.feature.city}
+          bedroom={house.bedroom}
         />
       </div>
     );
