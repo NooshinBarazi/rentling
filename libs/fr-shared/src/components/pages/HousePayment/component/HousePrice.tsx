@@ -27,7 +27,7 @@ export const HousePrice = ({priceDaily,priceMonthly}: PropsHousePrice) => {
           <Button
             Icon={undefined}
             text="Daily"
-            onClick={handeleClick}
+            onClick={()=>setHandelActive(true)}
             newStyle={
               handelActive ? styles.actived_button : styles.deactived_button
             }
@@ -38,7 +38,7 @@ export const HousePrice = ({priceDaily,priceMonthly}: PropsHousePrice) => {
             newStyle={
               handelActive ? styles.deactived_button : styles.actived_button
             }
-            onClick={handeleClick}
+            onClick={()=> setHandelActive(false)}
           />
         </div>
         <div className={styles.text_price}>
