@@ -46,7 +46,7 @@ export const HousePayment = ({
   bedroom,
   description,
 }: PropsHousePayment) => {
-  const [selectBtn, setSelectBtn] = useState(false);
+  const [selectBtn, setSelectBtn] = useState(true);
 
   const onclickBtn = () => {
     setSelectBtn(!selectBtn);
@@ -58,12 +58,16 @@ export const HousePayment = ({
       <section className={styles.container}>
         <div className={styles.house_payment_conatainer}>
           <div className={styles.icon_container}>
+            <div className={styles.map_icon}>
             <button className={selectBtn ? styles.btn_deactive : styles.btn_active} onClick={()=> setSelectBtn(false)}>
               <MapIcon />
             </button>
+            </div>
+            <div className={styles.Calender_icon}>
             <button className={selectBtn ?  styles.btn_active : styles.btn_deactive} onClick={()=> setSelectBtn(true)}>
               <CalenderIcon />
             </button>
+            </div>
           </div>
           <div className={styles.side_left}>
             <SlideImage images={images} />
@@ -92,7 +96,7 @@ export const HousePayment = ({
               !selectBtn ? styles.side_right_map : styles.deactive_side_right
             }
           >
-            <Image src={map} alt="/" />
+            <Image src={map} alt="/"/>
           </div>
         </div>
         </div>

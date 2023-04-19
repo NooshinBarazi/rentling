@@ -28,8 +28,30 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: -1rem;
-  right: 2rem;
+  top: -1.5rem;
+  right: 0;
+}
+
+.map_icon {
+  padding: 0;
+  width: 6.5rem;
+  height: 3.77rem;
+  Button {
+    width: 6.5rem;
+    height: 3.77rem;
+    border-radius: 0.3rem 0 0 0.3rem;
+  }
+}
+
+.Calender_icon {
+  padding: 0;
+  width: 6.5rem;
+  height: 3.77rem;
+  Button {
+    width: 6.5rem;
+    height: 3.77rem;
+    border-radius: 0 0.3rem 0.3rem 0;
+  }
 }
 
 .btn_deactive {
@@ -41,8 +63,8 @@
   height: 3.77rem;
   border: 0.1rem solid #f6f3f3;
   svg {
-    width: 4rem;
-    height: 3.8rem;
+    width: 2rem;
+    height: 1.8rem;
     margin: 0 1rem;
   }
 }
@@ -54,12 +76,13 @@
   align-items: center;
   width: 6.5rem;
   height: 3.77rem;
+  outline: none;
   svg {
-    width: 4rem;
-    height: 3.8rem;
+    width: 2rem;
+    height: 1.8rem;
     margin: 0 1rem;
-    Path{
-      color: #fff;
+    Path {
+      fill: #fff;
     }
   }
 }

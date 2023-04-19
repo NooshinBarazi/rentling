@@ -85,7 +85,10 @@ export const SlideImage = ({ images }: IProps) => {
           </div>
           <div
             className={styles.small_image_container}
-            onClick={(event)=> {setModalSlider(true); setHandelActive(true)}}
+            onClick={(event) => {
+              setModalSlider(true);
+              setHandelActive(true);
+            }}
           >
             {images.map((image, index) => {
               return (
@@ -108,7 +111,14 @@ export const SlideImage = ({ images }: IProps) => {
         </div>
         <div className={styles.counter_container}>
           <div className={styles.text_counter}>
-            <button onClick={(event)=> {setModalSlider(true); setHandelActive(true)}}>+{images.length}</button>
+            <button
+              onClick={(event) => {
+                setModalSlider(true);
+                setHandelActive(true);
+              }}
+            >
+              +{images.length}
+            </button>
           </div>
         </div>
       </div>
@@ -119,9 +129,9 @@ export const SlideImage = ({ images }: IProps) => {
           onMouseLeave={() => setIsHovered(false)}
         >
           <div className={styles.container_slider}>
-            <div className={styles.Header_container_slider}>
-              <div className={styles.Header_slider}>
-                <div className={styles.Header_left}>
+            <div className={styles.header_container_slider}>
+              <div className={styles.header_slider}>
+                <div className={styles.header_left}>
                   <button
                     className={styles.close_button}
                     onClick={toggleModalSLider}
@@ -130,33 +140,37 @@ export const SlideImage = ({ images }: IProps) => {
                     <p className={styles.text_btn_close}>close</p>
                   </button>
                 </div>
-                <div className={styles.Header_right}>
-                  <button
-                    onClick={() => setHandelActive(true)}
-                    className={
-                      handelActive
-                        ? styles.actived_button
-                        : styles.deactived_button
-                    }
-                  >
-                    <Slider />
-                    <p className={styles.text_btn}>slider</p>
-                  </button>
-                  <button
-                    onClick={(event) => {
-                      setHandelActive(false);
-                      toggleModalAlbum();
-                      toggleModalSLider();
-                    }}
-                    className={
-                      handelActive
-                        ? styles.deactived_button
-                        : styles.actived_button
-                    }
-                  >
-                    <Album />
-                    <p className={styles.text_btn}>Album</p>
-                  </button>
+                <div className={styles.header_right}>
+                  <div className={styles.button_slider}>
+                    <button
+                      onClick={() => setHandelActive(true)}
+                      className={
+                        handelActive
+                          ? styles.actived_button
+                          : styles.deactived_button
+                      }
+                    >
+                      <Slider />
+                      <p className={styles.text_btn}>slider</p>
+                    </button>
+                  </div>
+                  <div className={styles.button_album}>
+                    <button
+                      onClick={(event) => {
+                        setHandelActive(false);
+                        toggleModalAlbum();
+                        toggleModalSLider();
+                      }}
+                      className={
+                        handelActive
+                          ? styles.deactived_button
+                          : styles.actived_button
+                      }
+                    >
+                      <Album />
+                      <p className={styles.text_btn}>Album</p>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -186,9 +200,9 @@ export const SlideImage = ({ images }: IProps) => {
 
       {modalAlbum && (
         <div className={styles.container_album}>
-          <div className={styles.Header_container_album}>
-            <div className={styles.Header_album}>
-              <div className={styles.Header_left}>
+          <div className={styles.header_container_album}>
+            <div className={styles.header_album}>
+              <div className={styles.header_left}>
                 <button
                   className={styles.close_button}
                   onClick={(event) => {
@@ -199,35 +213,39 @@ export const SlideImage = ({ images }: IProps) => {
                   <p className={styles.text_btn_close}>close</p>
                 </button>
               </div>
-              <div className={styles.Header_right}>
-                <button
-                  className={
-                    handelActive
-                      ? styles.actived_button
-                      : styles.deactived_button
-                  }
-                  onClick={(event) => {
-                    setHandelActive(true);
-                    toggleModalAlbum();
-                    toggleModalSLider();
-                  }}
-                >
-                  <Slider />
-                  <p className={styles.text_btn}>slider</p>
-                </button>
-                <button
-                  className={
-                    handelActive
-                      ? styles.deactived_button
-                      : styles.actived_button
-                  }
-                  onClick={() => {
-                    setHandelActive(false);
-                  }}
-                >
-                  <Album />
-                  <p className={styles.text_btn}>Album</p>
-                </button>
+              <div className={styles.header_right}>
+                <div className={styles.button_slider}>
+                  <button
+                    className={
+                      handelActive
+                        ? styles.actived_button
+                        : styles.deactived_button
+                    }
+                    onClick={(event) => {
+                      setHandelActive(true);
+                      toggleModalAlbum();
+                      toggleModalSLider();
+                    }}
+                  >
+                    <Slider />
+                    <p className={styles.text_btn}>slider</p>
+                  </button>
+                </div>
+                <div className={styles.button_album}>
+                  <button
+                    className={
+                      handelActive
+                        ? styles.deactived_button
+                        : styles.actived_button
+                    }
+                    onClick={() => {
+                      setHandelActive(false);
+                    }}
+                  >
+                    <Album />
+                    <p className={styles.text_btn}>Album</p>
+                  </button>
+                </div>
               </div>
             </div>
           </div>

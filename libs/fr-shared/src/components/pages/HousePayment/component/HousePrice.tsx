@@ -4,18 +4,16 @@ import styles from './housePrice.module.scss';
 import { useState } from 'react';
 
 interface PropsHousePrice {
-priceDaily: number;
-priceMonthly:number
+  priceDaily: number;
+  priceMonthly: number;
 }
-export const HousePrice = ({priceDaily,priceMonthly}: PropsHousePrice) => {
+export const HousePrice = ({ priceDaily, priceMonthly }: PropsHousePrice) => {
   const { register } = useForm();
   const [handelActive, setHandelActive] = useState(false);
-
 
   const handeleClick = () => {
     setHandelActive((handelActive) => !handelActive);
   };
-
 
   return (
     <section id={styles.section_house_details}>
@@ -24,22 +22,26 @@ export const HousePrice = ({priceDaily,priceMonthly}: PropsHousePrice) => {
           <p>Rent this house</p>
         </div>
         <div className={styles.button_style}>
-          <Button
-            Icon={undefined}
-            text="Daily"
-            onClick={()=>setHandelActive(true)}
-            newStyle={
-              handelActive ? styles.actived_button : styles.deactived_button
-            }
-          />
-          <Button
-            Icon={undefined}
-            text="Monthly"
-            newStyle={
-              handelActive ? styles.deactived_button : styles.actived_button
-            }
-            onClick={()=> setHandelActive(false)}
-          />
+          <div className={styles.button_left}>
+            <Button
+              Icon={undefined}
+              text="Daily"
+              onClick={() => setHandelActive(true)}
+              newStyle={
+                handelActive ? styles.actived_button : styles.deactived_button
+              }
+            />
+          </div>
+          <div className={styles.button_right}>
+            <Button
+              Icon={undefined}
+              text="Monthly"
+              newStyle={
+                handelActive ? styles.deactived_button : styles.actived_button
+              }
+              onClick={() => setHandelActive(false)}
+            />
+          </div>
         </div>
         <div className={styles.text_price}>
           <p>{handelActive ? priceDaily : priceMonthly}</p>
@@ -59,7 +61,7 @@ export const HousePrice = ({priceDaily,priceMonthly}: PropsHousePrice) => {
             due to Landlord Tenant Laws
           </p>
         </div>
-        <div className={styles.button_style}>
+        <div className={styles.button_style_reserve}>
           <Button
             Icon={undefined}
             text="RESERVE"

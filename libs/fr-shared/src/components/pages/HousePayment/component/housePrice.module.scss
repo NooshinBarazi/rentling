@@ -46,26 +46,40 @@
     width: 150px;
     height: 50px;
     cursor: pointer;
-    &:hover {
-      border: 1px solid #cfcdcd;
-    }
-    Button {
-      border-bottom-right-radius: 0.2rem 0rem;
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 22px;
-      width: 150px;
-      height: 60px;
-      &:hover {
-        border: 1px solid #cfcdcd;
-      }
-    }
+  }
+}
+
+.button_left {
+  padding: 0;
+  margin: 0;
+  width: 15rem;
+  height: 6rem;
+  Button {
+    border-radius: 0.2rem 0 0 0.2rem;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    border: 0.1rem solid #417d8a;
+  }
+}
+
+.button_right {
+  padding: 0;
+  width: 15rem;
+  height: 6rem;
+  Button {
+    border-radius: 0 0.2rem 0.2rem 0;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    border: 0.1rem solid #417d8a;
   }
 }
 
 .text_price {
+  font-family: 'Open Sans';
   width: 149px;
   display: flex;
   align-items: center;
@@ -82,15 +96,14 @@
   margin-top: 10px;
 }
 
-
 .text_price {
- p{
-  font-style: normal;
-  font-size: 35px;
-  line-height: 48px;
-  color: #f76969;
- }
-  span{
+  p {
+    font-style: normal;
+    font-size: 35px;
+    line-height: 48px;
+    color: #f76969;
+  }
+  span {
     position: relative;
     font-size: 15px;
     padding-left: 10px;
@@ -106,7 +119,6 @@
   margin-top: 40px;
 }
 
-
 .input_container {
   margin-bottom: 20px;
   input {
@@ -121,13 +133,29 @@
   }
 }
 
+.button_style_reserve {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #417d8a;
+  Button {
+    background: #417d8a;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 0.2rem;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+  }
+}
 
 .actived_button {
   background: #417d8a;
   border: none;
   width: 150px;
   height: 60px;
-  border-radius: 2px;
+  border-radius: 0.2rem 0 0 0.2rem;
   font-weight: bold;
   color: #fbfbfb;
 }

@@ -79,7 +79,9 @@ export const HouseDetails = ({
       </div>
       <div className={styles.card_detail}>
         <span>About this house:</span>
+        <div className={styles.description}>
         <p>{description}</p>
+        </div>
       </div>
     </section>
   );

@@ -70,14 +70,7 @@
 }
 
 .card_detail {
-  p {
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 2.2rem;
-    font-style: normal;
-    font-family: 'Open Sans';
-    color: #a7a7a7;
-  }
+
   span {
     font-family: 'Open Sans';
     font-style: normal;
@@ -88,4 +81,18 @@
   }
   width: 52.9rem;
   height: 29.34rem;
+}
+
+.description{
+  width: 53rem;
+  height: 12rem;
+  overflow: auto;
+    p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.2rem;
+    font-style: normal;
+    font-family: 'Open Sans';
+    color: #a7a7a7;
+  }
 }
