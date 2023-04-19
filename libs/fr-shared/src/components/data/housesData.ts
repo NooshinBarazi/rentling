@@ -40,6 +40,7 @@ export const houses = [
       bathroom: 2,
       parking: true,
       meterage: '1,500',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 199,
@@ -69,6 +70,7 @@ export const houses = [
       bathroom: 2,
       parking: true,
       meterage: '1,500',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 199,
@@ -99,6 +101,7 @@ export const houses = [
       bathroom: 2,
       parking: true,
       meterage: '1,200',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 205,
@@ -129,6 +132,7 @@ export const houses = [
       bathroom: 3,
       parking: true,
       meterage: '2,000',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 299,
@@ -159,6 +163,7 @@ export const houses = [
       bathroom: 3,
       parking: false,
       meterage: '2,000',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 299,
@@ -189,6 +194,7 @@ export const houses = [
       bathroom: 1,
       parking: 'without parking',
       meterage: '800',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 175,
@@ -219,6 +225,7 @@ export const houses = [
       bathroom: 2,
       parking: true,
       meterage: '2,000',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 199,
@@ -249,6 +256,7 @@ export const houses = [
       bathroom: 2,
       parking: false,
       meterage: '2,000',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 199,
@@ -278,6 +286,7 @@ export const houses = [
       bathroom: 1,
       parking: true,
       meterage: '1,000',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 150,
@@ -307,6 +316,7 @@ export const houses = [
       bathroom: 1,
       parking: true,
       meterage: '750',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 125,
@@ -336,6 +346,7 @@ export const houses = [
       bathroom: 3,
       parking: true,
       meterage: '2,500',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 275,
@@ -365,6 +376,7 @@ export const houses = [
       bathroom: 3,
       parking: true,
       meterage: '2,500',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 275,
@@ -394,6 +406,7 @@ export const houses = [
       bathroom: 2,
       parking: false,
       meterage: '1,800',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 350,
@@ -423,6 +436,7 @@ export const houses = [
       bathroom: 2,
       parking: false,
       meterage: '1,800',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 350,
@@ -452,6 +466,7 @@ export const houses = [
       bathroom: 2,
       parking: true,
       meterage: '1,200',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 200,
@@ -481,6 +496,7 @@ export const houses = [
       bathroom: 2,
       parking: true,
       meterage: '1,200',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 200,
@@ -510,6 +526,7 @@ export const houses = [
       bathroom: 2,
       parking: true,
       meterage: '1,200',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 200,
@@ -539,6 +556,7 @@ export const houses = [
       bathroom: 2,
       parking: true,
       meterage: '1,200',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 200,
@@ -568,6 +586,7 @@ export const houses = [
       bathroom: 2,
       parking: false,
       meterage: '1,800',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 350,
@@ -597,6 +616,7 @@ export const houses = [
       bathroom: 2,
       parking: false,
       meterage: '1,800',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 350,
