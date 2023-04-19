@@ -29,13 +29,13 @@ export default function HousePaymentHandel() {
           address={house.address}
           bathrooms={house.feature.bathroom}
           parking={house.feature.parking as boolean}
-          area={house.feature.city}
-          description={undefined}
+          area={house.feature.meterage}
+          description={house.feature.description}
           images={house.images.imagesList}
           priceDaily={house.price.oneDay}
           priceMonthly={house.price.thirtyDay}
           cityName={house.feature.city}
-          bedroom={house.bedroom}
+          bedroom={house.feature.bedroom}
         />
       </div>
     );
