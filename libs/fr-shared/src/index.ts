@@ -1,4 +1,11 @@
 export * from './components';
 export * from './components/elements/Input/Input';
-export * from './components/elements/Icons//UserSigninIcon';
+export * from './components/elements/Icons/UserSigninIcon';
 export * from './components/elements/Icons/MailIcon';
+export * from './components/pages/Profile/components/CurrentRental/CurrentRental';
+export * from './components/elements/Icons/CommentIcon';
+export * from './components/elements/Icons/CalenderIcon';
+export * from './components/elements/Icons/StayTimeIcon';
+export * from './components/elements/Icons/FullStarIcon';
+export * from './components/elements/Icons/EmptyStarIcon';
+export * from './components/pages/Profile/components/data ';

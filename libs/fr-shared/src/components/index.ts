@@ -59,4 +59,9 @@ export * from './elements/Icons/HouseIcon';
 export * from './elements/Icons/FavoritesIcon';
 export * from './elements/Icons/PaymentIcon';
 export * from './elements/Icons/SecurityIcon';
+export * from './elements/Icons/DropDownIcon';
+export * from './elements/Icons/FindHomeIcon';
+export * from './pages/Profile/components/StarRating/StarRating';
+export * from './pages/Profile/components/profileTemplate/ProfileTemplate';
+
 
