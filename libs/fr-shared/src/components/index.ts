@@ -52,3 +52,11 @@ export * from './pages/Landing/Landing';
 export * from './section/information/Information';
 export * from './containers/Footer/Footer';
 export * from './containers/Footer/FooterItems/FooterItems';
+export * from './pages/Profile/components/UserProfile/UserProfile';
+export * from './elements/Icons/CurrentDateIcon';
+export * from './elements/Icons/UserProfileIcon';
+export * from './elements/Icons/HouseIcon';
+export * from './elements/Icons/FavoritesIcon';
+export * from './elements/Icons/PaymentIcon';
+export * from './elements/Icons/SecurityIcon';
+
