@@ -1,0 +1,91 @@
+@import '../../../../../design-system/schema.scss';
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-bg-gray;
+  background-image: url('../../../Landing/svgs/HeroBackground.svg');
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 150rem;
+  max-height: 110.4rem;
+  width: 90vw;
+  height: 90vh;
+  border-radius: 0.5rem;
+  background-color: $color-white;
+  background-image: url('../../../Landing/svgs/profile.svg');
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.profile_nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rem 2.5rem;
+  width: 20%;
+  min-width: 25rem;
+  height: 100%;
+  background-color: $color-white;
+  box-shadow: 0px 0px 2.5rem rgba(191, 196, 204, 0.5);
+  nav{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.nav_item,
+.nav_item_active {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0rem 0.5rem 1.5rem;
+  gap: 1rem;
+  width: 100%;
+  height: 6rem;
+  list-style: none;
+  opacity: 0.8;
+  border-radius: 0.25rem;
+
+  h4 {
+    font-weight: 600;
+    font-size: 2rem;
+    color: $color-grayish-dark-green;
+  }
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+
+    path {
+      fill: $color-grayish-dark-green;
+    }
+  }
+
+  &:hover {
+    box-shadow: $box-shadow-6;
+  }
+}
+
+.nav_item_active {
+  background-color: $color-primary;
+  opacity: 1;
+
+  h4 {
+    color: $color-white;
+  }
+
+  svg {
+    path {
+      fill: $color-white;
+    }
+  }
+}
