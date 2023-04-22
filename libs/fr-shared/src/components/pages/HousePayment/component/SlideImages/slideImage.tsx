@@ -264,9 +264,8 @@ export const SlideImage = ({ images }: IProps) => {
               <Image
                 src={images[imageIndex]}
                 alt="/"
-                priority
-                width={900}
-                height={700}
+                fill
+                object-fit="cover"
               />
             </div>
           </div>

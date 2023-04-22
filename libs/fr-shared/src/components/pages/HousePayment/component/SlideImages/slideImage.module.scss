@@ -414,7 +414,7 @@
   background: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 100%;
-  z-index: 100;
+  z-index: 100000000;
 }
 
 .text_btn_close {
@@ -428,11 +428,13 @@
 }
 
 .popup_image {
-  border-radius: 0.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 13rem;
+  margin: 14rem auto;
+  position: relative;
+  width: 100rem;
+  height: 52.4rem;
+  img{
+    border-radius: 0.5rem;
+  }
 }
 
 .close_popup {
