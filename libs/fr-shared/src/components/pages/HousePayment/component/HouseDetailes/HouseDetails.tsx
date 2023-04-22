@@ -6,7 +6,7 @@ import {
   SqFeetIcon,
 } from '@rentling/fr-shared';
 import styles from './houseDetails.module.scss';
-import { LocationIcon } from '../../../elements/Icons/LocationIcon';
+import { LocationIcon } from '../../../../elements/Icons/LocationIcon';
 
 interface Props {
   title: string;

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import map from '../HousePayment/component/image/map.jpg';
-import styles from './HousePayment.module.scss';
+import map from '../image/map.jpg';
+import styles from './housePayment.module.scss';
 import {
   houses,
   SlideImage,
