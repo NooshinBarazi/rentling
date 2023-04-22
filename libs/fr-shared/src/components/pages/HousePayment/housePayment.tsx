@@ -44,12 +44,11 @@ export const HousePayment = ({
   bedroom,
   description,
 }: PropsHousePayment) => {
-  const [selectBtn, setSelectBtn] = useState(true);
+  const [toggleBtnMapIcon, setToggleBtnMapIcon] = useState(true);
 
   const onclickBtn = () => {
-    setSelectBtn(!selectBtn);
+    setToggleBtnMapIcon(!toggleBtnMapIcon);
   };
-
 
   return (
     <>
@@ -57,14 +56,20 @@ export const HousePayment = ({
         <div className={styles.house_payment_conatainer}>
           <div className={styles.icon_container}>
             <div className={styles.map_icon}>
-            <button className={selectBtn ? styles.btn_deactive : styles.btn_active} onClick={()=> setSelectBtn(false)}>
-              <MapIcon />
-            </button>
+              <button
+                className={toggleBtnMapIcon ? styles.btn_deactive : styles.btn_active}
+                onClick={() => setToggleBtnMapIcon(false)}
+              >
+                <MapIcon />
+              </button>
             </div>
-            <div className={styles.Calender_icon}>
-            <button className={selectBtn ?  styles.btn_active : styles.btn_deactive} onClick={()=> setSelectBtn(true)}>
-              <CalenderIcon />
-            </button>
+            <div className={styles.calender_icon}>
+              <button
+                className={toggleBtnMapIcon ? styles.btn_active : styles.btn_deactive}
+                onClick={() => setToggleBtnMapIcon(true)}
+              >
+                <CalenderIcon />
+              </button>
             </div>
           </div>
           <div className={styles.side_left}>
@@ -79,27 +84,29 @@ export const HousePayment = ({
               description={description}
             />
           </div>
-        <div className={styles.side_right}>
-        <div
-            className={
-              selectBtn
-                ? styles.side_right_calender
-                : styles.deactive_side_right
-            }
-          >
-            <HousePrice priceDaily={priceDaily} priceMonthly={priceMonthly} />
+          <div className={styles.side_right}>
+            <div
+              className={
+                toggleBtnMapIcon
+                  ? styles.side_right_calender
+                  : styles.deactive_side_right
+              }
+            >
+              <HousePrice priceDaily={priceDaily} priceMonthly={priceMonthly} />
+            </div>
+            <div
+              className={
+                !toggleBtnMapIcon ? styles.side_right_map : styles.deactive_side_right
+              }
+            >
+              <div className={styles.image_map}>
+                <Image src={map} alt="/" fill object-fit="cover"/>
+              </div>
+            </div>
           </div>
-          <div
-            className={
-              !selectBtn ? styles.side_right_map : styles.deactive_side_right
-            }
-          >
-            <Image src={map} alt="/"/>
-          </div>
-        </div>
         </div>
         <div className={styles.house_image_slider}>
-          <HouseImageSlider houses={houses} cityName={cityName}/>
+          <HouseImageSlider houses={houses} cityName={cityName} />
         </div>
       </section>
     </>

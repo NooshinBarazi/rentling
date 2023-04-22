@@ -43,7 +43,7 @@
   }
 }
 
-.Calender_icon {
+.calender_icon {
   padding: 0;
   width: 6.5rem;
   height: 3.77rem;
@@ -113,10 +113,12 @@
   align-items: center;
   width: 48.7rem;
   height: 69.64rem;
-  img {
-    width: 45rem;
-    height: 45rem;
-  }
+}
+
+.image_map{
+  position: relative;
+  width: 48rem;
+  height: 46rem;
 }
 
 .deactive_side_right {
