@@ -1,12 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './slideImage.module.scss';
-import { SliderPath } from '../../../elements/HouseImageSlider/SliderPath';
-import house1 from '../image/house1.jpg';
-import { SlidebarButton } from '../../../elements/Icons/SliderButton';
-import { Close } from '../../../elements/Icons/Close';
-import { Slider } from '../../../elements/Icons/Slider';
-import { Album } from '../../../elements/Icons/Album';
+import { Slider, Album, Close, SlidebarButton } from '@rentling/fr-shared';
 import { useState, useEffect } from 'react';
 
 interface IProps {
@@ -15,7 +10,6 @@ interface IProps {
 
 export const SlideImage = ({ images }: IProps) => {
   const [currentImageIndex, setCurrentImagIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
   const [modalSlider, setModalSlider] = useState(false);
   const [modalAlbum, setModalAlbum] = useState(false);
 
@@ -54,15 +48,6 @@ export const SlideImage = ({ images }: IProps) => {
     setCurrentImagIndex(index);
   };
 
-  useEffect(() => {
-    if (!isHovered) {
-      const intervalId = setInterval(() => {
-        nextSlide();
-      }, 6000);
-      return () => clearInterval(intervalId);
-    }
-  }, [isHovered, nextSlide]);
-
   const currentImage = images[currentImageIndex];
 
   const prevImage =
@@ -81,7 +66,7 @@ export const SlideImage = ({ images }: IProps) => {
       <div className={styles.house_container}>
         <div className={styles.image_container}>
           <div className={styles.single_image}>
-            <Image src={currentImage} alt="" width={100} height={100} />
+            <Image src={currentImage} alt="" fill object-fit="cover" />
           </div>
           <div
             className={styles.small_image_container}
@@ -95,11 +80,10 @@ export const SlideImage = ({ images }: IProps) => {
                 <div className={styles.image_list_container} key={index}>
                   <div className={styles.images_slide}>
                     <Image
-                      width={100}
-                      height={100}
                       src={image}
                       alt="/"
-                      priority
+                      fill
+                      object-fit="cover"
                       onClick={() => setCurrentImagIndex(index)}
                       className={currentImageIndex == index ? 'active' : ''}
                     />
@@ -123,11 +107,7 @@ export const SlideImage = ({ images }: IProps) => {
         </div>
       </div>
       {modalSlider && (
-        <div
-          className={styles.containers}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
+        <div className={styles.container_modal_slider}>
           <div className={styles.container_slider}>
             <div className={styles.header_container_slider}>
               <div className={styles.header_slider}>
@@ -175,7 +155,6 @@ export const SlideImage = ({ images }: IProps) => {
               </div>
             </div>
             <div className={styles.box}>
-              <SliderPath />
               <button className={styles.slider_button_prev} onClick={prevSlide}>
                 <SlidebarButton />
               </button>
@@ -200,7 +179,7 @@ export const SlideImage = ({ images }: IProps) => {
 
       {modalAlbum && (
         <div className={styles.container_album}>
-          <div className={styles.header_container_album}>
+          <div className={styles.container_header_album}>
             <div className={styles.header_album}>
               <div className={styles.header_left}>
                 <button
@@ -257,7 +236,11 @@ export const SlideImage = ({ images }: IProps) => {
                   key={i}
                   onClick={togglePopup}
                 >
-                  <img src={img} alt="/" onClick={() => onSelectImage(i)} />
+                  <img
+                    src={img}
+                    alt="/"
+                    onClick={() => onSelectImage(i)}
+                  />
                 </div>
               );
             })}
