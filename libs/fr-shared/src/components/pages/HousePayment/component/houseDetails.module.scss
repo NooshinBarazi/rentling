@@ -13,7 +13,7 @@
     font-size: 1.6rem;
     line-height: 2.2rem;
     padding: 1.5rem 1rem;
-    color: #a7a7a7;
+    color: $color-text-light-gray;
   }
 }
 
@@ -28,8 +28,16 @@
     font-size: 1.6rem;
     line-height: 2.2rem;
     padding: 1.5rem 1rem;
-    color: #a7a7a7;
+    color: $color-text-light-gray;
     width: 50rem;
+  }
+}
+
+.location_icon {
+  width: 2.4rem;
+  height: 2.7rem;
+  path {
+    fill: $color-text-dark-gray;
   }
 }
 
@@ -53,7 +61,7 @@
   svg {
     width: 2.5rem;
     height: 2.5rem;
-    color: #585858;
+    color: $color-text-dark-gray;
   }
 
   p {
@@ -70,7 +78,6 @@
 }
 
 .card_detail {
-
   span {
     font-family: 'Open Sans';
     font-style: normal;
@@ -83,16 +90,16 @@
   height: 29.34rem;
 }
 
-.description{
+.description {
   width: 53rem;
   height: 12rem;
   overflow: auto;
-    p {
+  p {
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 2.2rem;
     font-style: normal;
     font-family: 'Open Sans';
-    color: #a7a7a7;
+    color: $color-text-light-gray;
   }
 }
