@@ -16,8 +16,6 @@ import {
   CalenderIcon,
   HouseImageSlider,
 } from '@rentling/fr-shared';
-import { title } from 'process';
-import { set } from 'react-hook-form';
 
 interface PropsHousePayment {
   title: string;
