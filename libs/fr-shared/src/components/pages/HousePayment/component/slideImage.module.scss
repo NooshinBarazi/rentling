@@ -1,6 +1,6 @@
 @import '../../../../design-system/schema.scss';
 
-#house_section1 {
+.house_section1 {
   width: 60.9rem;
   height: 31.5rem;
 }
@@ -52,7 +52,7 @@
 .counter_container {
   width: 6rem;
   height: 6rem;
-  box-shadow: 0px 0px 10px #bfc4cc;
+  box-shadow: 0px 0px 10px $box-shadow-10;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -72,7 +72,7 @@
     font-weight: 400;
     font-size: 2.5rem;
     line-height: 3rem;
-    color: #585858;
+    color: $color-text-dark-gray;
     text-align: center;
     border: none;
     background-color: #ffffff;
@@ -92,7 +92,7 @@
 }
 
 .container_slider {
-  box-shadow: 0px 0px 10px #bfc4cc;
+  box-shadow: 0px 0px 10px $box-shadow-10;
   width: 90vw;
   height: 90vh;
   margin-top: 2rem;
@@ -134,7 +134,7 @@
   justify-content: center;
   align-items: center;
   border: none;
-  background-color: #f76969;
+  background-color: $color-alert;
   border-radius: 0.5rem;
   cursor: pointer;
 }
@@ -172,7 +172,7 @@
   font-weight: 600;
   font-size: 1.4rem;
   line-height: 16px;
-  color: #a7a7a7;
+  color: $color-text-light-gray;
   padding-left: 1rem;
 }
 
@@ -236,7 +236,7 @@
   right: -1px;
   background: linear-gradient(
     90deg,
-    #f8f8f8 0%,
+    $color-bg-gray 0%,
     rgba(248, 248, 248, 0.75) 49.49%,
     rgba(248, 248, 248, 0) 100%
   );
@@ -247,7 +247,7 @@
 
 .container_album {
   position: relative;
-  box-shadow: 0px 0px 10px #bfc4cc;
+  box-shadow: 0px 0px 10px $box-shadow-10;
   width: 90vw;
   height: 90vh;
   margin-top: 2rem;
@@ -445,7 +445,7 @@
   justify-content: center;
   align-items: center;
   border: none;
-  background-color: #f76969;
+  background-color: $color-alert;
   border-radius: 0.5rem;
   cursor: pointer;
 }
@@ -459,7 +459,7 @@
 }
 
 .actived_button {
-  background: #417d8a;
+  background: $color-primary;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -488,9 +488,9 @@
   width: 10rem;
   height: 4rem;
   font-weight: bold;
-  color: #417d8a;
+  color: $color-primary;
   border-radius: 0.2rem;
-  box-shadow: 0px 0px 3px #bfc4cc;
+  box-shadow: 0px 0px 3px $box-shadow-10;
   cursor: pointer;
 }
 

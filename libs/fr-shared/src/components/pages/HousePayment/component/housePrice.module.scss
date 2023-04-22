@@ -1,9 +1,9 @@
 @import '../../../../design-system//schema.scss';
 
-#section_house_details {
+.section_house_details {
   width: 48.7rem;
   height: 69.64rem;
-  padding: 0px;
+  padding: 0;
 }
 
 .main_container {
@@ -11,22 +11,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 0px;
-  box-shadow: 0px 0px 3px #dadde1;
-  border-radius: 10px;
-  margin: 50px;
+  padding: 4rem 0;
+  box-shadow: 0 0 0.3rem #dadde1;
+  border-radius: 1rem;
+  margin: 5rem;
 }
 
 .container_text {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 4rem;
   p {
     text-align: center;
-    color: #a7a7a7;
-    font-size: 20px;
-    line-height: 27px;
+    color: $color-text-light-gray;
+    font-size: 2rem;
+    line-height: 2.7rem;
     font-weight: 600;
   }
 }
@@ -37,14 +37,13 @@
   align-items: center;
   Button {
     border-bottom-left-radius: 0.2rem 0rem;
-    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
     border-radius: 0.2rem;
-    width: 150px;
-    height: 50px;
+    width: 15rem;
+    height: 5rem;
     cursor: pointer;
   }
 }
@@ -56,11 +55,10 @@
   height: 6rem;
   Button {
     border-radius: 0.2rem 0 0 0.2rem;
-    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
-    border: 0.1rem solid #417d8a;
+    font-size: 1.6rem;
+    border: 0.1rem solid $color-primary;
   }
 }
 
@@ -70,45 +68,43 @@
   height: 6rem;
   Button {
     border-radius: 0 0.2rem 0.2rem 0;
-    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
-    border: 0.1rem solid #417d8a;
+    font-size: 1.6rem;
+    border: 0.1rem solid $color-primary;
   }
 }
 
 .text_price {
-  font-family: 'Open Sans';
-  width: 149px;
+  width: 14.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 2rem;
   font-weight: bold;
 }
 
 .button_container {
   display: flex;
   justify-content: center;
-  width: 150px;
-  height: 60px;
-  margin-top: 10px;
+  width: 15rem;
+  height: 6rem;
+  margin-top: 1rem;
 }
 
 .text_price {
   p {
     font-style: normal;
-    font-size: 35px;
-    line-height: 48px;
-    color: #f76969;
+    font-size: 3.5rem;
+    line-height: 4.8rem;
+    color: $color-alert;
   }
   span {
     position: relative;
-    font-size: 15px;
-    padding-left: 10px;
-    color: #a7a7a7;
-    bottom: -7px;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    color: $color-text-light-gray;
+    bottom: -0.7rem;
   }
 }
 
@@ -116,17 +112,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 4rem;
 }
 
 .input_container {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
   input {
-    width: 300px;
-    height: 60px;
-    padding: 0px 90px;
+    width: 30rem;
+    height: 6rem;
+    padding: 0 9rem;
     border: none;
-    background-color: #f8f8f8;
+    background-color: $color-bg-gray;
     &:hover {
       background-color: #f0f0f0;
     }
@@ -137,24 +133,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #417d8a;
+  background: $color-primary;
   Button {
-    background: #417d8a;
-    font-family: 'Open Sans';
+    background: $color-primary;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1.6rem;
     border-radius: 0.2rem;
-    width: 150px;
-    height: 50px;
+    width: 15rem;
+    height: 5rem;
     cursor: pointer;
   }
 }
 
 .actived_button {
-  background: #417d8a;
+  background: $color-primary;
   border: none;
-  width: 150px;
-  height: 60px;
+  width: 15rem;
+  height: 6rem;
   border-radius: 0.2rem 0 0 0.2rem;
   font-weight: bold;
   color: #fbfbfb;
@@ -163,25 +158,24 @@
 .deactived_button {
   background: white;
   border: none;
-  width: 150px;
-  height: 60px;
-  border: 1px solid #417d8a;
+  width: 15rem;
+  height: 6rem;
+  border: 0.1rem solid $color-primary;
   font-weight: bold;
-  color: #417d8a;
+  color: $color-primary;
 }
 
 .content_note {
-  width: 274px;
-  height: 32px;
+  width: 27.4rem;
+  height: 3.2rem;
   align-items: center;
   margin: 2rem 0rem;
-  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
   span {
-    color: #f76969;
+    color: $color-alert;
   }
   p {
     color: grey;

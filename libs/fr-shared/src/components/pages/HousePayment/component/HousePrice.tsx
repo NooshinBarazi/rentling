@@ -8,7 +8,6 @@ interface PropsHousePrice {
   priceMonthly: number;
 }
 export const HousePrice = ({ priceDaily, priceMonthly }: PropsHousePrice) => {
-  const { register } = useForm();
   const [handelActive, setHandelActive] = useState(false);
 
   const handeleClick = () => {
@@ -16,7 +15,7 @@ export const HousePrice = ({ priceDaily, priceMonthly }: PropsHousePrice) => {
   };
 
   return (
-    <section id={styles.section_house_details}>
+    <section className={styles.section_house_details}>
       <div className={styles.main_container}>
         <div className={styles.container_text}>
           <p>Rent this house</p>

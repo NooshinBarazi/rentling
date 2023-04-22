@@ -62,7 +62,7 @@ export const SlideImage = ({ images }: IProps) => {
 
   const ShowImage = () => {};
   return (
-    <section id={styles.house_section1}>
+    <section className={styles.house_section1}>
       <div className={styles.house_container}>
         <div className={styles.image_container}>
           <div className={styles.single_image}>
