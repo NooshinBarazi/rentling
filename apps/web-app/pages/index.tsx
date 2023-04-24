@@ -1,3 +1,4 @@
+import { RentalHistory } from '@rentling/fr-shared';
 import styles from './index.module.scss';
 
 export function Index() {
@@ -7,7 +8,7 @@ export function Index() {
    * Note: The corresponding styles are in the ./index.scss file.
    */
 
-  return <div></div>;
+  return <div><RentalHistory /></div>;
 }
 
 export default Index;

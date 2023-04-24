@@ -52,3 +52,5 @@ export * from './pages/Landing/Landing';
 export * from './section/information/Information';
 export * from './containers/Footer/Footer';
 export * from './containers/Footer/FooterItems/FooterItems';
+export * from './pages/Profile/components/RentalHistory/RentalHistory';
+export * from './elements/Icons/MoreInfoIcon';
