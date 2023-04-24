@@ -1,0 +1,126 @@
+@import '../../../../../design-system/schema.scss';
+
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 10rem;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../../../Landing/svgs/HeroBackground.svg');
+  background-color: $color-bg-gray;
+}
+.house_payment_conatainer {
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0px 0px 10px #dadde1;
+  border-radius: 1rem;
+  margin-top: 4rem;
+  position: relative;
+}
+.icon_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -1.5rem;
+  right: 0;
+}
+
+.map_icon {
+  padding: 0;
+  width: 6.5rem;
+  height: 3.77rem;
+  Button {
+    width: 6.5rem;
+    height: 3.77rem;
+    border-radius: 0.3rem 0 0 0.3rem;
+  }
+}
+
+.calender_icon {
+  padding: 0;
+  width: 6.5rem;
+  height: 3.77rem;
+  Button {
+    width: 6.5rem;
+    height: 3.77rem;
+    border-radius: 0 0.3rem 0.3rem 0;
+  }
+}
+
+.btn_deactive {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6.5rem;
+  height: 3.77rem;
+  border: 0.1rem solid #f6f3f3;
+  svg {
+    width: 2rem;
+    height: 1.8rem;
+    margin: 0 1rem;
+  }
+}
+
+.btn_active {
+  background-color: $color-text-dark-gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6.5rem;
+  height: 3.77rem;
+  outline: none;
+  svg {
+    width: 2rem;
+    height: 1.8rem;
+    margin: 0 1rem;
+    Path {
+      fill: #fff;
+    }
+  }
+}
+
+.side_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.side_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+
+.side_right_calender {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.side_right_map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48.7rem;
+  height: 69.64rem;
+}
+
+.image_map{
+  position: relative;
+  width: 48rem;
+  height: 46rem;
+}
+
+.deactive_side_right {
+  display: none;
+}
