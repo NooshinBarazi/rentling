@@ -1,24 +1,20 @@
-import { MouseEvent, useState } from 'react';
+import { useState } from 'react';
 import styles from './CurrentRental.module.scss';
 import Image from 'next/image';
 
 import {
-  CommentIcon,
   DateMonthIcon,
   CalenderIcon,
   StayTimeIcon,
-  BedIcon,
-  BathroomIcon,
-  CarIcon,
-  SqFeetIcon,
   Rating,
   TextIcon,
   Button,
-  FindHomeIcon
+  FindHomeIcon,
+  MoreInfo,
+  MoreInfoProps,
 } from '@rentling/fr-shared';
 
 interface CurrentRentalProps {
-  id: string;
   title: string;
   img: string;
   region: string;
@@ -28,16 +24,10 @@ interface CurrentRentalProps {
   duration: string;
   startDate: string;
   endDate: string;
-  bedrooms: number;
-  bathrooms: number;
-  parking: boolean;
-  area: string;
-  description: string;
-  comment: string;
+  rental: MoreInfoProps;
 }
 
 export const CurrentRental = ({
-  id,
   title,
   img,
   region,
@@ -47,12 +37,7 @@ export const CurrentRental = ({
   duration,
   startDate,
   endDate,
-  bedrooms,
-  bathrooms,
-  parking,
-  area,
-  description,
-  comment,
+  rental
 }: CurrentRentalProps) => {
   const [rating, setRating] = useState(0);
 
@@ -116,45 +101,7 @@ export const CurrentRental = ({
               <span>( 13 days left )</span>
             </div>
             {/* details */}
-
-            <div className={styles.house_features}>
-              <div className={styles.house_feature}>
-                <BedIcon />
-                <p>{bedrooms}</p>
-              </div>
-              <div className={styles.house_feature}>
-                <BathroomIcon />
-                <p>{bathrooms}</p>
-              </div>
-              <div className={styles.house_feature}>
-                <CarIcon />
-                <p>
-                  {parking ? 'with' : 'without'}
-                  <span>parking</span>
-                </p>
-              </div>
-              <div className={styles.house_feature}>
-                <SqFeetIcon />
-                <p>
-                  {area}
-                  <span>ft²</span>
-                </p>
-              </div>
-            </div>
-            {/* feature */}
-            <div className={styles.about_house}>
-              <h4>About this house:</h4>
-              <p>{description}</p>
-            </div>
-            {/* about */}
-            <div className={styles.comments_house}>
-              <h4>Your note about this house: </h4>
-              <div>
-                <p className={styles.text_comment}>{comment}</p>
-                <CommentIcon />
-              </div>
-            </div>
-            {/* comments */}
+            <MoreInfo {...rental} />
           </div>
           {/* details */}
         </div>
@@ -163,20 +110,32 @@ export const CurrentRental = ({
   );
 };
 
-
 export const EmptyCurrentRental = () => {
-  return(
+  return (
     <section>
-    <div className={styles.container}>
-      <div className={styles.header_content}>
-        <h4>YOUR CURRENT HOUSE</h4>
+      <div className={styles.container}>
+        <div className={styles.header_content}>
+          <h4>YOUR CURRENT HOUSE</h4>
+        </div>
+        <div className={styles.empty_content}>
+          <p className={styles.empty_text}>
+            You are not currently on a trip, so why not pack your bags and{' '}
+            <br /> start a new journey?
+          </p>
+          <Image
+            alt="empty page"
+            src={'/images/emptypage.avif'}
+            width={'800'}
+            height={'367'}
+          />
+          <Button
+            Icon={<FindHomeIcon />}
+            text={'Find your house'}
+            newStyle={''}
+            onClick={() => console.log('clicked')}
+          />
+        </div>
       </div>
-      <div className={styles.empty_content}>
-        <p className={styles.empty_text}>You are not currently on a trip, so why not pack your bags and <br /> start a new journey?</p>
-        <Image alt='empty page' src={'/images/emptypage.avif'} width={'800'} height={'367'}/>
-        <Button Icon={<FindHomeIcon />} text={'Find your house'} newStyle={''} onClick={() => console.log('clicked')} />
-      </div>
-    </div>
-  </section>
-  )
+    </section>
+  );
 };
