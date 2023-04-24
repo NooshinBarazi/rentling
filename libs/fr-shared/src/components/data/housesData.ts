@@ -1,22 +1,32 @@
-export const regions = [
-  { name: 'USA', cities: ['New York', 'Los Angeles', 'Chicago', 'Houston'] },
-  {
-    name: 'UK',
-    cities: ['London', 'Birmingham', 'Manchester', 'Liverpool'],
-  },
-  {
-    name: 'GERMANY',
-    cities: ['Berlin', 'Hamburg', 'Munich', 'Cologne'],
-  },
-  {
-    name: 'CANADA',
-    cities: ['Toronto', 'Montreal', 'Vancouver', 'Calgary'],
-  },
-];
-
 export const houses = [
   {
     images: {
+      imagesList: [
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/14.avif',
+        '/images/17.avif',
+        '/images/16.avif',
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/14.avif',
+        '/images/17.avif',
+        '/images/16.avif',
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/14.avif',
+        '/images/17.avif',
+        '/images/16.avif',
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/14.avif',
+        '/images/17.avif',
+        '/images/16.avif',
+      ],
       img: '/images/19.avif',
     },
     id: '36',
@@ -30,6 +40,7 @@ export const houses = [
       bathroom: 2,
       parking: true,
       meterage: '1,500',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 199,
@@ -38,6 +49,14 @@ export const houses = [
   },
   {
     images: {
+      imagesList: [
+        '/images/11.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/12.avif',
+      ],
       img: '/images/1.avif',
     },
     id: '1',
@@ -51,6 +70,7 @@ export const houses = [
       bathroom: 2,
       parking: true,
       meterage: '1,500',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 199,
@@ -59,6 +79,14 @@ export const houses = [
   },
   {
     images: {
+      imagesList: [
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/11.avif',
+      ],
       img: '/images/2.avif',
     },
 
@@ -73,6 +101,7 @@ export const houses = [
       bathroom: 2,
       parking: true,
       meterage: '1,200',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 205,
@@ -81,6 +110,14 @@ export const houses = [
   },
   {
     images: {
+      imagesList: [
+        '/images/11.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/12.avif',
+      ],
       img: '/images/23.avif',
     },
 
@@ -95,6 +132,7 @@ export const houses = [
       bathroom: 3,
       parking: true,
       meterage: '2,000',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 299,
@@ -103,6 +141,14 @@ export const houses = [
   },
   {
     images: {
+      imagesList: [
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/14.avif',
+      ],
       img: '/images/3.avif',
     },
 
@@ -117,6 +163,7 @@ export const houses = [
       bathroom: 3,
       parking: false,
       meterage: '2,000',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 299,
@@ -125,6 +172,14 @@ export const houses = [
   },
   {
     images: {
+      imagesList: [
+        '/images/11.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/15.avif',
+      ],
       img: '/images/4.avif',
     },
 
@@ -139,6 +194,7 @@ export const houses = [
       bathroom: 1,
       parking: 'without parking',
       meterage: '800',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 175,
@@ -147,6 +203,14 @@ export const houses = [
   },
   {
     images: {
+      imagesList: [
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/16.avif',
+      ],
       img: '/images/5.avif',
     },
 
@@ -161,6 +225,7 @@ export const houses = [
       bathroom: 2,
       parking: true,
       meterage: '2,000',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 199,
@@ -170,6 +235,14 @@ export const houses = [
 
   {
     images: {
+      imagesList: [
+        '/images/11.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/18.avif',
+        '/images/17.avif',
+      ],
       img: '/images/6.avif',
     },
     id: '6',
@@ -183,6 +256,7 @@ export const houses = [
       bathroom: 2,
       parking: false,
       meterage: '2,000',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 199,
@@ -191,6 +265,14 @@ export const houses = [
   },
   {
     images: {
+      imagesList: [
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/10.avif',
+      ],
       img: '/images/7.avif',
     },
     id: '7',
@@ -204,6 +286,7 @@ export const houses = [
       bathroom: 1,
       parking: true,
       meterage: '1,000',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 150,
@@ -212,6 +295,14 @@ export const houses = [
   },
   {
     images: {
+      imagesList: [
+        '/images/11.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/19.avif',
+      ],
       img: '/images/8.avif',
     },
     id: '8',
@@ -225,14 +316,23 @@ export const houses = [
       bathroom: 1,
       parking: true,
       meterage: '750',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 125,
-      thirtyDay: 1800,
+      thirtyDay: 1000,
     },
   },
   {
     images: {
+      imagesList: [
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/10.avif',
+      ],
       img: '/images/9.avif',
     },
     id: '9',
@@ -246,6 +346,7 @@ export const houses = [
       bathroom: 3,
       parking: true,
       meterage: '2,500',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 275,
@@ -254,6 +355,14 @@ export const houses = [
   },
   {
     images: {
+      imagesList: [
+        '/images/11.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/11.avif',
+      ],
       img: '/images/16.avif',
     },
     id: '16',
@@ -267,6 +376,7 @@ export const houses = [
       bathroom: 3,
       parking: true,
       meterage: '2,500',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 275,
@@ -275,6 +385,14 @@ export const houses = [
   },
   {
     images: {
+      imagesList: [
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/12.avif',
+      ],
       img: '/images/10.avif',
     },
     id: '10',
@@ -288,6 +406,7 @@ export const houses = [
       bathroom: 2,
       parking: false,
       meterage: '1,800',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 350,
@@ -296,9 +415,17 @@ export const houses = [
   },
   {
     images: {
+      imagesList: [
+        '/images/11.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/15.avif',
+      ],
       img: '/images/15.avif',
     },
-    id: '10',
+    id: '11',
     title: 'Luxury Apartment in Chicago',
     address: '1 Central Park South, Chicago, NY 10019',
     feature: {
@@ -309,6 +436,7 @@ export const houses = [
       bathroom: 2,
       parking: false,
       meterage: '1,800',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 350,
@@ -317,9 +445,17 @@ export const houses = [
   },
   {
     images: {
+      imagesList: [
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/14.avif',
+      ],
       img: '/images/11.avif',
     },
-    id: '11',
+    id: '12',
     title: 'Modern Apartment with a Balcony in Los Angeles',
     address: '2345 Sunset Boulevard, Los Angeles, CA 90026',
     feature: {
@@ -330,6 +466,7 @@ export const houses = [
       bathroom: 2,
       parking: true,
       meterage: '1,200',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 200,
@@ -338,9 +475,17 @@ export const houses = [
   },
   {
     images: {
+      imagesList: [
+        '/images/11.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/15.avif',
+      ],
       img: '/images/12.avif',
     },
-    id: '11',
+    id: '13',
     title: 'Modern Apartment with a Balcony in Chicago',
     address: '2345 Sunset Boulevard, Chicago, CA 90026',
     feature: {
@@ -351,6 +496,7 @@ export const houses = [
       bathroom: 2,
       parking: true,
       meterage: '1,200',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 200,
@@ -359,6 +505,14 @@ export const houses = [
   },
   {
     images: {
+      imagesList: [
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/16.avif',
+      ],
       img: '/images/20.avif',
     },
     id: '40',
@@ -372,6 +526,7 @@ export const houses = [
       bathroom: 2,
       parking: true,
       meterage: '1,200',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 200,
@@ -380,9 +535,17 @@ export const houses = [
   },
   {
     images: {
+      imagesList: [
+        '/images/11.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/16.avif',
+        '/images/17.avif',
+      ],
       img: '/images/13.avif',
     },
-    id: '11',
+    id: '14',
     title: 'Modern Apartment with a Balcony in Vancouver',
     address: '2345 Sunset Boulevard, Vancouver, CA 90026',
     feature: {
@@ -393,6 +556,7 @@ export const houses = [
       bathroom: 2,
       parking: true,
       meterage: '1,200',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 200,
@@ -401,9 +565,17 @@ export const houses = [
   },
   {
     images: {
+      imagesList: [
+        '/images/10.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/10.avif',
+      ],
       img: '/images/10.avif',
     },
-    id: '10',
+    id: '15',
     title: 'Luxury Apartment in Montreal',
     address: '1 Central Park South, Montreal, NY 10019',
     feature: {
@@ -414,6 +586,7 @@ export const houses = [
       bathroom: 2,
       parking: false,
       meterage: '1,800',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 350,
@@ -422,9 +595,17 @@ export const houses = [
   },
   {
     images: {
+      imagesList: [
+        '/images/11.avif',
+        '/images/20.avif',
+        '/images/19.avif',
+        '/images/10.avif',
+        '/images/17.avif',
+        '/images/19.avif',
+      ],
       img: '/images/22.avif',
     },
-    id: '10',
+    id: '19',
     title: 'Luxury Apartment in Liverpool',
     address: '1 Central Park South, Liverpool, NY 10019',
     feature: {
@@ -435,6 +616,7 @@ export const houses = [
       bathroom: 2,
       parking: false,
       meterage: '1,800',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     },
     price: {
       oneDay: 350,

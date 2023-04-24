@@ -1,0 +1,183 @@
+@import '../../../../../design-system/schema.scss';
+
+.section_house_details {
+  width: 48.7rem;
+  height: 69.64rem;
+  padding: 0;
+}
+
+.main_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+  box-shadow: 0 0 0.3rem #dadde1;
+  border-radius: 1rem;
+  margin: 5rem;
+}
+
+.container_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+  p {
+    text-align: center;
+    color: $color-text-light-gray;
+    font-size: 2rem;
+    line-height: 2.7rem;
+    font-weight: 600;
+  }
+}
+
+.button_style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  Button {
+    border-bottom-left-radius: 0.2rem 0rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    border-radius: 0.2rem;
+    width: 15rem;
+    height: 5rem;
+    cursor: pointer;
+  }
+}
+
+.button_left {
+  padding: 0;
+  margin: 0;
+  width: 15rem;
+  height: 6rem;
+  Button {
+    border-radius: 0.2rem 0 0 0.2rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    border: 0.1rem solid $color-primary;
+  }
+}
+
+.button_right {
+  padding: 0;
+  width: 15rem;
+  height: 6rem;
+  Button {
+    border-radius: 0 0.2rem 0.2rem 0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    border: 0.1rem solid $color-primary;
+  }
+}
+
+.text_price {
+  width: 14.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+.button_container {
+  display: flex;
+  justify-content: center;
+  width: 15rem;
+  height: 6rem;
+  margin-top: 1rem;
+}
+
+.text_price {
+  p {
+    font-style: normal;
+    font-size: 3.5rem;
+    line-height: 4.8rem;
+    color: $color-alert;
+  }
+  span {
+    position: relative;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    color: $color-text-light-gray;
+    bottom: -0.7rem;
+  }
+}
+
+.form_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.input_container {
+  margin-bottom: 2rem;
+  input {
+    width: 30rem;
+    height: 6rem;
+    padding: 0 9rem;
+    border: none;
+    background-color: $color-bg-gray;
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+}
+
+.button_style_reserve {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $color-primary;
+  Button {
+    background: $color-primary;
+    font-weight: 600;
+    font-size: 1.6rem;
+    border-radius: 0.2rem;
+    width: 15rem;
+    height: 5rem;
+    cursor: pointer;
+  }
+}
+
+.actived_button {
+  background: $color-primary;
+  border: none;
+  width: 15rem;
+  height: 6rem;
+  border-radius: 0.2rem 0 0 0.2rem;
+  font-weight: bold;
+  color: #fbfbfb;
+}
+
+.deactived_button {
+  background: white;
+  border: none;
+  width: 15rem;
+  height: 6rem;
+  border: 0.1rem solid $color-primary;
+  font-weight: bold;
+  color: $color-primary;
+}
+
+.content_note {
+  width: 27.4rem;
+  height: 3.2rem;
+  align-items: center;
+  margin: 2rem 0rem;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  span {
+    color: $color-alert;
+  }
+  p {
+    color: grey;
+  }
+}
