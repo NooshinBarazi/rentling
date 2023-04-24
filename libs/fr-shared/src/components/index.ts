@@ -63,5 +63,6 @@ export * from './elements/Icons/DropDownIcon';
 export * from './elements/Icons/FindHomeIcon';
 export * from './pages/Profile/components/StarRating/StarRating';
 export * from './pages/Profile/components/profileTemplate/ProfileTemplate';
+export * from './pages/Profile/components/common/MoreInfo/MoreInfo';
 
 
