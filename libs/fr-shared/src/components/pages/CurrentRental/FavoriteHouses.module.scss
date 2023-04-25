@@ -1,0 +1,88 @@
+@import '../../../design-system/schema.scss';
+
+.container_favorite_houses {
+  width: 85%;
+  height: auto;
+  margin: 12rem auto;
+}
+
+.header_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_favorite_houses {
+  width: 80rem;
+  height: 5.8rem;
+  background: $color-grayish-light-green;
+  border-radius: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12rem 25.4rem 0 11.6rem;
+  p {
+    font-weight: 700;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    width: 30rem;
+    height: 3.3rem;
+    color: #fff;
+  }
+}
+
+.drop_down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  width: 28.5rem;
+  height: 4.7rem;
+  margin-top: 2rem;
+  margin-left: 73.5rem;
+  p {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: $color-grayish-dark-green;
+  }
+}
+
+
+.not_home_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+
+.text_container {
+  width: 72rem;
+  height: 2.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.7rem;
+    color: $color-text-light-gray;
+  }
+}
+
+.image_container {
+  position: relative;
+  width: 20.08rem;
+  height: 20rem;
+  margin-top: 4.3rem;
+}
+
+.reserve_button {
+  margin-top: 4.3rem;
+  button {
+    width: 19.4rem;
+    height: 4.4rem;
+  }
+}
