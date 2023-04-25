@@ -6,8 +6,6 @@ import { Button } from '../../elements/Button/Button';
 import { PrimaryButtonIcon } from '../../elements/Icons/PrimaryButtonIcon';
 import { ChooseDropdown, houses } from '@rentling/fr-shared';
 
-
-
 export const FavoriteHouses = () => {
   const [selectedOption, setSelectedOption] = useState(false);
   const [bedCount, setBedCount] = useState<any>('all');
@@ -23,9 +21,6 @@ export const FavoriteHouses = () => {
   });
   const [sortSelected, setSortSelected] = useState<string>('cheaper');
 
-
-
-  
   const toggleSelecteOption = ({}) => {
     setSelectedOption(!selectedOption);
   };
@@ -123,17 +118,6 @@ export const FavoriteHouses = () => {
             <p>your favorite houses</p>
           </div>
         </div>
-
-       <div className={styles.drop_down}>
-       <p>sort by:</p>
-       <ChooseDropdown
-          selectedOption={sortSelected}
-          label={sortSelected}
-          style={undefined}
-          options={['cheaper','expensive']}
-          handleOptionChange={handleSortChange}
-        />
-       </div>
 
         <div className={styles.not_home_container}>
           <div className={styles.text_container}>

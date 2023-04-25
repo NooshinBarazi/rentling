@@ -3,13 +3,19 @@
 .container_favorite_houses {
   width: 85%;
   height: auto;
-  margin: 12rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 11.6rem;
+  margin-top: -3rem;
 }
 
 .header_container {
   display: flex;
   justify-content: center;
   align-items: center;
+  // margin-top: -5rem;
 }
 
 .header_favorite_houses {
@@ -20,7 +26,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 12rem 25.4rem 0 11.6rem;
   p {
     font-weight: 700;
     font-size: 2.4rem;
@@ -30,24 +35,6 @@
     color: #fff;
   }
 }
-
-.drop_down {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  padding: 1.5rem 0;
-  width: 28.5rem;
-  height: 4.7rem;
-  margin-top: 2rem;
-  margin-left: 73.5rem;
-  p {
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: $color-grayish-dark-green;
-  }
-}
-
 
 .not_home_container {
   display: flex;
