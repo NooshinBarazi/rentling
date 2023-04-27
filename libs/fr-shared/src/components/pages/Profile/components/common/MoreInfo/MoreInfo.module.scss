@@ -3,7 +3,8 @@
 .house_features {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    gap: 2rem;
     width: 100%;
     padding: 1rem 0;
     border-top: 0.05rem solid $color-grayish-light-green;
@@ -36,7 +37,7 @@
   }
   
   .about_house {
-    padding: 1rem 0;
+    padding: 1rem ;
     width: 100%;
   
     h4 {
@@ -48,13 +49,14 @@
     p {
       font-size: 1.6rem;
       color: $color-text-dark-gray;
+      max-width: 53rem;
     }
   }
   
   .comments_house {
     border-top: 0.05rem solid $color-grayish-light-green;
     width: 100%;
-    padding: 1rem 0;
+    padding: 1rem ;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
