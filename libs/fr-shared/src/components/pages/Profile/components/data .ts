@@ -110,7 +110,7 @@ export const users = [
       },
       {
         images: {
-          img: '/images/19.avif',
+          img: '/images/17.avif',
         },
         id: '36',
         title: 'Spacious House in the Heart of Calgary',

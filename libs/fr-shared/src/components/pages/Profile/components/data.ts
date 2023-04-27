@@ -106,11 +106,12 @@ export const users = [
             endDate: '2023/05/10',
           },
           rating: '1',
-          userNote: 'It was very bad house!',
+          description: 'Large suburban house in central London. Fully furnished with outdoor patio, heating insulation and two spacious decks. Walking distance to everything you might need in your stay in London!',
+          comment: 'It was very bad house!',
         },
         {
           images: {
-            img: '/images/19.avif',
+            img: '/images/17.avif',
           },
           id: '36',
           title: 'Spacious House in the Heart of Calgary',
@@ -132,7 +133,8 @@ export const users = [
             endDate: '2023/05/20',
           },
           rating: '5',
-          userNote: 'It was very beautiful house!',
+          description: 'Large suburban house in central London. Fully furnished with outdoor patio, heating insulation and two spacious decks. Walking distance to everything you might need in your stay in London!',
+          comment: 'It was very beautiful house!',
         },
       ],
       payments: [
