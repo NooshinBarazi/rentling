@@ -6,7 +6,7 @@ import { FullStarIcon, EmptyStarIcon } from "@rentling/fr-shared";
 interface RatingProps {
   className?: string;
   count: number;
-  value: number;
+  value: any;
   onChange?: (value: number) => void;
   emptyIcon?: React.ReactElement;
   fullIcon?: React.ReactElement;
