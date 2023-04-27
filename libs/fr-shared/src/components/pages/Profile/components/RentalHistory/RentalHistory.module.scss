@@ -6,9 +6,20 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex: 1 1 auto;
-    max-width: 75%;
-    margin: 10rem;
+    height: auto;
     gap: 3rem;
+   margin-left: 10rem;
+}
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: $color-white;
+    padding-top: 10rem;
 }
 
 .header_content {
@@ -42,24 +53,35 @@
     }
 }
 
-.houses {
-    width: 100%;
-}
-
 .houses_card {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
+    width: 100%;
 }
 
 .house_card {
     width: 100%;
     display: flex;
-    //justify-content: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    border-bottom: 1px solid $color-grayish-light-green;
+    padding: 0 6rem;
+
+    &:hover {
+        box-shadow: 0rem 0rem 2.5rem rgba(191, 196, 204, 0.5);
+    }
+}
+
+.card_info {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
     gap: 2rem;
     padding: 3rem 2rem;
-    box-shadow: 0rem 0rem 2.5rem rgba(191, 196, 204, 0.5);
     border-radius: 0.5rem;
 }
 
@@ -168,5 +190,19 @@
         font-size: 1.4rem;
         text-decoration-line: underline;
         color: $color-primary;
+    }
+}
+
+.house_rating {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+
+    p {
+        font-weight: 600;
+        font-size: 1.4rem;
+        color: $color-text-dark-gray;
     }
 }

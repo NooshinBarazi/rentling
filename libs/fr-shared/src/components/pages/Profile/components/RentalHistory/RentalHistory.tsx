@@ -1,25 +1,36 @@
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import {
   ChooseDropdown,
   TextIcon,
   DateMonthIcon,
   MoreInfoIcon,
+  CalenderIcon,
+  MoreInfo,
+  LessInfoIcon,
+  users,
+  Rating,
 } from '@rentling/fr-shared';
 import styles from './RentalHistory.module.scss';
-import { users } from '../../components/data';
-import Image from 'next/image';
-import { useState, useEffect } from 'react';
 
 export const RentalHistory = () => {
   const [sortUser, setSortUser] = useState(users);
   const [sortSelected, setSortSelected] = useState('Earliest');
+  const [isShow, setIsShow] = useState<any>([]);
 
   useEffect(() => {
     const sortedUser = users.map((user) => {
       const sortedHistoryByEarliest = user.history.slice().sort((a, b) => {
-        return Date.parse(a.rentalPeriod.startDate) - Date.parse(b.rentalPeriod.startDate);
+        return (
+          Date.parse(a.rentalPeriod.startDate) -
+          Date.parse(b.rentalPeriod.startDate)
+        );
       });
       const sortedHistoryByLatest = user.history.slice().sort((a, b) => {
-        return Date.parse(b.rentalPeriod.startDate) - Date.parse(a.rentalPeriod.startDate);
+        return (
+          Date.parse(b.rentalPeriod.startDate) -
+          Date.parse(a.rentalPeriod.startDate)
+        );
       });
       if (sortSelected === 'Earliest') {
         return { ...user, history: sortedHistoryByEarliest };
@@ -30,68 +41,109 @@ export const RentalHistory = () => {
     setSortUser(sortedUser);
   }, [sortSelected]);
 
-  
   const handleSort = (sortOption: string) => {
     setSortSelected(sortOption);
   };
-  
+
+  const handleShowMore = (itemIndex: any) => {
+    setIsShow((prevState: any) => {
+      const newState = [...prevState];
+      newState[itemIndex] = !prevState[itemIndex];
+      return newState;
+    });
+  };
+
   return (
     <div className={styles.container}>
-      <div className={styles.header_content}>
-        <h2>YOUR TRIP HISTORY</h2>
-      </div>
-      <div className={styles.sort_house}>
-        <p>Sortby :</p>
-        <ChooseDropdown
-          style={undefined}
-          label={sortSelected}
-          selectedOption={sortSelected}
-          options={['Earliest', 'Latest']}
-          handleOptionChange={handleSort}
-        />
+      <div className={styles.header}>
+        <div className={styles.header_content}>
+          <h2>YOUR TRIP HISTORY</h2>
+        </div>
+        <div className={styles.sort_house}>
+          <p>Sortby :</p>
+          <ChooseDropdown
+            style={undefined}
+            label={sortSelected}
+            selectedOption={sortSelected}
+            options={['Earliest', 'Latest']}
+            handleOptionChange={handleSort}
+          />
+        </div>
       </div>
       <div className={styles.houses}>
-        {sortUser.map((user) => (
-          <div className={styles.houses_card}>
-            {user.history.map((item) => (
-              <div className={styles.house_card}>
-                <Image
-                  src={item.images.img}
-                  alt={'Picture of the House'}
-                  width={'249'}
-                  height={'150'}
-                />
-                <div className={styles.location_house}>
-                  <h5>
-                    {item.feature.region}, {item.feature.city}
-                  </h5>
-                  <p>{item.address}</p>
-                  {/* <div> */}
-                  <TextIcon
-                    Icon={<DateMonthIcon />}
-                    title={'Monthly Price was'}
-                    text={`${item.price.monthlyPrice} $`}
-                    newStyle={styles.house_price}
+        {sortUser.map((user, userIndex) => (
+          <div className={styles.houses_card} key={userIndex}>
+            {user.history.map((item, itemIndex) => (
+              <div className={styles.house_card} key={itemIndex}>
+                <div className={styles.card_info}>
+                  <Image
+                    src={item.images.img}
+                    alt={'Picture of the House'}
+                    width={'249'}
+                    height={'150'}
                   />
-                  {/* </div> */}
-                  <div className={styles.rental_period}>
-                    <div className={styles.rental_date}>
-                      <DateMonthIcon />
-                      <p>{item.rentalPeriod.startDate}</p>
+                  <div className={styles.location_house}>
+                    <h5>
+                      {item.feature.region}, {item.feature.city}
+                    </h5>
+                    <p>{item.address}</p>
+
+                    <TextIcon
+                      Icon={<DateMonthIcon />}
+                      title={'Monthly Price was'}
+                      text={`${item.price.monthlyPrice} $`}
+                      newStyle={styles.house_price}
+                    />
+
+                    <div className={styles.rental_period}>
+                      <div className={styles.rental_date}>
+                        <CalenderIcon />
+                        <p>{item.rentalPeriod.startDate}</p>
+                      </div>
+                      <p>to</p>
+                      <div className={styles.rental_date}>
+                        <CalenderIcon />
+                        <p>{item.rentalPeriod.endDate}</p>
+                      </div>
                     </div>
-                    <p>to</p>
-                    <div className={styles.rental_date}>
-                      <DateMonthIcon />
-                      <p>{item.rentalPeriod.endDate}</p>
+                    {/* rental period */}
+                    <div
+                      className={styles.more_info}
+                      onClick={() => handleShowMore(itemIndex)}
+                    >
+                      {!isShow[itemIndex] ? (
+                        <>
+                          {' '}
+                          <p>See more details</p>
+                          <MoreInfoIcon />
+                        </>
+                      ) : (
+                        <>
+                          {' '}
+                          <p>See less details</p>
+                          <LessInfoIcon />
+                        </>
+                      )}
                     </div>
-                  </div>
-                  {/* rental period */}
-                  <div className={styles.more_info}>
-                    <p>See more details</p>
-                    <MoreInfoIcon />
                   </div>
                 </div>
-                {/* location house*/}
+
+                {isShow[itemIndex] ? (
+                  <>
+                    <div className={styles.house_rating}>
+                      <p>YOUR Rating: </p>
+                      <Rating count={5} value={item.rating} />
+                    </div>
+                    <MoreInfo
+                      bedrooms={item.feature.bedroom}
+                      bathrooms={item.feature.bathroom}
+                      parking={item.feature.parking}
+                      area={item.feature.meterage}
+                      description={item.description}
+                      comment={item.comment}
+                    />
+                  </>
+                ) : null}
               </div>
             ))}
           </div>
