@@ -7,8 +7,6 @@ import { PrimaryButtonIcon } from '../../elements/Icons/PrimaryButtonIcon';
 import { ChooseDropdown, houses } from '@rentling/fr-shared';
 
 export const FavoriteHouses = () => {
-  const [selectedOption, setSelectedOption] = useState(false);
-  const [sortSelected, setSortSelected] = useState<string>('cheaper');
 
   const FindYourHouse = () => {};
 
