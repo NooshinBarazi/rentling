@@ -28,20 +28,7 @@ export default function FindeFavoriteHouses() {
   if (!house) {
     return <FavoriteHouses />;
   }
-  return (
-    <CurrentRental
-      title={house.currentHouse.title}
-      img={house.currentHouse.images.img}
-      region={house.currentHouse.feature.region}
-      city={house.currentHouse.feature.city}
-      address={house.currentHouse.address}
-      price={house.currentHouse.price.thirtyDay}
-      duration={house.currentHouse.duration}
-      startDate={house.currentHouse.rentalPeriod.startDate}
-      endDate={house.currentHouse.rentalPeriod.endDate}
-      rental={undefined}
-    />
-  );
+
 }
 
 FindeFavoriteHouses.PageLayout = ProfileLayout;
