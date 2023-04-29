@@ -77,4 +77,5 @@ export * from './pages/Profile/components/StarRating/StarRating';
 export * from './pages/Profile/components/profileTemplate/ProfileTemplate';
 export * from './pages/Profile/components/common/MoreInfo/MoreInfo';
 export * from './pages/Profile/components/data';
+export * from './pages/Profile/components/data'
 
