@@ -14,31 +14,26 @@ import {
 import styles from './RentalHistory.module.scss';
 
 export const RentalHistory = () => {
-  const [sortUser, setSortUser] = useState(users);
+  const [selectedUser, setSelectedUser] = useState(users[0]);
   const [sortSelected, setSortSelected] = useState('Earliest');
   const [isShow, setIsShow] = useState<any>([]);
 
   useEffect(() => {
-    const sortedUser = users.map((user) => {
-      const sortedHistoryByEarliest = user.history.slice().sort((a, b) => {
+   
+      const sortedHistoryByEarliest = selectedUser.history.slice().sort((a, b) => {
         return (
           Date.parse(a.rentalPeriod.startDate) -
           Date.parse(b.rentalPeriod.startDate)
         );
       });
-      const sortedHistoryByLatest = user.history.slice().sort((a, b) => {
+      const sortedHistoryByLatest = selectedUser.history.slice().sort((a, b) => {
         return (
           Date.parse(b.rentalPeriod.startDate) -
           Date.parse(a.rentalPeriod.startDate)
         );
       });
-      if (sortSelected === 'Earliest') {
-        return { ...user, history: sortedHistoryByEarliest };
-      } else {
-        return { ...user, history: sortedHistoryByLatest };
-      }
-    });
-    setSortUser(sortedUser);
+      const sortedHistory = sortSelected === 'Earliest' ? sortedHistoryByEarliest : sortedHistoryByLatest;
+      setSelectedUser((prevState: any) => ({ ...prevState, history: sortedHistory }));
   }, [sortSelected]);
 
   const handleSort = (sortOption: string) => {
@@ -71,9 +66,9 @@ export const RentalHistory = () => {
         </div>
       </div>
       <div className={styles.houses}>
-        {sortUser.map((user, userIndex) => (
-          <div className={styles.houses_card} key={userIndex}>
-            {user.history.map((item, itemIndex) => (
+        {/* {sortUser.map((user, userIndex) => (
+          <div className={styles.houses_card} key={userIndex}> */}
+            {selectedUser.history.map((item, itemIndex) => (
               <div className={styles.house_card} key={itemIndex}>
                 <div className={styles.card_info}>
                   <Image
@@ -146,8 +141,8 @@ export const RentalHistory = () => {
                 ) : null}
               </div>
             ))}
-          </div>
-        ))}
+          {/* </div>
+        ))} */}
       </div>
     </div>
   );
