@@ -79,4 +79,4 @@ export * from './elements/Icons/Album';
 export * from './elements/Icons/Close';
 export * from './elements/Icons/Slider';
 export * from './elements/Icons/MapIcon';
-
+export * from './pages/Landing/Sections/HouseForm/regionCityData';
