@@ -1,0 +1,170 @@
+@import '../../../../../../design-system/schema.scss';
+
+.container {
+  width: 88rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 7.5rem;
+  // margin-top: -24rem;
+  position: relative;
+}
+
+.header_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_favorite_houses {
+  width: 100%;
+  height: 5.8rem;
+  background: $color-grayish-light-green;
+  border-radius: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  p {
+    font-weight: 700;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    width: 30rem;
+    height: 3.3rem;
+    color: #fff;
+  }
+}
+
+.sort_option {
+  width: 30rem;
+  height: 4.8rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0 1rem 5rem;
+  gap: 2rem;
+  margin: 5rem 0 3rem 58rem;
+  p {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: $color-grayish-dark-green;
+  }
+}
+
+.houses_container {
+  width: 100%;
+  height: 21rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 0 2.5rem rgba(191, 196, 204, 0.5);
+  border-radius: 0.5rem;
+}
+
+.container_image {
+  position: relative;
+  width: 24.9rem;
+  height: 15rem;
+  margin: 3rem 2.1rem;
+}
+
+.detailes_container {
+  width: 45.5rem;
+  height: 12.1rem;
+  margin: 4.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.region_container {
+  width: 24.6rem;
+  height: 2.5rem;
+  p {
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    color: $color-grayish-light-green;
+  }
+}
+
+.title {
+  width: 32.2rem;
+  height: 4.2rem;
+  p {
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: $color-text-dark-gray;
+  }
+}
+
+.calender_container {
+  width: 32.5rem;
+  height: 3.4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4rem;
+}
+
+.calendar {
+  width: 15rem;
+  height: 3.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+  p {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    color: $color-text-light-gray;
+  }
+  span {
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: $color-text-dark-gray;
+  }
+}
+
+.reaction {
+  width: 11rem;
+  height: 2.7rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+.share_icon {
+  svg {
+    width: 2.31rem;
+    height: 2.7rem;
+  }
+}
+
+.like_icon {
+  svg {
+    width: 3rem;
+    height: 2.7rem;
+  }
+  path {
+    fill: $color-alert;
+    box-direction: none;
+  }
+}
+
+
+
+
+
+
+
+
