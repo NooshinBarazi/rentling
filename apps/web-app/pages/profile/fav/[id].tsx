@@ -26,9 +26,7 @@ export default function FindeFavoriteHouses() {
   if (!user) {
     return <EmptyPageFavoriteHouses />;
   }
-  return (
-<FavoriteHouses/>
-  );
+  return <FavoriteHouses />;
 }
 
 FindeFavoriteHouses.PageLayout = ProfileLayout;
