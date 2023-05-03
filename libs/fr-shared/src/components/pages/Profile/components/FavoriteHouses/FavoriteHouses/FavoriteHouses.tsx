@@ -120,5 +120,4 @@ export const FavoriteHouses = ({
 };
 
 
-{/* <FavoriteHouses image={image} title={'1457 N Halsted St, Chicago, IL 60642 1457 N Halsted St, Chicago, IL 60642'} regins={'Germany, berlin'} onDay={300} thirtyDay={1000} /> */}
 
