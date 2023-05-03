@@ -41,7 +41,7 @@ export * from './pages/HousePayment/component/HousePrice/HousePrice';
 export * from './pages/HousePayment/component/SlideImages/slideImage';
 export * from './elements/Form/Container/ContainerForm';
 export * from './elements/Form/Form';
-
+export * from './pages/Landing/Sections/HouseForm/regionCityData';
 export * from './elements/Icons/BigHouseIcon';
 export * from './elements/HouseCard/HouseCard';
 export * from './pages/Landing/Sections/HouseForm/HouseForm';
@@ -73,4 +73,3 @@ export * from './elements/Icons/FindHomeIcon';
 export * from './pages/Profile/components/StarRating/StarRating';
 export * from './pages/Profile/components/profileTemplate/ProfileTemplate';
 export * from './pages/Profile/components/common/MoreInfo/MoreInfo';
-
