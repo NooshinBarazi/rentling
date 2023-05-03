@@ -66,8 +66,6 @@ export const RentalHistory = () => {
         </div>
       </div>
       <div className={styles.houses}>
-        {/* {sortUser.map((user, userIndex) => (
-          <div className={styles.houses_card} key={userIndex}> */}
             {selectedUser.history.map((item, itemIndex) => (
               <div className={styles.house_card} key={itemIndex}>
                 <div className={styles.card_info}>
@@ -85,8 +83,8 @@ export const RentalHistory = () => {
 
                     <TextIcon
                       Icon={<DateMonthIcon />}
-                      title={'Monthly Price was'}
-                      text={`${item.price.monthlyPrice} $`}
+                      title={item.price.monthlyPrice? 'Monthly Price was': 'Daily Price was'}
+                      text={`${item.price.monthlyPrice || item.price.dailyPrice} $`}
                       newStyle={styles.house_price}
                     />
 
@@ -141,8 +139,6 @@ export const RentalHistory = () => {
                 ) : null}
               </div>
             ))}
-          {/* </div>
-        ))} */}
       </div>
     </div>
   );
