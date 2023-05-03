@@ -1,10 +1,8 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import {
-  CurrentRental,
-  EmptyCurrentRental,
+  EmptyPageFavoriteHouses,
   FavoriteHouses,
-  MoreInfo,
   users,
 } from '@rentling/fr-shared';
 import { ProfileLayout } from '../../layout/ProfileLayout';
@@ -12,23 +10,25 @@ import { ProfileLayout } from '../../layout/ProfileLayout';
 export default function FindeFavoriteHouses() {
   const router = useRouter();
   const { id } = router.query;
-  const [house, setUser] = useState(null);
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     if (id) {
-      const house = getCurrentuserById(id as string);
-      setUser(house);
+      const user = getCurrentuserById(id as string);
+      setUser(user);
     }
   }, [id]);
 
-  const getCurrentuserById = (houseId: string) => {
-    return users.find((house) => house.currentHouse.id === houseId);
+  const getCurrentuserById = (userId: string) => {
+    return users.find((user) => user.profile.id === userId);
   };
 
-  if (!house) {
-    return <FavoriteHouses />;
+  if (!user) {
+    return <EmptyPageFavoriteHouses />;
   }
-
+  return (
+<FavoriteHouses/>
+  );
 }
 
 FindeFavoriteHouses.PageLayout = ProfileLayout;
