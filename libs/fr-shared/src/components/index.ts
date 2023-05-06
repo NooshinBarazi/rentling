@@ -74,6 +74,6 @@ export * from './elements/Icons/PasswordIcon';
 export * from './pages/Profile/components/StarRating/StarRating';
 export * from './pages/Profile/components/profileTemplate/ProfileTemplate';
 export * from './pages/Profile/components/common/MoreInfo/MoreInfo';
-export * from './pages/Profile/components/Login&Security/DeleteAccount';
-export * from './pages/Profile/components/Login&Security/DeleteAccountConfirmation';
+export * from './pages/Profile/components/LoginSecurity/DeleteAccount';
+export * from './pages/Profile/components/LoginSecurity/DeleteAccountConfirmation';
 
