@@ -70,8 +70,10 @@ export * from './elements/Icons/PaymentIcon';
 export * from './elements/Icons/SecurityIcon';
 export * from './elements/Icons/DropDownIcon';
 export * from './elements/Icons/FindHomeIcon';
+export * from './elements/Icons/PasswordIcon';
 export * from './pages/Profile/components/StarRating/StarRating';
 export * from './pages/Profile/components/profileTemplate/ProfileTemplate';
 export * from './pages/Profile/components/common/MoreInfo/MoreInfo';
-export * from './pages/Profile/components/Security/Security';
+export * from './pages/Profile/components/Login&Security/DeleteAccount';
+export * from './pages/Profile/components/Login&Security/DeleteAccountConfirmation';
 
