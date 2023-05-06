@@ -80,3 +80,4 @@ export * from './elements/Icons/Close';
 export * from './elements/Icons/Slider';
 export * from './elements/Icons/MapIcon';
 export * from './pages/Landing/Sections/HouseForm/regionCityData';
+export * from './pages/Profile/components/Payment/Payment';
