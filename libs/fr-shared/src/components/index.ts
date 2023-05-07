@@ -70,6 +70,11 @@ export * from './elements/Icons/PaymentIcon';
 export * from './elements/Icons/SecurityIcon';
 export * from './elements/Icons/DropDownIcon';
 export * from './elements/Icons/FindHomeIcon';
+export * from './elements/Icons/WarnIcon';
+export * from './elements/Icons/CheckIcon';
+export * from './elements/Icons/CancelIcon';
 export * from './pages/Profile/components/StarRating/StarRating';
 export * from './pages/Profile/components/profileTemplate/ProfileTemplate';
 export * from './pages/Profile/components/common/MoreInfo/MoreInfo';
+export * from './pages/Profile/components/personalInfo/PersonalInfo';
+
