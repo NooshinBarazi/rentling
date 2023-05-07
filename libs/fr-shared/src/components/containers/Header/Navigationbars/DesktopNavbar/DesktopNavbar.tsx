@@ -23,6 +23,7 @@ export const DesktopNavbar = () => {
   useEffect(() => {
     window.onscroll = () => {
       setIsScrolled(window.pageYOffset > 0 ? true : false);
+      
       return () => (window.onscroll = null);
     };
   }, []);
@@ -48,11 +49,11 @@ export const DesktopNavbar = () => {
           <LogoIcon href={'/'} />
         </div>
         <div className={styles.navbar_items}>
-          <Link href="./">
+          <Link href="/">
             <button
               style={isScrolled ? { display: 'none' } : { display: 'block' }}
             >
-              <p>I'm a Landlord </p>
+              <p>I'm a Landlord</p>
             </button>
           </Link>
           <div className={styles.dropdown_menu}>
