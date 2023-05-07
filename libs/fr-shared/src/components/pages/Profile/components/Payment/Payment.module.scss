@@ -1,0 +1,229 @@
+@import '../../../../../design-system/schema.scss';
+
+.container_show {
+  width: 88rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 7.5rem;
+  margin-top: 14rem;
+  position: relative;
+}
+
+.container{
+  width: 88rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 7.5rem;
+  margin-top: -24rem;
+  position: relative;
+}
+
+.header_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_favorite_houses {
+  width: 100%;
+  height: 5.8rem;
+  background: $color-grayish-light-green;
+  border-radius: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  p {
+    font-weight: 700;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    width: 30rem;
+    height: 3.3rem;
+    color: #fff;
+  }
+}
+
+.container_boxs {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+
+.box_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 16.8rem;
+}
+
+.container_box_top {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: 0px 0px 25px rgba(191, 196, 204, 0.5);
+}
+
+.description {
+  width: 55.2rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding-left: 3rem;
+  p {
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: $color-text-dark-gray;
+  }
+  span {
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: $color-text-light-gray;
+  }
+}
+
+.more_detaile {
+  width: 14.4rem;
+  height: 1.9rem;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  top: 2.3rem;
+  left: -2rem;
+
+  button {
+    width: 14.4rem;
+    height: 1.9rem;
+    border: none;
+    background-color: #fff;
+    color: $color-primary;
+    cursor: pointer;
+  }
+  span {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-top: 0.3rem solid $color-primary;
+    border-right: 0.3rem solid $color-primary;
+    rotate: (45deg);
+    margin-left: 1rem;
+    bottom: 0.4rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+}
+
+.less_detaile{
+  width: 14.4rem;
+  height: 1.9rem;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  top: 2.3rem;
+  left: -2rem;
+
+  button {
+    width: 14.4rem;
+    height: 1.9rem;
+    border: none;
+    background-color: #fff;
+    color: $color-primary;
+    cursor: pointer;
+  }
+  span {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-right: 0.3rem solid $color-primary;
+    border-bottom: 0.3rem solid $color-primary;
+    rotate: (45deg);
+    margin-left: 1rem;
+    bottom: 0.4rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+}
+
+.container_show_detaile{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 5rem;
+}
+
+.total_price {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-right: 6rem;
+  span {
+    font-weight: 600;
+    font-size: 2.2rem;
+    color: $color-primary;
+  }
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    color: $color-text-dark-gray;
+  }
+}
+
+.price_date_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-right: 20rem;
+  input {
+    width: 16.6rem;
+    height: 3.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0 3rem;
+    background-color: $color-bg-gray;
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+}
+
+.price {
+  font-weight: 600;
+  font-size: 2.2rem;
+  color: $color-primary;
+}
+
+.box_bottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 3rem;
+  width: 100%;
+  height: 22rem;
+  box-shadow: 0px 0px 25px rgba(191, 196, 204, 0.5);
+}
+.btn_payment {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 62.5rem;
+}
+
+.no_show{
+  display: none;
+}

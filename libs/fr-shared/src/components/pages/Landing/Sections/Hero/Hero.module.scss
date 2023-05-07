@@ -23,6 +23,7 @@
   display: flex;
   flex: 1 0 auto;
   flex-direction: column;
+  
   h1 {
     position: relative;
     font-family: 'Playfair Display';
@@ -53,10 +54,12 @@
   display: flex;
   align-items: center;
   gap: 2rem;
+
   h3 {
     font-size: 1.6rem;
     color: $color-primary;
   }
+
   button {
     @include primary-button;
   }
@@ -84,17 +87,20 @@
     background-image: url('../../images/HeroSection-home1.avif');
     background-position: 4rem 2rem;
   }
+
   &:nth-child(2) {
     grid-area: 1 / 2 / 2 / 3;
     background-image: url('../../images/HeroSection-home4.avif');
     background-position: -15rem 5rem;
   }
+
   &:nth-child(3) {
     grid-area: 2 / 1 / 3 / 2;
     background-image: url('../../images/HeroSection-home2.avif');
 
     background-position: 2rem -3rem;
   }
+
   &:nth-child(4) {
     grid-area: 2 / 2 / 3 / 3;
     background-image: url('../../images/HeroSection-home3.avif');

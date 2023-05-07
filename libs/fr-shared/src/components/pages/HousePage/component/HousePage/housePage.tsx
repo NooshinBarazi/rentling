@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import map from '../image/map.jpg';
-import styles from './housePayment.module.scss';
+import styles from './housePage.module.scss';
 import {
   houses,
   SlideImage,
@@ -31,7 +31,7 @@ interface PropsHousePayment {
   cityName: string;
 }
 
-export const HousePayment = ({
+export const HousePage = ({
   title,
   address,
   bathrooms,
@@ -57,7 +57,9 @@ export const HousePayment = ({
           <div className={styles.icon_container}>
             <div className={styles.map_icon}>
               <button
-                className={toggleBtnMapIcon ? styles.btn_deactive : styles.btn_active}
+                className={
+                  toggleBtnMapIcon ? styles.btn_deactive : styles.btn_active
+                }
                 onClick={() => setToggleBtnMapIcon(false)}
               >
                 <MapIcon />
@@ -65,7 +67,9 @@ export const HousePayment = ({
             </div>
             <div className={styles.calender_icon}>
               <button
-                className={toggleBtnMapIcon ? styles.btn_active : styles.btn_deactive}
+                className={
+                  toggleBtnMapIcon ? styles.btn_active : styles.btn_deactive
+                }
                 onClick={() => setToggleBtnMapIcon(true)}
               >
                 <CalenderIcon />
@@ -96,11 +100,13 @@ export const HousePayment = ({
             </div>
             <div
               className={
-                !toggleBtnMapIcon ? styles.side_right_map : styles.deactive_side_right
+                !toggleBtnMapIcon
+                  ? styles.side_right_map
+                  : styles.deactive_side_right
               }
             >
               <div className={styles.image_map}>
-                <Image src={map} alt="/" fill object-fit="cover"/>
+                <Image src={map} alt="/" fill object-fit="cover" />
               </div>
             </div>
           </div>
