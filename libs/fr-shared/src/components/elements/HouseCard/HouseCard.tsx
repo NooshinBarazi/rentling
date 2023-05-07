@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './HouseCard.module.scss';
 import Link from 'next/link';
 import {
@@ -14,8 +14,11 @@ import {
   Button,
 } from '@rentling/fr-shared';
 import Image from 'next/image';
+import { ShareModal } from './ShareModal';
+import { useRouter } from 'next/router';
 
 interface Props {
+  id: any;
   title?: any;
   address: any;
   bedrooms: any;
@@ -32,6 +35,7 @@ interface Props {
 }
 
 export const HouseCard = ({
+  id,
   region,
   selectedRegion,
   city,
@@ -46,6 +50,22 @@ export const HouseCard = ({
   oneDay,
   image,
 }: Props) => {
+  const router = useRouter();
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  const handleAddToFavorites =()=>{
+    const favoriteHouses: string[] = JSON.parse(localStorage.getItem('favoriteHouses') || '[]');
+    if(isFavorite){
+      const index = favoriteHouses.indexOf(id);
+      if(index > -1){
+        favoriteHouses.splice(index, 1);
+    }else{
+      favoriteHouses.push(id);
+    }
+    localStorage.setItem('favoriteHouses', JSON.stringify(favoriteHouses));
+    setIsFavorite(!isFavorite)
+  }}
+
   return (
     <article className={styles.house_card}>
       <div className={image ? styles.card_image : styles.display_none}>
@@ -104,7 +124,7 @@ export const HouseCard = ({
         </div>
 
         <div className={styles.card_buttons}>
-          <Link href={`/`}>
+          <Link href={`/houses/${id}`} as={`/houses/${id}`}>
             <Button
               text="Reserve"
               Icon={undefined}
@@ -112,10 +132,15 @@ export const HouseCard = ({
               onClick={() => {}}
             />
           </Link>
-          <div className={styles.share_icon}>
+          {/* <div className={styles.share_icon}>
             <ShareIcon />
+          </div> */}
+          <div className={styles.share_icon}>
+            <ShareModal
+              url={`${`localhost:4200/`}${router.asPath}`}
+            />
           </div>
-          <div className={styles.like_icon}>
+          <div itemID={id} className={styles.like_icon} onClick={handleAddToFavorites} >
             <LikeIcon />
           </div>
         </div>
