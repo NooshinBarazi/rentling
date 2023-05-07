@@ -1,6 +1,18 @@
 @import '../../../../../design-system/schema.scss';
 
-.container {
+.container_show {
+  width: 88rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 7.5rem;
+  margin-top: 14rem;
+  position: relative;
+}
+
+.container{
   width: 88rem;
   height: auto;
   display: flex;
@@ -54,6 +66,15 @@
   align-items: center;
   width: 100%;
   height: 16.8rem;
+}
+
+.container_box_top {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   box-shadow: 0px 0px 25px rgba(191, 196, 204, 0.5);
 }
 
@@ -77,7 +98,7 @@
   }
 }
 
-.btn {
+.more_detaile {
   width: 14.4rem;
   height: 1.9rem;
   display: flex;
@@ -108,8 +129,83 @@
   }
 }
 
-.no_show{
-  display: none;
+.less_detaile{
+  width: 14.4rem;
+  height: 1.9rem;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  top: 2.3rem;
+  left: -2rem;
+
+  button {
+    width: 14.4rem;
+    height: 1.9rem;
+    border: none;
+    background-color: #fff;
+    color: $color-primary;
+    cursor: pointer;
+  }
+  span {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-right: 0.3rem solid $color-primary;
+    border-bottom: 0.3rem solid $color-primary;
+    rotate: (45deg);
+    margin-left: 1rem;
+    bottom: 0.4rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+}
+
+.container_show_detaile{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 5rem;
+}
+
+.total_price {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-right: 6rem;
+  span {
+    font-weight: 600;
+    font-size: 2.2rem;
+    color: $color-primary;
+  }
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    color: $color-text-dark-gray;
+  }
+}
+
+.price_date_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-right: 20rem;
+  input {
+    width: 16.6rem;
+    height: 3.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0 3rem;
+    background-color: $color-bg-gray;
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+}
+
+.price {
+  font-weight: 600;
+  font-size: 2.2rem;
+  color: $color-primary;
 }
 
 .box_bottom {
@@ -126,4 +222,8 @@
   display: flex;
   justify-content: flex-end;
   margin-left: 62.5rem;
+}
+
+.no_show{
+  display: none;
 }
