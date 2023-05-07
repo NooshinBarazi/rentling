@@ -11,6 +11,7 @@ import {
   Footer,
   FooterItems,
 } from '@rentling/fr-shared';
+
 interface Props {}
 
 export const Landing = (props: Props) => {

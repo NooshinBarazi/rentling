@@ -70,6 +70,9 @@ export * from './elements/Icons/PaymentIcon';
 export * from './elements/Icons/SecurityIcon';
 export * from './elements/Icons/DropDownIcon';
 export * from './elements/Icons/FindHomeIcon';
+export * from './elements/Icons/WarnIcon';
+export * from './elements/Icons/CheckIcon';
+export * from './elements/Icons/CancelIcon';
 export * from './pages/Profile/components/StarRating/StarRating';
 export * from './pages/Profile/components/profileTemplate/ProfileTemplate';
 export * from './pages/Profile/components/common/MoreInfo/MoreInfo';
@@ -80,4 +83,9 @@ export * from './elements/Icons/Close';
 export * from './elements/Icons/Slider';
 export * from './elements/Icons/MapIcon';
 export * from './pages/Landing/Sections/HouseForm/regionCityData';
+<<<<<<< HEAD
 export * from './pages/Profile/components/Payment/Payment';
+=======
+export * from './pages/Profile/components/personalInfo/PersonalInfo';
+
+>>>>>>> 5900feb1837469553f679cf82812cdf888c2d86b

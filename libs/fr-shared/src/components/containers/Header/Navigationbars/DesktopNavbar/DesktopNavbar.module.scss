@@ -20,16 +20,20 @@
   margin: auto;
   transition: 0.3s;
 }
+
 .navbar_scrolled {
   box-shadow: $box-shadow-10;
 }
+
 .navbar_icon {
   transition: 0.3s;
   padding: 1rem 10rem;
+  
   svg {
     width: 7rem;
   }
 }
+
 .navbar_icon_scrolled {
   transition: 0.3s;
   padding: 0;
@@ -44,13 +48,16 @@
   z-index: 5;
   align-items: center;
   justify-content: center;
+  
   & svg {
     height: 3.4rem;
     width: 5.7rem;
   }
+  
   button {
     @include secondary-button;
   }
+  
   & * {
     cursor: pointer;
   }
@@ -89,6 +96,7 @@
   ul {
     display: none;
   }
+  
   &:hover {
     ul {
       display: block;
