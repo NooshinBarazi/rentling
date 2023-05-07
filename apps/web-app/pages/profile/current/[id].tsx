@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import {
   CurrentRental,
   EmptyCurrentRental,
-  MoreInfo,
   users,
 } from '@rentling/fr-shared';
 import { ProfileLayout } from '../../layout/ProfileLayout';
