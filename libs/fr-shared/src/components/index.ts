@@ -83,9 +83,6 @@ export * from './elements/Icons/Close';
 export * from './elements/Icons/Slider';
 export * from './elements/Icons/MapIcon';
 export * from './pages/Landing/Sections/HouseForm/regionCityData';
-<<<<<<< HEAD
 export * from './pages/Profile/components/Payment/Payment';
-=======
 export * from './pages/Profile/components/personalInfo/PersonalInfo';
 
->>>>>>> 5900feb1837469553f679cf82812cdf888c2d86b
