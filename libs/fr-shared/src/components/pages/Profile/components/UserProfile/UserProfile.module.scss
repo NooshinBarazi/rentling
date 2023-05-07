@@ -5,8 +5,8 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  width: 172.8rem;
-  height: 104rem;
+  width: 100vw;
+  height: 100vh;
   left: 0rem;
   background-color: $color-bg-gray;
   background-image: url('../../../Landing/svgs/HeroBackground.svg');
@@ -17,10 +17,8 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  width: 150rem;
-  height: 85rem;
-  left: 11.4rem;
-  top: 7.8rem;
+  width: 90vw;
+  height: 90vh;
   border-radius: 0.5rem;
   background-color: $color-white;
   background-image: url('../../../Landing/svgs/profile.svg');
