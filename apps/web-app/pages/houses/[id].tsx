@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { HousePayment, houses } from '@rentling/fr-shared';
+import { HousePage, houses } from '@rentling/fr-shared';
 
 export default function HousePaymentHandel() {
   const router = useRouter();
@@ -20,11 +20,21 @@ export default function HousePaymentHandel() {
   };
 
   if (!house) {
-   return <div style={{display: 'flex', justifyContent:'center', alignContent:'center'}}><h1>House profile not found!</h1>;</div>
+    return (
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignContent: 'center',
+        }}
+      >
+        <h1>House profile not found!</h1>;
+      </div>
+    );
   } else {
     return (
       <div>
-        <HousePayment
+        <HousePage
           title={house.title}
           address={house.address}
           bathrooms={house.feature.bathroom}
