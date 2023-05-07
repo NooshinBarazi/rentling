@@ -76,5 +76,12 @@ export * from './elements/Icons/CancelIcon';
 export * from './pages/Profile/components/StarRating/StarRating';
 export * from './pages/Profile/components/profileTemplate/ProfileTemplate';
 export * from './pages/Profile/components/common/MoreInfo/MoreInfo';
+export * from './pages/Profile/components/FavoriteHouses/FavoriteHouses/FavoriteHouses';
+export * from './pages/Profile/components/FavoriteHouses/EmptyPageFavoriteHouses/EmptyPageFavoriteHouses';
+export * from './elements/Icons/Album';
+export * from './elements/Icons/Close';
+export * from './elements/Icons/Slider';
+export * from './elements/Icons/MapIcon';
+export * from './pages/Landing/Sections/HouseForm/regionCityData';
 export * from './pages/Profile/components/personalInfo/PersonalInfo';
 
