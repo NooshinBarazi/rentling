@@ -19,6 +19,7 @@ import {
 } from '@rentling/fr-shared';
 
 export const HouseForm = () => {
+  
   //filtering item's States
   const [bedCount, setBedCount] = useState<any>('all');
   const [bathroomCount, setBathroomCount] = useState<string>('all');
@@ -187,7 +188,7 @@ export const HouseForm = () => {
     priceRange,
   ]);
 
-  const filteredCardsRef = useRef(null);
+  const filteredCardsRef = useRef<HTMLDivElement>(null);
 
   const go_to_top = useRef(null);
 
@@ -196,17 +197,22 @@ export const HouseForm = () => {
   //Button apply filter function
   const handleFilterClick = () => {
     setApplyFilter(true);
-    filteredCardsRef.current.scrollIntoView({ behavior: 'smooth' });
+
+    if( filteredCardsRef.current !== null) {
+
+      filteredCardsRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
-  const [formisSticky, setFormIsSticky] = useState(false);
+  const [formIsSticky, setFormIsSticky] = useState(false);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [formisSticky]);
+  }, [formIsSticky]);
 
   const handleScroll = () => {
     const house_form_section = document.getElementById('house_form_section'); // Replace "house_form_section" with your component's ID
@@ -224,7 +230,7 @@ export const HouseForm = () => {
     <div id="house_form_section" className={styles.house_form_section}>
       <form
         onSubmit={(e) => e.preventDefault()}
-        style={!formisSticky ? { marginLeft: '20rem' } : { marginLeft: '' }}
+        style={!formIsSticky ? { marginLeft: '20rem' } : { marginLeft: '' }}
         className={styles.form}
       >
         {/* region and city */}

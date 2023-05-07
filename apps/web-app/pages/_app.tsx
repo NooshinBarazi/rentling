@@ -13,7 +13,7 @@ function CustomApp({ Component, pageProps }: ComponentWithPageLayout) {
   return (
     <>
       <Head>
-        <title>Welcome to web-app!</title>
+        <title>Welcome to Rentling</title>
       </Head>
       <main className="app">
         {Component.PageLayout ? (

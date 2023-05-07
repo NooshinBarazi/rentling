@@ -40,6 +40,27 @@ export const users = [
     favoritesList: [
       {
         images: {
+          img: '/images/20.avif',
+        },
+        id: '36',
+        title: 'Spacious House in the Heart of Calgary',
+        address: '123 Main Street, Calgary, NY 10001',
+        feature: {
+          region: 'CANADA',
+          city: 'Calgary',
+          type: 'house',
+          bedroom: 3,
+          bathroom: 2,
+          parking: true,
+          meterage: 1500,
+        },
+        price: {
+          oneDay: 500,
+          thirtyDay: 5000,
+        },
+      },
+      {
+        images: {
           img: '/images/19.avif',
         },
         id: '36',
@@ -55,31 +76,52 @@ export const users = [
           meterage: 1500,
         },
         price: {
-          oneDay: 199,
+          oneDay: 400,
           thirtyDay: 2300,
         },
       },
-      {
-        images: {
-          img: '/images/19.avif',
-        },
-        id: '36',
-        title: 'Spacious House in the Heart of Calgary22',
-        address: '123 Main Street, Calgary, NY 10001',
-        feature: {
-          region: 'CANADA',
-          city: 'Calgary',
-          type: 'house',
-          bedroom: 3,
-          bathroom: 2,
-          parking: true,
-          meterage: 1500,
-        },
-        price: {
-          oneDay: 199,
-          thirtyDay: 2300,
-        },
+    {
+      images: {
+        img: '/images/22.avif',
       },
+      id: '40',
+      title: 'Spacious House in the Heart of Calgary',
+      address: '123 Main Street, Calgary, NY 10001',
+      feature: {
+        region: 'CANADA',
+        city: 'Calgary',
+        type: 'house',
+        bedroom: 3,
+        bathroom: 2,
+        parking: true,
+        meterage: 1500,
+      },
+      price: {
+        oneDay: 700,
+        thirtyDay: 7000,
+      },
+    },
+    {
+      images: {
+        img: '/images/23.avif',
+      },
+      id: '42',
+      title: 'Spacious House in the Heart of Calgary',
+      address: '123 Main Street, Calgary, NY 10001',
+      feature: {
+        region: 'CANADA',
+        city: 'Calgary',
+        type: 'house',
+        bedroom: 3,
+        bathroom: 2,
+        parking: true,
+        meterage: 1500,
+      },
+      price: {
+        oneDay: 800,
+        thirtyDay: 7500,
+      },
+    },
     ],
     history: [
       {
