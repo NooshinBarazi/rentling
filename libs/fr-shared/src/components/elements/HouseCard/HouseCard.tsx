@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import styles from './HouseCard.module.scss';
 import Link from 'next/link';
 import {
@@ -7,15 +6,12 @@ import {
   CarIcon,
   SqFeetIcon,
   LikeIcon,
-  ShareIcon,
-  TextIcon,
   DateDayIcon,
   DateMonthIcon,
   Button,
 } from '@rentling/fr-shared';
 import Image from 'next/image';
 import { ShareModal } from './ShareModal';
-import { useRouter } from 'next/router';
 
 interface Props {
   id: any;
@@ -50,21 +46,21 @@ export const HouseCard = ({
   oneDay,
   image,
 }: Props) => {
-  const router = useRouter();
-  const [isFavorite, setIsFavorite] = useState(false);
 
-  const handleAddToFavorites =()=>{
-    const favoriteHouses: string[] = JSON.parse(localStorage.getItem('favoriteHouses') || '[]');
-    if(isFavorite){
+  const handleAddToFavorites = () => {
+    let favoriteHouses = JSON.parse(
+      localStorage.getItem('favoriteHouses') || '[]'
+    );
+    if (favoriteHouses.includes(id)) {
       const index = favoriteHouses.indexOf(id);
-      if(index > -1){
+      if (index > -1) {
         favoriteHouses.splice(index, 1);
-    }else{
+      }
+    } else {
       favoriteHouses.push(id);
     }
     localStorage.setItem('favoriteHouses', JSON.stringify(favoriteHouses));
-    setIsFavorite(!isFavorite)
-  }}
+  };
 
   return (
     <article className={styles.house_card}>
@@ -132,15 +128,10 @@ export const HouseCard = ({
               onClick={() => {}}
             />
           </Link>
-          {/* <div className={styles.share_icon}>
-            <ShareIcon />
-          </div> */}
           <div className={styles.share_icon}>
-            <ShareModal
-              url={`${`localhost:4200/`}${router.asPath}`}
-            />
+            <ShareModal url={`${`localhost:4200/houses/`}${id}`} />
           </div>
-          <div itemID={id} className={styles.like_icon} onClick={handleAddToFavorites} >
+          <div className={styles.like_icon} onClick={handleAddToFavorites}>
             <LikeIcon />
           </div>
         </div>
