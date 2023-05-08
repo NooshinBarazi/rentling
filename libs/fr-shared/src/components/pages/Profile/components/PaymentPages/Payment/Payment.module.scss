@@ -9,7 +9,6 @@
   align-items: center;
   margin-left: 7.5rem;
   margin-top: 14rem;
-  position: relative;
 }
 
 .container{
@@ -22,6 +21,7 @@
   margin-left: 7.5rem;
   margin-top: -24rem;
   position: relative;
+
 }
 
 .header_container {
@@ -226,4 +226,11 @@
 
 .no_show{
   display: none;
+}
+
+.card_popup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }

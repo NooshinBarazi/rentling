@@ -1,17 +1,24 @@
-import { Button, Input } from '@rentling/fr-shared';
+import { Button, PaymentMethod } from '@rentling/fr-shared';
 import styles from './Payment.module.scss';
 import { useState } from 'react';
 
 export const Payment = () => {
   const [display, setDisplay] = useState(false);
 
+  const [paymentPopup, setPaymentPopup] = useState(true);
+
   const toggle_show = () => {
-    setDisplay(!display)
-  }
+    setDisplay(!display);
+  };
+
+  const toggleMethod = () => {
+    console.log(paymentPopup);
+    setPaymentPopup(!paymentPopup);
+  };
 
   return (
     <>
-      <div className={display? styles.container_show : styles.container}>
+      <div className={display ? styles.container_show : styles.container}>
         <div className={styles.header_container}>
           <div className={styles.header_favorite_houses}>
             <p>your favorite houses</p>
@@ -24,15 +31,20 @@ export const Payment = () => {
                 <p>Your payments</p>
                 <span>Keep track of all your payments and refunds.</span>
               </div>
-              <div className={display? styles.less_detaile : styles.more_detaile}>
-                <button
-                  onClick={toggle_show}
-                >
-                  {display? 'See less details' : 'See more details' } <span></span>
+              <div
+                className={display ? styles.less_detaile : styles.more_detaile}
+              >
+                <button onClick={toggle_show}>
+                  {display ? 'See less details' : 'See more details'}{' '}
+                  <span></span>
                 </button>
               </div>
             </div>
-            <div className={display? styles.container_show_detaile : styles.no_show}>
+            <div
+              className={
+                display ? styles.container_show_detaile : styles.no_show
+              }
+            >
               <div className={styles.description}>
                 <p>payments summary :</p>
               </div>
@@ -74,12 +86,17 @@ export const Payment = () => {
                 Icon={undefined}
                 text="Add Payment Method"
                 newStyle={''}
-                onClick={() => {}}
+                onClick={toggleMethod}
               />
             </div>
           </div>
         </div>
       </div>
+      {paymentPopup && (
+        <div className={styles.card_popup}>
+          <PaymentMethod />
+        </div>
+      )}
     </>
   );
 };
