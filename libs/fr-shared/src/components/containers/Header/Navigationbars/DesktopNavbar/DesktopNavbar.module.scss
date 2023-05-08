@@ -28,7 +28,7 @@
 .navbar_icon {
   transition: 0.3s;
   padding: 1rem 10rem;
-  
+
   svg {
     width: 7rem;
   }
@@ -48,16 +48,16 @@
   z-index: 5;
   align-items: center;
   justify-content: center;
-  
+
   & svg {
     height: 3.4rem;
     width: 5.7rem;
   }
-  
+
   button {
     @include secondary-button;
   }
-  
+
   & * {
     cursor: pointer;
   }
@@ -78,13 +78,13 @@
   bottom: 1rem;
 }
 
-.dropdown_menu {
+.dropdown_menu,
+.dropdown_menu_open {
   display: grid;
   grid-template-columns: 2;
-  grid-template-rows: 2;
+  grid-template-rows: (1fr 0);
   align-items: center;
   column-gap: 1rem;
-  padding-top: 1rem;
   height: 100%;
   p {
     grid-area: 1 / 2 / 2 / 3;
@@ -95,15 +95,15 @@
 
   ul {
     display: none;
-  }
-  
-  &:hover {
-    ul {
-      display: block;
-    }
+    margin-top: 0rem;
   }
 }
 
+.dropdown_menu_open {
+  ul {
+    display: block;
+  }
+}
 .profile_icon {
   grid-area: 1 / 1 / 2 / 2;
 }

@@ -19,11 +19,13 @@ export const DesktopNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   // checks the page on scroll, to animate the Logo + Navbar box shadow
   const [isScrolled, setIsScrolled] = useState(false);
+  // checks the dropdown state
+  const [dropdownIsOpen, setDropDonwIsOpen] = useState(false);
 
   useEffect(() => {
     window.onscroll = () => {
       setIsScrolled(window.pageYOffset > 0 ? true : false);
-      
+
       return () => (window.onscroll = null);
     };
   }, []);
@@ -56,7 +58,14 @@ export const DesktopNavbar = () => {
               <p>I'm a Landlord</p>
             </button>
           </Link>
-          <div className={styles.dropdown_menu}>
+          <div
+            className={
+              dropdownIsOpen ? styles.dropdown_menu_open : styles.dropdown_menu
+            }
+            tabIndex={1}
+            onBlur={() => setDropDonwIsOpen(false)}
+            onClick={() => setDropDonwIsOpen(!dropdownIsOpen)}
+          >
             <p>Profile</p>
             <div className={styles.profile_icon}>
               <ProfileIcon />
