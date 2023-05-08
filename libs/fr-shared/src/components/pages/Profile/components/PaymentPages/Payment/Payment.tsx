@@ -1,11 +1,15 @@
 import { Button, PaymentMethod } from '@rentling/fr-shared';
 import styles from './Payment.module.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-export const Payment = () => {
+interface PropsPaymet{
+options: any[];
+}
+
+export const Payment = ({options}: PropsPaymet) => {
   const [display, setDisplay] = useState(false);
 
-  const [paymentPopup, setPaymentPopup] = useState(true);
+  const [paymentPopup, setPaymentPopup] = useState(false);
 
   const toggle_show = () => {
     setDisplay(!display);
@@ -15,6 +19,10 @@ export const Payment = () => {
     console.log(paymentPopup);
     setPaymentPopup(!paymentPopup);
   };
+
+  const handelChange = () =>{
+    setPaymentPopup(!paymentPopup);
+  }
 
   return (
     <>
@@ -94,7 +102,10 @@ export const Payment = () => {
       </div>
       {paymentPopup && (
         <div className={styles.card_popup}>
-          <PaymentMethod />
+          <PaymentMethod
+            options={options}
+            handelChange={handelChange}
+          />
         </div>
       )}
     </>
