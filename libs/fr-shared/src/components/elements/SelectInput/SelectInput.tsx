@@ -15,8 +15,8 @@ interface IProps {
 export const SelectInput = ({ name, register, options, defaultValue }: IProps) => {
   return (
     <select {...register(name)} defaultValue={defaultValue}>
-      {options.map((option,index) => (
-        <option key={index} value={option.value}>
+      {options.map((option) => (
+        <option key={option.value} value={option.value}>
           {option.label}
         </option>
       ))}
