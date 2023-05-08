@@ -3,6 +3,7 @@ import styles from './paymnetMethod.module.scss';
 import image from './vector/Frame 416.jpg';
 import { Button, SelectInput } from '@rentling/fr-shared';
 import { useForm } from 'react-hook-form';
+import { useState } from 'react';
 
 interface IOption {
   value: string;
@@ -13,7 +14,7 @@ interface PropsPaymentMethod {
   options: IOption[];
 }
 
-export const PaymentMethod = (
+export const PaymentMethod: any = (
   onSubmit: any,
   { options }: PropsPaymentMethod
 ) => {
@@ -22,67 +23,71 @@ export const PaymentMethod = (
     register,
     formState: { errors },
   } = useForm();
+  const [canceHandel,setCanceHandel] = useState(true);
 
-  return (
-    <section className={styles.main}>
-      <div className={styles.container}>
-        <div className={styles.card_container}>
-          <div className={styles.hedear}>
-            <div className={styles.image_container}>
-              <Image src={image} alt="/" fill object-fit="cover" />
+  if(canceHandel){
+    
+    return (
+      <section  className={styles.main}>
+        <div className={styles.container}>
+          <div className={styles.card_container}>
+            <div className={styles.hedear}>
+              <div className={styles.image_container}>
+                <Image src={image} alt="/" fill object-fit="cover" />
+              </div>
             </div>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div className={styles.card_number_input}>
+                <input
+                  defaultValue={'Card Number'}
+                  {...register('exampleRequired', { required: true })}
+                />
+                {errors.exampleRequired && <span>This field is required</span>}
+              </div>
+              <div className={styles.card_information}>
+                <input
+                  defaultValue={'Expiration'}
+                  {...register('Expiration', { required: true })}
+                />
+                {errors.exampleRequired && <span>This field is required</span>}
+                <input
+                  defaultValue={'CVV'}
+                  {...register('CVV', { required: true })}
+                />
+                {errors.exampleRequired && <span>This field is required</span>}
+              </div>
+              <div className={styles.select_option}>
+                <SelectInput
+                  defaultValue={'Country/Region'}
+                  name={'Country/Region'}
+                  register={register}
+                  options={[
+                    { value: 'United States', label: 'United States' },
+                    { value: 'United States', label: 'United States' },
+                    { value: 'United States', label: 'United States' },
+                    { value: 'United States', label: 'United States' },
+                    { value: 'United States', label: 'United States' },
+                  ]}
+                />
+              </div>
+              <div className={styles.button_handel_submit}>
+                <Button
+                  Icon={undefined}
+                  text="CANCEL"
+                  newStyle=""
+                  onClick={() => {setCanceHandel(false)}}
+                />
+                <Button
+                  Icon={undefined}
+                  text="DONE"
+                  newStyle=""
+                  onClick={() => {}}
+                />
+              </div>
+            </form>
           </div>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <div className={styles.card_number_input}>
-              <input
-                defaultValue={'Card Number'}
-                {...register('exampleRequired', { required: true })}
-              />
-              {errors.exampleRequired && <span>This field is required</span>}
-            </div>
-            <div className={styles.card_information}>
-              <input
-                defaultValue={'Expiration'}
-                {...register('exampleRequired', { required: true })}
-              />
-              {errors.exampleRequired && <span>This field is required</span>}
-              <input
-                defaultValue={'CVV'}
-                {...register('exampleRequired', { required: true })}
-              />
-              {errors.exampleRequired && <span>This field is required</span>}
-            </div>
-            <div className={styles.select_option}>
-              <SelectInput
-                defaultValue={'Country/Region'}
-                name={'Country/Region'}
-                register={register}
-                options={[
-                  { value: 'United States', label: 'United States' },
-                  { value: 'United States', label: 'United States' },
-                  { value: 'United States', label: 'United States' },
-                  { value: 'United States', label: 'United States' },
-                  { value: 'United States', label: 'United States' },
-                ]}
-              />
-            </div>
-            <div className={styles.button_handel_submit}>
-              <Button
-                Icon={undefined}
-                text="CANCEL"
-                newStyle=""
-                onClick={() => {}}
-              />
-              <Button
-                Icon={undefined}
-                text="DONE"
-                newStyle=""
-                onClick={() => {}}
-              />
-            </div>
-          </form>
         </div>
-      </div>
-    </section>
-  );
+      </section>
+    );
+  }
 };
