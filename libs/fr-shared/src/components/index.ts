@@ -82,3 +82,4 @@ export * from './elements/Icons/MapIcon';
 export * from './pages/Landing/Sections/HouseForm/regionCityData';
 export * from './pages/Profile/components/PaymentPages/Payment/Payment';
 export * from './pages/Profile/components/PaymentPages/PaymentMethod/PaymnetMethod';
+export * from './elements/SelectInput/SelectInput';
