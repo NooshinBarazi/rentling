@@ -10,6 +10,7 @@ interface PriceSliderProps {
   daily: boolean;
   monthly: boolean;
   handlePriceTime: any;
+  step: any;
 }
 
 export const PriceSlider = ({
@@ -19,6 +20,7 @@ export const PriceSlider = ({
   daily,
   monthly,
   handlePriceTime,
+  step,
 }: PriceSliderProps) => {
   const [minVal, setMinVal] = useState(min);
   const [maxVal, setMaxVal] = useState(max);
@@ -112,6 +114,7 @@ export const PriceSlider = ({
             type="range"
             min={min}
             max={max}
+            step={step}
             value={minVal}
             ref={minValRef}
             onChange={onMinInputChange}
@@ -123,6 +126,7 @@ export const PriceSlider = ({
             type="range"
             min={min}
             max={max}
+            step={step}
             value={maxVal}
             ref={maxValRef}
             onChange={onMaxInputChange}

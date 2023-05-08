@@ -19,7 +19,6 @@ import {
 } from '@rentling/fr-shared';
 
 export const HouseForm = () => {
-  
   //filtering item's States
   const [bedCount, setBedCount] = useState<any>('all');
   const [bathroomCount, setBathroomCount] = useState<string>('all');
@@ -198,8 +197,7 @@ export const HouseForm = () => {
   const handleFilterClick = () => {
     setApplyFilter(true);
 
-    if( filteredCardsRef.current !== null) {
-
+    if (filteredCardsRef.current !== null) {
       filteredCardsRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
@@ -208,7 +206,7 @@ export const HouseForm = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -230,8 +228,7 @@ export const HouseForm = () => {
     <div id="house_form_section" className={styles.house_form_section}>
       <form
         onSubmit={(e) => e.preventDefault()}
-        style={!formIsSticky ? { marginLeft: '20rem' } : { marginLeft: '' }}
-        className={styles.form}
+        className={formIsSticky ? styles.form_scrolled : styles.form}
       >
         {/* region and city */}
         <Region
@@ -262,11 +259,12 @@ export const HouseForm = () => {
 
         {/* Price and date */}
         <PriceSlider
+          step={monthlySelected ? 500 : 50}
           daily={dailySelected}
           monthly={monthlySelected}
           handlePriceTime={handlePriceTime}
           min={0}
-          max={10000}
+          max={20000}
           onChange={setPriceRange}
         />
         <Button
@@ -307,7 +305,11 @@ export const HouseForm = () => {
           }}
         />
       </motion.div>
-      <div className={styles.filtered_result}>
+      <div
+        className={
+          formIsSticky ? styles.filtered_result_swiped : styles.filtered_result
+        }
+      >
         <p>Result</p>
       </div>
       <div className={styles.filtered_cards} ref={filteredCardsRef}>
