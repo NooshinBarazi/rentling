@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
-import { PersonalInfo, users } from '@rentling/fr-shared';
-import { ProfileLayout } from '../../layout/ProfileLayout';
+import { PersonalInfo, users,ProfileTemplate } from '@rentling/fr-shared';
+
 
 export default function PersonalInfoPage() {
   const router = useRouter();
@@ -22,4 +22,4 @@ export default function PersonalInfoPage() {
   return <PersonalInfo />;
 }
 
-PersonalInfoPage.PageLayout = ProfileLayout;
+PersonalInfoPage.PageLayout = ProfileTemplate;
