@@ -100,6 +100,5 @@ export * from './pages/Landing/Sections/HouseForm/regionCityData';
 export * from './pages/Profile/components/PaymentPages/Payment/Payment';
 export * from './pages/Profile/components/PaymentPages/PaymentMethod/PaymnetMethod';
 export * from './elements/SelectInput/SelectInput';
-export * from './pages/Profile/components/Payment/Payment';
 export * from './pages/Profile/components/personalInfo/PersonalInfo';
 
