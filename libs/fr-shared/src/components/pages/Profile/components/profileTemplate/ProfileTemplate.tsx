@@ -58,10 +58,10 @@ export const ProfileTemplate = ({children }: {children: React.ReactNode}) => {
               </li>
             </Link>
 
-            <Link href="/profile/history">
+            <Link href="/profile/history/" as={`/profile/history/`}>
               <li
                 className={
-                  router.pathname === '/profile/history'
+                  router.pathname === '/profile/history/'
                     ? styles.nav_item_active
                     : styles.nav_item
                 }

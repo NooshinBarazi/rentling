@@ -1,0 +1,208 @@
+@import '../../../../../design-system/schema.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 1 1 auto;
+    height: auto;
+    gap: 3rem;
+   margin-left: 10rem;
+}
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: $color-white;
+    padding-top: 10rem;
+}
+
+.header_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem 5rem;
+    width: 100%;
+    height: 5.8rem;
+    background-color: $color-grayish-light-green;
+    border-radius: 0.2rem;
+
+    h2 {
+        font-weight: 700;
+        font-size: 2.4rem;
+        color: $color-white;
+    }
+}
+
+.sort_house {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+
+    p {
+        font-weight: 600;
+        font-size: 2rem;
+        color: $color-grayish-dark-green;
+    }
+}
+
+.houses_card {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+}
+
+.house_card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    border-bottom: 1px solid $color-grayish-light-green;
+    padding: 0 6rem;
+
+    &:hover {
+        box-shadow: 0rem 0rem 2.5rem rgba(191, 196, 204, 0.5);
+    }
+}
+
+.card_info {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    border-radius: 0.5rem;
+}
+
+.location_house {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+
+    h5 {
+        font-weight: 700;
+        font-size: 1.8rem;
+        color: $color-grayish-light-green;
+    }
+
+    p {
+        font-size: 1.4rem;
+        color: $color-text-dark-gray;
+    }
+}
+
+.house_price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    border: none;
+
+    h4 {
+        font-weight: 600;
+        font-size: 1.44rem;
+        color: $color-text-light-gray;
+    }
+
+    p {
+        font-weight: 600;
+        font-size: 2.5rem;
+        color: $color-text-dark-gray;
+    }
+
+    svg {
+        width: 2rem;
+        height: 2rem;
+
+        path {
+            fill: $color-alert;
+        }
+    }
+}
+
+
+.rental_period {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+
+    p {
+        font-weight: 600;
+        font-size: 1.4rem;
+        color: $color-text-dark-gray;
+    }
+
+    span {
+        font-weight: 600;
+        font-size: 1.6rem;
+        color: $color-alert;
+    }
+}
+
+
+.rental_date {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    gap: 1rem;
+    width: 16.6rem;
+    height: 3.8rem;
+    background-color: $color-bg-gray;
+    border-radius: 0.2rem;
+
+    svg {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    p {
+        font-weight: 600;
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        color: $color-text-light-gray;
+    }
+}
+
+.more_info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 1.4rem;
+
+    p {
+        font-weight: 600;
+        font-size: 1.4rem;
+        text-decoration-line: underline;
+        color: $color-primary;
+    }
+}
+
+.house_rating {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+
+    p {
+        font-weight: 600;
+        font-size: 1.4rem;
+        color: $color-text-dark-gray;
+    }
+}

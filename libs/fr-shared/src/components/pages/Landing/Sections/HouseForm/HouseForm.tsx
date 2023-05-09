@@ -187,7 +187,7 @@ export const HouseForm = () => {
     priceRange,
   ]);
 
-  const filteredCardsRef = useRef(null);
+  const filteredCardsRef = useRef<HTMLDivElement>(null);
 
   const go_to_top = useRef(null);
 
@@ -196,17 +196,21 @@ export const HouseForm = () => {
   //Button apply filter function
   const handleFilterClick = () => {
     setApplyFilter(true);
-    filteredCardsRef.current.scrollIntoView({ behavior: 'smooth' });
+
+    if (filteredCardsRef.current !== null) {
+      filteredCardsRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
-  const [formisSticky, setFormIsSticky] = useState(false);
+  const [formIsSticky, setFormIsSticky] = useState(false);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [formisSticky]);
+  }, [formIsSticky]);
 
   const handleScroll = () => {
     const house_form_section = document.getElementById('house_form_section'); // Replace "house_form_section" with your component's ID
@@ -224,8 +228,7 @@ export const HouseForm = () => {
     <div id="house_form_section" className={styles.house_form_section}>
       <form
         onSubmit={(e) => e.preventDefault()}
-        style={!formisSticky ? { marginLeft: '20rem' } : { marginLeft: '' }}
-        className={styles.form}
+        className={formIsSticky ? styles.form_scrolled : styles.form}
       >
         {/* region and city */}
         <Region
@@ -256,11 +259,12 @@ export const HouseForm = () => {
 
         {/* Price and date */}
         <PriceSlider
+          step={monthlySelected ? 500 : 50}
           daily={dailySelected}
           monthly={monthlySelected}
           handlePriceTime={handlePriceTime}
           min={0}
-          max={10000}
+          max={20000}
           onChange={setPriceRange}
         />
         <Button
@@ -301,7 +305,11 @@ export const HouseForm = () => {
           }}
         />
       </motion.div>
-      <div className={styles.filtered_result}>
+      <div
+        className={
+          formIsSticky ? styles.filtered_result_swiped : styles.filtered_result
+        }
+      >
         <p>Result</p>
       </div>
       <div className={styles.filtered_cards} ref={filteredCardsRef}>
