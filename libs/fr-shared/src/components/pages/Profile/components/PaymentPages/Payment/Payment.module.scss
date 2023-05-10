@@ -239,9 +239,7 @@
   border: 0.005rem solid $color-grayish-light-green;
 }
 
-
 // PaymentMethod style
-
 
 .main {
   display: flex;
@@ -251,8 +249,20 @@
   width: 100%;
   height: 100vh;
   position: absolute;
-  margin-left: -21rem;
-  margin-bottom: 22rem;
+  margin-left: -9rem;
+  margin-bottom: 24rem;
+}
+
+.main_show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  margin-left: 87rem;
+  margin-top: 90rem;
 }
 
 .payment_container {
