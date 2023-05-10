@@ -1,12 +1,30 @@
-import { Button, PaymentMethod } from '@rentling/fr-shared';
+import { Button, SelectInput } from '@rentling/fr-shared';
 import styles from './Payment.module.scss';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import Image from 'next/image';
+import image from './vector/Frame 416.jpg';
 
-interface PropsPaymet{
-options: any[];
+
+interface PropsPaymet {
+  onStateChange: any;
+  options: IOption[];
+  updateParent: any
 }
 
-export const Payment = ({options}: PropsPaymet) => {
+interface IOption {
+  value: string;
+  label: string;
+}
+
+export const Payment = (onSubmit : any ,{ options }: PropsPaymet) => {
+
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm();
+
   const [display, setDisplay] = useState(false);
 
   const [paymentPopup, setPaymentPopup] = useState(false);
@@ -19,10 +37,6 @@ export const Payment = ({options}: PropsPaymet) => {
     console.log(paymentPopup);
     setPaymentPopup(!paymentPopup);
   };
-
-  const handelChange = () =>{
-    setPaymentPopup(!paymentPopup);
-  }
 
   return (
     <>
@@ -55,6 +69,7 @@ export const Payment = ({options}: PropsPaymet) => {
             >
               <div className={styles.description}>
                 <p>payments summary :</p>
+                <hr className={styles.horizontaـline} />
               </div>
               <div className={styles.total_price}>
                 <span> 1,900 $ </span>
@@ -62,6 +77,7 @@ export const Payment = ({options}: PropsPaymet) => {
               </div>
               <div className={styles.description}>
                 <p>payments history :</p>
+                <hr className={styles.horizontaـline} />
               </div>
               <div className={styles.price_date_container}>
                 <div className={styles.price}>
@@ -102,10 +118,66 @@ export const Payment = ({options}: PropsPaymet) => {
       </div>
       {paymentPopup && (
         <div className={styles.card_popup}>
-          <PaymentMethod
-            options={options}
-            handelChange={handelChange}
-          />
+                    <section className={styles.main}>
+        <div className={styles.payment_container}>
+          <div className={styles.card_container}>
+            <div className={styles.hedear}>
+              <div className={styles.image_container}>
+                <Image src={image} alt="/" fill object-fit="cover" />
+              </div>
+            </div>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div className={styles.card_number_input}>
+                <input
+                  defaultValue={'Card Number'}
+                  {...register('exampleRequired', { required: true })}
+                />
+                {errors.exampleRequired && <span>This field is required</span>}
+              </div>
+              <div className={styles.card_information}>
+                <input
+                  defaultValue={'Expiration'}
+                  {...register('Expiration', { required: true })}
+                />
+                {errors.exampleRequired && <span>This field is required</span>}
+                <input
+                  defaultValue={'CVV'}
+                  {...register('CVV', { required: true })}
+                />
+                {errors.exampleRequired && <span>This field is required</span>}
+              </div>
+              <div className={styles.select_option}>
+                <SelectInput
+                  defaultValue={'Country/Region'}
+                  name={'Country/Region'}
+                  register={register}
+                  options={[
+                    { value: 'United States', label: 'United States' },
+                    { value: 'United States', label: 'United States' },
+                    { value: 'United States', label: 'United States' },
+                    { value: 'United States', label: 'United States' },
+                    { value: 'United States', label: 'United States' },
+                  ]}
+                />
+              </div>
+              <div className={styles.button_handel_submit}>
+                <Button
+                  Icon={undefined}
+                  text="CANCEL"
+                  newStyle=""
+                  onClick={toggleMethod}
+                />
+                <Button
+                  Icon={undefined}
+                  text="DONE"
+                  newStyle=""
+                  onClick={() => {}}
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
         </div>
       )}
     </>
