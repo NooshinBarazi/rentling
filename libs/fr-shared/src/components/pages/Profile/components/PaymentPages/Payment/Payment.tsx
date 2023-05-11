@@ -5,18 +5,8 @@ import { useForm } from 'react-hook-form';
 import Image from 'next/image';
 import image from './vector/Frame 416.jpg';
 
-interface PropsPaymet {
-  onStateChange: any;
-  options: IOption[];
-  updateParent: any;
-}
 
-interface IOption {
-  value: string;
-  label: string;
-}
-
-export const Payment = (onSubmit: any, { options }: PropsPaymet) => {
+export const Payment = (onSubmit: any) => {
   const {
     handleSubmit,
     register,
