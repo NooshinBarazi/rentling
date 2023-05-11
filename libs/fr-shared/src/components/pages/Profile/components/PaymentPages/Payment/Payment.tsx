@@ -17,7 +17,7 @@ export const Payment = (onSubmit: any) => {
 
   const [paymentPopup, setPaymentPopup] = useState(false);
 
-  const toggle_show = () => {
+  const toggleShow = () => {
     setDisplay(!display);
   };
 
@@ -44,7 +44,7 @@ export const Payment = (onSubmit: any) => {
               <div
                 className={display ? styles.less_detaile : styles.more_detaile}
               >
-                <button onClick={toggle_show}>
+                <button onClick={toggleShow}>
                   {display ? 'See less details' : 'See more details'}{' '}
                   <span></span>
                 </button>
