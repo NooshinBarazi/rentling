@@ -95,7 +95,6 @@ export const Payment = (onSubmit: any) => {
             </div>
             <div className={styles.btn_payment}>
               <Button
-                Icon={undefined}
                 text="Add Payment Method"
                 newStyle={''}
                 onClick={toggleMethod}
@@ -156,13 +155,11 @@ export const Payment = (onSubmit: any) => {
                   </div>
                   <div className={styles.button_handel_submit}>
                     <Button
-                      Icon={undefined}
                       text="CANCEL"
                       newStyle=""
                       onClick={toggleMethod}
                     />
                     <Button
-                      Icon={undefined}
                       text="DONE"
                       newStyle=""
                       onClick={() => {}}
