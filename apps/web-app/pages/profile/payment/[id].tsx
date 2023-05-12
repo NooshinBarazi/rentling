@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 import {
   Payment,
   users,
+  ProfileTemplate
 } from '@rentling/fr-shared';
-import { ProfileLayout } from '../../layout/ProfileLayout';
 
 export default function ProfilePayment() {
   const router = useRouter();
@@ -29,4 +29,4 @@ if(user){
 }
 }
 
-ProfilePayment.PageLayout = ProfileLayout;
+ProfilePayment.PageLayout = ProfileTemplate;
