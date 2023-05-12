@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
-import { RentalHistory, users } from "@rentling/fr-shared";
-import { ProfileLayout } from '../../layout/ProfileLayout';
+import { ProfileTemplate, RentalHistory, users } from "@rentling/fr-shared";
+
 
 export default function RentalHistoryPage (){
     const router = useRouter();
@@ -24,4 +24,4 @@ export default function RentalHistoryPage (){
     );
 }
  
-RentalHistoryPage.PageLayout = ProfileLayout;
+RentalHistoryPage.PageLayout = ProfileTemplate;

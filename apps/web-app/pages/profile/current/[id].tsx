@@ -4,8 +4,8 @@ import {
   CurrentRental,
   EmptyCurrentRental,
   users,
+  ProfileTemplate,
 } from '@rentling/fr-shared';
-import { ProfileLayout } from '../../layout/ProfileLayout';
 
 export default function CurrentRentalPage() {
   const router = useRouter();
@@ -50,4 +50,4 @@ export default function CurrentRentalPage() {
   );
 }
 
-CurrentRentalPage.PageLayout = ProfileLayout;
+CurrentRentalPage.PageLayout = ProfileTemplate;

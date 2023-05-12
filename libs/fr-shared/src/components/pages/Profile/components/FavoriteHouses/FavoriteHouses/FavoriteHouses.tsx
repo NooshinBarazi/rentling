@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { users } from '@rentling/fr-shared';
 import { ChooseDropdown } from 'libs/fr-shared/src/components/elements/Dropdown/DropdownMenu';
@@ -17,10 +16,10 @@ interface PropsFavoriteHouses {
   thirtyDay: any;
 }
 
-function sortFavoritesListByPrice(user:any, priceType:any) {
+function sortFavoritesListByPrice(user: any, priceType: any) {
   const sortedFavoritesList = user.favoritesList
     .slice()
-    .sort((a:any, b:any) => a.price[priceType] - b.price[priceType]);
+    .sort((a: any, b: any) => a.price[priceType] - b.price[priceType]);
   return {
     ...user,
     favoritesList: sortedFavoritesList,
@@ -34,7 +33,7 @@ export const FavoriteHouses = () => {
 
   const handleSortChange = (sortOption: string) => {
     setSortSelected(sortOption);
-  
+
     const priceType = dailySelected ? 'oneDay' : 'thirtyDay';
     const sortedFavoritesList = favoritesList.slice().sort((a: any, b: any) => {
       if (sortOption === 'cheaper') {
@@ -100,7 +99,7 @@ export const FavoriteHouses = () => {
             handleOptionChange={handleSortChange}
           />
         </div>
-      {houseItems}
+        <div className={styles.house_item}>{houseItems}</div>
       </div>
     </>
   );

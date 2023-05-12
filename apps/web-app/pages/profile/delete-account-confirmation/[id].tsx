@@ -1,5 +1,4 @@
-import { DeleteAccountConfirmation, users } from '@rentling/fr-shared';
-import { ProfileLayout } from '../../layout/ProfileLayout';
+import { DeleteAccountConfirmation, users, ProfileTemplate } from '@rentling/fr-shared';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 
@@ -28,4 +27,4 @@ export default function DeleteAccountConfirmationPage() {
   );
 }
 
-DeleteAccountConfirmationPage.PageLayout = ProfileLayout;
+DeleteAccountConfirmationPage.PageLayout = ProfileTemplate;

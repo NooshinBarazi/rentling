@@ -1,9 +1,9 @@
 import { Button, Form } from '@rentling/fr-shared';
-import styles from './ContainerForm.module.scss';
+import styles from './LoginForm.module.scss';
 import Link from 'next/link';
 import { useState } from 'react';
 
-export const ContainerForm = () => {
+export const LoginForm = () => {
  
     const [isLogin, setIsLogin] = useState(false)
 
@@ -12,7 +12,7 @@ export const ContainerForm = () => {
       };
 
     return ( 
-        <section className={styles.container_form}>
+        <section className={styles.login_form}>
             <div className={`${styles.image} ${isLogin? `${styles.signin_img} ${styles.right_panel_active}` : styles.signup_img}`} >
                 {isLogin? <h4>Don’t have an account?</h4>: <h4>Already have an account?</h4>}
                 <Button Icon={undefined} text={isLogin? 'SignUP!' : 'Sign in'} newStyle={styles.signup_btn} onClick={()=> setIsLogin(!isLogin)} />

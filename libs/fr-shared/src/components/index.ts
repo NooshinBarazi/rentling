@@ -39,7 +39,7 @@ export * from './elements/Icons/SliderButton';
 export * from './elements/Icons/CalenderIcon';
 export * from './pages/HousePage/component/HousePrice/HousePrice';
 export * from './pages/HousePage/component/SlideImages/slideImage';
-export * from './elements/Form/Container/ContainerForm';
+export * from './elements/Form/Login/LoginForm';
 export * from './elements/Form/Form';
 export * from './pages/Landing/Sections/HouseForm/regionCityData';
 export * from './elements/Icons/BigHouseIcon';
@@ -97,6 +97,7 @@ export * from './elements/Icons/Close';
 export * from './elements/Icons/Slider';
 export * from './elements/Icons/MapIcon';
 export * from './pages/Landing/Sections/HouseForm/regionCityData';
-export * from './pages/Profile/components/Payment/Payment';
+export * from './pages/Profile/components/PaymentPages/Payment/Payment';
+export * from './elements/SelectInput/SelectInput';
 export * from './pages/Profile/components/personalInfo/PersonalInfo';
 

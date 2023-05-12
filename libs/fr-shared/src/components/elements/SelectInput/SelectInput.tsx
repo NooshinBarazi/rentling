@@ -9,11 +9,12 @@ interface IProps {
   name: string;
   register: UseFormRegister<FieldValues>;
   options: IOption[];
+  defaultValue?: string;
 }
 
-export const SelectInput = ({ name, register, options }: IProps) => {
+export const SelectInput = ({ name, register, options, defaultValue }: IProps) => {
   return (
-    <select {...register(name)}>
+    <select {...register(name)} defaultValue={defaultValue}>
       {options.map((option) => (
         <option key={option.value} value={option.value}>
           {option.label}
