@@ -17,9 +17,6 @@ interface Props {}
 export const Landing = (props: Props) => {
   return (
     <>
-      <Header>
-        <DesktopNavbar />
-      </Header>
       <Main>
         <Hero />
         <Information />
