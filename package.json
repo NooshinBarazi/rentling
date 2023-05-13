@@ -52,11 +52,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.1",
-<<<<<<< HEAD
     "react-redux": "^8.0.5",
-=======
     "react-select": "^5.7.3",
->>>>>>> fbc68d5212bb5e68d9731be4464ee0217e8efcfe
     "tslib": "^2.3.0"
   }
 }
