@@ -29,19 +29,22 @@ export const PaymentMethod: any = (
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className={styles.card_number_input}>
                 <input
-                  defaultValue={'Card Number'}
+                  placeholder='Card Number'
+                  type='number'
                   {...register('exampleRequired', { required: true })}
                 />
                 {errors.exampleRequired && <span>This field is required</span>}
               </div>
               <div className={styles.card_information}>
                 <input
-                  defaultValue={'Expiration'}
+                  placeholder='Expiration'
+                  type='number'
                   {...register('Expiration', { required: true })}
                 />
                 {errors.exampleRequired && <span>This field is required</span>}
                 <input
-                  defaultValue={'CVV'}
+                  placeholder='CVV'
+                  type='number'
                   {...register('CVV', { required: true })}
                 />
                 {errors.exampleRequired && <span>This field is required</span>}
