@@ -1,34 +1,33 @@
 @import '../../../../design-system/schema.scss';
 
-.login_form{
+.login_form {
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   position: absolute;
-	top: 0;
-	height: 100%;
-	transition: all 0.6s ease-in-out;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
   width: 100%;
 }
-.right_panel_active{
+.right_panel_active {
   transform: translateX(50rem);
 }
 
-.left_panel_active{
+.left_panel_active {
   transform: translateX(-50rem);
 }
 
-.image{
+.image {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-	width: 48rem;
-	 height: 50rem;
-	overflow: hidden;
-	transition: transform 0.6s ease-in-out;
-	z-index: 100;
-
+  width: 48rem;
+  height: 50rem;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
 
   h4 {
     font-style: normal;
@@ -40,11 +39,14 @@
   }
 }
 .signin_img {
-  background: (linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('./../images/Layer 1 1.png'));
- 
+  background: (
+    linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url('./../images/Layer 1 1.png')
+  );
 }
-.signup_img{
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/Selective Color 1 1.png');
+.signup_img {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url('../images/Selective Color 1 1.png');
 }
 
 .signup_btn {
@@ -62,8 +64,8 @@
   // border-radius: 0.5rem;
   // box-shadow: 0px 4px 20px #dadde1;
   // left: 0;
-	// width: 50%;
-	// z-index: 1;
+  // width: 50%;
+  // z-index: 1;
 
   h3 {
     font-weight: 70rem;
@@ -80,5 +82,4 @@
     text-align: center;
     color: $color-text-dark-gray;
   }
-
 }

@@ -1,8 +1,16 @@
 import { TextIcon } from 'libs/fr-shared/src/components/elements/TextIcon/TextIcon';
 import styles from './UserProfile.module.scss';
-import { CurrentDateIcon, UserProfileIcon, HouseIcon, FavoritesIcon, PaymentIcon,SecurityIcon} from '@rentling/fr-shared';
+import {
+  CurrentDateIcon,
+  UserProfileIcon,
+  HouseIcon,
+  FavoritesIcon,
+  PaymentIcon,
+  SecurityIcon,
+} from '@rentling/fr-shared';
 
 export const UserProfile = () => {
+
   return (
     <section className={styles.profile_section}>
       <div className={styles.container}>
@@ -26,7 +34,9 @@ export const UserProfile = () => {
           <TextIcon
             Icon={<HouseIcon />}
             title={'rental history'}
-            text={'your rental history of houses you stayed and details such as price, rental period and et.c'}
+            text={
+              'your rental history of houses you stayed and details such as price, rental period and et.c'
+            }
             newStyle={''}
           />
           <TextIcon

@@ -5,7 +5,6 @@ import { useForm } from 'react-hook-form';
 import Image from 'next/image';
 import image from './vector/Frame 416.jpg';
 
-
 export const Payment = (onSubmit: any) => {
   const {
     handleSubmit,
@@ -154,16 +153,8 @@ export const Payment = (onSubmit: any) => {
                     />
                   </div>
                   <div className={styles.button_handel_submit}>
-                    <Button
-                      text="CANCEL"
-                      newStyle=""
-                      onClick={toggleMethod}
-                    />
-                    <Button
-                      text="DONE"
-                      newStyle=""
-                      onClick={() => {}}
-                    />
+                    <Button text="CANCEL" newStyle="" onClick={toggleMethod} />
+                    <Button text="DONE" newStyle="" onClick={() => {}} />
                   </div>
                 </form>
               </div>

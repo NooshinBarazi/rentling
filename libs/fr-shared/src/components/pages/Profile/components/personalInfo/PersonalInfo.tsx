@@ -8,7 +8,6 @@ import {
   CancelIcon,
 } from '@rentling/fr-shared';
 
-
 export const PersonalInfo = () => {
   const [editableField, setEditableField] = useState<string>('');
 
@@ -16,7 +15,7 @@ export const PersonalInfo = () => {
     register,
     formState: { errors },
     reset,
-    handleSubmit
+    handleSubmit,
   } = useForm({
     defaultValues: {
       fullName: 'John Doe 1 2 3',
@@ -91,36 +90,40 @@ export const PersonalInfo = () => {
           onEdit={() => setEditableField('PhoneNumber')}
           register={register}
         />
-        <hr/>
+        <hr />
         <div className={styles.warn_icon}>
-        <InputInfo
-          name={'govermentId'}
-          label={'Government ID'}
-          type={'text'}
-          editableField={undefined}
-          validation={undefined}
-          error={undefined}
-          onSubmit={handleSubmit(onSubmit)}
-          onCancel={onCancel}
-          onEdit={() => setEditableField('govermentId')}
-          register={register}
-        />
-        <span><WarnIcon /></span>
+          <InputInfo
+            name={'govermentId'}
+            label={'Government ID'}
+            type={'text'}
+            editableField={undefined}
+            validation={undefined}
+            error={undefined}
+            onSubmit={handleSubmit(onSubmit)}
+            onCancel={onCancel}
+            onEdit={() => setEditableField('govermentId')}
+            register={register}
+          />
+          <span>
+            <WarnIcon />
+          </span>
         </div>
         <div className={styles.warn_icon}>
-        <InputInfo
-          name={'emergencyContact'}
-          label={'Emergency contact'}
-          type={'texxt'}
-          editableField={editableField}
-          validation={undefined}
-          error={undefined}
-          onSubmit={handleSubmit(onSubmit)}
-          onCancel={onCancel}
-          onEdit={() => setEditableField('emergencyContact')}
-          register={register}
-        />
-        <span><WarnIcon /></span>
+          <InputInfo
+            name={'emergencyContact'}
+            label={'Emergency contact'}
+            type={'texxt'}
+            editableField={editableField}
+            validation={undefined}
+            error={undefined}
+            onSubmit={handleSubmit(onSubmit)}
+            onCancel={onCancel}
+            onEdit={() => setEditableField('emergencyContact')}
+            register={register}
+          />
+          <span>
+            <WarnIcon />
+          </span>
         </div>
       </div>
     </div>
@@ -152,7 +155,10 @@ export const InputInfo = ({
   onCancel,
   onEdit,
 }: InputProps) => {
-  const {handleSubmit, formState: { errors }} = useForm();
+  const {
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   return (
     <>
@@ -172,14 +178,15 @@ export const InputInfo = ({
             </button>
           )}
         </div>
-      <span className={styles.error_msg}>{errors[name]?.message || error}</span>
+        <span className={styles.error_msg}>
+          {errors[name]?.message || error}
+        </span>
       </label>
     </>
   );
 };
 
-export const EditInfo = ({ onSubmit, onCancel}: any) => {
-
+export const EditInfo = ({ onSubmit, onCancel }: any) => {
   return (
     <div className={styles.edit_icon}>
       <button onClick={onSubmit}>

@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  flex: 1 1 auto; 
+  flex: 1 1 auto;
   margin: 10rem;
   gap: 3rem;
 }
@@ -157,7 +157,6 @@
   }
 }
 
-
 .rental_date {
   display: flex;
   flex-direction: row;
@@ -184,8 +183,7 @@
   }
 }
 
-
-.empty_content{
+.empty_content {
   display: flex;
   flex-direction: column;
   justify-content: space-around;

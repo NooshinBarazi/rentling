@@ -34,7 +34,8 @@ export const users = [
       },
       duration: '20 Days',
       rating: '5',
-      description: 'Large suburban house in central London. Fully furnished with outdoor patio, heating insulation and two spacious decks. Walking distance to everything you might need in your stay in London!',
+      description:
+        'Large suburban house in central London. Fully furnished with outdoor patio, heating insulation and two spacious decks. Walking distance to everything you might need in your stay in London!',
       comment: 'It was very beautiful house!',
     },
     favoritesList: [
@@ -80,48 +81,48 @@ export const users = [
           thirtyDay: 2300,
         },
       },
-    {
-      images: {
-        img: '/images/22.avif',
+      {
+        images: {
+          img: '/images/22.avif',
+        },
+        id: '40',
+        title: 'Spacious House in the Heart of Calgary',
+        address: '123 Main Street, Calgary, NY 10001',
+        feature: {
+          region: 'CANADA',
+          city: 'Calgary',
+          type: 'house',
+          bedroom: 3,
+          bathroom: 2,
+          parking: true,
+          meterage: 1500,
+        },
+        price: {
+          oneDay: 700,
+          thirtyDay: 7000,
+        },
       },
-      id: '40',
-      title: 'Spacious House in the Heart of Calgary',
-      address: '123 Main Street, Calgary, NY 10001',
-      feature: {
-        region: 'CANADA',
-        city: 'Calgary',
-        type: 'house',
-        bedroom: 3,
-        bathroom: 2,
-        parking: true,
-        meterage: 1500,
+      {
+        images: {
+          img: '/images/23.avif',
+        },
+        id: '42',
+        title: 'Spacious House in the Heart of Calgary',
+        address: '123 Main Street, Calgary, NY 10001',
+        feature: {
+          region: 'CANADA',
+          city: 'Calgary',
+          type: 'house',
+          bedroom: 3,
+          bathroom: 2,
+          parking: true,
+          meterage: 1500,
+        },
+        price: {
+          oneDay: 800,
+          thirtyDay: 7500,
+        },
       },
-      price: {
-        oneDay: 700,
-        thirtyDay: 7000,
-      },
-    },
-    {
-      images: {
-        img: '/images/23.avif',
-      },
-      id: '42',
-      title: 'Spacious House in the Heart of Calgary',
-      address: '123 Main Street, Calgary, NY 10001',
-      feature: {
-        region: 'CANADA',
-        city: 'Calgary',
-        type: 'house',
-        bedroom: 3,
-        bathroom: 2,
-        parking: true,
-        meterage: 1500,
-      },
-      price: {
-        oneDay: 800,
-        thirtyDay: 7500,
-      },
-    },
     ],
     history: [
       {
@@ -148,7 +149,8 @@ export const users = [
           endDate: '2023/05/10',
         },
         rating: '1',
-        description: 'Large suburban house in central London. Fully furnished with outdoor patio, heating insulation and two spacious decks. Walking distance to everything you might need in your stay in London!',
+        description:
+          'Large suburban house in central London. Fully furnished with outdoor patio, heating insulation and two spacious decks. Walking distance to everything you might need in your stay in London!',
         comment: 'It was very bad house!',
       },
       {
@@ -175,7 +177,8 @@ export const users = [
           endDate: '2023/05/20',
         },
         rating: '5',
-        description: 'Large suburban house in central London. Fully furnished with outdoor patio, heating insulation and two spacious decks. Walking distance to everything you might need in your stay in London!',
+        description:
+          'Large suburban house in central London. Fully furnished with outdoor patio, heating insulation and two spacious decks. Walking distance to everything you might need in your stay in London!',
         comment: 'It was very beautiful house!',
       },
     ],
@@ -226,7 +229,8 @@ export const users = [
       },
       duration: '20 Days',
       rating: '5',
-      description: 'Large suburban house in central London. Fully furnished with outdoor patio, heating insulation and two spacious decks. Walking distance to everything you might need in your stay in London!',
+      description:
+        'Large suburban house in central London. Fully furnished with outdoor patio, heating insulation and two spacious decks. Walking distance to everything you might need in your stay in London!',
       comment: 'It was very beautiful house!',
     },
     favoritesList: [
@@ -298,7 +302,8 @@ export const users = [
           endDate: '2023/05/10',
         },
         rating: '1',
-        description: 'Large suburban house in central London. Fully furnished with outdoor patio, heating insulation and two spacious decks. Walking distance to everything you might need in your stay in London!',
+        description:
+          'Large suburban house in central London. Fully furnished with outdoor patio, heating insulation and two spacious decks. Walking distance to everything you might need in your stay in London!',
         comment: 'It was very bad house!',
       },
       {
@@ -325,7 +330,8 @@ export const users = [
           endDate: '2023/05/20',
         },
         rating: '5',
-        description: 'Large suburban house in central London. Fully furnished with outdoor patio, heating insulation and two spacious decks. Walking distance to everything you might need in your stay in London!',
+        description:
+          'Large suburban house in central London. Fully furnished with outdoor patio, heating insulation and two spacious decks. Walking distance to everything you might need in your stay in London!',
         comment: 'It was very beautiful house!',
       },
     ],

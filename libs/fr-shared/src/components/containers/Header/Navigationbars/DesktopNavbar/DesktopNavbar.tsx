@@ -32,10 +32,10 @@ export const DesktopNavbar = () => {
 
   const links: LinkType[] = [
     { href: '/profile', label: 'User Profile' },
-    { href: '/profile', label: 'Favorites' },
-    { href: '/profile', label: 'Notifications' },
-    { href: '/profile', label: 'My houses' },
-    { href: '/profile', label: 'My properties' },
+    { href: '/profile/favorite', label: 'Favorites' },
+    { href: '/profile/notifications', label: 'Notifications' },
+    { href: '/profile/history', label: 'My houses' },
+    { href: '/profile/a', label: 'My properties' },
   ];
 
   return (

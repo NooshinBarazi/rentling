@@ -1,12 +1,8 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
-import {
-  Payment,
-  users,
-  ProfileTemplate
-} from '@rentling/fr-shared';
+import { PersonalInfo, users, ProfileTemplate } from '@rentling/fr-shared';
 
-export default function ProfilePayment() {
+export default function PersonalInfoPage() {
   const router = useRouter();
   const { id } = router.query;
   const [user, setUser] = useState(null);
@@ -22,11 +18,7 @@ export default function ProfilePayment() {
     return users.find((user) => user.profile.id === userId);
   };
 
-if(user){
-  return(
-    <Payment/>
-  )
-}
+  return <PersonalInfo />;
 }
 
-ProfilePayment.PageLayout = ProfileTemplate;
+PersonalInfoPage.PageLayout = ProfileTemplate;

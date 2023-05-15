@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {
   Header,
   DesktopNavbar,
   Hero,
   Information,
   LatestSlider,
-  HouseImageSlider,
   Main,
   HouseForm,
   Footer,

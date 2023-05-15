@@ -1,18 +1,18 @@
 @import '../../../design-system/schema.scss';
 
 .form {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	padding: 0 50px;
-	height: 100%;
-	text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
 }
 
 .submit_btn {
-   width: 100%;
-   color: $color-white;
-   margin-top: 1.5rem;
+  width: 100%;
+  color: $color-white;
+  margin-top: 1.5rem;
   @include primary-button;
 }

@@ -46,7 +46,6 @@ export const HouseCard = ({
   oneDay,
   image,
 }: Props) => {
-
   const handleAddToFavorites = () => {
     let favoriteHouses = JSON.parse(
       localStorage.getItem('favoriteHouses') || '[]'

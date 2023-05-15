@@ -37,7 +37,7 @@ export const CurrentRental = ({
   duration,
   startDate,
   endDate,
-  rental
+  rental,
 }: CurrentRentalProps) => {
   const [rating, setRating] = useState(0);
 

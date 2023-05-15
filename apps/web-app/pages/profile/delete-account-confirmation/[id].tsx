@@ -1,4 +1,8 @@
-import { DeleteAccountConfirmation, users, ProfileTemplate } from '@rentling/fr-shared';
+import {
+  DeleteAccountConfirmation,
+  users,
+  ProfileTemplate,
+} from '@rentling/fr-shared';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 
@@ -19,11 +23,13 @@ export default function DeleteAccountConfirmationPage() {
   };
   return (
     <>
-   {user && ( <DeleteAccountConfirmation
-    firstName={user.profile.firstName}
-    lastName={user.profile.lastName}
-  />)}
-  </>
+      {user && (
+        <DeleteAccountConfirmation
+          firstName={user.profile.firstName}
+          lastName={user.profile.lastName}
+        />
+      )}
+    </>
   );
 }
 

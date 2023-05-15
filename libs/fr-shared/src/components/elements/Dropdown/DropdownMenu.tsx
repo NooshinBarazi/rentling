@@ -2,19 +2,23 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import styles from './DropdownMenu.module.scss';
 import { motion } from 'framer-motion';
+
 interface LinkType {
   href: string;
   label: any;
 }
 
 export const Dropdown = ({ links }: any) => {
+  
   return (
     <div className={styles.dropdown_link_menu}>
       <ul>
         {links.map((link: LinkType) => (
-          <Link href={link.href}>
-            <li key={link.href}>{link.label}</li>
-          </Link>
+          <li>
+            <Link key={link.href} href={link.href}>
+              {link.label}
+            </Link>
+          </li>
         ))}
       </ul>
     </div>

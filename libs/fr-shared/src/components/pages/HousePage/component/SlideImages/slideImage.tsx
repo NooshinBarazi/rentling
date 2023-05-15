@@ -236,11 +236,7 @@ export const SlideImage = ({ images }: IProps) => {
                   key={i}
                   onClick={togglePopup}
                 >
-                  <img
-                    src={img}
-                    alt="/"
-                    onClick={() => onSelectImage(i)}
-                  />
+                  <img src={img} alt="/" onClick={() => onSelectImage(i)} />
                 </div>
               );
             })}
@@ -261,12 +257,7 @@ export const SlideImage = ({ images }: IProps) => {
             </button>
 
             <div className={styles.popup_image}>
-              <Image
-                src={images[imageIndex]}
-                alt="/"
-                fill
-                object-fit="cover"
-              />
+              <Image src={images[imageIndex]} alt="/" fill object-fit="cover" />
             </div>
           </div>
         </div>

@@ -1,4 +1,3 @@
-
 export const regions = [
   { name: 'USA', cities: ['New York', 'Los Angeles', 'Chicago', 'Houston'] },
   {

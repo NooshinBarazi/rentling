@@ -1,14 +1,18 @@
 import { useForm } from 'react-hook-form';
-import { UserSigninIcon, Input, PrimaryButtonIcon, MailIcon } from '@rentling/fr-shared';
+import {
+  UserSigninIcon,
+  Input,
+  PrimaryButtonIcon,
+  MailIcon,
+} from '@rentling/fr-shared';
 import styles from './Form.module.scss';
 
-export const Form = ({onSubmit, isLogin }: any) => {
+export const Form = ({ onSubmit, isLogin }: any) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-
 
   return (
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>

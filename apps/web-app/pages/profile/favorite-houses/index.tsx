@@ -1,9 +1,13 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
-import { PersonalInfo, users,ProfileTemplate } from '@rentling/fr-shared';
+import {
+  EmptyPageFavoriteHouses,
+  FavoriteHouses,
+  users,
+  ProfileTemplate,
+} from '@rentling/fr-shared';
 
-
-export default function PersonalInfoPage() {
+export default function FindeFavoriteHouses() {
   const router = useRouter();
   const { id } = router.query;
   const [user, setUser] = useState(null);
@@ -19,7 +23,10 @@ export default function PersonalInfoPage() {
     return users.find((user) => user.profile.id === userId);
   };
 
-  return <PersonalInfo />;
+  if (!user) {
+    return <EmptyPageFavoriteHouses />;
+  }
+  return <FavoriteHouses />;
 }
 
-PersonalInfoPage.PageLayout = ProfileTemplate;
+FindeFavoriteHouses.PageLayout = ProfileTemplate;

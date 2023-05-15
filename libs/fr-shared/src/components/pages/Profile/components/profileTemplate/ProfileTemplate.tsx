@@ -12,8 +12,11 @@ import {
 } from '@rentling/fr-shared';
 import React from 'react';
 
-
-export const ProfileTemplate = ({children }: {children: React.ReactNode}) => {
+export const ProfileTemplate = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
   const router = useRouter();
   return (
     <section className={styles.profile}>
@@ -30,7 +33,6 @@ export const ProfileTemplate = ({children }: {children: React.ReactNode}) => {
               >
                 <UserProfileIcon />
                 <h4>Profile</h4>
-                
               </li>
             </Link>
             <Link href="/profile/current/" as={`/profile/current/`}>
