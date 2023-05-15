@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './slideImage.module.scss';
-import { Slider, Album, Close, SlidebarButton } from '@rentling/fr-shared';
+import { Slider,Album, Close, SlidebarButton } from '@rentling/fr-shared';
 import { useState, useEffect } from 'react';
 
 interface IProps {
