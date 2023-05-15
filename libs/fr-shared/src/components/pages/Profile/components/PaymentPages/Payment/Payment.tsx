@@ -1,9 +1,15 @@
 import { Button, PaymentMethod } from '@rentling/fr-shared';
 import styles from './Payment.module.scss';
 import { useState, useEffect } from 'react';
+import { users } from '@rentling/fr-shared';
+
+interface PropsPayment{
+  priceDaily:  any;
+  priceMonthly: any
+}
 
 
-export const Payment = () => {
+export const Payment = ({priceDaily, priceMonthly}: PropsPayment) => {
   const [display, setDisplay] = useState(false);
 
   const [paymentPopup, setPaymentPopup] = useState(false);
