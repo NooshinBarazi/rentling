@@ -1,7 +1,6 @@
 @import '../../../design-system/schema.scss';
 
 .dropdown_link_menu {
-  margin-bottom: -1rem;
   @include dropdown_link;
 }
 
