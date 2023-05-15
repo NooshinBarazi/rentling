@@ -1,10 +1,9 @@
 import { Landing } from '@rentling/fr-shared';
 
+
 export function Index() {
   return (
-    <>
       <Landing />
-    </>
   );
 }
 
