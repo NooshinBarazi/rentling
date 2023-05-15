@@ -1,9 +1,10 @@
-import { Landing } from '@rentling/fr-shared';
+import { FavoriteHouses, Landing } from '@rentling/fr-shared';
 
 
 export function Index() {
   return (
-      <Landing />
+      // <Landing />
+      <FavoriteHouses/>
   );
 }
 
