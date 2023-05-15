@@ -5,8 +5,6 @@ import { motion } from 'framer-motion';
 function MemoProfileIcon({ profileIsOpen }: any) {
   return (
     <motion.svg
-      width="125"
-      height="38"
       viewBox="0 0 125 38"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
