@@ -117,13 +117,11 @@ export const RentalHistory = () => {
                 >
                   {!isShow[itemIndex] ? (
                     <>
-                      {' '}
                       <p>See more details</p>
                       <MoreInfoIcon />
                     </>
                   ) : (
                     <>
-                      {' '}
                       <p>See less details</p>
                       <LessInfoIcon />
                     </>
