@@ -111,6 +111,7 @@ export const DesktopNavbar = () => {
                     <li onClick={() => setLoggedIn(true)}>Login</li>
                     {defaultLinks.map((link) => (
                       <Link
+                        key={link.href + link.label}
                         onMouseDown={(event) => event.preventDefault()}
                         href={`/${link.href}`}
                       >

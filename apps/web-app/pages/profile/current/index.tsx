@@ -11,6 +11,7 @@ export default function CurrentRentalPage() {
   const router = useRouter();
   const { id } = router.query;
   const [user, setUser] = useState(null);
+  console.log("🚀 ~ file: index.tsx:14 ~ CurrentRentalPage ~ user:", user)
 
   useEffect(() => {
     if (id) {

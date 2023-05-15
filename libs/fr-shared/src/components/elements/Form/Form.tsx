@@ -50,7 +50,7 @@ export const Form = ({ onSubmit, isLogin }: any) => {
         register={register}
         Icon={<PasswordIcon style={{ width: '3rem', height: '3rem' }} />}
         id={'password'}
-        placeholder={'password'}
+        placeholder={'Password'}
         error={errors?.email?.message}
         validation={{
           required: 'Password is required.',

@@ -13,10 +13,11 @@ type ComponentWithPageLayout = AppProps & {
 function CustomApp({ Component, pageProps }: ComponentWithPageLayout) {
   return (
     <>
-      <AuthProvider>
+     
         <Head>
           <title>Welcome to Rentling</title>
         </Head>
+        <AuthProvider>
         <Header>
           <DesktopNavbar />
         </Header>
