@@ -61,6 +61,8 @@
     background: #fff;
     border: 0.1rem solid $color-grayish-light-green;
     border-radius: 0.2rem;
+    outline: none;
+    padding-left: 2rem;
   }
   div {
     background-color: #fff;
@@ -84,6 +86,8 @@
     border: 0.1rem solid $color-grayish-light-green;
     border-radius: 0.2rem;
     margin-top: 3.2rem;
+    outline: none;
+    padding-left: 2rem;
   }
   div {
     background-color: #fff;
@@ -101,6 +105,7 @@
     border-radius: 0.2rem;
     font-size: 2rem;
     color: $color-text-light-gray;
+    padding-left: 2rem;
     option {
       font-size: 2rem;
       color: $color-text-light-gray;
