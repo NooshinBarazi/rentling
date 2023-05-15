@@ -22,7 +22,7 @@ export const DeleteAccount = () => {
             <h4>Delete Your Account</h4>
             <button
               onClick={() =>
-                router.push('/profile/delete-account-confirmation/1')
+                router.push('/profile/delete-account-confirmation')
               }
             >
               Click here to delete your account
