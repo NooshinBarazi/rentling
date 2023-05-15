@@ -79,22 +79,27 @@
 
 @mixin dropdown_link {
   ul {
+    border-radius: 0.5rem;
     display: flex;
     justify-content: center;
     position: absolute;
     box-shadow: $box-shadow-3;
     background-color: $color-white;
     margin: 0;
-    padding: 0;
+    padding: 1rem;
     flex-direction: column;
 
     li {
-      font-size: 1.6rem;
-      padding: 1.2rem 4rem;
-      color: $color-text-light-gray;
+      border-radius: 0.25rem;
+
+      min-width: 20rem;
+      font-size: 1.4rem;
+      font-weight: 500;
+      padding: 1rem 2rem;
+      color: $color-text-dark-gray;
       list-style: none;
       &:hover {
-        background-color: $color-primary;
+        background-color: $color-grayish-dark-green;
         color: $color-white;
       }
     }
@@ -113,19 +118,21 @@
   box-shadow: $box-shadow-3;
   background-color: $color-white;
   margin: 0;
-  padding: 0;
+  padding: 0.5rem;
   display: flex;
   flex-direction: column;
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
+
   li {
+    border-radius: 0.25rem;
     font-size: 1.3rem;
     font-weight: 500;
     padding: 1rem 2rem;
     color: $color-grayish-dark-green;
     list-style: none;
     &:hover {
-      background-color: $color-grayish-light-green;
-      color: $color-text-dark-gray;
+      background-color: $color-grayish-dark-green;
+      color: $color-white;
     }
   }
 }

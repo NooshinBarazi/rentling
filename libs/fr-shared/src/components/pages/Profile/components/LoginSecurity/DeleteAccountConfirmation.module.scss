@@ -1,91 +1,89 @@
 @import '../../../../../design-system/schema.scss';
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex: 1 1 auto;
-    margin: 10rem;
-    gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 1 1 auto;
+  margin: 10rem;
+  gap: 3rem;
 }
 
 .delete_text {
-    width: 87rem;
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
+  width: 87rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 
-    h2 {
-        font-weight: 600;
-        font-size: 4rem;
-        color: $color-text-dark-gray;
-    }
+  h2 {
+    font-weight: 600;
+    font-size: 4rem;
+    color: $color-text-dark-gray;
+  }
 
-    p {
-        font-weight: 600;
-        font-size: 2rem;
-        color: $color-text-dark-gray;
-    }
-
+  p {
+    font-weight: 600;
+    font-size: 2rem;
+    color: $color-text-dark-gray;
+  }
 }
 
 .text_warn {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 
-    span {
-        font-size: 2.2rem;
-        color: $color-alert;
-    }
+  span {
+    font-size: 2.2rem;
+    color: $color-alert;
+  }
 
-    p {
-        font-size: 1.8rem;
-        color: $color-text-dark-gray;
-    }
+  p {
+    font-size: 1.8rem;
+    color: $color-text-dark-gray;
+  }
 }
 
 .remove {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
 
 .remove_account {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    width: 50rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 50rem;
 }
 
 .delete_btn {
-    border: none;
-    outline: none;
-    background-color: $color-alert;
-    color: $color-white;
-    padding: 1rem 8rem;
-    border-radius: 0.2rem;
-    font-size: 2rem;
+  border: none;
+  outline: none;
+  background-color: $color-alert;
+  color: $color-white;
+  padding: 1rem 8rem;
+  border-radius: 0.2rem;
+  font-size: 2rem;
 }
 
 .reset_pass {
-    display: flex;
-    justify-content: flex-start;
-    gap: 1rem;
-    padding: 1rem 0;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
 
-    p {
-        font-weight: 600;
-        font-size: 1.8rem;
-        color: $color-text-light-gray;
-    }
+  p {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: $color-text-light-gray;
+  }
 
-    span {
-        font-weight: 600;
-        font-size: 1.8rem;
-        text-decoration-line: underline;
-        color: $color-text-dark-gray;
-    }
-
+  span {
+    font-weight: 600;
+    font-size: 1.8rem;
+    text-decoration-line: underline;
+    color: $color-text-dark-gray;
+  }
 }

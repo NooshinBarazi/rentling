@@ -6,9 +6,7 @@ import { PrimaryButtonIcon } from '@rentling/fr-shared';
 import { ChooseDropdown, houses } from '@rentling/fr-shared';
 
 export const EmptyPageFavoriteHouses = () => {
-
   const FindYourHouse = () => {};
-
 
   return (
     <>

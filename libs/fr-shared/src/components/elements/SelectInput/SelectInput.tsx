@@ -12,7 +12,12 @@ interface IProps {
   defaultValue?: string;
 }
 
-export const SelectInput = ({ name, register, options, defaultValue }: IProps) => {
+export const SelectInput = ({
+  name,
+  register,
+  options,
+  defaultValue,
+}: IProps) => {
   return (
     <select {...register(name)} defaultValue={defaultValue}>
       {options.map((option) => (

@@ -1,14 +1,13 @@
 import { useForm } from 'react-hook-form';
-import { UserSigninIcon, Input, PrimaryButtonIcon, MailIcon } from '@rentling/fr-shared';
+import { UserSigninIcon, Input, MailIcon, PasswordIcon } from '@rentling/fr-shared';
 import styles from './Form.module.scss';
 
-export const Form = ({onSubmit, isLogin }: any) => {
+export const Form = ({ onSubmit, isLogin }: any) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-
 
   return (
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
@@ -49,9 +48,9 @@ export const Form = ({onSubmit, isLogin }: any) => {
         type="password"
         name="password"
         register={register}
-        Icon={<PrimaryButtonIcon style={{ width: '3rem', height: '3rem' }} />}
+        Icon={<PasswordIcon style={{ width: '3rem', height: '3rem' }} />}
         id={'password'}
-        placeholder={'password'}
+        placeholder={'Password'}
         error={errors?.email?.message}
         validation={{
           required: 'Password is required.',
@@ -62,7 +61,7 @@ export const Form = ({onSubmit, isLogin }: any) => {
         }}
       />
 
-      <button type="submit" className={styles.submit_btn}>
+      <button type="submit" className={styles.submit_button}>
         <p>{isLogin ? 'Login' : 'Sign up'}</p>
       </button>
     </form>

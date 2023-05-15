@@ -11,7 +11,7 @@ export const Region = ({
   regions,
 }: any) => {
   return (
-    <div className={styles.icon_dropdown}>
+    <div className={styles.icon_dropdown} style={{ zIndex: 333 }}>
       <MapIcon />
       <ChooseDropdown
         style={{ marginLeft: '2rem' }}
