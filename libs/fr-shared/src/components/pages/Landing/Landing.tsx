@@ -1,7 +1,5 @@
 import React from 'react';
 import {
-  Header,
-  DesktopNavbar,
   Hero,
   Information,
   LatestSlider,

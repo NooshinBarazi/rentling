@@ -45,9 +45,9 @@ export const DesktopNavbar = () => {
 
   const LoggedInlinks = [
     { href: 'profile', label: 'Profile' },
-    { href: 'favorites', label: 'Favorites' },
-    { href: 'messages', label: 'Notifications' },
-    { href: 'profile', label: 'My houses' },
+    { href: 'profile/favorite-houses', label: 'Favorites' },
+    { href: 'profile/messages', label: 'Notifications' },
+    { href: 'profile/history', label: 'My houses' },
   ];
 
   const defaultLinks = [

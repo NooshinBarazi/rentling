@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import Image from 'next/image';
 import image from './vector/Frame 416.jpg';
 
-export const Payment = (onSubmit: any) => {
+export const Payments = (onSubmit: any) => {
   const {
     handleSubmit,
     register,
@@ -30,14 +30,14 @@ export const Payment = (onSubmit: any) => {
       <div className={display ? styles.container_show : styles.container}>
         <div className={styles.header_container}>
           <div className={styles.header_favorite_houses}>
-            <p>your favorite houses</p>
+            <p>Your Payments Details</p>
           </div>
         </div>
         <div className={styles.container_boxs}>
           <div className={styles.container_box_top}>
             <div className={styles.box_top}>
               <div className={styles.description}>
-                <p>Your payments</p>
+                <p>Your Payments</p>
                 <span>Keep track of all your payments and refunds.</span>
               </div>
               <div
@@ -55,7 +55,7 @@ export const Payment = (onSubmit: any) => {
               }
             >
               <div className={styles.description}>
-                <p>payments summary :</p>
+                <p>Payments Summary :</p>
                 <hr className={styles.horizontaـline} />
               </div>
               <div className={styles.total_price}>
@@ -63,7 +63,7 @@ export const Payment = (onSubmit: any) => {
                 <p>Total spent money for rented houses</p>
               </div>
               <div className={styles.description}>
-                <p>payments history :</p>
+                <p>Payments History :</p>
                 <hr className={styles.horizontaـline} />
               </div>
               <div className={styles.price_date_container}>
@@ -86,7 +86,7 @@ export const Payment = (onSubmit: any) => {
           </div>
           <div className={styles.box_bottom}>
             <div className={styles.description}>
-              <p>Payment methods</p>
+              <p>Payment Methods</p>
               <span>
                 Add a payment method using our secure payment system, then start
                 planning your next trip.
@@ -95,7 +95,6 @@ export const Payment = (onSubmit: any) => {
             <div className={styles.btn_payment}>
               <Button
                 text="Add Payment Method"
-                newStyle={''}
                 onClick={toggleMethod}
               />
             </div>
@@ -145,7 +144,7 @@ export const Payment = (onSubmit: any) => {
                       register={register}
                       options={[
                         { value: 'United States', label: 'United States' },
-                        { value: 'United States', label: 'United States' },
+                        { value: 'Sweden', label: 'Sweden' },
                         { value: 'United States', label: 'United States' },
                         { value: 'United States', label: 'United States' },
                         { value: 'United States', label: 'United States' },

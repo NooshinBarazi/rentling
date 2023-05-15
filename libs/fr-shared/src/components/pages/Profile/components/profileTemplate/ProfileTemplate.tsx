@@ -44,13 +44,13 @@ export const ProfileTemplate = ({
                 }
               >
                 <CurrentDateIcon />
-                <h4>current rental</h4>
+                <h4>Current Rental</h4>
               </li>
             </Link>
-            <Link href="/profile/fav">
+            <Link href="/profile/favorite-houses">
               <li
                 className={
-                  router.pathname === '/profile/fav'
+                  router.pathname === '/profile/favorite-houses'
                     ? styles.nav_item_active
                     : styles.nav_item
                 }
@@ -60,28 +60,28 @@ export const ProfileTemplate = ({
               </li>
             </Link>
 
-            <Link href="/profile/history/" as={`/profile/history/`}>
+            <Link href="/profile/history" as={`/profile/history`}>
               <li
                 className={
-                  router.pathname === '/profile/history/'
+                  router.pathname === '/profile/history'
                     ? styles.nav_item_active
                     : styles.nav_item
                 }
               >
                 <HouseIcon />
-                <h4>rental history</h4>
+                <h4>Rental History</h4>
               </li>
             </Link>
-            <Link href="/profile/payment">
+            <Link href="/profile/payments">
               <li
                 className={
-                  router.pathname === '/profile/payment'
+                  router.pathname === '/profile/payments'
                     ? styles.nav_item_active
                     : styles.nav_item
                 }
               >
                 <PaymentIcon />
-                <h4>payments</h4>
+                <h4>Payments</h4>
               </li>
             </Link>
             <Link href="/profile/security">

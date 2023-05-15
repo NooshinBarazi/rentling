@@ -44,7 +44,7 @@ export const PersonalInfo = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header_content}>
-        <h2>PERSONAL INFO</h2>
+        <h2>PERSONAL INFORMATION</h2>
       </div>
       <div className={styles.personal_info}>
         <InputInfo
