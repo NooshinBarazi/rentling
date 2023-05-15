@@ -83,7 +83,7 @@ export * from './pages/Profile/components/StarRating/StarRating';
 export * from './pages/Profile/components/profileTemplate/ProfileTemplate';
 export * from './pages/Profile/components/common/MoreInfo/MoreInfo';
 export * from './pages/Profile/components/data ';
-export * from './pages/Profile/components/data '
+export * from './pages/Profile/components/data ';
 export * from './elements/Icons/WarnIcon';
 export * from './elements/Icons/CheckIcon';
 export * from './elements/Icons/CancelIcon';
@@ -100,4 +100,3 @@ export * from './pages/Landing/Sections/HouseForm/regionCityData';
 export * from './pages/Profile/components/PaymentPages/Payment/Payment';
 export * from './elements/SelectInput/SelectInput';
 export * from './pages/Profile/components/personalInfo/PersonalInfo';
-

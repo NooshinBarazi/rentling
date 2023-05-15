@@ -8,12 +8,12 @@ interface IProps {
   newStyle: string;
 }
 
-export const TextIcon = ({ Icon,title, text, newStyle }: IProps) => {
+export const TextIcon = ({ Icon, title, text, newStyle }: IProps) => {
   return (
     <div className={newStyle || style.text_icon}>
       <div className={style.text_header}>
-      <span>{Icon}</span>
-      <h4>{title}</h4>
+        <span>{Icon}</span>
+        <h4>{title}</h4>
       </div>
       <p>{text}</p>
     </div>

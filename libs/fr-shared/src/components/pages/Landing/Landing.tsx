@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {
-  Header,
-  DesktopNavbar,
   Hero,
   Information,
   LatestSlider,
-  HouseImageSlider,
   Main,
   HouseForm,
   Footer,
@@ -17,9 +14,6 @@ interface Props {}
 export const Landing = (props: Props) => {
   return (
     <>
-      <Header>
-        <DesktopNavbar />
-      </Header>
       <Main>
         <Hero />
         <Information />

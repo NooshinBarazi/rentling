@@ -20,7 +20,11 @@ export const DeleteAccount = () => {
         <div className={styles.delete_account}>
           <div className={styles.delete_button}>
             <h4>Delete Your Account</h4>
-            <button onClick={() => router.push('/profile/delete-account-confirmation/1')}>
+            <button
+              onClick={() =>
+                router.push('/profile/delete-account-confirmation/1')
+              }
+            >
               Click here to delete your account
             </button>
           </div>
