@@ -106,7 +106,7 @@ interface PropsPayment{
         </div>
       </div>
       {paymentPopup && (
-        <div className={styles.card_popup}>
+        <div className={styles.card_popup} tabIndex={1} onBlur={()=>{setPaymentPopup(false)}}>
           <PaymentMethod/>
         </div>
       )}

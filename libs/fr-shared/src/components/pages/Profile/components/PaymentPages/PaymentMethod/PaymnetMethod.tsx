@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './paymnetMethod.module.scss';
-import image from './vector/Frame 416.jpg';
+import image from '../Payment/vector/Frame 416.jpg';
 import { Button, SelectInput } from '@rentling/fr-shared';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
