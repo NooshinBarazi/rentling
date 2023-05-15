@@ -14,22 +14,6 @@ type ComponentWithPageLayout = AppProps & {
 
 function CustomApp({ Component, pageProps }: ComponentWithPageLayout) {
   return (
-// <<<<<<< HEAD
-//     <Provider store={store}>
-//       <Head>
-//         <title>Welcome to Rentling</title>
-//       </Head>
-//       <main className="app">
-//         {Component.PageLayout ? (
-//           <Component.PageLayout>
-//             <Component {...pageProps} />
-//           </Component.PageLayout>
-//         ) : (
-//           <Component {...pageProps} />
-//         )}
-//       </main>
-//       </Provider>
-// =======
     <>
      
         <Head>
