@@ -1,9 +1,13 @@
-import { DeleteAccount, users } from '@rentling/fr-shared';
-import { ProfileLayout } from '../../layout/ProfileLayout';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
+import {
+  EmptyPageFavoriteHouses,
+  FavoriteHouses,
+  users,
+  ProfileTemplate,
+} from '@rentling/fr-shared';
 
-export default function DeleteAccountPage() {
+export default function FindeFavoriteHouses() {
   const router = useRouter();
   const { id } = router.query;
   const [user, setUser] = useState(null);
@@ -18,7 +22,11 @@ export default function DeleteAccountPage() {
   const getCurrentuserById = (userId: string) => {
     return users.find((user) => user.profile.id === userId);
   };
-  return <DeleteAccount />;
+
+  if (!user) {
+    return <EmptyPageFavoriteHouses />;
+  }
+  return <FavoriteHouses />;
 }
 
-DeleteAccountPage.PageLayout = ProfileLayout;
+FindeFavoriteHouses.PageLayout = ProfileTemplate;

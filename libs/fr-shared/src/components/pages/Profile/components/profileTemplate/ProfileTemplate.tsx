@@ -12,9 +12,13 @@ import {
 } from '@rentling/fr-shared';
 import React from 'react';
 
-
-export const ProfileTemplate = ({children }: {children: React.ReactNode}) => {
+export const ProfileTemplate = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
   const router = useRouter();
+  
   return (
     <section className={styles.profile}>
       <div className={styles.container}>
@@ -30,25 +34,24 @@ export const ProfileTemplate = ({children }: {children: React.ReactNode}) => {
               >
                 <UserProfileIcon />
                 <h4>Profile</h4>
-                
               </li>
             </Link>
-            <Link href="/profile/current/" as={`/profile/current/`}>
+            <Link href="/profile/current" as={`/profile/current`}>
               <li
                 className={
-                  router.pathname === '/profile/current/'
+                  router.pathname === '/profile/current'
                     ? styles.nav_item_active
                     : styles.nav_item
                 }
               >
                 <CurrentDateIcon />
-                <h4>current rental</h4>
+                <h4>Current Rental</h4>
               </li>
             </Link>
-            <Link href="/profile/fav">
+            <Link href="/profile/favorite-houses">
               <li
                 className={
-                  router.pathname === '/profile/fav'
+                  router.pathname === '/profile/favorite-houses'
                     ? styles.nav_item_active
                     : styles.nav_item
                 }
@@ -58,40 +61,40 @@ export const ProfileTemplate = ({children }: {children: React.ReactNode}) => {
               </li>
             </Link>
 
-            <Link href="/profile/history/" as={`/profile/history/`}>
+            <Link href="/profile/history" as={`/profile/history`}>
               <li
                 className={
-                  router.pathname === '/profile/history/'
+                  router.pathname === '/profile/history'
                     ? styles.nav_item_active
                     : styles.nav_item
                 }
               >
                 <HouseIcon />
-                <h4>rental history</h4>
+                <h4>Rental History</h4>
               </li>
             </Link>
-            <Link href="/profile/payment">
+            <Link href="/profile/payments">
               <li
                 className={
-                  router.pathname === '/profile/payment'
+                  router.pathname === '/profile/payments'
                     ? styles.nav_item_active
                     : styles.nav_item
                 }
               >
                 <PaymentIcon />
-                <h4>payments</h4>
+                <h4>Payments</h4>
               </li>
             </Link>
-            <Link href="/profile/security">
+            <Link href="/profile/delete-account">
               <li
                 className={
-                  router.pathname === '/profile/security'
+                  router.pathname === '/profile/delete-account'
                     ? styles.nav_item_active
                     : styles.nav_item
                 }
               >
                 <SecurityIcon />
-                <h4>Login & security</h4>
+                <h4>Login & Security</h4>
               </li>
             </Link>
           </nav>

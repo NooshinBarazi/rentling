@@ -1,9 +1,7 @@
-import {UserProfile,} from '@rentling/fr-shared';
+import { UserProfile } from '@rentling/fr-shared';
 
-export default function UserProfilePage() {
-
-  return (
-    <UserProfile />
-  );
+function UserProfilePage() {
+  return <UserProfile />;
 }
 
+export default UserProfilePage;

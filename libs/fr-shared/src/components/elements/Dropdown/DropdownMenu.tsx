@@ -2,26 +2,16 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import styles from './DropdownMenu.module.scss';
 import { motion } from 'framer-motion';
-interface LinkType {
-  href: string;
-  label: any;
-}
-
-export const Dropdown = ({ links }: any) => {
-  return (
-    <div className={styles.dropdown_link_menu}>
-      <ul>
-        {links.map((link: LinkType) => (
-          <Link href={link.href}>
-            <li key={link.href}>{link.label}</li>
-          </Link>
-        ))}
-      </ul>
-    </div>
-  );
-};
 
 interface DropdownProps {
+  children?: any;
+}
+
+export const Dropdown = ({ children }: DropdownProps) => {
+  return <div className={styles.dropdown_link_menu}>{children}</div>;
+};
+
+interface ChooseDropdownProps {
   style: any;
   label: string;
   selectedOption: string;
@@ -37,7 +27,7 @@ export const ChooseDropdown = ({
   style,
   handleOptionChange,
   className,
-}: DropdownProps) => {
+}: ChooseDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

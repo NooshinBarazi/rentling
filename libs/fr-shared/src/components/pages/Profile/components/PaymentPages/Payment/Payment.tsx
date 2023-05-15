@@ -1,20 +1,26 @@
-import { Button, PaymentMethod } from '@rentling/fr-shared';
+import { Button, SelectInput } from '@rentling/fr-shared';
 import styles from './Payment.module.scss';
-import { useState, useEffect } from 'react';
-import { users } from '@rentling/fr-shared';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import Image from 'next/image';
+import image from './vector/Frame 416.jpg';
 
+export const Payments = (onSubmit: any) => {
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm();
 interface PropsPayment{
   priceDaily:  any;
   priceMonthly: any
 }
 
-
-export const Payment = ({priceDaily, priceMonthly}: PropsPayment) => {
   const [display, setDisplay] = useState(false);
 
   const [paymentPopup, setPaymentPopup] = useState(false);
 
-  const toggle_show = () => {
+  const toggleShow = () => {
     setDisplay(!display);
   };
 
@@ -23,30 +29,26 @@ export const Payment = ({priceDaily, priceMonthly}: PropsPayment) => {
     setPaymentPopup(!paymentPopup);
   };
 
-  const handelChange = () =>{
-    setPaymentPopup(!paymentPopup);
-  }
-
   return (
     <>
       <div className={styles.container}>
         <div className={styles.header_container}>
           <div className={styles.header_favorite_houses}>
-            <p>your favorite houses</p>
+            <p>Your Payments Details</p>
           </div>
         </div>
         <div className={styles.container_boxs}>
           <div className={styles.container_box_top}>
             <div className={styles.box_top}>
               <div className={styles.description}>
-                <p>Your payments</p>
+                <p>Your Payments</p>
                 <span>Keep track of all your payments and refunds.</span>
               </div>
               <div
                 className={display ? styles.less_detailes : styles.more_detailes}
               >
                 <button onClick={toggle_show}>
-                  {display ? <p>See less details</p> : <p>See more details</p>}
+                  {display ? 'See less details' : 'See more details'}{' '}
                   <span></span>
                 </button>
               </div>
@@ -57,14 +59,16 @@ export const Payment = ({priceDaily, priceMonthly}: PropsPayment) => {
               }
             >
               <div className={styles.description}>
-                <p>payments summary :</p>
+                <p>Payments Summary :</p>
+                <hr className={styles.horizontaـline} />
               </div>
               <div className={styles.total_price}>
                 <span> 1,900 $ </span>
                 <p>Total spent money for rented houses</p>
               </div>
               <div className={styles.description}>
-                <p>payments history :</p>
+                <p>Payments History :</p>
+                <hr className={styles.horizontaـline} />
               </div>
               <div className={styles.price_date_container}>
                 <div className={styles.price}>
@@ -86,7 +90,7 @@ export const Payment = ({priceDaily, priceMonthly}: PropsPayment) => {
           </div>
           <div className={styles.box_bottom}>
             <div className={styles.description}>
-              <p>Payment methods</p>
+              <p>Payment Methods</p>
               <span>
                 Add a payment method using our secure payment system, then start
                 planning your next trip.
@@ -94,9 +98,7 @@ export const Payment = ({priceDaily, priceMonthly}: PropsPayment) => {
             </div>
             <div className={styles.btn_payment}>
               <Button
-                Icon={undefined}
                 text="Add Payment Method"
-                newStyle={''}
                 onClick={toggleMethod}
               />
             </div>
@@ -106,6 +108,7 @@ export const Payment = ({priceDaily, priceMonthly}: PropsPayment) => {
       {paymentPopup && (
         <div className={styles.card_popup}>
           <PaymentMethod
+            options={options}
             handelChange={handelChange}
           />
         </div>

@@ -4,8 +4,8 @@ import {
   CurrentRental,
   EmptyCurrentRental,
   users,
+  ProfileTemplate,
 } from '@rentling/fr-shared';
-import { ProfileLayout } from '../../layout/ProfileLayout';
 
 export default function CurrentRentalPage() {
   const router = useRouter();
@@ -26,6 +26,7 @@ export default function CurrentRentalPage() {
   if (!user) {
     return <EmptyCurrentRental />;
   }
+
   const moreInfoProps = {
     bedrooms: user.currentHouse.feature.bedroom,
     bathrooms: user.currentHouse.feature.bathroom,
@@ -34,6 +35,7 @@ export default function CurrentRentalPage() {
     description: user.currentHouse.description,
     comment: user.currentHouse.comment,
   };
+  
   return (
     <CurrentRental
       title={user.currentHouse.title}
@@ -50,4 +52,4 @@ export default function CurrentRentalPage() {
   );
 }
 
-CurrentRentalPage.PageLayout = ProfileLayout;
+CurrentRentalPage.PageLayout = ProfileTemplate;

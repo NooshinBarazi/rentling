@@ -1,53 +1,55 @@
 @import '../../../../design-system/schema.scss';
 
-.container_form{
+.login_form {
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   position: absolute;
-	top: 0;
-	height: 100%;
-	transition: all 0.6s ease-in-out;
-  width: 100%;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: all 0.6s ease-in-out;
+  background-color: $color-bg-gray;
+  background-image: url('../../../pages/Landing/svgs/HeroBackground.svg');
 }
-.right_panel_active{
+
+.right_panel_active {
   transform: translateX(50rem);
 }
 
-.left_panel_active{
-  transform: translateX(-50rem);
+.left_panel_active {
+  transform: translateX(-48rem);
 }
 
-.image{
+.image {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-	width: 48rem;
-	 height: 50rem;
-	overflow: hidden;
-	transition: transform 0.6s ease-in-out;
-	z-index: 100;
-
+  min-width: 48rem;
+  min-height: 50rem;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+  border-radius: 0.5rem;
 
   h4 {
-    font-style: normal;
-    font-weight: 60rem;
     font-size: 2rem;
-    line-height: 2.7rem;
     color: $color-white;
     margin-top: 7.5rem;
   }
 }
+
 .signin_img {
   background: (linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('./../images/Layer 1 1.png'));
- 
+
 }
-.signup_img{
+
+.signup_img {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/Selective Color 1 1.png');
 }
 
-.signup_btn {
+.signup_button {
   @include secondary-button;
   margin-top: 2.6rem;
 }
@@ -57,26 +59,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 48rem;
-  height: 40rem;
-  // border-radius: 0.5rem;
-  // box-shadow: 0px 4px 20px #dadde1;
-  // left: 0;
-	// width: 50%;
-	// z-index: 1;
+  background-color: $color-white;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.4rem 2rem #dadde1;
+  padding: 7rem 10rem 12rem;
+  min-width: 50rem;
+  max-height: 50rem;
+  gap: 3rem;
 
   h3 {
-    font-weight: 70rem;
     font-size: 3.5rem;
-    line-height: 129.99%;
-    text-transform: uppercase;
     color: $color-grayish-dark-green;
   }
 
   p {
-    font-weight: 60rem;
     font-size: 2rem;
-    line-height: 2.7rem;
     text-align: center;
     color: $color-text-dark-gray;
   }

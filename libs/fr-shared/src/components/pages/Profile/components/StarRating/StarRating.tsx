@@ -1,7 +1,6 @@
-import { useState } from "react";
-import React from "react";
-import { FullStarIcon, EmptyStarIcon } from "@rentling/fr-shared";
-
+import { useState } from 'react';
+import React from 'react';
+import { FullStarIcon, EmptyStarIcon } from '@rentling/fr-shared';
 
 interface RatingProps {
   className?: string;
@@ -12,14 +11,13 @@ interface RatingProps {
   fullIcon?: React.ReactElement;
 }
 
-
 export const Rating: React.FC<RatingProps> = ({
   className,
   count,
   value,
   onChange,
   emptyIcon = <EmptyStarIcon />,
-  fullIcon = <FullStarIcon />
+  fullIcon = <FullStarIcon />,
 }) => {
   const [hoverValue, setHoverValue] = useState<number | undefined>(undefined);
 
@@ -56,7 +54,11 @@ export const Rating: React.FC<RatingProps> = ({
     stars.push(
       <div
         key={i}
-        style={{ cursor: "pointer" , display: 'inline-block' , marginLeft: '0.5rem'}}
+        style={{
+          cursor: 'pointer',
+          display: 'inline-block',
+          marginLeft: '0.5rem',
+        }}
         onMouseMove={() => handleMouseMove(i)}
         onMouseLeave={handleMouseLeave}
         onClick={() => handleClick(i)}
@@ -68,4 +70,3 @@ export const Rating: React.FC<RatingProps> = ({
 
   return <div className={`rating ${className}`}>{stars}</div>;
 };
-

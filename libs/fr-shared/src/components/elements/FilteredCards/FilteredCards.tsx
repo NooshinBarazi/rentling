@@ -17,7 +17,7 @@ export const FilteredCards = ({
   return (
     <section className={styles.result}>
       <div className={styles.sort_option}>
-        <p>sort by:</p>
+        <p>Sort by:</p>
         <ChooseDropdown
           selectedOption={sortSelected}
           style={undefined}
@@ -29,6 +29,7 @@ export const FilteredCards = ({
       <div className={styles.cards}>
         {filteredHouses.map((house: any) => (
           <HouseCard
+            key={house.id}
             id={house.id}
             selectedRegion={selectedRegion}
             region={house.feature.region}

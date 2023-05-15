@@ -2,9 +2,9 @@ import React from 'react';
 import styles from './Button.module.scss';
 
 interface IProps {
-  Icon: React.ReactNode;
+  Icon?: React.ReactNode;
   text: string;
-  newStyle: string;
+  newStyle?: string;
   onClick: React.MouseEventHandler;
 }
 
