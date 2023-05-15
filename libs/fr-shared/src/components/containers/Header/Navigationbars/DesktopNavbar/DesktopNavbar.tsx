@@ -1,11 +1,10 @@
-import React, { useContext, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './DesktopNavbar.module.scss';
 import Link from 'next/link';
 import {
   LogoIcon,
   ProfileIcon,
   NavbarDrawer,
-  MenuIcon,
   Dropdown,
   useAuth,
 } from '@rentling/fr-shared';
@@ -60,13 +59,16 @@ export const DesktopNavbar = () => {
       className={isScrolled ? styles.navbar_box_scrolled : styles.navbar_box}
     >
       <nav className={isScrolled ? styles.navbar_scrolled : styles.navbar}>
-        <div
-          className={
-            isScrolled ? styles.navbar_icon_scrolled : styles.navbar_icon
-          }
-        >
-          <LogoIcon href={'/'} />
-        </div>
+        <Link href={'/'}>
+          <div
+            className={
+              isScrolled ? styles.navbar_icon_scrolled : styles.navbar_icon
+            }
+          >
+            <LogoIcon />
+          </div>
+        </Link>
+
         <div className={styles.navbar_items}>
           <div
             onMouseEnter={() => setProfileIsOpen(true)}
@@ -128,13 +130,15 @@ export const DesktopNavbar = () => {
               </Dropdown>
             )}
           </div>
-          <MenuIcon onClick={() => setIsOpen(!isOpen)} />
         </div>
       </nav>
       <section
         className={isOpen ? styles.navbar_drawer : styles.navbar_drawer_close}
       >
-        <NavbarDrawer />
+        <NavbarDrawer
+          drawerIsOpen={() => setIsOpen(!isOpen)}
+          drawerIsClose={() => setIsOpen(false)}
+        />
       </section>
     </header>
   );

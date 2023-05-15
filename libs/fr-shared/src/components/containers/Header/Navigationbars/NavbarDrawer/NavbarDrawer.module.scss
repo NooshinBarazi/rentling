@@ -1,7 +1,7 @@
 @import '../../../../../design-system/schema.scss';
 
 .navbar_drawer {
-  background-color: $color-white;
+  background-color: $color-grayish-dark-green;
   box-shadow: $box-shadow-10;
   display: flex;
   width: 100%;
@@ -15,6 +15,8 @@
     margin: 0;
     gap: 2rem;
     li {
+      background-color: $color-grayish-dark-green;
+      border-radius: 0.5rem;
       display: flex;
       flex: 1 1 auto;
       padding: 1rem 2rem;
@@ -24,23 +26,34 @@
       font-weight: 600;
       transition: 0.2s;
       text-transform: capitalize;
-      color: $color-text-dark-gray;
-      &::before {
-        content: '';
-        position: absolute;
-        width: 0%;
-        height: 0.5rem;
-        bottom: 1.5rem;
-        z-index: -1;
-        background-color: $color-secondary;
-        transition: 0.3s;
-      }
+      color: $color-white;
+
+      // &::before {
+      //   content: '';
+      //   position: absolute;
+      //   width: 0%;
+      //   height: 0.5rem;
+      //   bottom: 1.5rem;
+      //   z-index: -1;
+      //   background-color: $color-primary;
+      //   transition: 0.3s;
+      // }
       &:hover {
-        scale: 1.1;
+        background-color: $color-primary;
         &::before {
           width: min(30%, 10rem);
         }
       }
     }
+  }
+}
+
+.pages_toggle {
+  right: 0;
+  position: absolute;
+  cursor: pointer;
+  margin-bottom: -7.5rem;
+  svg {
+    width: 12rem;
   }
 }
