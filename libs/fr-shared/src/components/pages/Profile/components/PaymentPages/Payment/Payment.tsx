@@ -1,8 +1,9 @@
 import { Button, PaymentMethod } from '@rentling/fr-shared';
 import styles from './Payment.module.scss';
-import image from './vector/Frame 416.jpg';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import Image from 'next/image';
+import image from './vector/Frame 416.jpg';
 
 export const Payments = (onSubmit: any) => {
   const {
@@ -34,7 +35,6 @@ interface PropsPayment{
         <div className={styles.header_container}>
           <div className={styles.header_favorite_houses}>
             <p>Your Payments Details</p>
-            <p>Your Payments Details</p>
           </div>
         </div>
         <div className={styles.container_boxs}>
@@ -42,13 +42,11 @@ interface PropsPayment{
             <div className={styles.box_top}>
               <div className={styles.description}>
                 <p>Your Payments</p>
-                <p>Your Payments</p>
                 <span>Keep track of all your payments and refunds.</span>
               </div>
               <div
                 className={display ? styles.less_detailes : styles.more_detailes}
               >
-                <button onClick={toggleShow}>
                 <button onClick={toggleShow}>
                   {display ? 'See less details' : 'See more details'}{' '}
                   <span></span>
@@ -63,16 +61,12 @@ interface PropsPayment{
               <div className={styles.description}>
                 <p>Payments Summary :</p>
                 <hr className={styles.horizontaـline} />
-                <p>Payments Summary :</p>
-                <hr className={styles.horizontaـline} />
               </div>
               <div className={styles.total_price}>
                 <span> 1,900 $ </span>
                 <p>Total spent money for rented houses</p>
               </div>
               <div className={styles.description}>
-                <p>Payments History :</p>
-                <hr className={styles.horizontaـline} />
                 <p>Payments History :</p>
                 <hr className={styles.horizontaـline} />
               </div>
@@ -96,7 +90,6 @@ interface PropsPayment{
           </div>
           <div className={styles.box_bottom}>
             <div className={styles.description}>
-              <p>Payment Methods</p>
               <p>Payment Methods</p>
               <span>
                 Add a payment method using our secure payment system, then start
