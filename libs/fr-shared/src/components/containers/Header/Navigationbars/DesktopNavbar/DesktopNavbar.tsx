@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import styles from './DesktopNavbar.module.scss';
 import Link from 'next/link';
 import {
@@ -7,14 +7,21 @@ import {
   NavbarDrawer,
   MenuIcon,
   Dropdown,
+  useAuth,
 } from '@rentling/fr-shared';
 
-interface LinkType {
-  href: string;
-  label: string;
-}
-
 export const DesktopNavbar = () => {
+  // checks if user is loggedin
+  const { isLoggedIn, setLoggedIn } = useAuth();
+
+  const handleLogin = () => {
+    setLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    setLoggedIn(false);
+  };
+
   // checks the Menu Icon state to Open / Close the Navbar drawer
   const [isOpen, setIsOpen] = useState(false);
   // checks the page on scroll, to animate the Logo + Navbar box shadow
@@ -30,14 +37,24 @@ export const DesktopNavbar = () => {
     };
   }, []);
 
-  const links: LinkType[] = [
-    { href: '/profile', label: 'User Profile' },
-    { href: '/profile', label: 'Favorites' },
-    { href: '/profile', label: 'Notifications' },
-    { href: '/profile', label: 'My houses' },
-    { href: '/profile', label: 'My properties' },
+  useEffect(() => {
+    if (dropdownIsOpen) {
+      setProfileIsOpen(true);
+    }
+  });
+
+  const LoggedInlinks = [
+    { href: 'profile', label: 'Profile' },
+    { href: 'favorites', label: 'Favorites' },
+    { href: 'messages', label: 'Notifications' },
+    { href: 'profile', label: 'My houses' },
   ];
 
+  const defaultLinks = [
+    // { href: 'login', label: 'Login' },
+    { href: 'signup', label: 'Signup' },
+  ];
+  const [profileIsOpen, setProfileIsOpen] = useState(false);
   return (
     <header
       className={isScrolled ? styles.navbar_box_scrolled : styles.navbar_box}
@@ -51,26 +68,64 @@ export const DesktopNavbar = () => {
           <LogoIcon href={'/'} />
         </div>
         <div className={styles.navbar_items}>
-          <Link href="/">
-            <button
-              style={isScrolled ? { display: 'none' } : { display: 'block' }}
-            >
-              <p>I'm a Landlord</p>
-            </button>
-          </Link>
           <div
+            onMouseEnter={() => setProfileIsOpen(true)}
+            onMouseLeave={() => setProfileIsOpen(false)}
             className={
               dropdownIsOpen ? styles.dropdown_menu_open : styles.dropdown_menu
             }
-            tabIndex={1}
-            onBlur={() => setDropDonwIsOpen(false)}
-            onClick={() => setDropDonwIsOpen(!dropdownIsOpen)}
+            tabIndex={5}
+            onBlur={() => (setDropDonwIsOpen(false), setProfileIsOpen(false))}
+            onClick={() => (
+              setDropDonwIsOpen(!dropdownIsOpen), setProfileIsOpen(false)
+            )}
           >
-            <p>Profile</p>
             <div className={styles.profile_icon}>
-              <ProfileIcon />
+              <ProfileIcon profileIsOpen={profileIsOpen} />
             </div>
-            <Dropdown links={links} />
+
+            {dropdownIsOpen && (
+              <Dropdown>
+                {isLoggedIn ? (
+                  <ul>
+                    {LoggedInlinks.map((link) => (
+                      <Link
+                        onMouseDown={(event) => event.preventDefault()}
+                        href={`/${link.href}`}
+                      >
+                        <li key={link.href}>{link.label}</li>
+                      </Link>
+                    ))}
+
+                    <div className={styles.navbar_dropdown_line}></div>
+
+                    <li> Switch to LandLord </li>
+                    <div className={styles.navbar_dropdown_line}></div>
+                    <Link href={'/help'}>
+                      <li> Help </li>
+                    </Link>
+                    <li onClick={handleLogout}> Logout </li>
+                  </ul>
+                ) : (
+                  <ul>
+                    <li onClick={() => setLoggedIn(true)}>Login</li>
+                    {defaultLinks.map((link) => (
+                      <Link
+                        onMouseDown={(event) => event.preventDefault()}
+                        href={`/${link.href}`}
+                      >
+                        <li key={link.href}>{link.label}</li>
+                      </Link>
+                    ))}
+                    <div className={styles.navbar_dropdown_line}></div>
+                    <li> Switch to LandLord </li>
+                    <Link href={'/help'}>
+                      <li> Help </li>
+                    </Link>
+                  </ul>
+                )}
+              </Dropdown>
+            )}
           </div>
           <MenuIcon onClick={() => setIsOpen(!isOpen)} />
         </div>

@@ -27,7 +27,8 @@ export const Rooms = ({ bedCount, handleBedChange }: any) => {
       </div>
 
       <div
-        tabIndex={2}
+        style={{ zIndex: 33 }}
+        tabIndex={3}
         onBlur={() => setCountIsOpen(false)}
         className={
           ['all', '1', '2', '3'].includes(bedCount)
@@ -58,11 +59,7 @@ export const Rooms = ({ bedCount, handleBedChange }: any) => {
           className={styles.dropdown_list}
         >
           {['4', '5', '6', '7', '8'].map((count: any) => (
-            <li
-              key={count}
-              // className={styles.option}
-              onClick={() => handleBedChange(count)}
-            >
+            <li key={count} onClick={() => handleBedChange(count)}>
               {count}
             </li>
           ))}
