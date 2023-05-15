@@ -45,10 +45,10 @@ export const ProfileTemplate = ({children }: {children: React.ReactNode}) => {
                 <h4>current rental</h4>
               </li>
             </Link>
-            <Link href="/profile/fav">
+            <Link href="/profile/favorite">
               <li
                 className={
-                  router.pathname === '/profile/fav'
+                  router.pathname === '/profile/favorite'
                     ? styles.nav_item_active
                     : styles.nav_item
                 }
@@ -82,10 +82,10 @@ export const ProfileTemplate = ({children }: {children: React.ReactNode}) => {
                 <h4>payments</h4>
               </li>
             </Link>
-            <Link href="/profile/security">
+            <Link href="/profile/delete-account">
               <li
                 className={
-                  router.pathname === '/profile/security'
+                  router.pathname === '/profile/delete-account'
                     ? styles.nav_item_active
                     : styles.nav_item
                 }
