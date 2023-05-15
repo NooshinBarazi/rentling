@@ -92,7 +92,7 @@ export * from './pages/Profile/components/profileTemplate/ProfileTemplate';
 export * from './pages/Profile/components/common/MoreInfo/MoreInfo';
 export * from './pages/Profile/components/FavoriteHouses/FavoriteHouses/FavoriteHouses';
 export * from './pages/Profile/components/FavoriteHouses/EmptyPageFavoriteHouses/EmptyPageFavoriteHouses';
-//export * from './elements/Icons/Album';
+export * from './elements/Icons/Album copy';
 export * from './elements/Icons/Close';
 export * from './elements/Icons/Slider';
 export * from './elements/Icons/MapIcon';
@@ -101,4 +101,3 @@ export * from './pages/Profile/components/PaymentPages/Payment/Payment';
 export * from './pages/Profile/components/PaymentPages/PaymentMethod/PaymnetMethod';
 export * from './elements/SelectInput/SelectInput';
 export * from './pages/Profile/components/personalInfo/PersonalInfo';
-
