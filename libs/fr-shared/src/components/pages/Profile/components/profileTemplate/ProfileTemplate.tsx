@@ -18,6 +18,7 @@ export const ProfileTemplate = ({
   children: React.ReactNode;
 }) => {
   const router = useRouter();
+  
   return (
     <section className={styles.profile}>
       <div className={styles.container}>
@@ -35,10 +36,10 @@ export const ProfileTemplate = ({
                 <h4>Profile</h4>
               </li>
             </Link>
-            <Link href="/profile/current/" as={`/profile/current/`}>
+            <Link href="/profile/current" as={`/profile/current`}>
               <li
                 className={
-                  router.pathname === '/profile/current/'
+                  router.pathname === '/profile/current'
                     ? styles.nav_item_active
                     : styles.nav_item
                 }
@@ -93,7 +94,7 @@ export const ProfileTemplate = ({
                 }
               >
                 <SecurityIcon />
-                <h4>Login & security</h4>
+                <h4>Login & Security</h4>
               </li>
             </Link>
           </nav>

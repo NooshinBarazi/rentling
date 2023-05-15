@@ -7,16 +7,6 @@ export default function DeleteAccountPage() {
   const { id } = router.query;
   const [user, setUser] = useState(null);
 
-  useEffect(() => {
-    if (id) {
-      const user = getCurrentuserById(id as string);
-      setUser(user);
-    }
-  }, [id]);
-
-  const getCurrentuserById = (userId: string) => {
-    return users.find((user) => user.profile.id === userId);
-  };
   return <DeleteAccount />;
 }
 
