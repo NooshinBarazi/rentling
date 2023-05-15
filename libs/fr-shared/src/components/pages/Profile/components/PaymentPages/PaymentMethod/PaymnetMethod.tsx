@@ -5,18 +5,8 @@ import { Button, SelectInput } from '@rentling/fr-shared';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 
-interface IOption {
-  value: string;
-  label: string;
-}
-
-interface PropsPaymentMethod {
-  options: IOption[];
-}
-
 export const PaymentMethod: any = (
-  onSubmit: any,
-  { options }: PropsPaymentMethod
+  onSubmit: any
 ) => {
   const {
     handleSubmit,

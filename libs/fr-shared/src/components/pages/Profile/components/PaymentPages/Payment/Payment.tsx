@@ -2,11 +2,8 @@ import { Button, PaymentMethod } from '@rentling/fr-shared';
 import styles from './Payment.module.scss';
 import { useState, useEffect } from 'react';
 
-interface PropsPaymet{
-options: any[];
-}
 
-export const Payment = ({options}: PropsPaymet) => {
+export const Payment = () => {
   const [display, setDisplay] = useState(false);
 
   const [paymentPopup, setPaymentPopup] = useState(false);
@@ -26,7 +23,7 @@ export const Payment = ({options}: PropsPaymet) => {
 
   return (
     <>
-      <div className={display ? styles.container_show : styles.container}>
+      <div className={styles.container}>
         <div className={styles.header_container}>
           <div className={styles.header_favorite_houses}>
             <p>your favorite houses</p>
@@ -40,10 +37,10 @@ export const Payment = ({options}: PropsPaymet) => {
                 <span>Keep track of all your payments and refunds.</span>
               </div>
               <div
-                className={display ? styles.less_detaile : styles.more_detaile}
+                className={display ? styles.less_detailes : styles.more_detailes}
               >
                 <button onClick={toggle_show}>
-                  {display ? 'See less details' : 'See more details'}{' '}
+                  {display ? <p>See less details</p> : <p>See more details</p>}
                   <span></span>
                 </button>
               </div>
@@ -103,7 +100,6 @@ export const Payment = ({options}: PropsPaymet) => {
       {paymentPopup && (
         <div className={styles.card_popup}>
           <PaymentMethod
-            options={options}
             handelChange={handelChange}
           />
         </div>
