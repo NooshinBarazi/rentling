@@ -1,4 +1,4 @@
-import { Button, SelectInput } from '@rentling/fr-shared';
+import { Button, PaymentMethod } from '@rentling/fr-shared';
 import styles from './Payment.module.scss';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -47,7 +47,7 @@ interface PropsPayment{
               <div
                 className={display ? styles.less_detailes : styles.more_detailes}
               >
-                <button onClick={toggle_show}>
+                <button onClick={toggleShow}>
                   {display ? 'See less details' : 'See more details'}{' '}
                   <span></span>
                 </button>
@@ -107,10 +107,7 @@ interface PropsPayment{
       </div>
       {paymentPopup && (
         <div className={styles.card_popup}>
-          <PaymentMethod
-            options={options}
-            handelChange={handelChange}
-          />
+          <PaymentMethod/>
         </div>
       )}
     </>
