@@ -26,6 +26,7 @@ export default function CurrentRentalPage() {
   if (!user) {
     return <EmptyCurrentRental />;
   }
+
   const moreInfoProps = {
     bedrooms: user.currentHouse.feature.bedroom,
     bathrooms: user.currentHouse.feature.bathroom,
@@ -34,6 +35,7 @@ export default function CurrentRentalPage() {
     description: user.currentHouse.description,
     comment: user.currentHouse.comment,
   };
+  
   return (
     <CurrentRental
       title={user.currentHouse.title}

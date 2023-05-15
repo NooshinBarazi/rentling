@@ -40,10 +40,12 @@
   min-height: 90rem;
   background-color: $color-white;
   box-shadow: 0px 0px 2.5rem rgba(191, 196, 204, 0.5);
+  
   nav {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    width: 80%;
   }
 }
 
