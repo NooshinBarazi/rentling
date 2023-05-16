@@ -1,10 +1,10 @@
 import { Landing } from '@rentling/fr-shared';
+import axios from "axios"
+import { useEffect } from 'react';
 
+export default function Index() {
 
-export function Index() {
   return (
-      <Landing />
+    <Landing />
   );
 }
-
-export default Index;

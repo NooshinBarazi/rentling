@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Hero,
   Information,
@@ -9,9 +9,10 @@ import {
   FooterItems,
 } from '@rentling/fr-shared';
 
-interface Props {}
+interface Props { }
 
 export const Landing = (props: Props) => {
+
   return (
     <>
       <Main>

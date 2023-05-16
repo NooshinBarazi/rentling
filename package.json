@@ -37,6 +37,8 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "jest": "28.1.1",
     "jest-environment-jsdom": "28.1.1",
+    "miragejs": "^0.1.47",
+    "msw": "^1.2.1",
     "node-sass": "^7.0.3",
     "nx": "15.5.3",
     "prettier": "^2.6.2",
@@ -48,6 +50,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
+    "axios": "^1.4.0",
     "framer-motion": "^9.0.1",
     "js-cookie": "^3.0.5",
     "next": "13.1.1",
@@ -57,5 +60,8 @@
     "react-redux": "^8.0.5",
     "react-select": "^5.7.3",
     "tslib": "^2.3.0"
+  },
+  "msw": {
+    "workerDirectory": "apps/web-app/public"
   }
 }
