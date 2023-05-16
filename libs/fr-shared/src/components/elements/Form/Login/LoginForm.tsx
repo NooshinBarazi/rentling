@@ -4,24 +4,31 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 export const LoginForm = () => {
-  const [isLogin, setIsLogin] = useState(false);
+  const [isSigninIn, setIsLogin] = useState(false);
 
-  const onSubmit = (data: any) => {
-    console.log(data);
+  const onSubmit = async (data: any) => {
+    const response = await window.fetch("http://localhost:8080/auth/sign-in", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+    const res = await response.json()
   };
 
-    return ( 
-        <section className={styles.login_form}>
-            <div className={`${styles.image} ${isLogin? `${styles.signin_img} ${styles.right_panel_active}` : styles.signup_img}`} >
-                {isLogin? <h4>Don’t have an account?</h4>: <h4>Already have an account?</h4>}
-                <Button text={isLogin? 'Sign Up' : 'Sign In'} newStyle={styles.signup_button} onClick={()=> setIsLogin(!isLogin)} />
-            </div>
-            <div className={`${styles.signin_form} ${isLogin? styles.left_panel_active : ''}`}>
-                <h3>{isLogin? 'Sign In' : 'Sign Up'}</h3>
-              <Form onSubmit={onSubmit} isLogin={isLogin}/>
-                <div><Link href={'#'}>{isLogin?<p>Forgot password?</p>: ''}</Link></div>
-            </div>
-        </section>
-     );
+  return (
+    <section className={styles.login_form}>
+      <div className={`${styles.image} ${isSigninIn ? `${styles.signin_img} ${styles.right_panel_active}` : styles.signup_img}`} >
+        {isSigninIn ? <h4>Don’t have an account?</h4> : <h4>Already have an account?</h4>}
+        <Button text={isSigninIn ? 'Sign Up' : 'Sign In'} newStyle={styles.signup_button} onClick={() => setIsLogin(!isSigninIn)} />
+      </div>
+      <div className={`${styles.signin_form} ${isSigninIn ? styles.left_panel_active : ''}`}>
+        <h3>{isSigninIn ? 'Sign In' : 'Sign Up'}</h3>
+        <Form onSubmit={onSubmit} isLogin={isSigninIn} />
+        <div><Link href={'#'}>{isSigninIn ? <p>Forgot password?</p> : ''}</Link></div>
+      </div>
+    </section>
+  );
 }
- 
+

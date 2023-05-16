@@ -24,10 +24,10 @@ export const ProfileTemplate = ({
       <div className={styles.container}>
         <div className={styles.profile_nav}>
           <nav>
-            <Link href="/profile">
+            <Link href="/profile/personal-info">
               <li
                 className={
-                  router.pathname === '/profile'
+                  router.pathname === '/profile/personal-info'
                     ? styles.nav_item_active
                     : styles.nav_item
                 }

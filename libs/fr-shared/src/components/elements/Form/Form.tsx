@@ -36,10 +36,10 @@ export const Form = ({ onSubmit, isLogin }: any) => {
 
       <Input
         type="text"
-        name="name"
+        name="username"
         register={register}
         Icon={<UserSigninIcon style={{ width: '3rem', height: '3rem' }} />}
-        id={'name'}
+        id={'username'}
         placeholder={'Username'}
         error={errors?.name?.message}
         validation={{ required: 'Name is required.' }}
