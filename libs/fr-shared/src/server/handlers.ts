@@ -1,6 +1,6 @@
 import { rest } from 'msw'
 import { Book, Review } from './types'
-import {MOCK_API_URL} from './constants'
+import {MOCK_API_URL} from '../constants/apis'
 import { availableUsers } from './data/users';
 import { houses } from './data/houses';
 

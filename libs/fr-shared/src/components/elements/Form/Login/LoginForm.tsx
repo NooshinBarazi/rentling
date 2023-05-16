@@ -7,7 +7,6 @@ export const LoginForm = () => {
   const [isSigninIn, setIsLogin] = useState(false);
 
   const onSubmit = async (data: any) => {
-    console.log("Submitting data >>>", data);
     const response = await window.fetch("http://localhost:8080/auth/sign-in", {
       method: "POST",
       headers: {
@@ -16,7 +15,6 @@ export const LoginForm = () => {
       body: JSON.stringify(data),
     })
     const res = await response.json()
-    console.log("🚀 ~ file: LoginForm.tsx:18 ~ onSubmit ~ response:", res, response.status )
   };
 
   return (
