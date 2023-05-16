@@ -57,11 +57,9 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  width: 100%;
 }
 
 .house_card {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -69,14 +67,13 @@
   gap: 1rem;
   border-bottom: 1px solid $color-grayish-light-green;
   padding: 0 6rem;
-
+  
   &:hover {
     box-shadow: 0rem 0rem 2.5rem rgba(191, 196, 204, 0.5);
   }
 }
 
 .card_info {
-  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;

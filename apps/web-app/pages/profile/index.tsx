@@ -1,7 +1,16 @@
 import { UserProfile } from '@rentling/fr-shared';
+import { useRouter } from 'next/router';
 
 function UserProfilePage() {
-  return <UserProfile />;
+  const router = useRouter();
+  const { username } = router.query;
+  return (
+    <UserProfile
+      firstName={'john'}
+      lastName={'Doe'}
+      email={'JohnDoe@gmail.com'}
+    />
+  );
 }
 
 export default UserProfilePage;
