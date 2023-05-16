@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useRef } from 'react';
+
 import {
   Hero,
   Information,
@@ -12,14 +13,19 @@ import {
 interface Props { }
 
 export const Landing = (props: Props) => {
+  const filteredCardsRef = useRef<HTMLDivElement>(null);
+  const housefilterref = useRef<HTMLDivElement>(null);
 
   return (
     <>
       <Main>
-        <Hero />
+        <Hero housefilterref={housefilterref} />
         <Information />
         <LatestSlider />
-        <HouseForm />
+        <HouseForm
+          housefilterref={housefilterref}
+          filteredCardsRef={filteredCardsRef}
+        />
       </Main>
       <Footer>
         <FooterItems />

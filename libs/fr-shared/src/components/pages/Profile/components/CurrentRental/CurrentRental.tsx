@@ -13,6 +13,7 @@ import {
   MoreInfo,
   MoreInfoProps,
 } from '@rentling/fr-shared';
+import { useRouter } from 'next/router';
 
 interface CurrentRentalProps {
   title: string;
@@ -111,6 +112,7 @@ export const CurrentRental = ({
 };
 
 export const EmptyCurrentRental = () => {
+  const router = useRouter();
   return (
     <section>
       <div className={styles.container}>
@@ -131,8 +133,7 @@ export const EmptyCurrentRental = () => {
           <Button
             Icon={<FindHomeIcon />}
             text={'Find your house'}
-            newStyle={''}
-            onClick={() => console.log('clicked')}
+            onClick={() => router.push('/')}
           />
         </div>
       </div>

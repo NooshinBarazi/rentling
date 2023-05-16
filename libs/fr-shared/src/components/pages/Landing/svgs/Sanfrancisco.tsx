@@ -573,4 +573,4 @@ function MemoApartmentIcon(props: any) {
   );
 }
 
-export const Sanfrancisco = React.memo(MemoApartmentIcon);
+export const SanfranciscoSVG = React.memo(MemoApartmentIcon);

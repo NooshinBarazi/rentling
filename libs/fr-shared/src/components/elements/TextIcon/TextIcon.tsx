@@ -5,7 +5,7 @@ interface IProps {
   Icon: React.ReactNode;
   title: string;
   text: string;
-  newStyle: string;
+  newStyle?: string;
 }
 
 export const TextIcon = ({ Icon, title, text, newStyle }: IProps) => {

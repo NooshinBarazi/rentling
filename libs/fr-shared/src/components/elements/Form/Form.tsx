@@ -51,7 +51,7 @@ export const Form = ({ onSubmit, isLogin }: any) => {
         Icon={<PasswordIcon style={{ width: '3rem', height: '3rem' }} />}
         id={'password'}
         placeholder={'Password'}
-        error={errors?.email?.message}
+        error={errors?.password?.message}
         validation={{
           required: 'Password is required.',
           minLength: {

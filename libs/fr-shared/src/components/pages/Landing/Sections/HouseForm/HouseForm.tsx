@@ -18,7 +18,14 @@ import {
   GoToTopIcon,
 } from '@rentling/fr-shared';
 
-export const HouseForm = () => {
+interface HouseFormProps {
+  filteredCardsRef: any;
+  housefilterref: any;
+}
+export const HouseForm = ({
+  filteredCardsRef,
+  housefilterref,
+}: HouseFormProps) => {
   //filtering item's States
   const [bedCount, setBedCount] = useState<any>('all');
   const [bathroomCount, setBathroomCount] = useState<string>('all');
@@ -187,8 +194,6 @@ export const HouseForm = () => {
     priceRange,
   ]);
 
-  const filteredCardsRef = useRef<HTMLDivElement>(null);
-
   const go_to_top = useRef(null);
 
   const isInView = useInView(go_to_top);
@@ -225,7 +230,11 @@ export const HouseForm = () => {
     }
   };
   return (
-    <div id="house_form_section" className={styles.house_form_section}>
+    <div
+      ref={housefilterref}
+      id="house_form_section"
+      className={styles.house_form_section}
+    >
       <form
         onSubmit={(e) => e.preventDefault()}
         className={formIsSticky ? styles.form_scrolled : styles.form}
