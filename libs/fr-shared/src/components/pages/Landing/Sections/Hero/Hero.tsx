@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Hero.module.scss';
 import { Button, PrimaryButtonIcon } from '@rentling/fr-shared';
-import { Sanfrancisco } from '../../svgs/Sanfrancisco';
+import { SanfranciscoSVG } from '../../svgs/Sanfrancisco';
 
 interface HeroProps {
   housefilterref: any;
@@ -39,7 +39,7 @@ export const Hero = ({ housefilterref }: HeroProps) => {
         </div>
       </section>
       <div className={styles.skyline}>
-        <Sanfrancisco />
+        <SanfranciscoSVG />
       </div>
     </div>
   );
