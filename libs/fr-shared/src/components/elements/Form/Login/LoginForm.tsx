@@ -15,7 +15,8 @@ export const LoginForm = () => {
       },
       body: JSON.stringify(data),
     })
-    console.log("🚀 ~ file: LoginForm.tsx:18 ~ onSubmit ~ response:", response)
+    const res = await response.json()
+    console.log("🚀 ~ file: LoginForm.tsx:18 ~ onSubmit ~ response:", res, response.status )
   };
 
   return (
