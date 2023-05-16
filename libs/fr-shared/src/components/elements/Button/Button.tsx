@@ -6,11 +6,16 @@ interface IProps {
   text: string;
   newStyle?: string;
   onClick: React.MouseEventHandler;
+  ref?: any;
 }
 
-export const Button = ({ Icon, text, newStyle, onClick }: IProps) => {
+export const Button = ({ ref, Icon, text, newStyle, onClick }: IProps) => {
   return (
-    <button onClick={onClick} className={newStyle || styles.primaryBtn}>
+    <button
+      ref={ref}
+      onClick={onClick}
+      className={newStyle || styles.primaryBtn}
+    >
       <p>{text}</p>
       <span>{Icon}</span>
     </button>

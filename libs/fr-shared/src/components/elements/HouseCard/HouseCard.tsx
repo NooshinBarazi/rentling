@@ -12,7 +12,7 @@ import {
 } from '@rentling/fr-shared';
 import Image from 'next/image';
 import { ShareModal } from './ShareModal';
-import { useDispatch} from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addFavorite } from 'libs/fr-shared/src/store/features/favoriteSlice';
 
 interface Props {
@@ -49,12 +49,28 @@ export const HouseCard = ({
   image,
 }: Props) => {
   const dispatch = useDispatch();
-  
+  const handleAddToFavorites = () => {
+    let favoriteHouses = JSON.parse(
+      localStorage.getItem('favoriteHouses') || '[]'
+    );
+    if (favoriteHouses.includes(id)) {
+      const index = favoriteHouses.indexOf(id);
+      if (index > -1) {
+        favoriteHouses.splice(index, 1);
+      }
+    } else {
+      favoriteHouses.push(id);
+    }
+    localStorage.setItem('favoriteHouses', JSON.stringify(favoriteHouses));
+  };
+
   return (
     <article className={styles.house_card}>
-      <div className={image ? styles.card_image : styles.display_none}>
-        <Image src={image} alt="Picture of house" fill object-fit="cover" />
-      </div>
+      <Link href={`/houses/${id}`} as={`/houses/${id}`}>
+        <div className={image ? styles.card_image : styles.display_none}>
+          <Image src={image} alt="Picture of house" fill object-fit="cover" />
+        </div>
+      </Link>
       <div className={styles.card_details}>
         <div className={title ? styles.card_title : styles.display_none}>
           <p>{title}</p>
@@ -110,7 +126,7 @@ export const HouseCard = ({
         <div className={styles.card_buttons}>
           <Link href={`/houses/${id}`} as={`/houses/${id}`}>
             <Button
-              text="Reserve"
+              text="See More"
               Icon={undefined}
               newStyle={''}
               onClick={() => {}}
@@ -119,7 +135,10 @@ export const HouseCard = ({
           <div className={styles.share_icon}>
             <ShareModal url={`${`localhost:4200/houses/`}${id}`} />
           </div>
-          <div className={styles.like_icon} onClick={()=> dispatch(addFavorite(id))}>
+          <div
+            className={styles.like_icon}
+            onClick={() => dispatch(addFavorite(id))}
+          >
             <LikeIcon />
           </div>
         </div>
