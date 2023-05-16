@@ -122,6 +122,7 @@ export const DesktopNavbar = () => {
                     ))}
                     <div className={styles.navbar_dropdown_line}></div>
                     <li> Switch to LandLord </li>
+                    <div className={styles.navbar_dropdown_line}></div>
                     <Link href={'/help'}>
                       <li> Help </li>
                     </Link>
