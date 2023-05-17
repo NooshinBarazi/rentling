@@ -36,10 +36,10 @@ export const Form = ({ onSubmit, isLogin }: any) => {
 
       <Input
         type="text"
-        name="name"
+        name="username"
         register={register}
         Icon={<UserSigninIcon style={{ width: '3rem', height: '3rem' }} />}
-        id={'name'}
+        id={'username'}
         placeholder={'Username'}
         error={errors?.name?.message}
         validation={{ required: 'Name is required.' }}
@@ -51,7 +51,7 @@ export const Form = ({ onSubmit, isLogin }: any) => {
         Icon={<PasswordIcon style={{ width: '3rem', height: '3rem' }} />}
         id={'password'}
         placeholder={'Password'}
-        error={errors?.email?.message}
+        error={errors?.password?.message}
         validation={{
           required: 'Password is required.',
           minLength: {

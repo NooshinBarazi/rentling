@@ -37,3 +37,8 @@ li {
   color: inherit;
   text-decoration: none;
 }
+
+//added margin top to all app to fix the navbar height difference
+.app {
+  padding-top: 7rem;
+}

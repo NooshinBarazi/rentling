@@ -3,8 +3,7 @@ import Head from 'next/head';
 import './styles.scss';
 import React from 'react';
 import { Provider } from 'react-redux';
-import {store} from '../../../libs/fr-shared/src/store/store'
-import { AuthProvider, DesktopNavbar, Header } from '@rentling/fr-shared';
+import { AuthProvider, DesktopNavbar, Header,store,initMocks } from '@rentling/fr-shared';
 
 type ComponentWithPageLayout = AppProps & {
   Component: AppProps['Component'] & {
@@ -13,26 +12,27 @@ type ComponentWithPageLayout = AppProps & {
 };
 
 function CustomApp({ Component, pageProps }: ComponentWithPageLayout) {
+  initMocks()
+  
   return (
     <>
-     
         <Head>
           <title>Welcome to Rentling</title>
         </Head>
         <AuthProvider>
         <Provider store={store}>
-        <Header>
-          <DesktopNavbar />
-        </Header>
-        <main className="app">
-          {Component.PageLayout ? (
-            <Component.PageLayout>
+          <Header>
+            <DesktopNavbar />
+          </Header>
+          <main className="app">
+            {Component.PageLayout ? (
+              <Component.PageLayout>
+                <Component {...pageProps} />
+              </Component.PageLayout>
+            ) : (
               <Component {...pageProps} />
-            </Component.PageLayout>
-          ) : (
-            <Component {...pageProps} />
-          )}
-        </main>
+            )}
+          </main>
         </Provider>
       </AuthProvider>
     </>

@@ -1,11 +1,9 @@
 import { FavoriteHouses, Landing } from '@rentling/fr-shared';
 
+export default function Index() {
 
-export function Index() {
   return (
-      // <Landing />
-      <FavoriteHouses/>
+      <Landing />
   );
 }
 
-export default Index;

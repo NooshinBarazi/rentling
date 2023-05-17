@@ -58,7 +58,7 @@
   width: 50rem;
 }
 
-.delete_btn {
+.delete_button {
   border: none;
   outline: none;
   background-color: $color-alert;
@@ -66,6 +66,7 @@
   padding: 1rem 8rem;
   border-radius: 0.2rem;
   font-size: 2rem;
+  cursor: pointer;
 }
 
 .reset_pass {

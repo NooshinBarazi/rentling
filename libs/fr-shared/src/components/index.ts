@@ -102,3 +102,4 @@ export * from './elements/SelectInput/SelectInput';
 export * from './pages/Profile/components/personalInfo/PersonalInfo';
 export * from './pages/Profile/components/personalInfo/PersonalInfo';
 export * from './pages/Profile/components/PaymentPages/PaymentMethod/PaymnetMethod';
+export * from '../store/store';

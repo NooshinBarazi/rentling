@@ -10,7 +10,7 @@ interface IProps {
 }
 
 export const DeleteAccountConfirmation = ({ firstName, lastName }: IProps) => {
-  const { register } = useForm();
+  const { register, formState: { errors }, } = useForm();
   const router = useRouter();
   return (
     <div className={styles.container}>
@@ -41,12 +41,18 @@ export const DeleteAccountConfirmation = ({ firstName, lastName }: IProps) => {
           name={'password'}
           type={'password'}
           id={'password'}
-          validation={undefined}
           placeholder={'type your password to delete your account'}
-          error={undefined}
+          error={errors?.password?.message}
           register={register}
+          validation={{
+            required: 'Password is required.',
+            minLength: {
+              value: 6,
+              message: 'Password should be at-least 6 characters.',
+            },
+          }}
         />
-        <button className={styles.delete_btn}>DELETE MY ACCOUNT</button>
+        <button className={styles.delete_button}>DELETE MY ACCOUNT</button>
       </div>
       <div className={styles.reset_pass}>
         <p>Forget your password?</p>
@@ -57,7 +63,6 @@ export const DeleteAccountConfirmation = ({ firstName, lastName }: IProps) => {
       <Button
         Icon={<FindHomeIcon />}
         text={'Back to main menu'}
-        newStyle={''}
         onClick={() => router.push('/profile')}
       />
     </div>

@@ -1,9 +1,12 @@
 import React from 'react';
 import styles from './Hero.module.scss';
-import { PrimaryButtonIcon } from '@rentling/fr-shared';
-import { Sanfrancisco } from '../../svgs/Sanfrancisco';
+import { Button, PrimaryButtonIcon } from '@rentling/fr-shared';
+import { SanfranciscoSVG } from '../../svgs/Sanfrancisco';
 
-export const Hero = () => {
+interface HeroProps {
+  housefilterref: any;
+}
+export const Hero = ({ housefilterref }: HeroProps) => {
   return (
     <div className={styles.hero_section}>
       <section className={styles.hero_container}>
@@ -14,12 +17,17 @@ export const Hero = () => {
           <h3>Helping over 10 million renters to find their perfect fit.</h3>
           <div className={styles.hero_search}>
             <h3>Looking for a new place ?</h3>
-            <button>
-              <p>Find my house</p>
-              <span>
-                <PrimaryButtonIcon />
-              </span>
-            </button>
+            <Button
+              onClick={() => {
+                if (housefilterref.current) {
+                  housefilterref.current.scrollIntoView({
+                    behavior: 'smooth',
+                  });
+                }
+              }}
+              text="Find my house"
+              Icon={<PrimaryButtonIcon />}
+            />
           </div>
         </div>
 
@@ -31,7 +39,7 @@ export const Hero = () => {
         </div>
       </section>
       <div className={styles.skyline}>
-        <Sanfrancisco />
+        <SanfranciscoSVG />
       </div>
     </div>
   );
