@@ -3,20 +3,25 @@
 .house_section1 {
   width: 60.9rem;
   height: 31.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
 }
 
 .house_container {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   width: 50rem;
   height: 24rem;
 }
 
-
-
 .single_image {
+  width: 45rem;
+  height: 24rem;
+  position: relative;
+  margin-top: 5rem;
   img {
     border-radius: 0.4rem;
   }
@@ -26,11 +31,10 @@
   display: flex;
   justify-content: space-between;
   gap: 1.5rem;
-  max-width: 55rem;
+  max-width: 49rem;
   overflow: hidden;
-  position: absolute;
-  left: -2rem;
-  top: 19rem;
+  margin-top: -3rem;
+  margin-left: -1.5rem;
 }
 
 .image_list_container {
@@ -41,24 +45,25 @@
 
 .images_slide {
   border: 3px solid #ffffff;
-  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: $box-shadow-10;
   width: 17rem;
   height: 10rem;
   position: relative;
   border-radius: 0.3rem;
+  max-width: 15rem;
 }
 
 .counter_container {
-  width: 6rem;
-  height: 6rem;
-  box-shadow: 0px 0px 10px $box-shadow-10;
+  width: 5rem;
+  height: 5rem;
+  box-shadow: 0px 0px 10px 0px #bfc4cc;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  top: 11.5rem;
-  right: -26.8rem;
+  margin-bottom: -26rem;
+  margin-left: -4rem;
+  z-index: 10;
   background-color: #ffffff;
 }
 
@@ -66,11 +71,8 @@
   cursor: pointer;
 
   button {
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 400;
     font-size: 2.5rem;
-    line-height: 3rem;
     color: $color-text-dark-gray;
     text-align: center;
     border: none;
@@ -82,12 +84,18 @@
 //modalSlider
 
 .container_modal_slider {
-  position: relative;
+  position: absolute;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 300;
+  background: #fff;
+  margin-top: 34rem;
+  margin-right: -49rem;
+  width: 150rem;
+  height: 100%;
 }
 
 .container_slider {
@@ -103,12 +111,12 @@
 }
 
 .header_container_slider {
-  width: 90vw;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 30;
+  z-index: 300;
+  width: 100%;
 }
 
 .header_left {
@@ -120,7 +128,7 @@
 
 .header_slider {
   background-color: #fff;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -177,13 +185,13 @@
 }
 
 .box {
-  max-width: 100vw;
-  height: 80vh;
+  max-width: 80%;
+  height: 80%;
   display: flex;
-  position: relative;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  width: 80%;
 }
 
 .slider_button_next,
@@ -196,9 +204,8 @@
   width: 10rem;
   border: none;
   height: 24rem;
-  position: absolute;
   cursor: pointer;
-  z-index: 5;
+  z-index: 300;
   & svg {
     width: 60%;
     transition: 0.3s;
@@ -220,14 +227,14 @@
 .next_image,
 .prev_image {
   position: relative;
-  width: 40rem;
-  height: 24rem;
+  width: 30rem;
+  height: 19rem;
 }
 
 .current_image_slider {
   position: relative;
-  width: 85rem;
-  height: 51rem;
+  width: 60rem;
+  height: 42rem;
   overflow: hidden;
   margin: 0 5rem;
 }
@@ -246,25 +253,23 @@
 // modalAlbum
 
 .container_album {
-  position: relative;
-  box-shadow: 0px 0px 10px $box-shadow-10;
-  width: 90vw;
-  height: 90vh;
-  margin-top: 2rem;
+  position: absolute;
+  box-shadow: $box-shadow-10;
+  width: 150rem;
+  height: 90%;
   z-index: 30000000;
   background-color: #ffffff;
-  margin: 0 auto;
-  margin-left: -28rem;
   overflow: scroll;
-  margin-top: -9rem;
+  margin-top: 30rem;
+  margin-left: 49rem;
 }
 
 .container_header_album {
-  width: 90vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 30;
+  z-index: 300;
 }
 .header_album {
   background: #fff;
@@ -403,10 +408,6 @@
 
 // popUp
 
-.container_popup {
-  position: relative;
-}
-
 .popup {
   position: fixed;
   top: 0;
@@ -428,7 +429,7 @@
 }
 
 .popup_image {
-  margin: 14rem auto;
+  margin: 10rem auto;
   position: relative;
   width: 100rem;
   height: 52.4rem;
@@ -438,7 +439,6 @@
 }
 
 .close_popup {
-  position: absolute;
   top: 10rem;
   left: 20rem;
   width: 10rem;
@@ -450,6 +450,8 @@
   background-color: $color-alert;
   border-radius: 0.5rem;
   cursor: pointer;
+  margin-top: 5rem;
+  margin-left: 25rem;
 }
 
 .close_image {
@@ -511,5 +513,135 @@
     height: 14rem;
     background-color: #fff;
     clip-path: path('M48 137.782V3.21775L1.7098 70.5L48 137.782Z');
+  }
+}
+
+//responsive
+
+@media (max-width: 75rem) {
+  .single_image {
+    width: 70rem;
+    height: 40rem;
+    position: relative;
+    margin-top: 5rem;
+  }
+  .images_slide {
+    border: 3px solid #ffffff;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25);
+    width: 24rem;
+    height: 15rem;
+    position: relative;
+    border-radius: 0.3rem;
+    max-width: 35rem;
+  }
+  .small_image_container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    max-width: 73rem;
+    overflow: hidden;
+    margin-top: -3rem;
+    margin-left: -1.5rem;
+  }
+
+  .counter_container {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: -42rem;
+    margin-left: -4rem;
+  }
+  .text_counter {
+    button {
+      font-size: 5rem;
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+  .side_left {
+    gap: 25rem;
+  }
+  .container_modal_slider {
+    width: 150rem;
+    height: 100%;
+    margin-top: 131rem;
+    margin-right: 1rem;
+  }
+  .next_image,
+  .prev_image {
+    display: none;
+  }
+  .header_slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+  }
+  .house_container {
+    height: 12rem;
+    margin-bottom: -12rem;
+  }
+
+  .box {
+    height: 35%;
+  }
+  .current_image_slider {
+    width: 75rem;
+    height: 45rem;
+  }
+  .slider_button_prev {
+    width: 15rem;
+    height: 34rem;
+    margin-right: -10rem;
+    svg {
+      width: 15rem;
+      height: 34rem;
+    }
+  }
+  .slider_button_next {
+    width: 17rem;
+    height: 37rem;
+    margin-left: -10rem;
+    svg {
+      width: 17rem;
+      height: 37rem;
+    }
+  }
+  .header_right {
+    display: flex;
+    justify-content: space-between;
+    gap: 20rem;
+    align-items: center;
+  }
+
+  .actived_button {
+    width: 17rem;
+    height: 7rem;
+  }
+
+  .deactived_button {
+    width: 17rem;
+    height: 7rem;
+  }
+
+  .container_album {
+    height: 100%;
+    margin-top: 139rem;
+    margin-left: -1rem;
+  }
+
+  .header_album {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    margin-top: 18rem;
+  }
+  .current_image_album {
+    margin: 20rem auto;
+  }
+  .header_right {
+    width: 60rem;
   }
 }
