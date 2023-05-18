@@ -3,6 +3,10 @@
 .container {
   width: 60.9rem;
   height: 36.5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card_title {
@@ -79,8 +83,6 @@
 
 .card_detail {
   span {
-    font-family: 'Open Sans';
-    font-style: normal;
     font-weight: 700;
     color: #585858;
     font-size: 1.8rem;
@@ -101,5 +103,71 @@
     font-style: normal;
     font-family: 'Open Sans';
     color: $color-text-light-gray;
+  }
+}
+
+//responsive
+
+@media (max-width: 750px) {
+  .card_title {
+    width: 72rem;
+    p {
+      font-size: 3.5rem;
+      line-height: 4.2rem;
+    }
+  }
+  .location_icon {
+    width: 6.4rem;
+    height: 8.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+  .card_address p {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+    padding: 1.5rem 1rem;
+    color: #a7a7a7;
+    width: 70rem;
+  }
+
+  .card_item {
+    svg {
+      width: 8.5rem;
+      height: 4.5rem;
+      color: #585858;
+      margin-top: 0.8rem;
+    }
+    p {
+      font-size: 3.2rem;
+    }
+    span {
+      font-size: 3.2rem;
+    }
+  }
+  .card_items {
+    height: 10rem;
+    width: 77.9rem;
+  }
+  .card_detail {
+    width: 72.9rem;
+    height: 10.34rem;
+    span {
+      font-size: 3.8rem;
+      line-height: 8rem;
+    }
+  }
+  .description {
+    p {
+      font-size: 2.6rem;
+      line-height: 3.5rem;
+    }
   }
 }
