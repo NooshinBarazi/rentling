@@ -13,6 +13,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  gap: 2rem;
   padding: 4rem 6rem;
   box-shadow: 0 0 0.3rem #dadde1;
   border-radius: 1rem;
@@ -200,7 +201,7 @@
     height: 6rem;
     Button {
       width: 20rem;
-      height: 4.5rem;
+      height: 7.5rem;
     }
     p {
       font-size: 3.2rem;
@@ -211,7 +212,7 @@
     height: 6rem;
     Button {
       width: 20rem;
-      height: 4.5rem;
+      height: 7.5rem;
     }
     p {
       font-size: 3.2rem;

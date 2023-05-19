@@ -190,11 +190,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 16rem;
+    gap: 20rem;
   }
   .icon_container {
     order: 2;
-    margin-top: -89rem;
+    margin-top: -92rem;
     margin-left: -113rem;
   }
 
@@ -217,5 +217,30 @@
   .button_style_rental {
     width: 40rem;
     height: 6rem;
+  }
+  .map_icon {
+    margin-right: 2rem;
+    button {
+      width: 10rem;
+      height: 7.77rem;
+    }
+    svg {
+      width: 8rem;
+      height: 6.8rem;
+    }
+  }
+  .calender_icon {
+    margin-left: 2rem;
+    button {
+      width: 10rem;
+      height: 7.77rem;
+    }
+    svg {
+      width: 8rem;
+      height: 6.8rem;
+    }
+  }
+  .side_right_map {
+    margin-left: -9rem;
   }
 }
