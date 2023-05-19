@@ -14,8 +14,7 @@
   height: 24rem;
 }
 
-.image_container {
-}
+
 
 .single_image {
   img {
@@ -100,6 +99,7 @@
   background-color: #ffffff;
   margin: 0 auto;
   margin-left: -28rem;
+  margin-top: -9rem;
 }
 
 .header_container_slider {
@@ -256,6 +256,7 @@
   margin: 0 auto;
   margin-left: -28rem;
   overflow: scroll;
+  margin-top: -9rem;
 }
 
 .container_header_album {
@@ -267,8 +268,7 @@
 }
 .header_album {
   background: #fff;
-  position: fixed;
-  width: 90vw;
+  width: 90%;
   height: 10.4vh;
   display: flex;
   justify-content: space-between;

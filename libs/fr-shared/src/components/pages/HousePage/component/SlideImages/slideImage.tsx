@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Image from 'next/image';
 import styles from './slideImage.module.scss';
 import { Slider, Album, Close, SlidebarButton } from '@rentling/fr-shared';
@@ -60,7 +60,6 @@ export const SlideImage = ({ images }: IProps) => {
       ? images[0]
       : images[currentImageIndex + 1];
 
-  const ShowImage = () => {};
   return (
     <section className={styles.house_section1}>
       <div className={styles.house_container}>
@@ -177,72 +176,73 @@ export const SlideImage = ({ images }: IProps) => {
         </div>
       )}
 
-      {modalAlbum && (
-        <div className={styles.container_album}>
-          <div className={styles.container_header_album}>
-            <div className={styles.header_album}>
-              <div className={styles.header_left}>
-                <button
-                  className={styles.close_button}
-                  onClick={(event) => {
-                    toggleModalAlbum();
-                  }}
-                >
-                  <Close />
-                  <p className={styles.text_btn_close}>close</p>
-                </button>
-              </div>
-              <div className={styles.header_right}>
-                <div className={styles.button_slider}>
+        {modalAlbum && (
+      <div className={styles.container_album}>
+            <div className={styles.container_header_album}>
+              <div className={styles.header_album}>
+                <div className={styles.header_left}>
                   <button
-                    className={
-                      handelActive
-                        ? styles.actived_button
-                        : styles.deactived_button
-                    }
+                    className={styles.close_button}
                     onClick={(event) => {
-                      setHandelActive(true);
                       toggleModalAlbum();
-                      toggleModalSLider();
                     }}
                   >
-                    <Slider />
-                    <p className={styles.text_btn}>slider</p>
+                    <Close />
+                    <p className={styles.text_btn_close}>close</p>
                   </button>
                 </div>
-                <div className={styles.button_album}>
-                  <button
-                    className={
-                      handelActive
-                        ? styles.deactived_button
-                        : styles.actived_button
-                    }
-                    onClick={() => {
-                      setHandelActive(false);
-                    }}
-                  >
-                    <Album />
-                    <p className={styles.text_btn}>Album</p>
-                  </button>
+                <div className={styles.header_right}>
+                  <div className={styles.button_slider}>
+                    <button
+                      className={
+                        handelActive
+                          ? styles.actived_button
+                          : styles.deactived_button
+                      }
+                      onClick={(event) => {
+                        setHandelActive(true);
+                        toggleModalAlbum();
+                        toggleModalSLider();
+                      }}
+                    >
+                      <Slider />
+                      <p className={styles.text_btn}>slider</p>
+                    </button>
+                  </div>
+                  <div className={styles.button_album}>
+                    <button
+                      className={
+                        handelActive
+                          ? styles.deactived_button
+                          : styles.actived_button
+                      }
+                      onClick={() => {
+                        setHandelActive(false);
+                      }}
+                    >
+                      <Album />
+                      <p className={styles.text_btn}>Album</p>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className={styles.current_image_album}>
-            {images.map((img, i) => {
-              return (
-                <div
-                  className={styles.grid_images}
-                  key={i}
-                  onClick={togglePopup}
-                >
-                  <img src={img} alt="/" onClick={() => onSelectImage(i)} />
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      )}
+            <div className={styles.current_image_album}>
+              {images.map((img, i) => {
+                return (
+                  <div
+                    className={styles.grid_images}
+                    key={i}
+                    onClick={togglePopup}
+                  >
+                    <img src={img} alt="/" onClick={() => onSelectImage(i)} />
+                  </div>
+                );
+              })}
+            </div>
+      </div>
+        )}
+
       {popup && (
         <div className={styles.container_popup}>
           <div
