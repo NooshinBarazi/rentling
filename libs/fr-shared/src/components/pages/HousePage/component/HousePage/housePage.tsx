@@ -10,6 +10,9 @@ import {
   MapIcon,
   CalenderIcon,
   HouseImageSlider,
+  Button,
+  ShareIcon,
+  LikeIcon,
 } from '@rentling/fr-shared';
 
 interface PropsHousePayment {
@@ -46,42 +49,46 @@ export const HousePage = ({
   };
 
   return (
-    <>
-      <section className={styles.container}>
-        <div className={styles.house_payment_conatainer}>
-          <div className={styles.icon_container}>
-            <div className={styles.map_icon}>
-              <button
-                className={
-                  toggleBtnMapIcon ? styles.btn_deactive : styles.btn_active
-                }
-                onClick={() => setToggleBtnMapIcon(false)}
-              >
-                <MapIcon />
-              </button>
-            </div>
-            <div className={styles.calender_icon}>
-              <button
-                className={
-                  toggleBtnMapIcon ? styles.btn_active : styles.btn_deactive
-                }
-                onClick={() => setToggleBtnMapIcon(true)}
-              >
-                <CalenderIcon />
-              </button>
-            </div>
+    <div className={styles.page_container}>
+      <div className={styles.container}>
+        <div className={styles.icon_container}>
+          <div className={styles.map_icon}>
+            <button
+              className={
+                toggleBtnMapIcon ? styles.btn_deactive : styles.btn_active
+              }
+              onClick={() => setToggleBtnMapIcon(false)}
+            >
+              <MapIcon />
+            </button>
           </div>
+          <div className={styles.calender_icon}>
+            <button
+              className={
+                toggleBtnMapIcon ? styles.btn_active : styles.btn_deactive
+              }
+              onClick={() => setToggleBtnMapIcon(true)}
+            >
+              <CalenderIcon />
+            </button>
+          </div>
+        </div>
+        <div className={styles.house_page_conatainer}>
           <div className={styles.side_left}>
-            <SlideImage images={images} />
-            <HouseDetails
-              title={title}
-              address={address}
-              parking={parking}
-              bathrooms={bathrooms}
-              bedroom={bedroom}
-              area={area}
-              description={description}
-            />
+            <div className={styles.slide_image}>
+              <SlideImage images={images} />
+            </div>
+            <div className={styles.house_detailes}>
+              <HouseDetails
+                title={title}
+                address={address}
+                parking={parking}
+                bathrooms={bathrooms}
+                bedroom={bedroom}
+                area={area}
+                description={description}
+              />
+            </div>
           </div>
           <div className={styles.side_right}>
             <div
@@ -103,13 +110,25 @@ export const HousePage = ({
               <div className={styles.image_map}>
                 <Image src={map} alt="/" fill object-fit="cover" />
               </div>
+              <div className={styles.social_icon}>
+                <ShareIcon />
+                <LikeIcon />
+              </div>
+              <div className={styles.button_style_rental}>
+                <Button
+                  Icon={undefined}
+                  text="Rent this house"
+                  newStyle=""
+                  onClick={() => {}}
+                />
+              </div>
             </div>
           </div>
         </div>
         <div className={styles.house_image_slider}>
           <HouseImageSlider houses={houses} cityName={cityName} />
         </div>
-      </section>
-    </>
+      </div>
+    </div>
   );
 };
