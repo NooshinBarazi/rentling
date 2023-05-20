@@ -60,6 +60,7 @@ export const signUp = createAsyncThunk('signUp', async (data: any,{rejectWithVal
     body: JSON.stringify(data),
   });
   const res = await response.json();
+  localStorage.setItem('user', JSON.stringify(res));
   return res;
   } catch (error) {
     return rejectWithValue(error);
