@@ -38,9 +38,12 @@ export const signIn = createAsyncThunk(
         }
       );
       const res = await response.json();
+      localStorage.setItem('user', JSON.stringify(res));
+
       if (response.status === 200) router.push('/');
 
       return res;
+      
     } catch (error) {
       return rejectWithValue(error);
     }
