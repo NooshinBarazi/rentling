@@ -7,13 +7,15 @@ interface IProps {
   newStyle?: string;
   onClick: React.MouseEventHandler;
   ref?: any;
+  disabled?: boolean;
 }
 
-export const Button = ({ ref, Icon, text, newStyle, onClick }: IProps) => {
+export const Button = ({ ref, Icon, text, newStyle, onClick, disabled }: IProps) => {
   return (
     <button
       ref={ref}
       onClick={onClick}
+      disabled={disabled}
       className={newStyle || styles.primaryBtn}
     >
       <p>{text}</p>

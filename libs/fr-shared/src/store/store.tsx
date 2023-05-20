@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import FavoriteReducer from './features/favoriteSlice'
+import authReducer from './features/authSlice'
 
 export const store = configureStore({
   reducer: {
-    favorites: FavoriteReducer
+    favorites: FavoriteReducer,
+    auth: authReducer,
   },
 })
 

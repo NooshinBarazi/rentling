@@ -20,7 +20,7 @@
     width: 30px;
     height: auto;
   }
-  &:hover {
+  &:hover:not([disabled]) {
     background: $color-white;
     outline: 2px solid $color-primary;
     transition: 0s;
@@ -32,6 +32,9 @@
         fill: $color-primary;
       }
     }
+  }
+  &:disabled{
+    opacity: 0.5;
   }
 }
 
