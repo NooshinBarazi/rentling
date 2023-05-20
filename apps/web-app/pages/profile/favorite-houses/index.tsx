@@ -7,7 +7,7 @@ import {
   ProfileTemplate,
 } from '@rentling/fr-shared';
 
-export default function FindeFavoriteHouses() {
+export default function FindFavoriteHouses() {
   const router = useRouter();
   const { id } = router.query;
   const [user, setUser] = useState(null);
@@ -29,4 +29,4 @@ export default function FindeFavoriteHouses() {
   return <FavoriteHouses />;
 }
 
-FindeFavoriteHouses.PageLayout = ProfileTemplate;
+FindFavoriteHouses.PageLayout = ProfileTemplate;

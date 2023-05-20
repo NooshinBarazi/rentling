@@ -37,7 +37,6 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "jest": "28.1.1",
     "jest-environment-jsdom": "28.1.1",
-    "miragejs": "^0.1.47",
     "msw": "^1.2.1",
     "node-sass": "^7.0.3",
     "nx": "15.5.3",
