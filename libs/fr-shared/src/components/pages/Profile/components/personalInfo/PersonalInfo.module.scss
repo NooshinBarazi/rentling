@@ -10,6 +10,8 @@
   height: auto;
   gap: 3rem;
   margin: 10rem;
+
+  outline: solid green;
 }
 
 .header_content {
@@ -33,6 +35,10 @@
 }
 
 .personal_info {
+  outline: solid red;
+padding: 2rem;
+
+  // 
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -61,6 +67,7 @@
     font-size: 2rem;
     color: $color-text-dark-gray;
   }
+
   button {
     background-color: transparent;
     border: none;

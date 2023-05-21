@@ -1,14 +1,15 @@
 import { rest } from 'msw'
 import { Book, Review } from './types'
-import {MOCK_API_URL} from '../constants/apis'
+import { MOCK_API_URL } from '../constants/apis'
 import { availableUsers } from './data/users';
 import { houses } from './data/houses';
+import { users } from './data/data ';
 
 export const handlers = [
     rest.post(`${MOCK_API_URL}/auth/sign-in`, (req, res, ctx) => {
 
-        const {username, password} = req.body as any;
-    
+        const { username, password } = req.body as any;
+
         const foundUser = availableUsers.find(u => u.username === username && u.password === password)
 
         return foundUser ? res(
@@ -25,4 +26,15 @@ export const handlers = [
             ctx.json(houses)
         )
     }),
+
+    rest.get(`${MOCK_API_URL}/:userId/favorites`, (req, res, ctx) => {
+        
+        const { userId } = req.params;
+
+        const favoritesForUser = users.find(u => u.profile.id === userId)?.favoritesList;
+        return res(
+            ctx.status(200),
+            ctx.json(favoritesForUser)
+        )
+    })
 ]

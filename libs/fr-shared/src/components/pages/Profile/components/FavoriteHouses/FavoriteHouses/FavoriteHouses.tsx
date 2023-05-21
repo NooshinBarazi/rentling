@@ -12,7 +12,7 @@ interface PropsFavoriteHouses {
   image: any;
   regins: any;
   title: any;
-  onDay: any;
+  oneDay: any;
   thirtyDay: any;
 }
 
@@ -35,6 +35,7 @@ export const FavoriteHouses = () => {
     setSortSelected(sortOption);
 
     const priceType = dailySelected ? 'oneDay' : 'thirtyDay';
+    
     const sortedFavoritesList = favoritesList.slice().sort((a: any, b: any) => {
       if (sortOption === 'cheaper') {
         return a.price[priceType] - b.price[priceType];
