@@ -20,7 +20,7 @@ export const PersonalInfo = () => {
     defaultValues: {
       fullName: 'John Doe 1 2 3',
       email: 'JohnDoe@gmail.com',
-      PhoneNumber: '+1 234 567 8910',
+      phoneNumber: '+1 234 567 8910',
       govermentId: '',
       emergencyContact: '',
     },
@@ -30,11 +30,12 @@ export const PersonalInfo = () => {
     console.log(data);
     setEditableField('');
   };
+
   const onCancel = () => {
     reset({
       fullName: 'John Doe 1 2 3',
       email: 'JohnDoe@gmail.com',
-      PhoneNumber: '+1 234 567 8910',
+      phoneNumber: '+1 234 567 8910',
       govermentId: '',
       emergencyContact: '',
     });
@@ -79,7 +80,7 @@ export const PersonalInfo = () => {
           }}
         />
         <InputInfo
-          name={'PhoneNumber'}
+          name={'phoneNumber'}
           label={'Phone Number'}
           type={'text'}
           editableField={editableField}
@@ -111,8 +112,8 @@ export const PersonalInfo = () => {
         <div className={styles.warn_icon}>
           <InputInfo
             name={'emergencyContact'}
-            label={'Emergency contact'}
-            type={'texxt'}
+            label={'Emergency Contact'}
+            type={'text'}
             editableField={editableField}
             validation={undefined}
             error={undefined}
