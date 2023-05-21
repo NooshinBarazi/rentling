@@ -67,9 +67,17 @@ export const HouseCard = ({
   return (
     <article className={styles.house_card}>
       <Link href={`/houses/${id}`} as={`/houses/${id}`}>
-        <div className={image ? styles.card_image : styles.display_none}>
-          <Image src={image} alt="Picture of house" fill object-fit="cover" />
-        </div>
+        {image && (
+          <div className={styles.card_image}>
+            <Image
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+              src={image}
+              alt="Picture of house"
+              fill
+              object-fit="cover"
+            />
+          </div>
+        )}
       </Link>
       <div className={styles.card_details}>
         <div className={title ? styles.card_title : styles.display_none}>

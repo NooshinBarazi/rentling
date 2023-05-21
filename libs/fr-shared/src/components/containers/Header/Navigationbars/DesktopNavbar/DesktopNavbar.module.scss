@@ -21,6 +21,9 @@
   transition: 0.3s;
 }
 
+.navbar {
+  box-shadow: $box-shadow-3;
+}
 .navbar_scrolled {
   box-shadow: $box-shadow-10;
 }
@@ -98,8 +101,54 @@
   }
 
   ul {
+    cursor: default;
     display: none;
     margin-top: 0rem;
+  }
+}
+
+.user_email {
+  display: flex;
+  align-items: center;
+  max-width: 15rem;
+  margin: 0.5rem 2rem;
+  transition: 0.3s all;
+  border-radius: 0.2rem;
+  overflow: hidden;
+
+  p {
+    right: auto;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 1.1rem;
+    color: rgba($color-text-light-gray, 0.7);
+    text-transform: uppercase;
+    width: auto;
+    cursor: default;
+  }
+  &:hover {
+    p {
+      animation: textSlide 4s ease-in-out 0.5s;
+    }
+  }
+}
+
+@keyframes textSlide {
+  0% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(
+      min(calc(-100% + 15rem), min(calc(15rem - 100%), 0%))
+    );
+  }
+  60% {
+    transform: translateX(
+      min(calc(-100% + 15rem), min(calc(15rem - 100%), 0%))
+    );
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 

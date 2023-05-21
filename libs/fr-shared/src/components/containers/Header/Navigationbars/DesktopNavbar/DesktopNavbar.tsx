@@ -7,18 +7,18 @@ import {
   NavbarDrawer,
   Dropdown,
   useAuth,
+  selectUser,
 } from '@rentling/fr-shared';
+import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 export const DesktopNavbar = () => {
   // checks if user is loggedin
-  const { isLoggedIn, setLoggedIn } = useAuth();
-
-  const handleLogin = () => {
-    setLoggedIn(true);
-  };
+  const { isLoggedIn, setIsLoggedIn, userEmail } = useAuth();
 
   const handleLogout = () => {
-    setLoggedIn(false);
+    setIsLoggedIn(false);
+    router.push('/');
   };
 
   // checks the Menu Icon state to Open / Close the Navbar drawer
@@ -49,11 +49,10 @@ export const DesktopNavbar = () => {
     { href: 'profile/history', label: 'My houses' },
   ];
 
-  const defaultLinks = [
-    // { href: 'login', label: 'Login' },
-    { href: 'signup', label: 'Signup' },
-  ];
   const [profileIsOpen, setProfileIsOpen] = useState(false);
+
+  const router = useRouter();
+
   return (
     <header
       className={isScrolled ? styles.navbar_box_scrolled : styles.navbar_box}
@@ -90,6 +89,11 @@ export const DesktopNavbar = () => {
               <Dropdown>
                 {isLoggedIn ? (
                   <ul>
+                    <div className={styles.user_email}>
+                      <p>{userEmail}</p>
+                    </div>
+                    {/* <div className={styles.navbar_dropdown_line}></div> */}
+
                     {LoggedInlinks.map((link) => (
                       <Link
                         onMouseDown={(event) => event.preventDefault()}
@@ -110,16 +114,19 @@ export const DesktopNavbar = () => {
                   </ul>
                 ) : (
                   <ul>
-                    <li onClick={() => setLoggedIn(true)}>Login</li>
-                    {defaultLinks.map((link) => (
-                      <Link
-                        key={link.href + link.label}
-                        onMouseDown={(event) => event.preventDefault()}
-                        href={`/${link.href}`}
-                      >
-                        <li key={link.href}>{link.label}</li>
-                      </Link>
-                    ))}
+                    <Link
+                      href={'/auth/sign-in'}
+                      onMouseDown={(event) => event.preventDefault()}
+                    >
+                      <li>Login</li>
+                    </Link>
+                    <Link
+                      href={'/auth/sign-up'}
+                      onMouseDown={(event) => event.preventDefault()}
+                    >
+                      <li>Sign Up</li>
+                    </Link>
+
                     <div className={styles.navbar_dropdown_line}></div>
                     <li> Switch to LandLord </li>
                     <div className={styles.navbar_dropdown_line}></div>

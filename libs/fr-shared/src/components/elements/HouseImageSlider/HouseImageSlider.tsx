@@ -69,10 +69,17 @@ export const HouseImageSlider = ({
         </button>
         <div className={styles.slider}>
           <div className={styles.prev_image}>
-            <Image src={prevImage.images.img} alt="" fill object-fit="cover" />
+            <Image
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+              src={prevImage.images.img}
+              alt=""
+              fill
+              object-fit="cover"
+            />
           </div>
           <div className={styles.current_image}>
             <Image
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
               src={currentImage.images.img}
               alt=""
               fill
@@ -80,7 +87,13 @@ export const HouseImageSlider = ({
             />
           </div>
           <div className={styles.next_image}>
-            <Image src={nextImage.images.img} alt="" fill object-fit="cover" />
+            <Image
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+              src={nextImage.images.img}
+              alt=""
+              fill
+              object-fit="cover"
+            />
           </div>
         </div>
         <button className={styles.slider_button_next} onClick={nextSlide}>
@@ -89,6 +102,7 @@ export const HouseImageSlider = ({
       </div>
       <div style={{ marginTop: '-12rem' }}>
         <HouseCard
+          id={currentImage.id}
           address={currentImage.address}
           bathrooms={currentImage.feature.bathroom}
           bedrooms={currentImage.feature.bedroom}
