@@ -3,11 +3,7 @@ import { useState, useEffect } from 'react';
 import { Payments, ProfileTemplate } from '@rentling/fr-shared';
 
 export default function ProfilePayments() {
-  const router = useRouter();
-  const { id } = router.query;
-
-    return <Payments />;
-  
+  return <Payments />;
 }
 
 ProfilePayments.PageLayout = ProfileTemplate;

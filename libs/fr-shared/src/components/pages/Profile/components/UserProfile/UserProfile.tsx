@@ -10,19 +10,20 @@ import {
   TextIcon,
 } from '@rentling/fr-shared';
 
-interface UserProfile{
-  firstName: string,
-  lastName: string,
-  email: string,
+interface UserProfile {
+  firstName: string;
+  lastName: string;
+  email: string;
 }
 
-export const UserProfile = ({firstName, lastName, email}: UserProfile) => {
-
+export const UserProfile = ({ firstName, lastName, email }: UserProfile) => {
   return (
     <section className={styles.profile_section}>
       <div className={styles.container}>
         <div className={styles.profile_info}>
-          <h4>{firstName} {lastName}</h4>
+          <h4>
+            {firstName} {lastName}
+          </h4>
           <p>{email}</p>
         </div>
         <div className={styles.profile_box}>

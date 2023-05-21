@@ -5,20 +5,17 @@ import { Button, SelectInput } from '@rentling/fr-shared';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 
-export const PaymentMethod: any = (
-  onSubmit: any
-) => {
+export const PaymentMethod: any = (onSubmit: any) => {
   const {
     handleSubmit,
     register,
     formState: { errors },
   } = useForm();
-  const [canceHandel,setCanceHandel] = useState(true);
+  const [canceHandel, setCanceHandel] = useState(true);
 
-  if(canceHandel){
-    
+  if (canceHandel) {
     return (
-      <section  className={styles.main}>
+      <section className={styles.main}>
         <div className={styles.container}>
           <div className={styles.card_container}>
             <div className={styles.hedear}>
@@ -29,22 +26,22 @@ export const PaymentMethod: any = (
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className={styles.card_number_input}>
                 <input
-                  placeholder='Card Number'
-                  type='number'
+                  placeholder="Card Number"
+                  type="number"
                   {...register('exampleRequired', { required: true })}
                 />
                 {errors.exampleRequired && <span>This field is required</span>}
               </div>
               <div className={styles.card_information}>
                 <input
-                  placeholder='Expiration'
-                  type='number'
+                  placeholder="Expiration"
+                  type="number"
                   {...register('Expiration', { required: true })}
                 />
                 {errors.exampleRequired && <span>This field is required</span>}
                 <input
-                  placeholder='CVV'
-                  type='number'
+                  placeholder="CVV"
+                  type="number"
                   {...register('CVV', { required: true })}
                 />
                 {errors.exampleRequired && <span>This field is required</span>}
@@ -68,7 +65,9 @@ export const PaymentMethod: any = (
                   Icon={undefined}
                   text="CANCEL"
                   newStyle=""
-                  onClick={() => {setCanceHandel(false)}}
+                  onClick={() => {
+                    setCanceHandel(false);
+                  }}
                 />
                 <Button
                   Icon={undefined}

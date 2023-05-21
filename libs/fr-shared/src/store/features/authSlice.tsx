@@ -43,30 +43,34 @@ export const signIn = createAsyncThunk(
       if (response.status === 200) router.push('/');
 
       return res;
-      
     } catch (error) {
       return rejectWithValue(error);
     }
   }
 );
 
-export const signUp = createAsyncThunk('signUp', async (data: any,{rejectWithValue}) => {
-  try {
-    const response = await window.fetch('http://localhost:8080/auth/sign-in', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  });
-  const res = await response.json();
-  localStorage.setItem('user', JSON.stringify(res));
-  return res;
-  } catch (error) {
-    return rejectWithValue(error);
+export const signUp = createAsyncThunk(
+  'signUp',
+  async (data: any, { rejectWithValue }) => {
+    try {
+      const response = await window.fetch(
+        'http://localhost:8080/auth/sign-in',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        }
+      );
+      const res = await response.json();
+      localStorage.setItem('user', JSON.stringify(res));
+      return res;
+    } catch (error) {
+      return rejectWithValue(error);
+    }
   }
-  
-});
+);
 
 const authSlice = createSlice({
   name: 'auth',
@@ -83,7 +87,7 @@ const authSlice = createSlice({
         state.error = null;
       })
       .addCase(signUp.fulfilled, (state, action) => {
-        console.log(action)
+        console.log(action);
         state.loading = false;
         state.user = action.payload;
         state.error = null;

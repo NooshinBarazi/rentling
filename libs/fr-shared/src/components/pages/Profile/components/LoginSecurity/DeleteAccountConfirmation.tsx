@@ -10,7 +10,10 @@ interface IProps {
 }
 
 export const DeleteAccountConfirmation = ({ firstName, lastName }: IProps) => {
-  const { register, formState: { errors }, } = useForm();
+  const {
+    register,
+    formState: { errors },
+  } = useForm();
   const router = useRouter();
   return (
     <div className={styles.container}>

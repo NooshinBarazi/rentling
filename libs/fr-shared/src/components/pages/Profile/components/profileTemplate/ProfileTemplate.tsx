@@ -18,7 +18,7 @@ export const ProfileTemplate = ({
   children: React.ReactNode;
 }) => {
   const router = useRouter();
-  
+
   return (
     <section className={styles.profile}>
       <div className={styles.container}>

@@ -18,13 +18,13 @@ export const SignIN = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isDirty, isValid  },
+    formState: { errors, isDirty, isValid },
   } = useForm();
   const dispatch = useDispatch();
   const router = useRouter();
 
   const onSubmit = (data: any) => {
-     dispatch(signIn(data));
+    dispatch(signIn(data));
   };
 
   return (

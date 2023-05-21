@@ -17,11 +17,11 @@ const favoritesSlice = createSlice({
         const index = state.findIndex((element) => element.id === houseId);
         state.splice(index, 1);
       } else {
-        state.push({id: houseId });
+        state.push({ id: houseId });
       }
     },
   },
 });
 
-export const {addFavorite} = favoritesSlice.actions;
+export const { addFavorite } = favoritesSlice.actions;
 export default favoritesSlice.reducer;

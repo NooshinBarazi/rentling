@@ -42,12 +42,15 @@
 }
 
 .signin_img {
-  background: (linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('./../images/Layer 1 1.png'));
-
+  background: (
+    linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url('./../images/Layer 1 1.png')
+  );
 }
 
 .signup_img {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/Selective Color 1 1.png');
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url('../images/Selective Color 1 1.png');
 }
 
 .signup_button {
@@ -80,20 +83,18 @@
   }
 
   svg {
-		path {
-			fill: $color-white;
-		}
-
-	}
-
+    path {
+      fill: $color-white;
+    }
+  }
 }
 .submit_button {
-	width: 100%;
-	color: $color-white;
-	@include primary-button;
+  width: 100%;
+  color: $color-white;
+  @include primary-button;
 }
 
-.input_form{
+.input_form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

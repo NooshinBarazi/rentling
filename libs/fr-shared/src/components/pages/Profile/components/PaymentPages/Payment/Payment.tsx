@@ -11,10 +11,10 @@ export const Payments = (onSubmit: any) => {
     register,
     formState: { errors },
   } = useForm();
-interface PropsPayment{
-  priceDaily:  any;
-  priceMonthly: any
-}
+  interface PropsPayment {
+    priceDaily: any;
+    priceMonthly: any;
+  }
 
   const [display, setDisplay] = useState(false);
 
@@ -45,7 +45,9 @@ interface PropsPayment{
                 <span>Keep track of all your payments and refunds.</span>
               </div>
               <div
-                className={display ? styles.less_detailes : styles.more_detailes}
+                className={
+                  display ? styles.less_detailes : styles.more_detailes
+                }
               >
                 <button onClick={toggleShow}>
                   {display ? 'See less details' : 'See more details'}{' '}
@@ -97,17 +99,20 @@ interface PropsPayment{
               </span>
             </div>
             <div className={styles.btn_payment}>
-              <Button
-                text="Add Payment Method"
-                onClick={toggleMethod}
-              />
+              <Button text="Add Payment Method" onClick={toggleMethod} />
             </div>
           </div>
         </div>
       </div>
       {paymentPopup && (
-        <div className={styles.card_popup} tabIndex={1} onBlur={()=>{setPaymentPopup(false)}}>
-          <PaymentMethod/>
+        <div
+          className={styles.card_popup}
+          tabIndex={1}
+          onBlur={() => {
+            setPaymentPopup(false);
+          }}
+        >
+          <PaymentMethod />
         </div>
       )}
     </>

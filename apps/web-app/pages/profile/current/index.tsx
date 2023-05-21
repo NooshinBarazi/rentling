@@ -35,7 +35,7 @@ export default function CurrentRentalPage() {
     description: user.currentHouse.description,
     comment: user.currentHouse.comment,
   };
-  
+
   return (
     <CurrentRental
       title={user.currentHouse.title}

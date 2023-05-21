@@ -1,8 +1,5 @@
-import { SignUp } from "@rentling/fr-shared";
+import { SignUp } from '@rentling/fr-shared';
 
-
-export default function SignUpPage(){
-    return(
-        <SignUp />
-    )
+export default function SignUpPage() {
+  return <SignUp />;
 }

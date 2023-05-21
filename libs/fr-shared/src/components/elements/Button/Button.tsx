@@ -10,7 +10,14 @@ interface IProps {
   disabled?: boolean;
 }
 
-export const Button = ({ ref, Icon, text, newStyle, onClick, disabled }: IProps) => {
+export const Button = ({
+  ref,
+  Icon,
+  text,
+  newStyle,
+  onClick,
+  disabled,
+}: IProps) => {
   return (
     <button
       ref={ref}

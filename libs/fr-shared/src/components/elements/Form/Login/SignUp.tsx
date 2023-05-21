@@ -20,9 +20,9 @@ export const SignUp = () => {
   const router = useRouter();
   const dispatch = useDispatch();
 
-  const onSubmit = async(data: any) => {
-   await dispatch(signUp(data))
-  }
+  const onSubmit = async (data: any) => {
+    await dispatch(signUp(data));
+  };
   return (
     <section className={styles.form}>
       <div className={`${styles.image} ${`${styles.signup_img} `}`}>
