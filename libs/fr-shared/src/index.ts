@@ -9,5 +9,5 @@ export * from './components/elements/Icons/StayTimeIcon';
 export * from './components/elements/Icons/FullStarIcon';
 export * from './components/elements/Icons/EmptyStarIcon';
 export * from './components/pages/Profile/components/data ';
-export * from './AppContext';
+export * from './contexts/AuthContext';
 export * from './server';
