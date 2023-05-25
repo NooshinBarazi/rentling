@@ -7,8 +7,9 @@ import {
   AuthProvider,
   DesktopNavbar,
   Header,
-  store,
   initMocks,
+  wrapper,
+  store
 } from '@rentling/fr-shared';
 
 type ComponentWithPageLayout = AppProps & {
@@ -25,8 +26,9 @@ function CustomApp({ Component, pageProps }: ComponentWithPageLayout) {
       <Head>
         <title>Welcome to Rentling</title>
       </Head>
-      <Provider store={store}>
+     
         <AuthProvider>
+          <Provider store={store}>
           <Header>
             <DesktopNavbar />
           </Header>
@@ -39,10 +41,11 @@ function CustomApp({ Component, pageProps }: ComponentWithPageLayout) {
               <Component {...pageProps} />
             )}
           </main>
+          </Provider>
         </AuthProvider>
-      </Provider>
+     
     </>
   );
 }
 
-export default CustomApp;
+export default wrapper.withRedux(CustomApp);
