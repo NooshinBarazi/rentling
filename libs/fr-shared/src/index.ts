@@ -11,3 +11,4 @@ export * from './components/elements/Icons/EmptyStarIcon';
 export * from './components/pages/Profile/components/data ';
 export * from './contexts/AuthContext';
 export * from './server';
+export * from './store/store';
