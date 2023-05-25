@@ -28,7 +28,7 @@ function CustomApp({ Component, pageProps }: ComponentWithPageLayout) {
       </Head>
      
         <AuthProvider>
-          <Provider store={store}>
+          <Provider store={storefeat}>
           <Header>
             <DesktopNavbar />
           </Header>
