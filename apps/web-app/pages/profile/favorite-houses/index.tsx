@@ -31,7 +31,7 @@ export default function FindFavoriteHouses({favorites}) {
   console.log(favorites)
   const favoritehosue = useSelector((state: RootState)=> state.favorites)
  
-  if ((favorites.length === 0) && favoritehosue.length === 0) {
+  if ((favorites.length === 0)dis) {
     return <EmptyPageFavoriteHouses />;
   }
   return <FavoriteHouses FavoriteHouse={favorites}/>;
