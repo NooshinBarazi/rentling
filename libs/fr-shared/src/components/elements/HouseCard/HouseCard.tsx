@@ -50,18 +50,15 @@ export const HouseCard = ({
 }: Props) => {
   const dispatch = useDispatch();
   const handleAddToFavorites = () => {
-    let favoriteHouses = JSON.parse(
-      localStorage.getItem('favoriteHouses') || '[]'
-    );
-    if (favoriteHouses.includes(id)) {
-      const index = favoriteHouses.indexOf(id);
-      if (index > -1) {
-        favoriteHouses.splice(index, 1);
-      }
-    } else {
-      favoriteHouses.push(id);
-    }
-    localStorage.setItem('favoriteHouses', JSON.stringify(favoriteHouses));
+    const house = {
+      id,
+      image,
+      title,
+      region,
+      price: {oneDay, thirtyDay} // Modify this based on the actual price property
+    };
+
+    dispatch(addFavorite(house));
   };
 
   return (
@@ -145,7 +142,7 @@ export const HouseCard = ({
           </div>
           <div
             className={styles.like_icon}
-            onClick={() => dispatch(addFavorite(id))}
+            onClick={handleAddToFavorites}
           >
             <LikeIcon />
           </div>
