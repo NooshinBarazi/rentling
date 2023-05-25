@@ -1,32 +1,41 @@
-import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
+import { GetServerSideProps } from 'next';
+import { fetchFavorite } from 'libs/fr-shared/src/store/features/favoriteSlice';
 import {
   EmptyPageFavoriteHouses,
   FavoriteHouses,
-  users,
   ProfileTemplate,
+  RootState,
+  wrapper,
+  useAuth
 } from '@rentling/fr-shared';
+import { useSelector } from 'react-redux';
 
-export default function FindFavoriteHouses() {
-  const router = useRouter();
-  const { id } = router.query;
-  const [user, setUser] = useState(null);
 
-  useEffect(() => {
-    if (id) {
-      const user = getCurrentuserById(id as string);
-      setUser(user);
+export const getServerSideProps: GetServerSideProps  = wrapper.getServerSideProps(
+  (store) => 
+    async({params})=>{
+
+// const auth = useAuth()
+// console.log('auth',auth)
+      await store.dispatch(fetchFavorite())
+      const {favorites} = store.getState()
+      return{
+        props:{
+           favorites
+        }
+      }
     }
-  }, [id]);
+)
 
-  const getCurrentuserById = (userId: string) => {
-    return users.find((user) => user.profile.id === userId);
-  };
-
-  if (!user) {
+export default function FindFavoriteHouses({favorites}) {
+  console.log(favorites)
+  const favoritehosue = useSelector((state: RootState)=> state.favorites)
+ 
+  if ((favorites.length === 0) && favoritehosue.length === 0) {
     return <EmptyPageFavoriteHouses />;
   }
-  return <FavoriteHouses />;
+  return <FavoriteHouses FavoriteHouse={favorites}/>;
 }
 
 FindFavoriteHouses.PageLayout = ProfileTemplate;
+
