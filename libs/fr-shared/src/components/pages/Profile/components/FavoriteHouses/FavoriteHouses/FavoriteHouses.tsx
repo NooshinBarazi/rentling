@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { users } from '@rentling/fr-shared';
+import { useState, useEffect } from 'react';
+import { RootState, users } from '@rentling/fr-shared';
 import { ChooseDropdown } from 'libs/fr-shared/src/components/elements/Dropdown/DropdownMenu';
 import { DropDownIcon } from 'libs/fr-shared/src/components/elements/Icons/DropDownIcon';
 import { CalenderIcon } from 'libs/fr-shared/src/components/elements/Icons/CalenderIcon';
@@ -7,14 +7,17 @@ import { ShareIcon } from 'libs/fr-shared/src/components/elements/Icons/ShareIco
 import { LikeIcon } from 'libs/fr-shared/src/components/elements/Icons/LikeIcon';
 import styles from './FavoriteHouses.module.scss';
 import Image from 'next/image';
+import {useSelector } from 'react-redux';
 
-interface PropsFavoriteHouses {
+interface FavoriteHouse {
   image: any;
   regins: any;
   title: any;
   oneDay: any;
   thirtyDay: any;
 }
+
+type HouseProps = FavoriteHouse[];
 
 function sortFavoritesListByPrice(user: any, priceType: any) {
   const sortedFavoritesList = user.favoritesList
@@ -26,10 +29,12 @@ function sortFavoritesListByPrice(user: any, priceType: any) {
   };
 }
 
-export const FavoriteHouses = () => {
+export const FavoriteHouses = ({ FavoriteHouse }: { FavoriteHouse: HouseProps }) => {
   const [dailySelected, setDailySelected] = useState<boolean>(true);
   const [sortSelected, setSortSelected] = useState<string>('cheaper');
-  const [favoritesList, setFavoritesList] = useState(users[0].favoritesList);
+  const [favoritesList, setFavoritesList] = useState(
+    useSelector((state: RootState) => state.favorites)
+  );
 
   const handleSortChange = (sortOption: string) => {
     setSortSelected(sortOption);
@@ -49,24 +54,24 @@ export const FavoriteHouses = () => {
   const houseItems = favoritesList.map((house: any) => (
     <div className={styles.houses_container}>
       <div className={styles.container_image}>
-        <Image src={house.images.img} alt="/" fill object-fit="cover" />
+        <Image src={house.images?.img} alt="/" fill object-fit="cover" />
       </div>
       <div className={styles.detailes_container}>
         <div className={styles.region_container}>
-          <p>{house.feature.region}</p>
+          <p>{house.feature?.region}</p>
         </div>
         <div className={styles.title}>
-          <p>{house.title}</p>
+          <p>{house?.title}</p>
         </div>
         <div className={styles.calender_container}>
           <div className={styles.calendar}>
             <CalenderIcon />
-            <span>{house.price.oneDay}</span>
+            <span>{house.price?.oneDay}</span>
             <p>$/day</p>
           </div>
           <div className={styles.calendar}>
             <CalenderIcon />
-            <span>{house.price.thirtyDay}</span>
+            <span>{house.price?.thirtyDay}</span>
             <p>$/mo</p>
           </div>
         </div>
