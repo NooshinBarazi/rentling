@@ -7,17 +7,16 @@ import {
   NavbarDrawer,
   Dropdown,
   useAuth,
-  selectUser,
 } from '@rentling/fr-shared';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 
 export const DesktopNavbar = () => {
   // checks if user is loggedin
-  const { isLoggedIn, setIsLoggedIn, userEmail } = useAuth();
+  const { availableUser, setUser } = useAuth();
 
   const handleLogout = () => {
-    setIsLoggedIn(false);
+    setUser(null);
     router.push('/');
   };
 
@@ -87,12 +86,12 @@ export const DesktopNavbar = () => {
 
             {dropdownIsOpen && (
               <Dropdown>
-                {isLoggedIn ? (
+                {availableUser?.isLoggedIn ? (
                   <ul>
                     <div className={styles.user_email}>
-                      <p>{userEmail}</p>
+                      <p>{availableUser.userEmail}</p>
                     </div>
-                    {/* <div className={styles.navbar_dropdown_line}></div> */}
+                    <div className={styles.navbar_dropdown_line}></div>
 
                     {LoggedInlinks.map((link) => (
                       <Link

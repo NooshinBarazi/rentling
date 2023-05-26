@@ -1,73 +1,72 @@
-import { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 import { useSelector } from 'react-redux';
 import { selectUser } from '../store/features/authSlice';
 import { RootState } from '../store/store';
 
+interface AvailableUser {
+  isLoggedIn: boolean | null;
+  userEmail: string | null;
+  userName: string | null;
+  userId: string | null;
+}
+
 interface AuthContextProps {
-  isLoggedIn: boolean;
-  userEmail: any;
-  setIsLoggedIn: (loggedIn: boolean) => void;
+  availableUser: AvailableUser | null;
+  setUser: (newUser: AvailableUser | null) => void;
 }
 
 const AuthContext = createContext<AuthContextProps>({
-  isLoggedIn: false,
-  userEmail: null,
-  setIsLoggedIn: () => {},
+  availableUser: null,
+  setUser: () => {},
 });
 
 export const useAuth = () => useContext(AuthContext);
 
-export const AuthProvider = ({ children }: any) => {
+export const AuthProvider: React.FC = ({ children }: any) => {
   const user = useSelector((state: RootState) => selectUser(state));
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userEmail, setUserEmail] = useState<string | null>();
+
+  const [availableUser, setAvailableUser] = useState<AvailableUser | null>(
+    null
+  );
 
   useEffect(() => {
-    const fetchData = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 500));
-      setIsLoggedIn(user !== null);
-      setUserEmail(user?.email);
+    const storedAvailableUser = Cookies.get('availableUser');
+
+    const fetchData = () => {
+      setTimeout(() => {
+        setAvailableUser({
+          isLoggedIn: user ? true : null,
+          userEmail: user?.email || null,
+          userName: user?.username || null,
+          userId: user?.id || null,
+        });
+      }, 500);
     };
 
-    const storedEmail = Cookies.get('userEmail');
-    const storedLogin = Cookies.get('isLoggedIn');
-
-    if (storedEmail) {
-      setUserEmail(JSON.parse(storedEmail));
-    } else {
-      fetchData();
-    }
-
-    if (storedLogin) {
-      setIsLoggedIn(JSON.parse(storedLogin));
+    if (storedAvailableUser) {
+      setAvailableUser(JSON.parse(storedAvailableUser));
     } else {
       fetchData();
     }
   }, [user]);
 
   useEffect(() => {
-    if (userEmail) {
-      Cookies.set('userEmail', JSON.stringify(userEmail), {
+    if (availableUser?.isLoggedIn === true) {
+      Cookies.set('availableUser', JSON.stringify(availableUser), {
         expires: 1,
       });
     } else {
-      Cookies.remove('userEmail');
+      Cookies.remove('availableUser');
     }
-  }, [userEmail]);
+  }, [availableUser]);
 
-  useEffect(() => {
-    if (isLoggedIn) {
-      Cookies.set('isLoggedIn', JSON.stringify(isLoggedIn), {
-        expires: 1,
-      });
-    } else {
-      Cookies.remove('isLoggedIn');
-    }
-  }, [isLoggedIn]);
+  const setUser = (newUser: AvailableUser | null) => {
+    setAvailableUser(newUser);
+  };
 
   return (
-    <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn, userEmail }}>
+    <AuthContext.Provider value={{ availableUser, setUser }}>
       {children}
     </AuthContext.Provider>
   );

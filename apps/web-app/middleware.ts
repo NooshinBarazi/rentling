@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/dist/server/web/spec-extension/response';
 
 export default function middleware(req: any) {
-  let loggedIn = req.cookies.get('isLoggedIn');
+  let loggedIn = req.cookies.get('availableUser');
   let url = req.url;
 
   if (!loggedIn && url.includes('profile')) {
