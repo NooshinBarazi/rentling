@@ -35,4 +35,28 @@ export const handlers = [
     )?.favoritesList;
     return favoritesForUser ? res(ctx.status(200), ctx.json(favoritesForUser)) :res(ctx.status(200), ctx.json({}));
   }),
+
+  rest.get(`${MOCK_API_URL}/:userId/rental-history`, (req, res, ctx) => {
+
+    const { userId } = req.params;
+
+    const rentalHistoryForUser = users.find(
+      (u) => u.profile.id === userId
+    )?.history;
+
+    return res(ctx.status(200), ctx.json(rentalHistoryForUser));
+
+  }),
+
+  rest.get(`${MOCK_API_URL}/:userId/current-rental`, (req, res, ctx) => {
+
+    const { userId } = req.params;
+
+    const currentRentalForUser = users.find(
+      (u) => u.profile.id === userId
+    )?.currentHouse;
+
+    return res(ctx.status(200), ctx.json(currentRentalForUser));
+
+  })
 ];
