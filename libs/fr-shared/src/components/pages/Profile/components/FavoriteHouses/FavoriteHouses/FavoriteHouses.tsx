@@ -17,7 +17,7 @@ interface FavoriteHouse {
   thirtyDay: any;
 }
 
-type HouseProps = FavoriteHouse[];
+type FavoriteHousesProps = {favoriteHouses: FavoriteHouse[]};
 
 function sortFavoritesListByPrice(user: any, priceType: any) {
   const sortedFavoritesList = user.favoritesList
@@ -29,7 +29,7 @@ function sortFavoritesListByPrice(user: any, priceType: any) {
   };
 }
 
-export const FavoriteHouses = ({ FavoriteHouse }: { FavoriteHouse: HouseProps }) => {
+export const FavoriteHouses = ({ favoriteHouses }: FavoriteHousesProps ) => {
   const [dailySelected, setDailySelected] = useState<boolean>(true);
   const [sortSelected, setSortSelected] = useState<string>('cheaper');
   const [favoritesList, setFavoritesList] = useState(
@@ -51,7 +51,7 @@ export const FavoriteHouses = ({ FavoriteHouse }: { FavoriteHouse: HouseProps })
     setFavoritesList(sortedFavoritesList);
   };
 
-  const houseItems = favoritesList.map((house: any) => (
+  const houseItems = favoriteHouses.map((house: any) => (
     <div className={styles.houses_container}>
       <div className={styles.container_image}>
         <Image src={house.images?.img} alt="/" fill object-fit="cover" />
@@ -92,7 +92,7 @@ export const FavoriteHouses = ({ FavoriteHouse }: { FavoriteHouse: HouseProps })
       <div className={styles.container}>
         <div className={styles.header_container}>
           <div className={styles.header_favorite_houses}>
-            <p>your favorite houses</p>
+            <p>Your Favorite Houses</p>
           </div>
         </div>
         <div className={styles.sort_option}>

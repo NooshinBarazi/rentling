@@ -1,5 +1,5 @@
-import { SignIN } from '@rentling/fr-shared';
+import { SignIn } from '@rentling/fr-shared';
 
 export default function SignINPage() {
-  return <SignIN />;
+  return <SignIn />;
 }

@@ -7,7 +7,6 @@ import {
   NavbarDrawer,
   Dropdown,
   useAuth,
-  selectUser,
 } from '@rentling/fr-shared';
 import { useRouter } from 'next/router';
 import Image from 'next/image';

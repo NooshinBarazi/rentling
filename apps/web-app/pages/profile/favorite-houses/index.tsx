@@ -9,32 +9,29 @@ import {
   useAuth
 } from '@rentling/fr-shared';
 import { useSelector } from 'react-redux';
+import { unwrapResult } from '@reduxjs/toolkit';
 
 
-export const getServerSideProps: GetServerSideProps  = wrapper.getServerSideProps(
-  (store) => 
-    async({params})=>{
+export const getServerSideProps: GetServerSideProps = wrapper.getServerSideProps(
+  (store) =>
+    async (ctx) => {
 
-// const auth = useAuth()
-// console.log('auth',auth)
-      await store.dispatch(fetchFavorite())
-      const {favorites} = store.getState()
-      return{
-        props:{
-           favorites
+      const actionResult = await store.dispatch(fetchFavorite())
+      const favoriteHouses = unwrapResult(actionResult)
+      return {
+        props: {
+          favoriteHouses
         }
       }
     }
 )
 
-export default function FindFavoriteHouses({favorites}) {
-  console.log(favorites)
-  const favoritehosue = useSelector((state: RootState)=> state.favorites)
- 
-  if ((favorites.length === 0)dis) {
+export default function FindFavoriteHouses({ favoriteHouses }) {
+
+  if ((favoriteHouses.length === 0)) {
     return <EmptyPageFavoriteHouses />;
   }
-  return <FavoriteHouses FavoriteHouse={favorites}/>;
+  return <FavoriteHouses favoriteHouses={favoriteHouses} />;
 }
 
 FindFavoriteHouses.PageLayout = ProfileTemplate;

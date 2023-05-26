@@ -1,5 +1,6 @@
 import { PayloadAction, createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { HYDRATE } from 'next-redux-wrapper';
+import axios from "axios"
 
 export type Favorite = {
   id: string;
@@ -11,18 +12,19 @@ export type Favorite = {
 };
 
 type FavoriteState = Favorite[]
+
 const initialState: FavoriteState = []
 
 export const fetchFavorite = createAsyncThunk(
   'favorites',
   async (userId, { rejectWithValue }) => {
     try {
-      const response = await window.fetch(
-        `http://localhost:8080/${userId}/favorites`
+      const usr = 2;
+      const { data } = await axios.get(
+        `http://localhost:8080/${usr}/favorites`
       );
-      const responseData  = await response.json();
-      console.log(responseData )
-      return responseData ;
+      return data;
+
     } catch (error) {
       return rejectWithValue(error);
     }
@@ -43,9 +45,12 @@ const favoritesSlice = createSlice({
       }
     },
   },
-  extraReducers:{
-    [HYDRATE]: (state, action)=>{
-    return action.payload.favorites
+  extraReducers: {
+    [HYDRATE]: (state, action) => {
+      return {
+        ...state,
+        ...action.payload.favorites
+      }
     }
   }
 });

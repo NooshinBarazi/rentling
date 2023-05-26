@@ -27,7 +27,6 @@ export const PersonalInfo = () => {
   });
 
   const onSubmit = (data: any) => {
-    console.log(data);
     setEditableField('');
   };
 

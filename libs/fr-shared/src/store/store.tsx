@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { createWrapper} from "next-redux-wrapper";
-import FavoriteReducer from './features/favoriteSlice';
+import { createWrapper } from "next-redux-wrapper";
+import favoriteReducer from './features/favoriteSlice';
 import authReducer from './features/authSlice';
 
-const makeStore = ()=>{
+const makeStore = () => {
   const store = configureStore({
     reducer: {
-      favorites: FavoriteReducer,
+      favorites: favoriteReducer,
       auth: authReducer,
     },
   });
@@ -15,7 +15,7 @@ const makeStore = ()=>{
 
 export const store = configureStore({
   reducer: {
-    favorites: FavoriteReducer,
+    favorites: favoriteReducer,
     auth: authReducer,
   },
 });

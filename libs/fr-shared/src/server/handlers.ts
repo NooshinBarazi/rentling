@@ -33,6 +33,6 @@ export const handlers = [
     const favoritesForUser = users.find(
       (u) => u.profile.id === userId
     )?.favoritesList;
-    return res(ctx.status(200), ctx.json(favoritesForUser));
+    return favoritesForUser ? res(ctx.status(200), ctx.json(favoritesForUser)) :res(ctx.status(200), ctx.json({}));
   }),
 ];

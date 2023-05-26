@@ -14,7 +14,7 @@ export const DeleteAccount = () => {
         <div className={styles.reset_password}>
           <h4>Forget Your Password?</h4>
           <Link href={'/reset'}>
-            <p>Click here to Reset your password</p>
+            <p>Click here to reset your password</p>
           </Link>
         </div>
         <div className={styles.delete_account}>

@@ -25,7 +25,6 @@ export const Payments = (onSubmit: any) => {
   };
 
   const toggleMethod = () => {
-    console.log(paymentPopup);
     setPaymentPopup(!paymentPopup);
   };
 

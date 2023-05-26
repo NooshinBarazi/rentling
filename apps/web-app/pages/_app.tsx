@@ -26,9 +26,9 @@ function CustomApp({ Component, pageProps }: ComponentWithPageLayout) {
       <Head>
         <title>Welcome to Rentling</title>
       </Head>
-     
+
+      <Provider store={store}>
         <AuthProvider>
-          <Provider store={storefeat}>
           <Header>
             <DesktopNavbar />
           </Header>
@@ -41,9 +41,9 @@ function CustomApp({ Component, pageProps }: ComponentWithPageLayout) {
               <Component {...pageProps} />
             )}
           </main>
-          </Provider>
         </AuthProvider>
-     
+      </Provider>
+
     </>
   );
 }

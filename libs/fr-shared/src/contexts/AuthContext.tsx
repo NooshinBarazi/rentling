@@ -6,7 +6,7 @@ import { RootState } from '../store/store';
 
 interface AuthContextProps {
   isLoggedIn: boolean;
-  userEmail: any;
+  userEmail: string | null;
   setIsLoggedIn: (loggedIn: boolean) => void;
 }
 
@@ -21,17 +21,17 @@ export const useAuth = () => useContext(AuthContext);
 export const AuthProvider = ({ children }: any) => {
   const user = useSelector((state: RootState) => selectUser(state));
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userEmail, setUserEmail] = useState<string | null>();
+  const [userEmail, setUserEmail] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchData = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 500));
-      setIsLoggedIn(user !== null);
-      setUserEmail(user?.email);
-    };
-
     const storedEmail = Cookies.get('userEmail');
     const storedLogin = Cookies.get('isLoggedIn');
+
+    const fetchData = async () => {
+      await new Promise((resolve) => setTimeout(resolve, 500));
+      setIsLoggedIn(Boolean(user));
+      setUserEmail(user?.email || null);
+    };
 
     if (storedEmail) {
       setUserEmail(JSON.parse(storedEmail));
@@ -48,9 +48,7 @@ export const AuthProvider = ({ children }: any) => {
 
   useEffect(() => {
     if (userEmail) {
-      Cookies.set('userEmail', JSON.stringify(userEmail), {
-        expires: 1,
-      });
+      Cookies.set('userEmail', JSON.stringify(userEmail), { expires: 1 });
     } else {
       Cookies.remove('userEmail');
     }
@@ -58,9 +56,7 @@ export const AuthProvider = ({ children }: any) => {
 
   useEffect(() => {
     if (isLoggedIn) {
-      Cookies.set('isLoggedIn', JSON.stringify(isLoggedIn), {
-        expires: 1,
-      });
+      Cookies.set('isLoggedIn', JSON.stringify(isLoggedIn), { expires: 1 });
     } else {
       Cookies.remove('isLoggedIn');
     }

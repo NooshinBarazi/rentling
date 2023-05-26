@@ -2,19 +2,16 @@ import {
   Button,
   Input,
   PasswordIcon,
-  RootState,
   UserSigninIcon,
 } from '@rentling/fr-shared';
 import styles from './SignIn.module.scss';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useRouter } from 'next/router';
 import { useForm } from 'react-hook-form';
 import { signIn } from 'libs/fr-shared/src/store/features/authSlice';
-import { colors } from 'react-select/dist/declarations/src/theme';
 
-export const SignIN = () => {
+export const SignIn = () => {
   const {
     register,
     handleSubmit,
