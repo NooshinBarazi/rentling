@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import map from '../image/map.jpg';
 import styles from './housePage.module.scss';
 import {
-  houses,
   SlideImage,
   HouseDetails,
   HousePrice,
@@ -126,7 +125,7 @@ export const HousePage = ({
           </div>
         </div>
         <div className={styles.house_image_slider}>
-          <HouseImageSlider houses={houses} cityName={cityName} />
+          {/* <HouseImageSlider houses={houses} cityName={cityName} /> */}
         </div>
       </div>
     </div>

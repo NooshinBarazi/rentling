@@ -5,7 +5,6 @@ import { motion, useInView } from 'framer-motion';
 
 import {
   regions,
-  houses,
   FilteredCards,
   PriceSlider,
   PropertyType,
@@ -19,10 +18,12 @@ import {
 } from '@rentling/fr-shared';
 
 interface HouseFormProps {
+  houses: any;
   filteredCardsRef: any;
   housefilterref: any;
 }
 export const HouseForm = ({
+  houses,
   filteredCardsRef,
   housefilterref,
 }: HouseFormProps) => {

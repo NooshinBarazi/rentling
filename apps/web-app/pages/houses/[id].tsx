@@ -1,25 +1,12 @@
-import { useRouter } from 'next/router';
 import React from 'react';
-import { useEffect, useState } from 'react';
-import { HousePage, houses } from '@rentling/fr-shared';
+import { HousePage, wrapper } from '@rentling/fr-shared';
+import { GetServerSideProps } from 'next';
+import { unwrapResult } from '@reduxjs/toolkit';
+import {fetchSingleHouse } from 'libs/fr-shared/src/store/features/singleHouseSlice';
 
-export default function HousePaymentHandel() {
-  const router = useRouter();
-  const { id } = router.query;
-  const [house, setHouse] = useState(null);
+export default function HousePaymentPage({singleHouse}) {
 
-  useEffect(() => {
-    if (id) {
-      const houseData = getHouseById(id as string);
-      setHouse(houseData);
-    }
-  }, [id]);
-
-  const getHouseById = (houseId: string) => {
-    return houses.find((house) => house.id === houseId);
-  };
-
-  if (!house) {
+  if (!singleHouse) {
     return (
       <div
         style={{
@@ -35,19 +22,34 @@ export default function HousePaymentHandel() {
     return (
       <div>
         <HousePage
-          title={house.title}
-          address={house.address}
-          bathrooms={house.feature.bathroom}
-          parking={house.feature.parking as boolean}
-          area={house.feature.meterage}
-          description={house.feature.description}
-          images={house.images.imagesList}
-          priceDaily={house.price.oneDay}
-          priceMonthly={house.price.thirtyDay}
-          cityName={house.feature.city}
-          bedroom={house.feature.bedroom}
+          title={singleHouse.title}
+          address={singleHouse.address}
+          bathrooms={singleHouse.feature.bathroom}
+          parking={singleHouse.feature.parking as boolean}
+          area={singleHouse.feature.meterage}
+          description={singleHouse.feature.description}
+          images={singleHouse.images.imagesList}
+          priceDaily={singleHouse.price.oneDay}
+          priceMonthly={singleHouse.price.thirtyDay}
+          cityName={singleHouse.feature.city}
+          bedroom={singleHouse.feature.bedroom}
         />
       </div>
     );
   }
 }
+
+export const getServerSideProps: GetServerSideProps = wrapper.getServerSideProps(
+  (store) =>
+    async (context) => {
+    
+    const actionResult = await store.dispatch(fetchSingleHouse(context.params.id as string))
+    const singleHouse = unwrapResult(actionResult)
+
+      return {
+        props: {
+          singleHouse
+        }
+      }
+    }
+)

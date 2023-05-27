@@ -37,12 +37,16 @@ export const signIn = createAsyncThunk(
           body: JSON.stringify(data),
         }
       );
-      const res = await response.json();
-      localStorage.setItem('user', JSON.stringify(res));
+      
+      const authenticationInfo = await response.json();
 
-      if (response.status === 200) router.push('/');
+      if (response.status === 200) {
+        localStorage.setItem('current_user', JSON.stringify(authenticationInfo));
 
-      return res;
+        router.push('/');
+      }
+
+      return authenticationInfo;
     } catch (error) {
       return rejectWithValue(error);
     }
@@ -87,7 +91,6 @@ const authSlice = createSlice({
         state.error = null;
       })
       .addCase(signUp.fulfilled, (state, action) => {
-        console.log(action);
         state.loading = false;
         state.user = action.payload;
         state.error = null;
@@ -106,7 +109,6 @@ const authSlice = createSlice({
         state.error = null;
       })
       .addCase(signIn.rejected, (state, action) => {
-        console.log(action);
         state.loading = false;
         state.error = action.error.message || 'Sing in failed';
       });

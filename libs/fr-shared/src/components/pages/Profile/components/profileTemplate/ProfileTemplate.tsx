@@ -36,10 +36,10 @@ export const ProfileTemplate = ({
                 <h4>Profile</h4>
               </li>
             </Link>
-            <Link href="/profile/current" as={`/profile/current`}>
+            <Link href="/profile/current-rental" as={`/profile/current-rental`}>
               <li
                 className={
-                  router.pathname === '/profile/current'
+                  router.pathname === '/profile/current-rental'
                     ? styles.nav_item_active
                     : styles.nav_item
                 }
@@ -61,10 +61,10 @@ export const ProfileTemplate = ({
               </li>
             </Link>
 
-            <Link href="/profile/history" as={`/profile/history`}>
+            <Link href="/profile/rental-history" as={`/profile/rental-history`}>
               <li
                 className={
-                  router.pathname === '/profile/history'
+                  router.pathname === '/profile/rental-history'
                     ? styles.nav_item_active
                     : styles.nav_item
                 }

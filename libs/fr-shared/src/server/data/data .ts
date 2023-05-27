@@ -236,7 +236,7 @@ export const users = [
     favoritesList: [
       {
         images: {
-          img: '/images/19.avif',
+          img: '/images/20.avif',
         },
         id: '36',
         title: 'Spacious House in the Heart of Calgary',

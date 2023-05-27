@@ -9,7 +9,6 @@ import {
   useAuth,
 } from '@rentling/fr-shared';
 import { useRouter } from 'next/router';
-import Image from 'next/image';
 
 export const DesktopNavbar = () => {
   // checks if user is loggedin
