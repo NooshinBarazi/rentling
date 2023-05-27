@@ -93,7 +93,7 @@
   z-index: 300;
   background: #fff;
   margin-top: 34rem;
-  margin-right: -49rem;
+  margin-right: -58rem;
   width: 150rem;
   height: 100%;
 }
@@ -185,25 +185,46 @@
 }
 
 .box {
-  max-width: 80%;
+  max-width: 100%;
   height: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  width: 80%;
+  width: 98%;
 }
 
-.slider_button_next,
+.slider_button_next {
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  margin-left: -5rem;
+  cursor: pointer;
+  width: 10rem;
+  border: none;
+  height: 22rem;
+  cursor: pointer;
+  z-index: 300;
+  & svg {
+    width: 60%;
+    transition: 0.3s;
+  }
+  &:hover {
+    & svg {
+      transform: rotate(-5deg);
+      scale: 1.2;
+    }
+  }
+}
 .slider_button_prev {
   backdrop-filter: blur(2px);
   display: flex;
   align-items: center;
-  padding: 2rem;
+  margin-right: -5rem;
   cursor: pointer;
   width: 10rem;
   border: none;
-  height: 24rem;
+  height: 22rem;
   cursor: pointer;
   z-index: 300;
   & svg {
@@ -219,6 +240,8 @@
 }
 
 .slider {
+  width: 150rem;
+  height: 200rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -228,12 +251,12 @@
 .prev_image {
   position: relative;
   width: 30rem;
-  height: 19rem;
+  height: 22rem;
 }
 
 .current_image_slider {
   position: relative;
-  width: 60rem;
+  width: 65rem;
   height: 42rem;
   overflow: hidden;
   margin: 0 5rem;
@@ -261,7 +284,7 @@
   background-color: #ffffff;
   overflow: scroll;
   margin-top: 30rem;
-  margin-left: 49rem;
+  margin-left: 58rem;
 }
 
 .container_header_album {
@@ -561,7 +584,7 @@
     gap: 25rem;
   }
   .container_modal_slider {
-    width: 150rem;
+    width: 99rem;
     height: 100%;
     margin-top: 131rem;
     margin-right: 1rem;
@@ -586,13 +609,14 @@
     height: 35%;
   }
   .current_image_slider {
-    width: 75rem;
+    width: 78rem;
     height: 45rem;
   }
   .slider_button_prev {
     width: 15rem;
-    height: 34rem;
+    height: 45rem;
     margin-right: -10rem;
+    cursor: pointer;
     svg {
       width: 15rem;
       height: 34rem;
@@ -600,8 +624,9 @@
   }
   .slider_button_next {
     width: 17rem;
-    height: 37rem;
+    height: 45rem;
     margin-left: -10rem;
+    cursor: pointer;
     svg {
       width: 17rem;
       height: 37rem;
