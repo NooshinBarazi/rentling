@@ -30,21 +30,21 @@ export const UserProfile = ({ firstName, lastName, email }: UserProfile) => {
           <Link href="/profile/personal-info">
             <TextIcon
               Icon={<UserProfileIcon />}
-              title={'Profile info'}
+              title={'Profile Info'}
               text={'Provide personal details and how we can reach you'}
             />
           </Link>
-          <Link href="/profile/current/">
+          <Link href="/profile/current-rental">
             <TextIcon
               Icon={<CurrentDateIcon />}
-              title={'current rental'}
+              title={'Current Rental'}
               text={'Your current rental house profile and details'}
             />
           </Link>
-          <Link href="/profile/history/">
+          <Link href="/profile/rental-history">
             <TextIcon
               Icon={<HouseIcon />}
-              title={'rental history'}
+              title={'Rental History'}
               text={
                 'your rental history of houses you stayed and details such as price, rental period and et.c'
               }
@@ -60,14 +60,14 @@ export const UserProfile = ({ firstName, lastName, email }: UserProfile) => {
           <Link href="/profile/payment">
             <TextIcon
               Icon={<PaymentIcon />}
-              title={'payments'}
+              title={'Payments'}
               text={'Review payments, payouts, coupons, and gift cards'}
             />
           </Link>
           <Link href="/profile/delete-account">
             <TextIcon
               Icon={<SecurityIcon />}
-              title={'Login & security'}
+              title={'Login & Security'}
               text={'Update your password and secure or delete your account'}
             />
           </Link>

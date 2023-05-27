@@ -8,12 +8,11 @@ import {
   CalenderIcon,
   MoreInfo,
   LessInfoIcon,
-  users,
   Rating,
 } from '@rentling/fr-shared';
 import styles from './RentalHistory.module.scss';
 
-export const RentalHistory = () => {
+export const RentalHistory = ({rentalHistory}) => {
   const [selectedUser, setSelectedUser] = useState(users[0]);
   const [sortSelected, setSortSelected] = useState('Earliest');
   const [isShow, setIsShow] = useState<any>([]);
@@ -27,7 +26,7 @@ export const RentalHistory = () => {
           Date.parse(b.rentalPeriod.startDate)
         );
       });
-    const sortedHistoryByLatest = selectedUser.history.slice().sort((a, b) => {
+    const sortedHistoryByLatest = rentalHistory.slice().sort((a, b) => {
       return (
         Date.parse(b.rentalPeriod.startDate) -
         Date.parse(a.rentalPeriod.startDate)
@@ -73,7 +72,7 @@ export const RentalHistory = () => {
         </div>
       </div>
       <div className={styles.houses}>
-        {selectedUser.history.map((item, itemIndex) => (
+        {rentalHistory.map((item, itemIndex) => (
           <div className={styles.house_card} key={itemIndex}>
             <div className={styles.card_info}>
               <Image

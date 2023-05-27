@@ -4,7 +4,7 @@ import axios from "axios";
 
 export const fetchRentalHistory = createAsyncThunk(
     'rentalHistory',
-    async (userId, { rejectWithValue }) => {
+    async (userId: number, { rejectWithValue }) => {
       try {
         const { data } = await axios.get(
           `http://localhost:8080/${userId}/rental-history`

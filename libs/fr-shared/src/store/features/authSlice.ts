@@ -91,7 +91,6 @@ const authSlice = createSlice({
         state.error = null;
       })
       .addCase(signUp.fulfilled, (state, action) => {
-        console.log(action);
         state.loading = false;
         state.user = action.payload;
         state.error = null;
@@ -110,7 +109,6 @@ const authSlice = createSlice({
         state.error = null;
       })
       .addCase(signIn.rejected, (state, action) => {
-        console.log(action);
         state.loading = false;
         state.error = action.error.message || 'Sing in failed';
       });

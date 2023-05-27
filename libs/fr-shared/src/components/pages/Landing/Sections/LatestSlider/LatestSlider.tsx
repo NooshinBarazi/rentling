@@ -1,12 +1,11 @@
 import { HouseImageSlider } from '@rentling/fr-shared';
 import { Seattle } from '../../svgs/Seattle';
 import styles from './LatestSlider.module.scss';
-import {houses } from '../../../../../server/data/houses';
 import { useEffect, useState } from 'react';
 
 const cities = ['New York', 'Chicago'];
 
-export const LatestSlider = () => {
+export const LatestSlider = ({houses}) => {
   const [cityName, setCityName] = useState('New York' || 'Chicago');
 
   useEffect(() => {

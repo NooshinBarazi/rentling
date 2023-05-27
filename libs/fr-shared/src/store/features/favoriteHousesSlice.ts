@@ -17,15 +17,15 @@ const initialState: FavoriteState = []
 
 export const fetchFavoriteHouses = createAsyncThunk(
   'favoriteHouses',
-  async (userId, { rejectWithValue }) => {
+  async (userId: number, thunkAPI) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/2/favorites`
+        `http://localhost:8080/${userId}/favorites`
       );
       return data;
 
     } catch (error) {
-      return rejectWithValue(error);
+      return thunkAPI.rejectWithValue(error);
     }
   }
 );
@@ -44,15 +44,18 @@ const favoriteHousesSlice = createSlice({
       }
     },
   },
-  extraReducers: {
-    [HYDRATE]: (state, action) => {
-      console.log("🚀 ~ file: favoriteHousesSlice.ts:55 ~ action:", action.payload)
+  extraReducers: (builder ) => {
 
+    builder
+    .addCase(fetchFavoriteHouses.fulfilled, (state, action) => {
+      state.push(...action.payload);
+    })
+    .addCase(HYDRATE, (state, action) => {
       return {
         ...state,
-        ...action.payload.favorites
+        ...action.payload.favoriteHouses
       }
-    }
+    })
   }
 });
 

@@ -4,9 +4,10 @@ import {
   EmptyPageFavoriteHouses,
   FavoriteHouses,
   ProfileTemplate,
-  wrapper,
+  wrapper
 } from '@rentling/fr-shared';
 import { unwrapResult } from '@reduxjs/toolkit';
+import cookie from 'cookie';
 
 
 export default function FindFavoriteHouses({ favoriteHouses }) {
@@ -20,10 +21,13 @@ export default function FindFavoriteHouses({ favoriteHouses }) {
 export const getServerSideProps: GetServerSideProps = wrapper.getServerSideProps(
   (store) =>
     async (context) => {
+      const cookies = context.req.headers.cookie;
+      const parsedCookies = cookie.parse(cookies);
+      const userId = JSON.parse(parsedCookies.availableUser).userId as number;
 
-      const actionResult = await store.dispatch(fetchFavoriteHouses())
+      const actionResult = await store.dispatch(fetchFavoriteHouses(userId))
       const favoriteHouses = unwrapResult(actionResult)
-      
+
       return {
         props: {
           favoriteHouses

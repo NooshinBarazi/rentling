@@ -10,9 +10,9 @@ import {
   FooterItems,
 } from '@rentling/fr-shared';
 
-interface Props {}
+interface Props { }
 
-export const Landing = (props: Props) => {
+export const Landing = ({ houses }) => {
   const filteredCardsRef = useRef<HTMLDivElement>(null);
   const housefilterref = useRef<HTMLDivElement>(null);
 
@@ -21,8 +21,9 @@ export const Landing = (props: Props) => {
       <Main>
         <Hero housefilterref={housefilterref} />
         <Information />
-        <LatestSlider />
+        <LatestSlider houses={houses} />
         <HouseForm
+          houses={houses}
           housefilterref={housefilterref}
           filteredCardsRef={filteredCardsRef}
         />

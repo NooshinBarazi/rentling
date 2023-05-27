@@ -23,7 +23,7 @@ const AuthContext = createContext<AuthContextProps>({
 
 export const useAuth = () => useContext(AuthContext);
 
-export const AuthProvider: React.FC = ({ children }: any) => {
+export const AuthProvider = ({ children }: any) => {
   const user = useSelector((state: RootState) => selectUser(state));
 
   const [availableUser, setAvailableUser] = useState<AvailableUser | null>(

@@ -1,13 +1,14 @@
+
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 
-export const fetchCurrentRental = createAsyncThunk(
+export const fetchSingleHouse = createAsyncThunk(
     'currentRental',
-    async (userId: number, { rejectWithValue }) => {
+    async (houseId: string, { rejectWithValue }) => {
       try {
         const { data } = await axios.get(
-          `http://localhost:8080/${userId}/current-rental`
+          `http://localhost:8080/houses/${houseId}`
         );
         return data;
   
