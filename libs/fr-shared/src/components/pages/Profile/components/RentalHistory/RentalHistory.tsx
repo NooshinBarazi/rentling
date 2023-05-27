@@ -12,8 +12,8 @@ import {
 } from '@rentling/fr-shared';
 import styles from './RentalHistory.module.scss';
 
-export const RentalHistory = ({rentalHistory}) => {
-  const [selectedUser, setSelectedUser] = useState(users[0]);
+export const RentalHistory = ({rentalHistory}: any) => {
+
   const [sortSelected, setSortSelected] = useState('Earliest');
   const [isShow, setIsShow] = useState<any>([]);
 
