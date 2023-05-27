@@ -13,7 +13,7 @@ import {
 import Image from 'next/image';
 import { ShareModal } from './ShareModal';
 import { useDispatch } from 'react-redux';
-import { addFavorite } from 'libs/fr-shared/src/store/features/favoriteSlice';
+import { addFavorite } from 'libs/fr-shared/src/store/features/favoriteHousesSlice';
 
 interface Props {
   id: any;

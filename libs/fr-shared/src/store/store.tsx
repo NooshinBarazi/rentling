@@ -1,23 +1,25 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { createWrapper } from "next-redux-wrapper";
-import favoriteReducer from './features/favoriteSlice';
+import favoriteReducer from './features/favoriteHousesSlice';
 import authReducer from './features/authSlice';
 
 const makeStore = () => {
   const store = configureStore({
     reducer: {
-      favorites: favoriteReducer,
+      favoriteHouses: favoriteReducer,
       auth: authReducer,
     },
+    devTools: true
   });
   return store
 }
 
 export const store = configureStore({
   reducer: {
-    favorites: favoriteReducer,
+    favoriteHouses: favoriteReducer,
     auth: authReducer,
   },
+  devTools: true
 });
 
 export type AppStore = ReturnType<typeof makeStore>;

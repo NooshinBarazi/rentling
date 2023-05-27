@@ -1,30 +1,13 @@
 import { GetServerSideProps } from 'next';
-import { fetchFavorite } from 'libs/fr-shared/src/store/features/favoriteSlice';
+import { fetchFavoriteHouses } from 'libs/fr-shared/src/store/features/favoriteHousesSlice';
 import {
   EmptyPageFavoriteHouses,
   FavoriteHouses,
   ProfileTemplate,
-  RootState,
   wrapper,
-  useAuth
 } from '@rentling/fr-shared';
-import { useSelector } from 'react-redux';
 import { unwrapResult } from '@reduxjs/toolkit';
 
-
-export const getServerSideProps: GetServerSideProps = wrapper.getServerSideProps(
-  (store) =>
-    async (ctx) => {
-
-      const actionResult = await store.dispatch(fetchFavorite())
-      const favoriteHouses = unwrapResult(actionResult)
-      return {
-        props: {
-          favoriteHouses
-        }
-      }
-    }
-)
 
 export default function FindFavoriteHouses({ favoriteHouses }) {
 
@@ -33,6 +16,21 @@ export default function FindFavoriteHouses({ favoriteHouses }) {
   }
   return <FavoriteHouses favoriteHouses={favoriteHouses} />;
 }
+
+export const getServerSideProps: GetServerSideProps = wrapper.getServerSideProps(
+  (store) =>
+    async (context) => {
+
+      const actionResult = await store.dispatch(fetchFavoriteHouses())
+      const favoriteHouses = unwrapResult(actionResult)
+      
+      return {
+        props: {
+          favoriteHouses
+        }
+      }
+    }
+)
 
 FindFavoriteHouses.PageLayout = ProfileTemplate;
 

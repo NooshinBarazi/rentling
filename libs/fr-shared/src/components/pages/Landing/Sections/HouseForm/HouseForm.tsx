@@ -42,6 +42,7 @@ export const HouseForm = ({
   });
   const [sortSelected, setSortSelected] = useState<string>('cheaper');
 
+
   // Region change function
   const handleRegionChange = (region: string) => {
     setSelectedRegion(region);

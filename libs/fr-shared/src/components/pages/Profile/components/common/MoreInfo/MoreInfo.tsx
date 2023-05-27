@@ -52,12 +52,12 @@ export const MoreInfo = ({
       </div>
       {/* feature */}
       <div className={styles.about_house}>
-        <h4>About this house:</h4>
+        <h4>About This House:</h4>
         <p>{description}</p>
       </div>
       {/* about */}
       <div className={styles.comments_house}>
-        <h4>Your note about this house: </h4>
+        <h4>Your Note about the House: </h4>
         <div>
           <p className={styles.text_comment}>{comment}</p>
           <CommentIcon />

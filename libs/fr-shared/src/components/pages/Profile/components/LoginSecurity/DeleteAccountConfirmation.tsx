@@ -14,7 +14,9 @@ export const DeleteAccountConfirmation = ({ firstName, lastName }: IProps) => {
     register,
     formState: { errors },
   } = useForm();
+  
   const router = useRouter();
+
   return (
     <div className={styles.container}>
       <div className={styles.delete_text}>

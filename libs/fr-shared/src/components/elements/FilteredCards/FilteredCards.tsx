@@ -9,7 +9,7 @@ interface CardsProps {
 }
 
 export const FilteredCards = ({
-  filteredHouses,
+  filteredHouses = [],
   handleSortChange,
   sortSelected,
   selectedRegion,

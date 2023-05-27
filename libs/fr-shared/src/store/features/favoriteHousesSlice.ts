@@ -15,13 +15,12 @@ type FavoriteState = Favorite[]
 
 const initialState: FavoriteState = []
 
-export const fetchFavorite = createAsyncThunk(
-  'favorites',
+export const fetchFavoriteHouses = createAsyncThunk(
+  'favoriteHouses',
   async (userId, { rejectWithValue }) => {
     try {
-      const usr = 2;
       const { data } = await axios.get(
-        `http://localhost:8080/${usr}/favorites`
+        `http://localhost:8080/2/favorites`
       );
       return data;
 
@@ -31,8 +30,8 @@ export const fetchFavorite = createAsyncThunk(
   }
 );
 
-const favoritesSlice = createSlice({
-  name: 'favorites',
+const favoriteHousesSlice = createSlice({
+  name: 'favoriteHouses',
   initialState,
   reducers: {
     addFavorite: (state, { payload: house }: PayloadAction<Favorite>) => {
@@ -47,6 +46,8 @@ const favoritesSlice = createSlice({
   },
   extraReducers: {
     [HYDRATE]: (state, action) => {
+      console.log("🚀 ~ file: favoriteHousesSlice.ts:55 ~ action:", action.payload)
+
       return {
         ...state,
         ...action.payload.favorites
@@ -55,5 +56,5 @@ const favoritesSlice = createSlice({
   }
 });
 
-export const { addFavorite } = favoritesSlice.actions;
-export default favoritesSlice.reducer;
+export const { addFavorite } = favoriteHousesSlice.actions;
+export default favoriteHousesSlice.reducer;
