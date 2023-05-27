@@ -18,7 +18,7 @@ export const RentalHistory = ({rentalHistory}) => {
   const [isShow, setIsShow] = useState<any>([]);
 
   useEffect(() => {
-    const sortedHistoryByEarliest = selectedUser.history
+    const sortedHistoryByEarliest = rentalHistory
       .slice()
       .sort((a, b) => {
         return (
