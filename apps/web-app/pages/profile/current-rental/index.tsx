@@ -9,8 +9,7 @@ import cookie from 'cookie';
 import { fetchCurrentRental } from 'libs/fr-shared/src/store/features/currentRentalSlice';
 import { unwrapResult } from '@reduxjs/toolkit';
 
-export default function CurrentRentalPage({currentRentals}) {
-
+export default function CurrentRentalPage({ currentRentals }) {
   if (currentRentals.length === 0) {
     return <EmptyCurrentRental />;
   }
@@ -40,22 +39,20 @@ export default function CurrentRentalPage({currentRentals}) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = wrapper.getServerSideProps(
-  (store) =>
-    async (context) => {
-      const cookies = context.req.headers.cookie;
-      const parsedCookies = cookie.parse(cookies);
-      const userId = JSON.parse(parsedCookies.availableUser).userId as number;
+export const getServerSideProps: GetServerSideProps =
+  wrapper.getServerSideProps((store) => async (context) => {
+    const cookies = context.req.headers.cookie;
+    const parsedCookies = cookie.parse(cookies);
+    const userId = JSON.parse(parsedCookies.availableUser).userId as number;
 
-      const actionResult = await store.dispatch(fetchCurrentRental(userId))
-      const currentRentals = unwrapResult(actionResult)
+    const actionResult = await store.dispatch(fetchCurrentRental(userId));
+    const currentRentals = unwrapResult(actionResult);
 
-      return {
-        props: {
-          currentRentals
-        }
-      }
-    }
-)
+    return {
+      props: {
+        currentRentals,
+      },
+    };
+  });
 
 CurrentRentalPage.PageLayout = ProfileTemplate;

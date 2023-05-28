@@ -14,7 +14,7 @@ export const DeleteAccountConfirmation = ({ firstName, lastName }: IProps) => {
     register,
     formState: { errors },
   } = useForm();
-  
+
   const router = useRouter();
 
   return (

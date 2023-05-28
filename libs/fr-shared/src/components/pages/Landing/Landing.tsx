@@ -10,7 +10,7 @@ import {
   FooterItems,
 } from '@rentling/fr-shared';
 
-interface Props { }
+interface Props {}
 
 export const Landing = ({ houses }) => {
   const filteredCardsRef = useRef<HTMLDivElement>(null);

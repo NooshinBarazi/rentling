@@ -1,6 +1,6 @@
 import { PayloadAction, createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { HYDRATE } from 'next-redux-wrapper';
-import axios from "axios"
+import axios from 'axios';
 
 export type Favorite = {
   id: string;
@@ -11,9 +11,9 @@ export type Favorite = {
   monthlyPrice: string;
 };
 
-type FavoriteState = Favorite[]
+type FavoriteState = Favorite[];
 
-const initialState: FavoriteState = []
+const initialState: FavoriteState = [];
 
 export const fetchFavoriteHouses = createAsyncThunk(
   'favoriteHouses',
@@ -23,7 +23,6 @@ export const fetchFavoriteHouses = createAsyncThunk(
         `http://localhost:8080/${userId}/favorites`
       );
       return data;
-
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
     }
@@ -44,19 +43,18 @@ const favoriteHousesSlice = createSlice({
       }
     },
   },
-  extraReducers: (builder ) => {
-
+  extraReducers: (builder) => {
     builder
-    .addCase(fetchFavoriteHouses.fulfilled, (state, action) => {
-      state.push(...action.payload);
-    })
-    .addCase(HYDRATE, (state, action) => {
-      return {
-        ...state,
-        ...action.payload.favoriteHouses
-      }
-    })
-  }
+      .addCase(fetchFavoriteHouses.fulfilled, (state, action) => {
+        state.push(...action.payload);
+      })
+      .addCase(HYDRATE, (state, action: any) => {
+        return {
+          ...state,
+          ...action.payload.favoriteHouses,
+        };
+      });
+  },
 });
 
 export const { addFavorite } = favoriteHousesSlice.actions;

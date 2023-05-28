@@ -272,8 +272,8 @@ export const users = [
           meterage: 1500,
         },
         price: {
-          oneDay: 199,
-          thirtyDay: 2300,
+          oneDay: 120,
+          thirtyDay: 3300,
         },
       },
     ],

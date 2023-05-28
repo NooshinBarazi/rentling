@@ -7,3 +7,5 @@ export async function initMocks() {
     worker.start();
   }
 }
+
+initMocks();

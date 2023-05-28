@@ -7,9 +7,8 @@ import {
   AuthProvider,
   DesktopNavbar,
   Header,
-  initMocks,
   wrapper,
-  store
+  store,
 } from '@rentling/fr-shared';
 
 type ComponentWithPageLayout = AppProps & {
@@ -19,8 +18,6 @@ type ComponentWithPageLayout = AppProps & {
 };
 
 function CustomApp({ Component, pageProps }: ComponentWithPageLayout) {
-  initMocks();
-
   return (
     <>
       <Head>
@@ -43,7 +40,6 @@ function CustomApp({ Component, pageProps }: ComponentWithPageLayout) {
           </main>
         </AuthProvider>
       </Provider>
-
     </>
   );
 }

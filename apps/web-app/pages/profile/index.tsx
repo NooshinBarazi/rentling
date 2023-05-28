@@ -1,7 +1,6 @@
 import { UserProfile } from '@rentling/fr-shared';
 
 function UserProfilePage() {
-
   return (
     <UserProfile
       firstName={'john'}

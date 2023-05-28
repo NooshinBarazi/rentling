@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 const cities = ['New York', 'Chicago'];
 
-export const LatestSlider = ({houses}) => {
+export const LatestSlider = ({ houses }) => {
   const [cityName, setCityName] = useState('New York' || 'Chicago');
 
   useEffect(() => {

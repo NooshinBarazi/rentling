@@ -49,13 +49,14 @@ export const HouseCard = ({
   image,
 }: Props) => {
   const dispatch = useDispatch();
+
   const handleAddToFavorites = () => {
     const house = {
       id,
       image,
       title,
       region,
-      price: {oneDay, thirtyDay} // Modify this based on the actual price property
+      price: { oneDay, thirtyDay }, // Modify this based on the actual price property
     };
 
     dispatch(addFavorite(house));
@@ -140,10 +141,7 @@ export const HouseCard = ({
           <div className={styles.share_icon}>
             <ShareModal url={`${`localhost:4200/houses/`}${id}`} />
           </div>
-          <div
-            className={styles.like_icon}
-            onClick={handleAddToFavorites}
-          >
+          <div className={styles.like_icon} onClick={handleAddToFavorites}>
             <LikeIcon />
           </div>
         </div>

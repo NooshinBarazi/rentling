@@ -7,18 +7,14 @@ export default function Index({ houses }) {
   return <Landing houses={houses} />;
 }
 
+export const getServerSideProps: GetServerSideProps =
+  wrapper.getServerSideProps((store) => async (context) => {
+    const actionResult = await store.dispatch(fetchHouses());
+    const houses = unwrapResult(actionResult);
 
-export const getServerSideProps: GetServerSideProps = wrapper.getServerSideProps(
-  (store) =>
-    async (context) => {
-
-      const actionResult = await store.dispatch(fetchHouses())
-      const houses = unwrapResult(actionResult)
-
-      return {
-        props: {
-          houses
-        }
-      }
-    }
-)
+    return {
+      props: {
+        houses,
+      },
+    };
+  });

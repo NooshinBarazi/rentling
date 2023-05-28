@@ -37,11 +37,14 @@ export const signIn = createAsyncThunk(
           body: JSON.stringify(data),
         }
       );
-      
+
       const authenticationInfo = await response.json();
 
       if (response.status === 200) {
-        localStorage.setItem('current_user', JSON.stringify(authenticationInfo));
+        localStorage.setItem(
+          'current_user',
+          JSON.stringify(authenticationInfo)
+        );
 
         router.push('/');
       }

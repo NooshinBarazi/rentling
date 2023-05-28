@@ -2,10 +2,9 @@ import React from 'react';
 import { HousePage, wrapper } from '@rentling/fr-shared';
 import { GetServerSideProps } from 'next';
 import { unwrapResult } from '@reduxjs/toolkit';
-import {fetchSingleHouse } from 'libs/fr-shared/src/store/features/singleHouseSlice';
+import { fetchSingleHouse } from 'libs/fr-shared/src/store/features/singleHouseSlice';
 
-export default function HousePaymentPage({singleHouse}) {
-
+export default function HousePaymentPage({ singleHouse }) {
   if (!singleHouse) {
     return (
       <div
@@ -39,17 +38,16 @@ export default function HousePaymentPage({singleHouse}) {
   }
 }
 
-export const getServerSideProps: GetServerSideProps = wrapper.getServerSideProps(
-  (store) =>
-    async (context) => {
-    
-    const actionResult = await store.dispatch(fetchSingleHouse(context.params.id as string))
-    const singleHouse = unwrapResult(actionResult)
+export const getServerSideProps: GetServerSideProps =
+  wrapper.getServerSideProps((store) => async (context) => {
+    const actionResult = await store.dispatch(
+      fetchSingleHouse(context.params.id as string)
+    );
+    const singleHouse = unwrapResult(actionResult);
 
-      return {
-        props: {
-          singleHouse
-        }
-      }
-    }
-)
+    return {
+      props: {
+        singleHouse,
+      },
+    };
+  });

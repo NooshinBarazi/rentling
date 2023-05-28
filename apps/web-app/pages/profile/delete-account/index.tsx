@@ -1,6 +1,4 @@
-import { DeleteAccount, users, ProfileTemplate } from '@rentling/fr-shared';
-import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
+import { DeleteAccount, ProfileTemplate } from '@rentling/fr-shared';
 
 export default function DeleteAccountPage() {
   return <DeleteAccount />;

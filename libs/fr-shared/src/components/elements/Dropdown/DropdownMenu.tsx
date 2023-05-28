@@ -12,7 +12,7 @@ export const Dropdown = ({ children }: DropdownProps) => {
 };
 
 interface ChooseDropdownProps {
-  style: any;
+  style?: any;
   label: string;
   selectedOption: string;
   options: string[];

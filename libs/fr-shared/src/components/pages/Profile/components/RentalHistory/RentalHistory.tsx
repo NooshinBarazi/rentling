@@ -12,30 +12,29 @@ import {
 } from '@rentling/fr-shared';
 import styles from './RentalHistory.module.scss';
 
-export const RentalHistory = ({rentalHistory}: any) => {
-
+export const RentalHistory = ({ rentalHistory }: any) => {
   const [sortSelected, setSortSelected] = useState('Earliest');
   const [isShow, setIsShow] = useState<any>([]);
 
   useEffect(() => {
-    const sortedHistoryByEarliest = rentalHistory
-      .slice()
-      .sort((a, b) => {
-        return (
-          Date.parse(a.rentalPeriod.startDate) -
-          Date.parse(b.rentalPeriod.startDate)
-        );
-      });
+    const sortedHistoryByEarliest = rentalHistory.slice().sort((a, b) => {
+      return (
+        Date.parse(a.rentalPeriod.startDate) -
+        Date.parse(b.rentalPeriod.startDate)
+      );
+    });
     const sortedHistoryByLatest = rentalHistory.slice().sort((a, b) => {
       return (
         Date.parse(b.rentalPeriod.startDate) -
         Date.parse(a.rentalPeriod.startDate)
       );
     });
+
     const sortedHistory =
       sortSelected === 'Earliest'
         ? sortedHistoryByEarliest
         : sortedHistoryByLatest;
+
     setSelectedUser((prevState: any) => ({
       ...prevState,
       history: sortedHistory,

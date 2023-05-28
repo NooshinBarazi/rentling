@@ -7,7 +7,7 @@ import { ShareIcon } from 'libs/fr-shared/src/components/elements/Icons/ShareIco
 import { LikeIcon } from 'libs/fr-shared/src/components/elements/Icons/LikeIcon';
 import styles from './FavoriteHouses.module.scss';
 import Image from 'next/image';
-import {useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 interface FavoriteHouse {
   image: any;
@@ -17,7 +17,7 @@ interface FavoriteHouse {
   thirtyDay: any;
 }
 
-type FavoriteHousesProps = {favoriteHouses: FavoriteHouse[]};
+type FavoriteHousesProps = { favoriteHouses: FavoriteHouse[] };
 
 function sortFavoritesListByPrice(user: any, priceType: any) {
   const sortedFavoritesList = user.favoritesList
@@ -29,12 +29,10 @@ function sortFavoritesListByPrice(user: any, priceType: any) {
   };
 }
 
-export const FavoriteHouses = ({ favoriteHouses }: FavoriteHousesProps ) => {
+export const FavoriteHouses = ({ favoriteHouses }: FavoriteHousesProps) => {
   const [dailySelected, setDailySelected] = useState<boolean>(true);
   const [sortSelected, setSortSelected] = useState<string>('cheaper');
-  const [favoritesList, setFavoritesList] = useState(
-    useSelector((state: RootState) => state.favorites)
-  );
+  const [favoritesList, setFavoritesList] = useState(favoriteHouses);
 
   const handleSortChange = (sortOption: string) => {
     setSortSelected(sortOption);
@@ -48,10 +46,11 @@ export const FavoriteHouses = ({ favoriteHouses }: FavoriteHousesProps ) => {
         return b.price[priceType] - a.price[priceType];
       }
     });
-    setFavoritesList(sortedFavoritesList);
+
+    setFavoritesList(sortedFavoritesList as any);
   };
 
-  const houseItems = favoriteHouses.map((house: any) => (
+  const houseItems = favoritesList.map((house: any) => (
     <div className={styles.houses_container}>
       <div className={styles.container_image}>
         <Image src={house.images?.img} alt="/" fill object-fit="cover" />
@@ -101,7 +100,6 @@ export const FavoriteHouses = ({ favoriteHouses }: FavoriteHousesProps ) => {
             label={sortSelected}
             selectedOption={sortSelected}
             options={['cheaper', 'expensive']}
-            style={undefined}
             handleOptionChange={handleSortChange}
           />
         </div>
